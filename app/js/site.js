@@ -7,5 +7,5 @@
 (function(global, undefined) {
   'use strict';
 
-  global.utils = {}
+  global.utils = {};
 })(window);
