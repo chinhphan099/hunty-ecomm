@@ -86,6 +86,7 @@ label {
     padding: 10px 20px 10px 10px;
     border: 1px solid @border-input;
     color: @placeholder;
+    border-radius: 3px;
     .text-truncate();
   }
   input {
@@ -178,12 +179,12 @@ label {
     .position(0 null null 0);
     z-index: 1;
     .size(@size);
-    .font-size(18px);
-    color: @color01;
+    .font-size(12px);
+    color: @yellow;
     text-align: center;
     &:before {
       position: relative;
-      top: 4px;
+      top: 7px;
       z-index: 1;
       opacity: 0;
     }
@@ -191,7 +192,7 @@ label {
       content: "";
       .position(0 null null 0);
       .size(100%);
-      background-color: @color05;
+      background-color: @color02;
       border: 1px solid @border-input;
       .circle& {
         .border-radius(50%);
@@ -278,134 +279,11 @@ label {
   font-size: @font-button;
   line-height: 1;
   border: 1px solid transparent;
-  background: none;
-  .transition(all .25s ease);
-  // Radius
-  &.radius {.border-radius(4px);}
-  // Full width
-  &.expanded {width: 100%;}
-
-  &.btn-primary {
-    border-color: @color12;
-    background-color: @color12;
-    color: @color01;
-    // size
-    &.tiny {
-      .font-size(11px);
-    }
-    &.small {
-      .font-size(13px);
-    }
-    &.larger {
-      .font-size(16px);
-    }
-    &:hover {
-      border-color: @color09;
-      background-color: @color09;
-    }
-  }
-  &.btn-secondary {
-    border-color: @color13;
-    background-color: @color13;
-    color: @color01;
-    // size
-    &.tiny {
-      .font-size(11px);
-    }
-    &.small {
-      .font-size(14px);
-    }
-    &.larger {
-      .font-size(16px);
-    }
-    &:hover {
-      border-color: @color09;
-      background-color: @color09;
-    }
-  }
-  &.btn-tertiary {
-    border-color: @color14;
-    background-color: @color14;
-    color: @color01;
-    // size
-    &.tiny {
-      .font-size(11px);
-    }
-    &.small {
-      .font-size(14px);
-    }
-    &.larger {
-      .font-size(16px);
-    }
-    &:hover {
-      border-color: @color09;
-      background-color: @color09;
-    }
-  }
-  &.btn-disabled {
-    cursor: not-allowed;
-    pointer-events: none;
-    border-color: @color06;
-    background-color: @color06;
-    color: @color01;
-    // size
-    &.tiny {
-      .font-size(11px);
-    }
-    &.small {
-      .font-size(14px);
-    }
-    &.larger {
-      .font-size(16px);
-    }
-  }
-
-  // Hollow
-  &.hollow {
-    background-color: transparent;
-    &:hover {
-      background-color: transparent;
-    }
-    &.btn-primary {
-      color: @color12;
-      border-color: @color12;
-      &:hover {
-        color: @color09;
-        border-color: @color09;
-      }
-    }
-    &.btn-secondary {
-      color: @color13;
-      border-color: @color13;
-      &:hover {
-        color: @color09;
-        border-color: @color09;
-      }
-    }
-    &.btn-tertiary {
-      color: @color14;
-      border-color: @color14;
-      &:hover {
-        color: @color09;
-        border-color: @color09;
-      }
-    }
-    &.btn-disabled {
-      color: @color06;
-    }
-  }
-}
-@media (max-width: @sm-max) {
-  .button {
-    &.tiny {
-      .font-size(11px);
-    }
-    &.small {
-      .font-size(12px);
-    }
-    &.larger {
-      .font-size(16px);
-    }
+  background-color: @yellow;
+  font-weight: bold;
+  border-radius: 3px;
+  .transition(all 150ms ease);
+  &:hover {
   }
 }
 
