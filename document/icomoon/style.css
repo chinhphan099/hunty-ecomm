@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?kxr7wq');
-  src:  url('fonts/icomoon.eot?kxr7wq#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?kxr7wq') format('truetype'),
-    url('fonts/icomoon.woff?kxr7wq') format('woff'),
-    url('fonts/icomoon.svg?kxr7wq#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?4vtjdl');
+  src:  url('fonts/icomoon.eot?4vtjdl#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?4vtjdl') format('truetype'),
+    url('fonts/icomoon.woff?4vtjdl') format('woff'),
+    url('fonts/icomoon.svg?4vtjdl#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,7 +24,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 .icon-tracking:before {
   content: "\e936";
 }
@@ -93,11 +92,9 @@
 }
 .icon-arrow-left:before {
   content: "\e900";
-  color: #8b929f;
 }
 .icon-arrow-right:before {
   content: "\e901";
-  color: #8b929f;
 }
 .icon-arrow-up:before {
   content: "\e902";
@@ -105,55 +102,42 @@
 }
 .icon-camera:before {
   content: "\e903";
-  color: #ffd100;
 }
 .icon-campaign:before {
   content: "\e904";
-  color: #8b929f;
 }
 .icon-cart:before {
   content: "\e905";
-  color: #ffd100;
 }
 .icon-check:before {
   content: "\e907";
-  color: #ffd100;
 }
 .icon-check-in:before {
   content: "\e908";
-  color: #8b929f;
 }
 .icon-customers:before {
   content: "\e909";
-  color: #8b929f;
 }
 .icon-follow:before {
   content: "\e90a";
-  color: #ffd100;
 }
 .icon-followed:before {
   content: "\e90b";
-  color: #8b929f;
 }
 .icon-glasses:before {
   content: "\e90c";
-  color: #ffd100;
 }
 .icon-handtilizer:before {
   content: "\e90d";
-  color: #ffd100;
 }
 .icon-head-phone:before {
   content: "\e90e";
-  color: #ffd100;
 }
 .icon-heart:before {
   content: "\e90f";
-  color: #ffd100;
 }
 .icon-home:before {
   content: "\e910";
-  color: #8b929f;
 }
 .icon-hunty-feed .path1:before {
   content: "\e911";
@@ -166,19 +150,15 @@
 }
 .icon-location:before {
   content: "\e913";
-  color: #8b929f;
 }
 .icon-marketing:before {
   content: "\e914";
-  color: #8b929f;
 }
 .icon-message:before {
   content: "\e915";
-  color: #ffd100;
 }
 .icon-notification:before {
   content: "\e916";
-  color: #8b929f;
 }
 .icon-order .path1:before {
   content: "\e917";
@@ -196,47 +176,36 @@
 }
 .icon-pant:before {
   content: "\e91a";
-  color: #ffd100;
 }
 .icon-phone:before {
   content: "\e91b";
-  color: #ffd100;
 }
 .icon-photo:before {
   content: "\e91c";
-  color: #ffd100;
 }
 .icon-product:before {
   content: "\e91d";
-  color: #8b929f;
 }
 .icon-promo:before {
   content: "\e91e";
-  color: #8b929f;
 }
 .icon-report:before {
   content: "\e91f";
-  color: #8b929f;
 }
 .icon-search:before {
   content: "\e920";
-  color: #fff;
 }
 .icon-shop:before {
   content: "\e921";
-  color: #fff;
 }
 .icon-shop-order:before {
   content: "\e922";
-  color: #8b929f;
 }
 .icon-skin-care:before {
   content: "\e923";
-  color: #ffd100;
 }
 .icon-sneaker:before {
   content: "\e924";
-  color: #ffd100;
 }
 .icon-top:before {
   content: "\e927";
@@ -244,29 +213,22 @@
 }
 .icon-triangle-down:before {
   content: "\e928";
-  color: #8b929f;
 }
 .icon-t-shirt:before {
   content: "\e929";
-  color: #ffd100;
 }
 .icon-view-shop:before {
   content: "\e92a";
-  color: #ffd100;
 }
 .icon-watch:before {
   content: "\e92b";
-  color: #ffd100;
 }
 .icon-write:before {
   content: "\e92c";
-  color: #ffd100;
 }
-.icon-acount:before {
+.icon-account:before {
   content: "\e92d";
-  color: #8b929f;
 }
 .icon-analysis:before {
   content: "\e92e";
-  color: #8b929f;
 }
