@@ -7,5 +7,9 @@
 (function(global, undefined) {
   'use strict';
 
-  global.utils = {};
+  function scrollTopAfterCollapse() {}
+
+  global.Site = {
+    scrollTopAfterCollapse: scrollTopAfterCollapse
+  };
 })(window);

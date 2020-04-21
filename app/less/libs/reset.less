@@ -17,10 +17,13 @@ html {
 *, *:before, *:after {.box-sizing(inherit);}
 body {
   font-family: @font-family-base;
-  font-size: @font-size;
-  color: @text-color;
+  font-size: @font-size-mb;
   line-height: 1;
+  color: @text-color;
   background-color: @bgd-body;
+  @media (min-width: 768px) {
+    font-size: @font-size;
+  }
 }
 audio, canvas, progress, video {
   display: inline-block;
@@ -233,12 +236,11 @@ input[type="date"] {
   -moz-appearance: textfield;
   appearance: none;
   color: @color-input;
-  font-size: @font-size;
-  .border-radius(0);
+  font-size: @font-size-input;
+  border-radius: 3px;
   .placeholder(@placeholder);
   &::-ms-clear {
     display: none;
-    /* icon close within input on IE */
   }
 }
 input[type="password"]::-ms-reveal {
@@ -250,7 +252,6 @@ input::-webkit-outer-spin-button {
   -moz-appearance: none;
   appearance: none;
   margin: 0;
-  /* Removing spin buttons for Number input */
 }
 input:-webkit-autofill { background: papayaWhip; color: hotPink; }
 input[type="date"]::-webkit-calendar-picker-indicator{
@@ -266,14 +267,13 @@ input[type="search"]::-webkit-search-results-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  /* icon close within input Search */
 }
 textarea {
   .border-radius(0);
   width: 100%;
   padding: 10px;
   overflow: auto;
-  font-size: @font-size;
+  font-size: @font-size-input;
   color: @color-input;
   vertical-align: top;
   resize: none;

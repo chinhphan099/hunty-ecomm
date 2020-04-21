@@ -1,19 +1,4 @@
-// Margins
-// Heading
-// Background Color
-// Text Color
-// Link Style
-// Panigation
-// Price
-// Breadcrumbs
-// Divider
-// Blockquote
-//--------------//
-
 .relative {position: relative;}
-
-// Margins
-// .margins(30 40 50);
 
 // Heading
 .heading-1 {}
@@ -22,38 +7,6 @@
 .heading-4 {}
 .heading-5 {}
 .heading-6 {}
-
-// Background Color
-.bgd-silver {
-  background-color: silver !important;
-}
-.bgd-light-grey {
-  background-color: @color02 !important;
-}
-.bgd-dark-grey {
-  background-color: @color09 !important;
-}
-
-// Text Color
-.red-text {
-  color: red !important;
-}
-
-// Link Style
-.link {
-  position: relative;
-  .font-size(20px);
-  text-decoration: underline;
-  .link-color(@color12);
-  &:hover {
-    text-decoration: none;
-  }
-  i {
-    .position(50% null);
-    .translateY(-38%);
-    font-size: .8em;
-  }
-}
 
 // Panigation
 .pagination {
@@ -70,21 +23,20 @@
     }
     &.active {
       a {
-        color: @color01;
-        background-color: @color04;
+        color: white;
+        background-color: @yellow;
       }
     }
     a {
       display: block;
       .size(30px);
       .font-size(14px);
-      color: @color10;
-      border: 1px solid @color09;
+      color: #8B929F;
+      border: 1px solid #D2DAEA;
       line-height: 30px;
       .transition(all .3s ease);
       &:hover {
-        color: @color01;
-        background-color: @color05;
+        background-color: lighten(@yellow, 5%);
       }
       i {
         line-height: 30px;
@@ -104,9 +56,7 @@
       }
     }
   }
-}
-@media (max-width: @sm-max) {
-  .pagination {
+  @media (max-width: 767px) {
     width: 100%;
     .prev-page {
       float: left;
@@ -131,82 +81,5 @@
         }
       }
     }
-  }
-}
-
-// Price
-.price {
-  display: block;
-  &:extend(.clearfix all);
-  .new-price, .old-price {
-    display: inline-block;
-    color: @color10;
-  }
-  .new-price {
-    font-weight: bold;
-  }
-  .old-price {
-    color: @color08;
-  }
-}
-
-// Breadcrumbs
-.breadcrumbs {
-  li {
-    display: inline-block;
-  }
-  i {
-    position: relative;
-    top: 2px;
-  }
-}
-
-// Divider
-.divider {
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-  clear: both;
-  span {
-    position: relative;
-    display: inline-block;
-    padding: 0 10px;
-    &:before, &:after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      width: 1000px;
-      border-top: 1px solid @color03;
-    }
-    &:before {
-      right: 100%;
-    }
-    &:after {
-      left: 100%;
-    }
-    &.empty {
-      font-size: 0;
-      padding: 0;
-    }
-  }
-}
-
-// Blockquote
-blockquote {
-  quotes: "\201C""\201D""\2018""\2019";
-  &:before, &:after {
-    .sans-serif();
-    font-size: 4em;
-    line-height: 0;
-  }
-  &:before {
-    content: open-quote;
-    margin-right: 0.15em;
-    vertical-align: -0.4em;
-  }
-  &:after {
-    content: close-quote;
-    margin-left: 0.15em;
-    vertical-align: -0.6em;
   }
 }
