@@ -1,5 +1,5 @@
 {
-  "name": "PugLessJsTemplate",
+  "name": "HuntyProject",
   "version": "1.0.0",
   "keywords": "gulp, less, pug, node",
   "author": {
@@ -9,10 +9,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chinhphan099/frontend.git"
+    "url": "https://github.com/chinhphan099/hunty-ecomm.git"
   },
   "bus": {
-    "url": "https://github.com/chinhphan099/frontend/issues",
+    "url": "https://github.com/chinhphan099/hunty-ecomm/issues",
     "email": "chinhphan099@gmail.com"
   },
   "dependencies": {
