@@ -20,11 +20,11 @@ label {
 .custom-input {
   position: relative;
   > i {
-    .position(50% null null 3px);
+    .position(50% null null 5px);
     .translateY(-50%);
     & + span {
       input {
-        padding-left: 20px;
+        padding-left: 25px;
       }
     }
   }
@@ -87,6 +87,7 @@ label {
     display: block;
     padding: 10px 20px 10px 10px;
     border: 1px solid @border-input;
+    font-size: @font-size-input;
     color: @placeholder;
     border-radius: 3px;
     .text-truncate();
@@ -167,7 +168,7 @@ label {
     display: table-cell;
     height: @size;
     padding-left: @space;
-    .font-size(13px);
+    .font-size(14px);
     color: @text-color;
     vertical-align: middle;
     cursor: pointer;
