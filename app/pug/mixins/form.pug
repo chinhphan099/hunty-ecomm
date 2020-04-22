@@ -23,7 +23,7 @@ mixin button(opts)
       block
 
 //- custom input
-mixin customInput(ctrl, opts)
+mixin customInput(ctrl, opts, icons)
   .custom-input
     if ctrl.id
       button(type=(ctrl.type || "submit"),
@@ -34,12 +34,15 @@ mixin customInput(ctrl, opts)
           i(class=ctrl.iconClass)
     else
       i(class=ctrl.iconClass)!=(ctrl.text || "")
-    span: input(type=(opts.type || "text"),
-      name=opts.name ? opts.name : opts.id,
-      id=opts.id,
-      value=opts.value,
-      required=opts.required,
-      placeholder=opts.placeholder)&attributes(attributes)
+    if icons
+      i(class=icons.iconCls)
+    span
+      input(type=(opts.type || "text"),
+        name=opts.name ? opts.name : opts.id,
+        id=opts.id,
+        value=opts.value,
+        required=opts.required,
+        placeholder=opts.placeholder)&attributes(attributes)
 
 mixin customDate(opts)
   .custom-date(data-date="")
