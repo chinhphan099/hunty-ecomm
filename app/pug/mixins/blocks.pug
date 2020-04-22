@@ -6,8 +6,8 @@ mixin blocks(headingText)
 
 mixin price(newPrice, oldPrice)
   span.price&attributes(attributes)
-    ins.new-price!=newPrice
-    del.old-price!=oldPrice
+    ins.price__curent!=newPrice
+    del.price__old!=oldPrice
 
 mixin pagination()
   .pagination-wrap&attributes(attributes)

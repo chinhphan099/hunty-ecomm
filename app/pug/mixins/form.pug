@@ -50,7 +50,7 @@ mixin customDate(opts)
       value=opts.value,
       required=opts.required,
       placeholder=opts.placeholder)
-    i.icon-arrow-down
+    i.icon-angle-down
 
 //- textarea
 mixin textarea(id, placeholder)
@@ -65,11 +65,10 @@ mixin label-horizontal(id, text)
 
 mixin customSelect(select, opts)
   .custom-select(data-select="")
-    span Please select an option
     select(name=select.id, id=select.id)&attributes(attributes)
       each item in opts
         option(value=item.value, selected=item.selected)!=(item.text || item.value)
-    i.icon-arrow-down
+    i.icon-angle-down
 
 mixin linkCheckbox(opts)
   .checkbox(class=opts.class)&attributes(attributes)

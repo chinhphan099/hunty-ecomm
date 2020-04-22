@@ -108,19 +108,21 @@ label {
   background-color: @bgd-input;
   .selected& {
     background-color: @bgd-input;
-    span {
+    select {
       color: @color-input;
       border-color: @border-input;
     }
     i {
-      color: @color-input;;
+      color: @color-input;
     }
   }
   select {
-    .position();
-    z-index: 1;
-    .size(100%);
-    opacity: 0;
+    color: @placeholder;
+    border: 1px solid @border-input;
+    border-radius: 3px;
+    padding: 10px 20px 10px 10px;
+    width: 100%;
+    font-size: @font-size-input;
   }
   span {
     display: block;
@@ -135,6 +137,7 @@ label {
     .font-size(18px);
     .translateY(-50%);
     color: @placeholder;
+    pointer-events: none;
   }
 }
 
@@ -259,7 +262,8 @@ label {
 }
 
 // Form group
-.form-group {
+.fieldset {
+  padding-top: 20px;
   &:extend(.clearfix all);
   .label01 {
     height: 40px;
