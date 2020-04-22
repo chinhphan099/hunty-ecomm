@@ -1,2 +1,56 @@
 header.header
-	| Header Here
+    .header__inner
+        .container
+            .header__logo: +link('Hunty', '#'): +img('logo.png', 'Hunty')
+            .header__location
+                .fieldset
+                    +customSelect({id: 'select_id'}, [
+                        {value: '', text: 'Hồ Chí Minh '},
+                        {value: 'Hà Nội'},
+                        {value: 'Thanh Hóa'}
+                    ])
+            .header__searchForm
+                +customInput({id: 'search_btn', type: 'button', text: 'Tìm kiếm'}, {id: "txt_search", placeholder: 'Search for Brand, Promotion... '}, {iconCls: 'icon-search'})
+
+            .header_links
+                .header_tracking
+                    +link('Tracking order', '#')
+                        i.icon-tracking
+                        span Tracking order
+                .header_notification
+                    +link('Notification', '#')
+                        i.icon-notification
+                        span Notification
+                .header__login
+                    +link('Login', '#')
+                        i.icon-account
+                        span Login
+    .header__main_nav
+        .container
+            .header__left
+                nav.nav__navigation
+                    .nav__category
+                        +link('danh mục sản phẩm ', '#')
+                            i.icon-hamburger
+                            span Danh mục sản phẩm 
+                    .nav__navbar
+                        +items-2([
+                            {title: 'Introduce', href: '#', subClass: 'abcd', subList: [
+                                {title: 'Recruitment', href: '#'},
+                                {title: 'Term & Conditions', href: '#', subClass: 'abc', subList: [
+                                    {title: 'Recruitment', href: '#'},
+                                    {title: 'Term & Conditions', href: '#'}
+                                ]}
+                            ]},
+                            {title: 'Recruitment', href: '#'},
+                            {title: 'Term & Conditions', href: '#'},
+                            {title: 'Contact', href: '#'}
+                        ], 0)
+                    .recently__viewed
+                        .recently__viewed_title
+                            i.icon-caret-down
+                            span Sản phẩm đã xem 
+                        
+
+            .header__right
+
