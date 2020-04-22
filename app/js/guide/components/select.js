@@ -10,6 +10,7 @@
  *    updateValue
  *    destroy
  */
+
 ;(function($, window, undefined) {
   'use strict';
 
@@ -73,5 +74,33 @@
   $(function() {
     $('[data-' + pluginName + ']')[pluginName]();
   });
-
 }(jQuery, window));
+
+/*
+class CustomSelect {
+  constructor(elm) {
+    this.elements = document.querySelectorAll(elm);
+    this.selects = this.elements.querySelector('select');
+    this.selectedCls = 'selected';
+  }
+
+  listener() {
+    Array.prototype.slice.call(this.selects).forEach(select => {
+      select.addEventListener('change', (e) => {
+        if(e.currentTarget.value !== '') {
+          e.currentTarget.classList.add(this.selectedCls);
+        }
+        else {
+          e.currentTarget.classList.remove(this.selectedCls);
+        }
+      });
+    });
+  }
+
+  init() {
+    this.listener();
+  }
+}
+
+new CustomSelect('[data-select]').init();
+*/
