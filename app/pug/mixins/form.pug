@@ -71,7 +71,7 @@ mixin customSelect(select, opts)
     select(name=select.id, id=select.id)&attributes(attributes)
       each item in opts
         option(value=item.value, selected=item.selected)!=(item.text || item.value)
-    i.icon-angle-down
+    i.icon-caret-down
 
 mixin linkCheckbox(opts)
   .checkbox(class=opts.class)&attributes(attributes)

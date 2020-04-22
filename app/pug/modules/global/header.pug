@@ -1,31 +1,33 @@
 header.header
     .header__inner
         .container
-            .header__logo: +link('Hunty', '#'): +img('logo.png', 'Hunty')
-            .header__location
-                .fieldset
+            .header__wrap
+                .header__logo: +link('Hunty', '#'): +img('logo.png', 'Hunty')
+                .header__location
                     +customSelect({id: 'select_id'}, [
                         {value: '', text: 'Hồ Chí Minh '},
                         {value: 'Hà Nội'},
                         {value: 'Thanh Hóa'}
                     ])
-            .header__searchForm
-                +customInput({id: 'search_btn', type: 'button', text: 'Tìm kiếm'}, {id: "txt_search", placeholder: 'Search for Brand, Promotion... '}, {iconCls: 'icon-search'})
+                        
+                .header__searchForm
+                    +customInput({id: 'search_btn', type: 'button', text: 'Tìm kiếm'}, {id: "txt_search", placeholder: 'Search for Brand, Promotion... '}, {iconCls: 'icon-search'})
 
-            .header_links
-                .header_tracking
+            .header__links
+                .header__tracking
                     +link('Tracking order', '#')
                         i.icon-tracking
                         span Tracking order
-                .header_notification
+                .header__notification
                     +link('Notification', '#')
                         i.icon-notification
-                        span Notification
+                        span.number-notification
+                        span.text Notification
                 .header__login
                     +link('Login', '#')
                         i.icon-account
                         span Login
-    .header__main_nav
+    .header__main
         .container
             .header__left
                 nav.nav__navigation
@@ -33,11 +35,11 @@ header.header
                         +link('danh mục sản phẩm ', '#')
                             i.icon-hamburger
                             span Danh mục sản phẩm 
-                    .nav__navbar
+                    .nav__navigation__navbar
                         +items-2([
-                            {title: 'Introduce', href: '#', subClass: 'abcd', subList: [
+                            {title: 'Introduce', href: '#', subClass: 'sub_menu', subList: [
                                 {title: 'Recruitment', href: '#'},
-                                {title: 'Term & Conditions', href: '#', subClass: 'abc', subList: [
+                                {title: 'Term & Conditions', href: '#', subClass: 'sub_menu', subList: [
                                     {title: 'Recruitment', href: '#'},
                                     {title: 'Term & Conditions', href: '#'}
                                 ]}
@@ -46,11 +48,31 @@ header.header
                             {title: 'Term & Conditions', href: '#'},
                             {title: 'Contact', href: '#'}
                         ], 0)
-                    .recently__viewed
-                        .recently__viewed_title
+                .product__recently
+                    .product__recently__title
+                        +link('danh mục sản phẩm ', '#')
                             i.icon-caret-down
                             span Sản phẩm đã xem 
-                        
+                    ul.product__recently__list
+                        li: img(src="https://picsum.photos/100/120", alt="")
+                        li: img(src="https://picsum.photos/100/120", alt="")
+                        li: img(src="https://picsum.photos/100/120", alt="")
+                        li: img(src="https://picsum.photos/100/120", alt="")
 
             .header__right
+                .header__shop__management
+                    +link('Shop Management ', '#')
+                        i.icon-view-shop
+                        span Shop Management
+                .header__hunty__feed
+                    +link('Hunty feed ', '#')
+                        i.icon-hunty-feed #[span.path1]#[span.path2]
+                        span Hunty feed 
+                .header__mini__cart
+                    .mini__cart_title
+                        +link('Cart ', '#')
+                            i.icon-cart
+                            span Cart
+
+
 

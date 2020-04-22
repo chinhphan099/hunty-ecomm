@@ -1,3 +1,137 @@
+// Feader
+.header  {
+    background: #FFD100;
+    .container {
+        &:before, &:after {content: none;}
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    a {
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #333;
+        > i, > span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        i {
+            
+            margin-right: 10px;
+            color: #fff;
+            font-size: 24px;
+            line-height: 0;
+        }
+    }
+    &__inner {
+        padding: 20px 0;
+        border-bottom: 1px solid #FFEB8E;
+    }
+    &__wrap {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        width: 120px;
+        margin-right: 30px;
+    }
+    &__location {
+        width: 175px;
+        margin-right: 20px;
+        .custom-select {
+            select {
+                padding: 5px 10px;
+                border: 2px solid #FFEB8E;
+                border-radius: 3px;
+                color: #333;
+                height: 38px;
+            }
+        }
+    }
+    &__searchForm {
+        width: 418px;
+        .custom-input {
+            height: 38px;
+            padding: 2px;
+            background-color: #fff;
+            border: 2px solid #FFEB8E;
+            border-radius: 3px;
+            color: #333;
+            > i {
+                left: 10px;
+                font-size: 20px;
+                color: #8B929F;
+                & + span input {
+                    padding-left: 35px;
+                }
+            }
+        }
+        input {
+            font-style: italic;
+            color: #8B929F;
+        }
+        input,
+        button {
+            border: none;
+            height: 30px;
+        }
+        button {
+            padding: 0 10px;
+            background: #FFD100;
+            box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
+            border-radius: 3px;
+            font-size: 14px;
+        }
+    }
+    &__links {
+        flex: 1 0;
+        padding-left: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__main {
+        padding: 10px 0;
+    }
+    &__left {
+        display: flex;
+    }
+    &__right {
+        display: flex;
+        & > div {
+            margin-left: 40px;
+        }
+    }
+    &__shop__management {
+
+    }
+    &__hunty__feed {
+        i {
+            .path1:before {color: #fff}
+            .path2:before {color: #ffd100}
+        }
+    }
+}
+
+.nav__navigation {
+    margin-right: 40px;
+    &__navbar {
+        display: none;
+        .sub_menu {
+            display: none;
+        }
+    }
+}
+
+.product__recently {
+    &__list {
+        display: none;
+    }
+}
+
 // Footer
 .footer {
     background: #F8FAFF;
