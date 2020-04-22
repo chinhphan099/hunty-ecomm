@@ -1,9 +1,10 @@
 // Typography
 @fonticon: "icomoon";
+@noto-sans: "Noto Sans", Arial, sans-serif; // Font ko chân
 @sans-serif: Helvetica, Arial, sans-serif; // Font ko chân
 @serif: Georgia, "Times New Roman", Times, serif; // Font có chân
 @monospace: Monaco, Menlo, Consolas, "Courier New", monospace;
-@font-family-base: @sans-serif;
+@font-family-base: @noto-sans;
 @font-size-mb: 1.4rem;
 @font-size: 1.6rem;
 @font-size-input: 1.4rem;
@@ -23,6 +24,7 @@
 @h6-size-mobile: 10px;
 
 .fonticon() {font-family: @fonticon;}
+.noto-sans() {font-family: @noto-sans;}
 .sans-serif() {font-family: @sans-serif;}
 .serif() {font-family: @serif;}
 .monospace() {font-family: @monospace;}
@@ -43,9 +45,6 @@
 @color09: #666;
 @color10: #333;
 @color11: #000;
-@color12: #ff0000;
-@color13: #2199e8;
-@color14: #3adb76;
 
 // Important
 @bgd-body: #fff;

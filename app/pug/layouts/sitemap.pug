@@ -5,11 +5,12 @@ mixin rowTitle(title)
   tr
     td.title(colspan="13"): strong!=title
 mixin rowContent(no, obj)
+  - var sty = "display: block; width: " + obj.progress + "%; height: 40px; background-color: #dedede; text-align: center; line-height: 40px; font-weight: bold;"
   tr.template&attributes(attributes)
     td.number!=no
     td.psd!=obj.name
     td.file: a(href=obj.link, target="_blank")!=obj.link.substr(1)
-    td.progress!=obj.progress+'%'
+    td.progress(style="padding: 0;"): span(style=sty)!=obj.progress+'%'
 mixin rowContentList(arr)
   each obj, index in arr
     +rowContent(index+1, obj)
@@ -29,6 +30,7 @@ html(class="no-js", lang="en")
     meta(name="author", content="")
     meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui, user-scalable=no")
     link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
+    link(href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet")
     style.
       a {display: block; color: red; text-decoration: none;}
       a:hover {color: #f00;}
