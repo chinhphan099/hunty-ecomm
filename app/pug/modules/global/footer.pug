@@ -13,7 +13,7 @@
 footer.footer
 	.footer__inner
 		.container
-			.footer__col.footer_customer__service
+			.footer__col
 				h4 Customer Service
 				ul.footer__nav
 					+items([
@@ -22,7 +22,7 @@ footer.footer
 						{title: 'Call Center', href: '#'}
 					])
 
-			.footer__col.footer__about
+			.footer__col
 				h4 About Hunty
 				ul.footer__nav
 					+items([
@@ -31,7 +31,7 @@ footer.footer
 						{title: 'Term & Conditions', href: '#'},
 						{title: 'Contact', href: '#'}
 					])
-			.footer__col.footer__payment
+			.footer__col
 				h4 Payment method
 				ul.footer__payment_list
 					li: +link('Title', '#'): +img('visa.svg', 'Visa')
@@ -41,7 +41,7 @@ footer.footer
 				ul.footer-payment-list
 					li: +link('Title', '#'): +img('visa.svg', 'Visa')
 
-			.footer__col.footer__follow
+			.footer__col
 				h4 Follow hunty
 				ul.footer__socials
 					li: +link('FaceBook', '#'): i.icon-fb-circle
