@@ -2,18 +2,25 @@ header.header
     .header__inner
         .container
             .header__wrap
-                .header__logo: +link('Hunty', '#'): +img('logo.png', 'Hunty')
+                .header__logo.hidden-sm-down: +link('Hunty', '#'): +img('logo.png', 'Hunty')
                 .header__location
+                    i.icon-location.hidden-md-up
                     +customSelect({id: 'select_id'}, [
                         {value: '', text: 'Hồ Chí Minh '},
                         {value: 'Hà Nội'},
                         {value: 'Thanh Hóa'}
                     ])
+                    button.header__search-btn.hidden-md-up: i.icon-search
                         
                 .header__searchForm
-                    +customInput({id: 'search_btn', type: 'button', text: 'Tìm kiếm'}, {id: "txt_search", placeholder: 'Search for Brand, Promotion... '}, {iconCls: 'icon-search'})
+                    .header__searchForm-inner
+                        button.header__btn-back.hidden-md-up: i.icon-arrow-left
+                        +customInput({id: 'search_btn', type: 'button', text: '<span>Tìm kiếm</span>', iconClass: 'icon-search'}, {id: "txt_search", placeholder: 'Search for Brand, Promotion... '}, {iconCls: 'icon-search'})
+                        button.header__gro-up.hidden-md-up: i.icon-gro-up
+                        .header__search-auto-complete.hidden
+                            | Content
 
-            .header__links
+            .header__links.hidden-sm-down
                 .header__tracking
                     +link('Tracking order', '#')
                         i.icon-tracking
@@ -27,7 +34,7 @@ header.header
                     +link('Login', '#')
                         i.icon-account
                         span Login
-    .header__main
+    .header__main.hidden-sm-down
         .container
             .header__left
                 nav.nav
