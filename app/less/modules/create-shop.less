@@ -165,20 +165,19 @@
 		margin-top: 25px;
 
 		.fieldset {
-			.flex-display();
-			.justify-content(space-between);
-			.align-items(center);
 			padding-top: 0;
 			padding-bottom: 13px;
 
-			& > label {
-				width: 100px;
+			.label {
 				.font-size(14px);
 				line-height: 19px;
 				color: #333;
 				@media (max-width: 767px) {
 					display: none;
 				}
+			}
+			.appear {
+				display: block;
 			}
 
 			&__column {
@@ -196,8 +195,8 @@
 					.flex-display();
 					.justify-content(center);
 					.align-items(center);
-					width: 65px;
-					height: 65px;
+					width: 85px;
+					height: 85px;
 					text-align: center;
 					border: 1px dashed @yellow;
 					box-sizing: border-box;
@@ -219,8 +218,8 @@
 
 					input {
 						.position(0 null null 0);
-						width: 65px;
-						height: 65px;
+						width: 84px;
+						height: 84px;
 						z-index: 1;
 						opacity: 0;
 					}
@@ -274,8 +273,22 @@
 			padding: 0 80px 0 30px;
 
 			.fieldset {
-				& > label {
+				.flex-display();
+				.justify-content(space-between);
+				.align-items(center);
+				.label {
 					width: 150px;
+				}
+
+				&__column {
+					&__img {
+						width: 65px;
+						height: 65px;
+						input {
+							width: 64px;
+							height: 64px;
+						}
+					}
 				}
 
 				&__col3 {
