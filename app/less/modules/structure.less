@@ -8,6 +8,7 @@
         align-items: center;
     }
     a {
+        display: block;
         font-size: 14px;
         text-transform: uppercase;
         color: #333;
@@ -17,10 +18,21 @@
         }
         i {
             
-            margin-right: 10px;
+            margin-right: 6px;
             color: #fff;
-            font-size: 24px;
             line-height: 0;
+            
+        }
+        .icon-tracking,
+        .icon-notification {
+            font-size: 28px;
+        }
+        .icon-cart,
+        .icon-account {
+            font-size: 24px;
+        }
+        .icon-hunty-feed {
+            font-size: 30px;
         }
     }
     &__inner {
@@ -28,7 +40,7 @@
         border-bottom: 1px solid #FFEB8E;
     }
     &__wrap {
-        width: 60%;
+        width: 64%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -119,12 +131,27 @@
     }
     &__right {
         display: flex;
+        align-items: center;
         & > div {
             margin-left: 40px;
         }
     }
     &__shop__management {
-
+        .icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background-color: #fff;
+            i {
+                color: #FE2070;
+                font-size: 18px;
+                margin-right: 0;
+            }
+        }
     }
     &__hunty__feed {
         i {
@@ -132,10 +159,21 @@
             .path2:before {color: #ffd100}
         }
     }
+    &__mini__cart {
+        a {
+            display: block;
+            padding: 8px 12px;
+            border-radius: 3px;
+            border: 2px solid #FFFFFF;
+        }
+    }
 }
 
 .nav__navigation {
     margin-right: 40px;
+    .icon-hamburger {
+        font-size: 2.6rem;
+    }
     &__navbar {
         display: none;
         .sub_menu {
@@ -145,6 +183,11 @@
 }
 
 .product__recently {
+    .icon-caret-down {
+        font-size: 2rem;
+    }
+    &___title {
+    }
     &__list {
         display: none;
     }
