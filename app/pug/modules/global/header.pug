@@ -9,7 +9,7 @@ header.header
                         {value: 'Hà Nội'},
                         {value: 'Thanh Hóa'}
                     ])
-                        
+
                 .header__searchForm
                     +customInput({id: 'search_btn', type: 'button', text: 'Tìm kiếm'}, {id: "txt_search", placeholder: 'Search for Brand, Promotion... '}, {iconCls: 'icon-search'})
 
@@ -34,7 +34,7 @@ header.header
                     .nav__category
                         +link('danh mục sản phẩm ', '#')
                             i.icon-hamburger
-                            span Danh mục sản phẩm 
+                            span Danh mục sản phẩm
                     .nav__navigation__navbar
                         +items-2([
                             {title: 'Introduce', href: '#', subClass: 'sub_menu', subList: [
@@ -52,7 +52,7 @@ header.header
                     .product__recently__title
                         +link('danh mục sản phẩm ', '#')
                             i.icon-caret-down
-                            span Sản phẩm đã xem 
+                            span Sản phẩm đã xem
                     ul.product__recently__list
                         li: img(src="https://picsum.photos/100/120", alt="")
                         li: img(src="https://picsum.photos/100/120", alt="")
@@ -67,7 +67,7 @@ header.header
                 .header__hunty__feed
                     +link('Hunty feed ', '#')
                         i.icon-hunty-feed #[span.path1]#[span.path2]
-                        span Hunty feed 
+                        span Hunty feed
                 .header__mini__cart
                     .mini__cart_title
                         +link('Cart ', '#')

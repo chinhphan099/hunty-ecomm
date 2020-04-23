@@ -5,24 +5,21 @@ mixin blocks(headingText)
       block
 
 mixin price(newPrice, oldPrice)
-  span.price&attributes(attributes)
-    ins.price__curent!=newPrice
-    del.price__old!=oldPrice
+  p.price&attributes(attributes)
+    ins.price__current!=newPrice
+    if oldPrice
+      del.price__old!=oldPrice
 
 mixin pagination()
-  .pagination-wrap&attributes(attributes)
-    ul.pagination
-      li.prev-page: +link('Previous', 'javascript:;').prev #[i.icon-arrow-left]
-      li.next-page.hidden-md-up: +link('Next', 'javascript:;') #[i.icon-arrow-right]
-      li.number
-        ul.clearfix
-          li: +link('1') 1#[span /5]
-          li.active: +link('2') 2#[span /5]
-          li.unavailable: span ...
-          li: +link('3') 3#[span /5]
-          li: +link('4') 4#[span /5]
-          li: +link('5') 5#[span /5]
-      li.next-page.hidden-sm-down: +link('Next', 'javascript:;') #[i.icon-arrow-right]
+  .pagination&attributes(attributes)
+    ul.pagination__inner
+      li: +link('Previous', 'javascript:;') #[i.icon-arrow-left]
+      li: +link('1', 'javascript:;') 1
+      li: +link('2', 'javascript:;') 2
+      li.active: +link('3', 'javascript:;') 3
+      li: +link('4', 'javascript:;') 4
+      li: +link('5', 'javascript:;') 5
+      li: +link('Next', 'javascript:;') #[i.icon-arrow-right]
 
 mixin divider(text, spanClass)
   .divider&attributes(attributes)
@@ -47,3 +44,19 @@ mixin icons(classes)
         //span.name!=classname
     if block
       block
+
+mixin product()
+  .product
+    .product__thumb
+      img(src="https://picsum.photos/seed/145/180" alt="Product name")
+    .product__progress
+      span.product__percent(style="width: 50%")
+      b.product__text Đã bán 90
+    +price('575.000 đ').text-center
+    p.product__name
+      | Lorem ipsum dolor sit amet, consectetur.
+    +price('575.000 đ', '(1.000.000)')
+    span.product__deal -30%
+    p.product__rate
+      i.icon-star
+      span.product__count 4.9
