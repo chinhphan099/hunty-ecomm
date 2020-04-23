@@ -1,1 +1,79 @@
-p ádfsdf
+.loginshop
+	.loginshop__inner
+		h2 Thank you for your trust and the choice to accompany Hunty! <br />Please fill in your information to create an account to log in to the Sales Center
+		.loginshop__form
+			.fieldset
+				label.label(for="guide_txt")
+					span Shop’s Name
+				.fieldset__column
+					input(type="text" name="guide_txt" id="guide_txt" required="required" placeholder="My Shop" aria-required="true")
+					span.error-message This field is required.
+			.fieldset
+				label.label(for="address")
+					span Address
+				.fieldset__column
+					input(type="text" name="address" id="address" required="required" placeholder="My Address" aria-required="true")
+					span.error-message This field is required.
+			.fieldset
+				label.label(for="city")
+					span City
+				.fieldset__column
+					.fieldset__row
+						.fieldset__col3
+							input(type="text" name="city" id="city" required="required" placeholder="City" aria-required="true")
+						.fieldset__col3
+							input(type="text" name="state" id="state" required="required" placeholder="State" aria-required="true")
+						.fieldset__col3
+							input(type="text" name="zipcode" id="zipcode" required="required" placeholder="Zipcode" aria-required="true")
+					span.error-message This field is required.
+			.fieldset
+				label.label(for="telephone")
+					span Telephone
+				.fieldset__column
+					input(type="text" name="telephone" id="telephone" required="required" placeholder="Telephone" aria-required="true")
+					span.error-message This field is required.
+			.fieldset
+				label.label(for="email")
+					span Email
+				.fieldset__column
+					input(type="text" name="email" id="email" required="required" placeholder="Email" aria-required="true")
+					span.error-message This field is required.
+			.fieldset
+				label.label
+					span Shop’s Logo
+				.fieldset__column
+					button(type="button")
+						i.icon-photo
+						span Browse
+			.fieldset
+				label.label
+					span Featured Image
+				.fieldset__column
+					button(type="button")
+						i.icon-photo
+						span Browse
+			.fieldset
+				label.label
+					span Opening Time
+				.fieldset__column
+					.fieldset__row
+						.fieldset__col1
+							select(name="time" id="time")
+								option(value="") 7 days/ week
+								option(value="1") 6 days/ week
+								option(value="2") 5 days/ week
+								option(value="3") 4 days/ week
+								option(value="4") 3 days/ week
+								option(value="5") 2 days/ week
+								option(value="6") 1 days/ week
+							i.icon-caret-down
+						.fieldset__col2
+							input(type="text" name="fromTime" id="fromTime" required="required" placeholder="From Time" aria-required="true")
+						.fieldset__col2
+							input(type="text" name="toTime" id="toTime" required="required" placeholder="To" aria-required="true")
+					span.error-message This field is required.
+		.loginshop__button
+			a.btn Register Seller
+		p By submitting your application, you agree to our #[a(href="term.html") Term & Conditions] <br />and confirm that the information you have provided is complete and accurate.
+
+
