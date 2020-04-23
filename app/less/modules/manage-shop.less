@@ -1,0 +1,92 @@
+//--------------------------------headershop
+.headermanage {
+	background-color: @yellow;
+
+	&__inner {
+		.flex-display();
+		.justify-content(space-between);
+		.align-items(center);
+		padding: 20px 0;
+		.font-size(14px);
+		line-height: 19px;
+		color: #333;
+
+		p {
+			margin-bottom: 0;
+		}
+
+		a {
+			color: inherit;
+			&:hover {
+				color: inherit;
+			}
+		}
+
+		@media (min-width: 768px) {
+		}
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	&__left {
+		p {
+			.font-size(24px);
+			font-weight: bold;
+			line-height: 29px;
+		}
+		.icon-shop {
+			padding-right: 10px;
+			.font-size(30px);
+			color: #fff;
+			vertical-align: middle;
+		}
+	}
+
+	&__right {
+		position: relative;
+		.flex-display();
+		.justify-content(space-between);
+		.align-items(center);
+
+		.icon-shop {
+			.position(10px null null 10px);
+			.font-size(19px);
+			color: @yellow;
+			vertical-align: middle;
+		}
+
+		p {
+			.flex(1 0);
+			img {
+				width: 20px;
+				margin-right: 5px;
+				border-radius: 50%;
+			}
+		}
+
+		.custom-select {
+			width: 240px;
+			margin-right: 25px;
+		}
+
+		select {
+			padding-left: 35px;
+		}
+
+		@media (max-width: 767px) {
+			p {
+				span {
+					display: none;
+				}
+				&:last-child {
+					display: none;
+				}
+			}
+		}
+
+	}
+}
+
+//--------------------------------
+
