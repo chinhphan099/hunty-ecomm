@@ -30,29 +30,61 @@ header.header
     .header__main
         .container
             .header__left
-                nav.nav__navigation
-                    .nav__category
-                        +link('danh mục sản phẩm ', '#')
-                            i.icon-hamburger
-                            span Danh mục sản phẩm 
-                    .nav__navigation__navbar
+                nav.nav
+                    +link('danh mục sản phẩm ', '#').nav__category__toggle
+                        i.icon-hamburger
+                        span Danh mục sản phẩm 
+                    ul.nav__navbar
                         +items-2([
                             {title: 'Introduce', href: '#', subClass: 'sub_menu', subList: [
                                 {title: 'Recruitment', href: '#'},
+                                {title: 'Recruitment', href: '#'},
+                                {title: 'Recruitment', href: '#'},
+                                {title: 'Recruitment', href: '#'},
+                                {title: 'Recruitment', href: '#'},
+                                {title: 'Recruitment', href: '#'},
+                                {title: 'Recruitment', href: '#'},
+                                {title: 'Recruitment', href: '#'},
+                                {title: 'Recruitment', href: '#'},
+                                {title: 'Recruitment', href: '#'},
+                                {title: 'Recruitment', href: '#'},
+                                {title: 'Recruitment', href: '#'},
+                                {title: 'Recruitment', href: '#'},
                                 {title: 'Term & Conditions', href: '#', subClass: 'sub_menu', subList: [
+                                    {title: 'Recruitment', href: '#'},
+                                    {title: 'Term & Conditions', href: '#'},
+                                    {title: 'Recruitment', href: '#'},
+                                    {title: 'Term & Conditions', href: '#'},
+                                    {title: 'Recruitment', href: '#'},
+                                    {title: 'Term & Conditions', href: '#'},
+                                    {title: 'Recruitment', href: '#'},
+                                    {title: 'Term & Conditions', href: '#'},
+                                    {title: 'Recruitment', href: '#'},
+                                    {title: 'Term & Conditions', href: '#'},
                                     {title: 'Recruitment', href: '#'},
                                     {title: 'Term & Conditions', href: '#'}
                                 ]}
                             ]},
                             {title: 'Recruitment', href: '#'},
                             {title: 'Term & Conditions', href: '#'},
+                            {title: 'Contact', href: '#'},
+                            {title: 'Recruitment', href: '#'},
+                            {title: 'Term & Conditions', href: '#'},
+                            {title: 'Contact', href: '#'},
+                            {title: 'Recruitment', href: '#'},
+                            {title: 'Term & Conditions', href: '#'},
+                            {title: 'Contact', href: '#'},
+                            {title: 'Recruitment', href: '#'},
+                            {title: 'Term & Conditions', href: '#'},
+                            {title: 'Contact', href: '#'},
+                            {title: 'Recruitment', href: '#'},
+                            {title: 'Term & Conditions', href: '#'},
                             {title: 'Contact', href: '#'}
                         ], 0)
                 .product__recently
-                    .product__recently__title
-                        +link('danh mục sản phẩm ', '#')
-                            i.icon-caret-down
-                            span Sản phẩm đã xem 
+                    +link('danh mục sản phẩm ', '#').product__recently__title
+                        i.icon-caret-down
+                        span Sản phẩm đã xem 
                     ul.product__recently__list
                         li: img(src="https://picsum.photos/100/120", alt="")
                         li: img(src="https://picsum.photos/100/120", alt="")
@@ -62,7 +94,7 @@ header.header
             .header__right
                 .header__shop__management
                     +link('Shop Management ', '#')
-                        i.icon-view-shop
+                        span.icon: i.icon-view-shop
                         span Shop Management
                 .header__hunty__feed
                     +link('Hunty feed ', '#')
