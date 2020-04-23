@@ -10,7 +10,10 @@ mixin rowContent(no, obj)
     td.number!=no
     td.psd!=obj.name
     td.file: a(href=obj.link, target="_blank")!=obj.link.substr(1)
-    td.progress(style="padding: 0;"): span(style=sty)!=obj.progress+'%'
+    td.progress(style="padding: 0;"): span(style=sty)
+      !=obj.progress+'%'
+      if obj.progress == 90
+        |  - Reviewing
 mixin rowContentList(arr)
   each obj, index in arr
     +rowContent(index+1, obj)
