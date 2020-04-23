@@ -28,6 +28,10 @@ mixin divider(text, spanClass)
   .divider&attributes(attributes)
     span(class!=spanClass)!=text
 
+mixin goback()
+  a.goback.hidden-md-up(href="javascript:;" onclick="window.history.back()" title="Trang trước")
+    i.icon-arrow-prev
+
 //- Used in Style Guide page.
 mixin color(name, code)
   li(data-handler="")
