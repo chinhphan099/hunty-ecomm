@@ -1,7 +1,6 @@
 //--------------------------------headershop
 .headermanage {
 	background-color: @yellow;
-
 	&__inner {
 		.flex-display();
 		.justify-content(space-between);
@@ -10,18 +9,15 @@
 		.font-size(14px);
 		line-height: 19px;
 		color: #333;
-
 		p {
 			margin-bottom: 0;
 		}
-
 		a {
 			color: inherit;
 			&:hover {
 				color: inherit;
 			}
 		}
-
 		@media (min-width: 768px) {
 		}
 		@media (max-width: 767px) {
@@ -48,14 +44,12 @@
 		.flex-display();
 		.justify-content(space-between);
 		.align-items(center);
-
 		.icon-shop {
 			.position(10px null null 10px);
 			.font-size(19px);
 			color: @yellow;
 			vertical-align: middle;
 		}
-
 		p {
 			.flex(1 0);
 			img {
@@ -64,16 +58,13 @@
 				border-radius: 50%;
 			}
 		}
-
 		.custom-select {
 			width: 240px;
 			margin-right: 25px;
 		}
-
 		select {
 			padding-left: 35px;
 		}
-
 		@media (max-width: 767px) {
 			p {
 				span {
@@ -88,5 +79,68 @@
 	}
 }
 
+//--------------------------------management
+.management {
+	.flex-display();
+	.flex-wrap(wrap);
+	a {
+		color: #000;
+	}
+	&__left {
+		width: 340px;
+		.menu {
+			padding: 20px;
+			.font-size(18px);
+			line-height: 25px;
+			p {
+				margin-bottom: 0;
+				&:first-child {
+					background-color: #F4F7FF;
+				}
+			}
+			a {
+				display: block;
+				padding: 10px;
+				color: #000;
+			}
+			i {
+				margin-right: 10px;
+			}
+		}
+	}
+	&__right {
+		.flex(1 0);
+		padding: 20px 25px;
+		.font-size(18px);
+		line-height: 20px;
+		background-color: #F4F7FF;
+		.block1 {
+			.flex-display();
+			.justify-content(space-between);
+			.align-items(center);
+			padding: 30px 25px;
+			border: 1px solid #F4F7FC;
+			box-shadow: 2px 2px 8px rgba(42, 47, 60, 0.06);
+			background-color: #fff;
+			button {
+				a {
+					padding: 8px 28px;
+					font-weight: bold;
+					.font-size(16px);
+					line-height: 20px;
+					border: 1px solid #FFD100;
+					border-radius: 3px;
+				}
+			}
+		}
+		.block2 {
+			padding: 20px;
+			border: 1px solid #F4F7FC;
+			box-shadow: 2px 2px 8px rgba(42, 47, 60, 0.06);
+			background-color: #fff;
+		}
+	}
+}
 //--------------------------------
+
 

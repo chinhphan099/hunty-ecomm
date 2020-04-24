@@ -1,8 +1,16 @@
 extends layouts/manage-shop
 
 block vars
-  -title = 'Shop Management'
+	-title = 'Shop Management'
 
 block main
-  main
-    | include module Code here
+	main
+		.management
+			.management__left
+				include modules/manage-shop/list-menu
+			.management__right
+				include modules/manage-shop/block-1
+				include modules/manage-shop/block-2
+				include modules/manage-shop/block-3
+				include modules/manage-shop/block-4
+				include modules/manage-shop/block-5
