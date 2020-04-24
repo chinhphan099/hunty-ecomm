@@ -1,24 +1,82 @@
 .container
   .row
-    .col-xs-6.col-sm-3
-      h3 Sản phẩm: +product()
+    .col-xs-6.col-sm-4
+      h3.temp-h3.
+        Breadcrumbs: +breadcrumbs([
+          {
+            title: 'Home',
+            href: 'index.html',
+            text: 'Home'
+          },
+          {
+            title: 'Category',
+            href: 'index.html',
+            text: 'Category'
+          },
+          {
+            text: 'Product Name'
+          },
+        ])
   br
   .row
-    .col-xs-6.col-sm-3
-      +product()
-  br
+    .col-xs-6.col-sm-4
+      +breadcrumbs([
+        {
+          title: 'Home',
+          href: 'index.html',
+          text: 'Home'
+        },
+        {
+          title: 'Category',
+          href: 'index.html',
+          text: 'Category'
+        },
+        {
+          text: 'Product Name'
+        },
+      ])
+  hr
+  .row
+    .col-xs-6.col-sm-4
+      h3.temp-h3 Tiêu đề: +heading('Viewed Product')
+  .row
+    .col-xs-6.col-sm-4
+      +heading('Viewed Product')
+      +heading('Recommended Promotion')
+  hr
+  .row
+    .col-sm-6
+      +heading('Mô tả sản phẩm ở trang product detail')
+      .editor
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem quia, corrupti accusamus odio, deserunt dicta natus necessitatibus dolores eligendi quis tempore? Tempora exercitationem consectetur tenetur incidunt reiciendis architecto beatae nesciunt.
+        p: img(src="https://picsum.photos/700/350")
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem quia, corrupti accusamus odio, deserunt dicta natus necessitatibus dolores eligendi quis tempore? Tempora exercitationem consectetur tenetur incidunt reiciendis architecto beatae nesciunt.
+  hr
+  .row
+    .col-xs-6.col-sm-2
+      h3.temp-h3 Sản phẩm: +product('progress')
+    .col-xs-6.col-sm-2
+      h3.temp-h3 Sản phẩm: +product('one-price')
+    .col-xs-6.col-sm-2
+      h3.temp-h3 Sản phẩm: +product('two-price')
+  .row
+    .col-xs-6.col-sm-2
+      +product('progress')
+    .col-xs-6.col-sm-2
+      +product('one-price')
+    .col-xs-6.col-sm-2
+      +product('two-price')
+  hr
   .row
     .col-xs-6.col-sm-3
-      h3 Phân trang: +pagination()
-  br
+      h3.temp-h3 Phân trang: +pagination()
   .row
     .col-xs-12
       +pagination()
-  br
+  hr
   .row
     .col-xs-6.col-sm-3
-      h3 Promotion item: +promotion()
-  br
+      h3.temp-h3 Promotion item: +promotion()
   .row
     .col-xs-6.col-sm-3
       +promotion()

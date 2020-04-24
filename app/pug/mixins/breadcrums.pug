@@ -7,4 +7,4 @@ mixin breadcrumbs(arr)
           +link(item.title, item.href, item.text)
         li #[i.icon-angle-right]
       else
-        li.active!= item.text ? item.text : item.title
+        li!= item.text ? item.text : item.title

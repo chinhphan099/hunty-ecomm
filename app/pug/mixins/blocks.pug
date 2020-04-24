@@ -45,21 +45,29 @@ mixin icons(classes)
     if block
       block
 
-mixin product()
+mixin product(type)
   .product
     .product__thumb
-      img(src="https://picsum.photos/145/180?grayscale" alt="Product name")
-    .product__progress
-      span.product__percent(style="width: 50%")
-      b.product__text Đã bán 90
-    +price('575.000 đ').text-center
-    p.product__name
-      | Lorem ipsum dolor sit amet, consectetur.
-    +price('575.000 đ', '(1.000.000)')
-    span.product__deal -30%
-    p.product__rate
-      i.icon-star
-      span.product__count 4.9
+      img(src="https://picsum.photos/175/170?grayscale" alt="Product name")
+    if type == "progress"
+      .product__progress
+        span.product__percent(style="width: 50%")
+        b.product__text Đã bán 90
+      span.product__deal -30%
+      +price('575.000 đ').text-center
+    else if type == "one-price"
+      p.product__name
+        | Lorem ipsum dolor sit amet
+      span.product__deal -30%
+      +price('575.000 đ')
+    else
+      p.product__name
+        | Lorem ipsum dolor sit amet
+      +price('575.000 đ', '(1.000.000)')
+      span.product__deal -30%
+      p.product__rate
+        i.icon-star
+        span.product__count 4.9
 
 mixin promotion()
   .promotion
