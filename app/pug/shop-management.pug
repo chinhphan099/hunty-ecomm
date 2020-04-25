@@ -5,12 +5,15 @@ block vars
 
 block main
 	main
+		+goback()
 		.management
-			.management__left
-				include modules/manage-shop/list-menu
-			.management__right
-				include modules/manage-shop/block-1
-				include modules/manage-shop/block-2
-				include modules/manage-shop/block-3
-				include modules/manage-shop/block-4
-				include modules/manage-shop/block-5
+			.management__inner
+				.management__left
+					include modules/manage-shop/list-menu
+					include modules/manage-shop/navigation
+				.management__right
+					include modules/manage-shop/block-1
+					include modules/manage-shop/block-2
+					include modules/manage-shop/block-3
+					include modules/manage-shop/block-4
+					include modules/manage-shop/block-5
