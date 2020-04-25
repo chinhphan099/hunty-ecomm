@@ -450,7 +450,7 @@
     variableWidth: {
       speed: 600,
       variableWidth: true,
-      infinite: true,
+      infinite: false,
       zIndex: 5
     },
     vertical: {

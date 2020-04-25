@@ -45,10 +45,12 @@ mixin icons(classes)
     if block
       block
 
-mixin product(type)
+mixin product(type, slideitem)
+  if slideitem
+    -imgcls = 'img-view'
   .product
     .product__thumb
-      img(src="https://picsum.photos/175/170?grayscale" alt="Product name")
+      +img-upload("product-1.png", "Product name")(class!=imgcls)
     if type == "progress"
       .product__progress
         span.product__percent(style="width: 50%")

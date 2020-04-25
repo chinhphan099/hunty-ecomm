@@ -8,8 +8,28 @@
 }
 
 .heading {
+  margin-bottom: 20px;
+  &--link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .countdown {
+    display: inline-flex;
+    margin: 0 auto 0 15px;
+    &__item {
+      padding: 0 2px;
+    }
+    &--hour, &--minute, &--second {
+      background-color: @yellow;
+      font-weight: bold;
+      border-radius: 2px;
+    }
+  }
+  .see-all {
+    color: #8B929F;
+  }
   &__text {
-    margin-bottom: 20px;
     font-size: 2rem;
     font-weight: bold;
     color: #2C2E32;
