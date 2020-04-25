@@ -28,6 +28,7 @@
 
 // Category Icon
 .category_icons {
+	padding-bottom: 10px;
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
@@ -98,13 +99,63 @@
 	}
 }
 
-// Index
+// Product List 
 .product_block {
-	padding: 18px 20px;
-	box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06); 
-	border-radius: 5px;
 	.product {
 		width: 140px;
 		margin-right: 15px;
+	}
+	@media(min-width: 768px) {
+		margin-bottom: 30px;	
+		padding: 18px 20px;
+		background: #fff;
+		box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06); 
+		border-radius: 5px;
+	}
+	@media(max-width: 767px) {
+		.slider {
+			padding: 20px 0 20px 20px;
+			margin-left: -15px;
+			margin-right: -15px;
+			background: #F4F7FC;
+			width: auto;
+		}	
+	}
+}
+
+// Banner promo mobile
+.banner__promoMb {
+	padding: 15px 0 10px;
+	img {width: 100%;}
+}
+
+// Recommended Promotion
+
+.promotion_block {
+	padding: 20px 0;
+	border-bottom: 5px solid #F5F6F8;
+	.promotion {
+		width: 220px;
+		margin-right: 15px;
+		text-align: left;
+	}
+	@media (min-width: 992px) {
+		border-bottom: 0;
+		margin-bottom: 0;
+		&__inner {
+			padding: 20px 0;
+			background-color: #F8FAFF;
+		}
+		.slick {
+			display: flex;
+			justify-content: space-between;
+		}
+		.item {
+			width: calc(~"100% / 4 - 15px");
+			img {width: 100%;}
+		}
+		.promotion {
+			width: 100%;
+		}
 	}
 }

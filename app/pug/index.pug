@@ -22,7 +22,7 @@ block main
     section.category_icons
          .container
             ul.category_icons__list
-                li: +link('T-shirt', '#').active
+                li: +link('T-shirt', '#')
                     span.icon: +img('ic_t_shirt.png')
                     span.text T-shirt 
                 li: +link('Accessories', '#')
@@ -65,3 +65,29 @@ block main
                             .item
                                 +product('progress', 'slideitem')
 
+    section.banner__promoMb.hidden-sm-up
+        .container
+            .banner__promo__slider
+            +link('Image', '#'): +img-upload('promo_1.png')
+
+    section.promotion_block
+        .container
+                +heading('Recommended Promotion ', 'See All')
+        .promotion_block__inner
+            .container
+                .slider(data-cslider='{"type": "variableWidth", "initUnder": "767"}')
+                    .slick
+                        -for (var i = 0; i < 4; i++)
+                            .item
+                                +promotion('slideitem')
+
+    section.promotion_block
+        .container
+            +heading('Promotion Near You ', 'See All')
+        .promotion_block__inner
+            .container
+                .slider(data-cslider='{"type": "variableWidth", "initUnder": 767}')
+                    .slick
+                        -for (var i = 0; i < 4; i++)
+                            .item
+                                +promotion('slideitem')
