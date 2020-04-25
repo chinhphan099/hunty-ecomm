@@ -14,10 +14,7 @@ block main
         .container
             .banner__inner
                 .banner__slider
-                    picture
-                        source(media="(max-width: 767px)" srcset="images/upload/banner_mb.png")
-                        img(src="images/upload/banner.png" alt="Banner" style="width:auto;")
-
+                    +img-upload('banner.png')
                 .banner__promo.hidden-md-down
                     +link('Image', '#')
                         +img-upload('promo_1.png')
