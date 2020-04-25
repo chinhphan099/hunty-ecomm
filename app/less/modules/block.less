@@ -25,3 +25,75 @@
 		}
 	}
 }
+
+// Category Icon
+.category_icons {
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		text-align: center;
+		li {
+			margin: 10px 0;
+			width: calc(~"100% / 5 - 5px");
+		}
+		a {
+			display: block;
+			color: #2C2E32;
+			font-size: 11px;
+			line-height: 1.4;
+			&:hover,
+			&.active {
+				.icon {
+					background: #F4F7FC;
+				}
+			}
+		}
+		.icon {
+			margin: 0 auto 5px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.size(50px);
+			background: #fff;
+			box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
+			border-radius: 12px;
+			border: 1px solid #F4F7FC;
+			text-align: center;
+			img {
+				max-width: 80%;
+				max-height: 50%;
+			}
+		}
+	}
+	@media(min-width: 768px) {
+		&__list {
+			li {
+				width: calc(~"100% / 10 - 5px");
+			}
+		}
+	}
+	@media(min-width: 992px) {
+		padding: 20px 0;
+		&__list {
+			.icon {
+				margin-bottom: 10px;
+				.size(70px);
+			}
+		}
+	}
+	@media(min-width: 1200px) {
+		&__list {
+			a {
+				font-size: 16px;
+			}
+			.icon {
+				.size(94px);
+				img {
+					max-width: 100%;
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}

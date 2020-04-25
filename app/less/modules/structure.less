@@ -530,10 +530,10 @@
 }
 
 .back-top-top {
-    .position(fixed, null 20px 40px null);
+    .position(fixed, null 20px 60px null);
     width: 46px;
     height: 46px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     border: 1px solid #F4F7FC;
@@ -546,6 +546,9 @@
     &:hover {
         background-color: #FFD100;
         color: #fff;
+    }
+    @media(min-width: 768px) {
+        bottom: 40px;
     }
 }
 
