@@ -60,17 +60,17 @@ footer.footer.hidden-sm-down
         .container
             p Copyright © 2020 Hunty.com
 
-+link('Back To Top', '#').back-top-top: i.icon-arrow-up
++link('Back To Top', 'javascript:;')(data-scrollto='{"handle": "body"}').back-top-top: i.icon-arrow-up
 
 nav.tabbar.hidden-sm-up
     .tabbar__inner
         +link('Home', '#').tabbar__item.active
             i.icon-home
             span.text Home
-    
+
         +link('Hunty feed ', '#').tabbar__item.hunty-feed
             i.icon-hunty-feed #[span.path1]#[span.path2]
-            span.text Hunty feed 
+            span.text Hunty feed
         +link('Notification', '#').tabbar__item.notification
             span.icon
                 i.icon-notification
