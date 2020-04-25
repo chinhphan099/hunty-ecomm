@@ -1,6 +1,5 @@
 // Feader
 .header  {
-    background: #FFD100;
     &__searchForm {
         input {
             font-style: italic;
@@ -12,6 +11,7 @@
         }
     }
     @media(min-width: 768px) {
+        background: #FFD100;
         .container {
             &:before, &:after {content: none;}
             display: flex;
@@ -114,13 +114,13 @@
             align-items: center;
         }
         &__notification {
-            a {
+            .icon {
                 position: relative;
             }
             .number {
                 position: absolute;
-                left: 10px;
-                top: -4px;
+                left: 8px;
+                top: -12px;
                 border-radius: 50%;
                 background-color: #FE2070;
                 color: #fff;
@@ -209,9 +209,17 @@
         }
     }
     @media(max-width: 767px) {
-        background: #FFD100 url("/images/bg_header_mb.png") no-repeat;
-        background-size: cover;
-        height: 165px;
+        &:before {
+            .home & {
+                .position(0 0 null 0);
+                content: "";
+                background: #FFD100 url("/images/bg_header_mb.png") no-repeat;
+                background-size: cover;
+                height: 165px;
+                z-index: -1;
+            }
+        }
+
         &__inner {
             padding: 20px 0;
         }
@@ -290,6 +298,9 @@
     }
 }
 
+
+
+// Open Search
 @media(max-width: 767px) {
     .open-search {
         .header__searchForm {
@@ -591,5 +602,50 @@
     }
     @media(max-width: 767px) {
         text-align: center;
+    }
+}
+
+// .Tabbar Mobile
+.tabbar {
+    .position(fixed, null 0 0 0);
+    box-shadow: 0px -2px 10px rgba(38, 47, 75, 0.1);
+    background-color: #fff;
+    z-index: 1000;
+    &__inner {
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+    }
+    &__item {
+        position: relative;
+        color: rgba(139, 146, 159, .8);
+        font-size: 1.1rem;
+        i {
+            display: block;
+            margin: 0 auto 4px;
+            font-size: 24px;
+        }
+        &.active,
+        &:hover {
+            color: #FFD100;
+        }
+        .icon {
+            position: relative;
+        }
+        .number {
+            position: absolute;
+            left: 0;
+            top: -4px;
+            border-radius: 50%;
+            background-color: #FE2070;
+            color: #fff;
+            width: 15px;
+            height: 15px;
+            text-align: center;
+            line-height: 15px;
+            font-size: 11px;
+        }
     }
 }
