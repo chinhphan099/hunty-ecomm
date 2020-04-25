@@ -1,63 +1,82 @@
-.newsletter
-	.container
-		.newsletter__inner
-			.newsletter__icon
-				img(src="images/newsletter.png" title="Newsletter")
-			.newsletter__description
-				h3 Subscribe our newsletter and get notifications
-				.custom-input
-					button(type="button" name="Subscribe" id="Subscribe") Subscribe
-					span: input(type="text" name="Subscribe" id="Subscribe" placeholder = "Your email")
+.newsletter.hidden-sm-down
+    .container
+        .newsletter__inner
+            .newsletter__icon
+                img(src="images/newsletter.png" title="Newsletter")
+            .newsletter__description
+                h3 Subscribe our newsletter and get notifications
+                .custom-input
+                    button(type="button" name="Subscribe" id="Subscribe") Subscribe
+                    span: input(type="text" name="Subscribe" id="Subscribe" placeholder = "Your email")
 
 
-footer.footer
-	.footer__inner
-		.container
-			.footer__col
-				h4 Customer Service
-				ul.footer__nav
-					+items([
-						{title: 'FAQ', href: '#'},
-						{title: 'Policy', href: '#'},
-						{title: 'Call Center', href: '#'}
-					])
+footer.footer.hidden-sm-down
+    .footer__inner
+        .container
+            .footer__col
+                h4 Customer Service
+                ul.footer__nav
+                    +items([
+                        {title: 'FAQ', href: '#'},
+                        {title: 'Policy', href: '#'},
+                        {title: 'Call Center', href: '#'}
+                    ])
 
-			.footer__col
-				h4 About Hunty
-				ul.footer__nav
-					+items([
-						{title: 'Introduce', href: '#'},
-						{title: 'Recruitment', href: '#'},
-						{title: 'Term & Conditions', href: '#'},
-						{title: 'Contact', href: '#'}
-					])
-			.footer__col
-				h4 Payment method
-				ul.footer__payment_list
-					li: +link('Title', '#'): +img('visa.svg', 'Visa')
-					li: +link('Title', '#'): +img('mastercard.svg', 'Visa')
+            .footer__col
+                h4 About Hunty
+                ul.footer__nav
+                    +items([
+                        {title: 'Introduce', href: '#'},
+                        {title: 'Recruitment', href: '#'},
+                        {title: 'Term & Conditions', href: '#'},
+                        {title: 'Contact', href: '#'}
+                    ])
+            .footer__col
+                h4 Payment method
+                ul.footer__payment_list
+                    li: +link('Title', '#'): +img('visa.svg', 'Visa')
+                    li: +link('Title', '#'): +img('mastercard.svg', 'Visa')
 
-				h4 Delivery
-				ul.footer-payment-list
-					li: +link('Title', '#'): +img('visa.svg', 'Visa')
+                h4 Delivery
+                ul.footer-payment-list
+                    li: +link('Title', '#'): +img('visa.svg', 'Visa')
 
-			.footer__col
-				h4 Follow hunty
-				ul.footer__socials
-					li: +link('FaceBook', '#'): i.icon-fb-circle
-													span.path1
-													span.path2
-					li: +link('Youtube', '#'): i.icon-youtube-circle
-													span.path1
-													span.path2
-				h4 HUnty application
-				ul.footer__apps
-					li: +link('App Store', '#'): +img('app-store.svg', 'App Store')
-					li: +link('Google Play', '#'): +img('google-play.svg', 'Google Play')
+            .footer__col
+                h4 Follow hunty
+                ul.footer__socials
+                    li: +link('FaceBook', '#'): i.icon-fb-circle
+                                                    span.path1
+                                                    span.path2
+                    li: +link('Youtube', '#'): i.icon-youtube-circle
+                                                    span.path1
+                                                    span.path2
+                h4 HUnty application
+                ul.footer__apps
+                    li: +link('App Store', '#'): +img('app-store.svg', 'App Store')
+                    li: +link('Google Play', '#'): +img('google-play.svg', 'Google Play')
 
 
-	.footer__copyright
-		.container
-			p Copyright © 2020 Hunty.com
+    .footer__copyright
+        .container
+            p Copyright © 2020 Hunty.com
 
 +link('Back To Top', 'javascript:;')(data-scrollto='{"handle": "body"}').back-top-top: i.icon-arrow-up
+
+nav.tabbar.hidden-sm-up
+    .tabbar__inner
+        +link('Home', '#').tabbar__item.active
+            i.icon-home
+            span.text Home
+
+        +link('Hunty feed ', '#').tabbar__item.hunty-feed
+            i.icon-hunty-feed #[span.path1]#[span.path2]
+            span.text Hunty feed
+        +link('Notification', '#').tabbar__item.notification
+            span.icon
+                i.icon-notification
+                span.number 2
+                span.text Notification
+        +link('Profile', '#').tabbar__item.profile
+            i.icon-account
+            span.text Profile
+

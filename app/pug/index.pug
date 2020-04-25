@@ -10,4 +10,17 @@ block vars
 
 block main
   main
-    | Content
+    section.banner
+        .container
+            .banner__inner
+                .banner__slider
+                    +img-upload('banner.png')
+                .banner__promo.hidden-md-down
+                    +link('Image', '#')
+                        +img-upload('promo_1.png')
+                    +link('Image', '#')
+                        +img-upload('promo_2.png')
+                    +link('Image', '#')
+                        +img-upload('promo_3.png')
+
+
