@@ -145,7 +145,6 @@
           break;
         case TypeSliders.VARIABLEWIDTH:
           option = $.extend(this.options.variableWidth, {
-            slidesToShow: that.element.find('.item').length - 1
           });
           break;
         case TypeSliders.VERTICAL:
@@ -450,7 +449,7 @@
     variableWidth: {
       speed: 600,
       variableWidth: true,
-      infinite: false,
+      infinite: true,
       zIndex: 5
     },
     vertical: {
