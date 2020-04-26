@@ -1,11 +1,19 @@
 //--------------------------------headershop
+.headermanage {
+	&.planning {
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+}
 //--------------------------------management
 .management {
-	&__pricing {
+	.pricing {
 		.flex(1 0);
+		padding-top: 60px;
 		.font-size(14px);
 		line-height: 20px;
-		background-color: #F4F7FF;
+		background-color: @yellow;
 		@media (min-width: 768px) {
 			padding: 20px 40px;
 			.font-size(16px);

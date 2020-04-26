@@ -1,0 +1,21 @@
+header.headermanage.planning
+	.container
+		.headermanage__inner
+			.headermanage__left
+				h3
+					a(href="#")
+						i.icon-shop.hidden-sm-down
+						| Shop Management
+				p.hidden-md-up
+					a(href="#") Go Premium
+			.headermanage__right
+				+customSelect({id: 'routine'}, [
+					{value: '', text: 'Routine'},
+					{value: 'Routine 1', selected: 'selected'},
+					{value: 'Routine 2'}
+					])
+				i.icon-shop
+				p.hidden-md
+					a(href="#")
+						img(src="https://i.picsum.photos/id/111/25/25.jpg" title="")
+						span CHRIS HEMSWORTH

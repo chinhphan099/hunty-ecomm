@@ -127,40 +127,21 @@
 		}
 	}
 	&__left {
-		.menu {
-			padding: 20px;
-			.font-size(16px);
-			line-height: 25px;
-			p {
-				margin-bottom: 0;
-				&:first-child {
-					background-color: #F4F7FF;
-				}
-			}
-			a {
-				display: block;
-				padding: 10px;
-				color: #000;
-			}
-			i {
-				margin-right: 10px;
-			}
-		}
 		@media (min-width: 768px) {
 			width: 240px;
 		}
 		@media (min-width: 992px) {
-			&__left {
-				width: 340px;
-				.menu {
-					.font-size(18px);
-				}
-			}
+			width: 340px;
 		}
 		.navigation {
-			i {
-				.font-size(30px);
-				color: #8B929F;
+			a:hover {
+				color: @yellow;
+			}
+			button {
+				i {
+					.font-size(30px);
+					color: #8B929F;
+				}
 			}
 			&__mobile {
 				display: block;
@@ -168,31 +149,60 @@
 				border: none;
 				background-color: transparent;
 				transform: translateY(-50%);
+				z-index: 9;
 			}
 			&__click {
 				display: none;
 				.position(15px 15px null null);
 				border: none;
-				i {
-					background-color: #fff;
-				}
+				z-index: 999;
 			}
 			button:focus +.navigation__click +.navigation__nav, button:focus +.navigation__click {
 				display: block;
 			}
 			&__nav {
 				display: none;
-				.position(50px 0 0 0);
-				padding: 20px;
+				.position();
+				padding: 70px 20px 20px;
+				.font-size(18px);
+				line-height: 25px;
 				text-align: right;
 				background-color: #fff;
 				transition: height 0.3s ease;
-				z-index: 999;
+				z-index: 99;
 				li {
 					margin-bottom: 25px;
-					.font-size(18px);
 					font-weight: 600;
-					line-height: 21px;
+				}
+				@media (max-width: 767px) {
+					i {
+						display: none;
+					}
+				}
+				@media (min-width: 768px) {
+					display: block;
+					position: inherit;
+					padding: 20px;
+					.font-size(16px);
+					text-align: left;
+					li {
+						margin-bottom: 0;
+						font-weight: normal;
+						&:first-child {
+							background-color: #F4F7FF;
+						}
+					}
+					a {
+						display: block;
+						padding: 10px;
+						color: #000;
+					}
+					i {
+						margin-right: 10px;
+					}
+				}
+				@media (min-width: 992px) {
+					.font-size(18px);
 				}
 			}
 		}
