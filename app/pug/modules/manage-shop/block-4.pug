@@ -1,9 +1,7 @@
 .block4
-	.block4__heading
-		+heading('Promotion Running ')
-	.block4__thumb
-		.slider(data-cslider='{"type": "variableWidth": 767}')
-			.slick
-				-for (var i = 0; i < 5; i++)
-					.item
-						+promotion('slideitem')
+	+heading('Promotion Running')
+	.slider(data-cslider='{"type": "variableWidth"}')
+		.slick
+			-for (var i = 0; i < 10; i++)
+				.item
+					a(href="#"): img(src="https://picsum.photos/384/150?grayscale")
