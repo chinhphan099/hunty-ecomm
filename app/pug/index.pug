@@ -57,8 +57,7 @@ block main
         .container
             .product_block
                 .product_block__header
-                    .inner
-                        +heading('FLA<i class="icon-flash-sale"></i>H SALE', 'See All', 'countdown')
+                    +heading('FLA<i class="icon-flash-sale"></i>H SALE', 'See All', 'countdown')
                 .slider.single-slider(data-cslider='{"type": "variableWidth"}')
                     .slick
                         -for (var i = 0; i < 15; i++)
@@ -75,7 +74,7 @@ block main
                 +heading('Recommended Promotion ', 'See All')
         .promotion_block__inner
             .container
-                .slider(data-cslider='{"type": "variableWidth", "initUnder": "767"}')
+                .slider(data-cslider='{"type": "variableWidth"}')
                     .slick
                         -for (var i = 0; i < 4; i++)
                             .item
@@ -91,3 +90,58 @@ block main
                         -for (var i = 0; i < 4; i++)
                             .item
                                 +promotion('slideitem')
+
+    section
+        .container
+            .viewed_products
+                +heading('Viewed Product', 'See All')
+                .slider.single-slider(data-cslider='{"type": "variableWidth"}')
+                    .slick
+                        -for (var i = 0; i < 15; i++)
+                            .item
+                                +product('one-price', 'slideitem')
+    section.categories_block
+        .container
+            ul.categories_block__list
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+                li: +link('Categories 1', '#')
+    section.cs_block
+        .container
+            .cs_block__list
+                .cs_block__item 
+                    span.icon: i.icon-support
+                    h4 Hỗ Trợ Dịch Vụ Cho Các Shop
+                .cs_block__item 
+                    span.icon: i.icon-customer
+                    h4 Mang lại khách hàng tiềm năng shop
+                .cs_block__item 
+                    span.icon: i.icon-assurance
+                    h4 Thật sự an tâm khi mua hàng
+                .cs_block__item 
+                    span.icon: i.icon-eco
+                    h4 Eco System thương mại điện tử
+                .cs_block__item 
+                    span.icon: i.icon-sale
+                    h4 Chủ động nhận mã giảm giá
