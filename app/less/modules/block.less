@@ -2,17 +2,21 @@
 .banner {
 	@media(min-width: 768px) {
 		&__inner {
+			position: relative;
 			padding: 2px 0;
-			display: flex;
-			justify-content: space-around;
 		}
 		&__slider {
-			flex: 1 0 0%;
+			position: relative;
+		    width: 890px;
+		    height: 370px;
+		    overflow: hidden;
+		    z-index: 1;
 			box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
 		}
 		&__promo {
+			.position();
 			width: 280px;
-			margin-left: 20px;
+			height: 370px;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
@@ -130,7 +134,6 @@
 }
 
 // Recommended Promotion
-
 .promotion_block {
 	padding: 20px 0;
 	border-bottom: 5px solid #F5F6F8;
