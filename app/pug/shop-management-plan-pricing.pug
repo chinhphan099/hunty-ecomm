@@ -1,0 +1,14 @@
+extends layouts/shop-management-plan-pricing
+
+block vars
+	-title = 'PLAN & PRICING'
+
+block main
+	main
+		+goback()
+		.management
+			.management__inner
+				.management__left
+					include modules/manage-shop/list-menu
+				.management__right
+					include modules/manage-shop/pricing
