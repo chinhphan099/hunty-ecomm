@@ -1,9 +1,7 @@
-.block4
-	.block4__heading
-		+heading('Promotion Running ')
-	.block4__thumb
-		.slider(data-cslider='{"type": "variableWidth": 767}')
-			.slick
-				-for (var i = 0; i < 5; i++)
-					.item
-						+promotion('slideitem')
+.promotion_block
+	+heading('Promotion Running')
+	.slider(data-cslider='{"type": "variableWidth"}')
+		.slick
+			-for (var i = 0; i < 4; i++)
+				.item
+					+promotion('slideitem')

@@ -20,6 +20,36 @@
     }, 400);
   }
 
+  function searchIndex() {
+    const searchBtn = document.querySelector('.header__search-btn');
+    if(searchBtn) {
+      searchBtn.addEventListener('click', () => {
+        document.querySelector('body').classList.add('open-search');
+      });
+    }
+
+    const backBtn = document.querySelector('.header__btn-back');
+    if(!!backBtn) {
+      backBtn.addEventListener('click', () => {
+        document.querySelector('body').classList.remove('open-search');
+      });
+    }
+  }
+
+  function listener() {
+    searchIndex();
+  }
+
+  function init() {}
+
+  window.addEventListener('DOMContentLoaded', () => {
+    init();
+  });
+
+  window.addEventListener('load', () => {
+    listener();
+  });
+
   global.Site = {
     scrollTopAfterCollapse: scrollTopAfterCollapse
   };
