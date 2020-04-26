@@ -609,11 +609,17 @@
 }
 
 // .Tabbar Mobile
+@media(max-width: 767px) {
+    .home {
+        padding-bottom: 70px;
+    }
+}
 .tabbar {
     .position(fixed, null 0 0 0);
     box-shadow: 0px -2px 10px rgba(38, 47, 75, 0.1);
     background-color: #fff;
     z-index: 11;
+
     &__inner {
         height: 64px;
         display: flex;
