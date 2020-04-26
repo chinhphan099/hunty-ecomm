@@ -6,12 +6,12 @@ header.header
                 .header__location
                     i.icon-location.hidden-md-up
                     +customSelect({id: 'select_id'}, [
-                        {value: '', text: 'Hồ Chí Minh '},
-                        {value: 'Hà Nội'},
-                        {value: 'Thanh Hóa'}
+                        {value: 'hcm', text: 'Hồ Chí Minh '},
+                        {value: 'hn', text: 'Hà Nội'},
+                        {value: 'th', text: 'Thanh Hoá'}
                     ])
                     button.header__search-btn.hidden-md-up: i.icon-search
-                        
+
                 .header__searchForm
                     .header__searchForm-inner
                         button.header__btn-back.hidden-md-up: i.icon-arrow-left
@@ -41,7 +41,7 @@ header.header
                 nav.nav
                     +link('danh mục sản phẩm ', '#').nav__category__toggle
                         i.icon-hamburger
-                        span Danh mục sản phẩm 
+                        span Danh mục sản phẩm
                     ul.nav__navbar
                         +items-2([
                             {title: 'Introduce', href: '#', subClass: 'sub_menu', subList: [
@@ -92,7 +92,7 @@ header.header
                 .product__recently
                     +link('danh mục sản phẩm ', '#').product__recently__title
                         i.icon-caret-down
-                        span Sản phẩm đã xem 
+                        span Sản phẩm đã xem
                     ul.product__recently__list
                         li: img(src="https://picsum.photos/100/120", alt="")
                         li: img(src="https://picsum.photos/100/120", alt="")
@@ -107,7 +107,7 @@ header.header
                 .header__hunty__feed
                     +link('Hunty feed ', '#')
                         i.icon-hunty-feed #[span.path1]#[span.path2]
-                        span Hunty feed 
+                        span Hunty feed
                 .header__mini__cart
                     .mini__cart_title
                         +link('Cart ', '#')
