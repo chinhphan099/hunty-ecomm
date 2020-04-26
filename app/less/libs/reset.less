@@ -33,47 +33,46 @@ main, section, article, aside, details, summary, figure, figcaption, header, foo
   display: block;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
   a {
     color: inherit;
   }
 }
 h1 {
-  .font-size(@h1-size);
+  .font-size(@h1-size-mobile);
 }
 h2 {
-  .font-size(@h2-size);
+  .font-size(@h2-size-mobile);
 }
 h3 {
-  .font-size(@h3-size);
+  .font-size(@h3-size-mobile);
 }
 h4 {
-  .font-size(@h4-size);
+  .font-size(@h4-size-mobile);
 }
 h5 {
-  .font-size(@h5-size);
+  .font-size(@h5-size-mobile);
 }
 h6 {
-  .font-size(@h6-size);
+  .font-size(@h6-size-mobile);
 }
-@media (max-width: @sm-max) {
+@media (min-width: 992px) {
   h1 {
-    .font-size(@h1-size-mobile);
+    .font-size(@h1-size);
   }
   h2 {
-    .font-size(@h2-size-mobile);
+    .font-size(@h2-size);
   }
   h3 {
-    .font-size(@h3-size-mobile);
+    .font-size(@h3-size);
   }
   h4 {
-    .font-size(@h4-size-mobile);
+    .font-size(@h4-size);
   }
   h5 {
-    .font-size(@h5-size-mobile);
+    .font-size(@h5-size);
   }
   h6 {
-    .font-size(@h6-size-mobile);
+    .font-size(@h6-size);
   }
 }
 address {

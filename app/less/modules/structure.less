@@ -11,7 +11,9 @@
         }
     }
     @media(min-width: 768px) {
+        position: relative;
         background: #FFD100;
+        z-index: 5;
         .container {
             &:before, &:after {content: none;}
             display: flex;
@@ -23,16 +25,16 @@
             font-size: 12px;
             text-transform: uppercase;
             color: #333;
+            &:hover {
+                color: #000;
+            }
             > i, > span {
                 display: inline-block;
                 vertical-align: middle;
             }
             i {
-
                 margin-right: 6px;
                 color: #fff;
-                line-height: 0;
-
             }
             .icon-tracking,
             .icon-notification {
@@ -46,7 +48,7 @@
             }
             .icon-hunty-feed {
                 font-size: 30px;
-                margin-top: -3px;
+                margin-top: -5px;
             }
         }
         &__inner {
@@ -119,8 +121,8 @@
             }
             .number {
                 position: absolute;
-                left: 8px;
-                top: -12px;
+                left: 10px;
+                top: 0;
                 border-radius: 50%;
                 background-color: #FE2070;
                 color: #fff;
@@ -171,7 +173,10 @@
                 display: block;
                 padding: 8px 12px;
                 border-radius: 3px;
-                border: 2px solid #FFFFFF;
+                border: 2px solid #FFF;
+                &:hover {
+                    background-color: #FFDC40;
+                }
             }
         }
     }

@@ -10,7 +10,12 @@ block main
         .container
             .banner__inner
                 .banner__slider
-                    +img-upload('banner.png')
+                    .slider.single-slider(data-cslider='{"type": "single", "dots": true}')
+                        .slick
+                            -for (var i = 0; i < 3; i++)
+                                .item
+                                    +img-upload('banner.png').img-view
+                    
                 .banner__promo.hidden-md-down
                     +link('Image', '#')
                         +img-upload('promo_1.png')
@@ -74,7 +79,7 @@ block main
                 +heading('Recommended Promotion ', 'See All')
         .promotion_block__inner
             .container
-                .slider(data-cslider='{"type": "variableWidth"}')
+                .slider(data-cslider='{"type": "variableWidth", "initUnder": 767}')
                     .slick
                         -for (var i = 0; i < 4; i++)
                             .item
@@ -100,6 +105,7 @@ block main
                         -for (var i = 0; i < 15; i++)
                             .item
                                 +product('one-price', 'slideitem')
+
     section.categories_block
         .container
             ul.categories_block__list

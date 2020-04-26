@@ -143,14 +143,17 @@
       .size(10px);
       margin: 0 5px;
       font-size: 0;
-      background-color: grey;
+      background-color: #D2DAEA;
       .border-radius(50%);
       border: none;
+      .transition(all .3s ease); 
     }
   }
   .slick-active {
     button {
-      background-color: black;
+      background-color: #FFD100;
+      width: 28px;
+      border-radius: 18px;
     }
   }
 }
@@ -159,11 +162,25 @@
   top: 50%;
   z-index: 6;
   .translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .text-hide();
+  .size(46px);
+  background: #FFFFFF;
+  border: 1px solid #F4F7FC;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.14);
+  border-radius: 50%;
+  &:hover {
+    background: #FFD100;
+    border-color: #FFD100;
+  }
   &:before {
     .fonticon();
-    .font-size(50px);
-    color: @color11;
+    font-size: 3.5rem;
+    color: #8B929F;
+    line-height: 0;
   }
   .vertical-slider & {
     left: 50%;
@@ -179,6 +196,9 @@
 }
 .slick-prev {
   left: 10px;
+  &:before {
+    content: "\f104";
+  }
   .vertical-slider & {
     top: 0 !important;
   }
@@ -188,6 +208,9 @@
 }
 .slick-next {
   right: 10px;
+  &:before {
+    content: "\f105";
+  }
   .vertical-slider & {
     top: auto !important;
     right: auto;
