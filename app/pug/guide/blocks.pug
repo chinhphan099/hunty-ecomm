@@ -1,4 +1,13 @@
-.container
+.container(data-copies)
+  .row
+    .col-xs-6
+      h3 Button - Click button to copy mixin
+  .row
+    .col-xs-6.col-sm-2(data-handler)
+      button.button(data-copy='+button({class: "button", id: "buttonId", name: "buttonId"}) Button Text') Button
+    .col-xs-6.col-sm-2(data-handler)
+      button.button.hollow(data-copy='+button({class: "button hollow", id: "buttonId", name: "buttonId"}) Button Text') Button
+  br
   .row
     .col-xs-6.col-sm-4
       h3.temp-h3.

@@ -282,11 +282,17 @@ label {
   font-weight: bold;
   border-radius: 3px;
   .transition(all 150ms ease);
-  &:hover {}
+  &:hover {
+    background-color: @color01;
+    border-color: @yellow;
+  }
   &.hollow {
     border-color: @yellow;
-    background-color: #fff;
-    color: black;
+    background-color: @color01;
+    color: @color11;
+    &:hover {
+      background-color: @yellow;
+    }
   }
 }
 
