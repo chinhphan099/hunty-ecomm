@@ -1,8 +1,8 @@
 section
     .container
-        .viewed_products
+        .product_block
             +heading('Viewed Product', 'See All')
-            .slider(data-cslider='{"type": "variableWidth", "setPositionArrows": true}')
+            .slider(data-cslider='{"type": "product", "setPositionArrows": true}')
                 .slick
                     -for (var i = 0; i < 15; i++)
                         .item

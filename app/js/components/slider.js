@@ -26,6 +26,8 @@
       CENTERMODE: 'centerMode',
       VIDEOSLIDE: 'videoSlide',
       VARIABLEWIDTH: 'variableWidth',
+      PROMOTION: 'promotion',
+      PRODUCT: 'product',
       PRICINGSLIDE: 'pricingslide',
       VERTICAL: 'vertical',
       TWOROW: 'tworow',
@@ -148,6 +150,12 @@
           break;
         case TypeSliders.VARIABLEWIDTH:
           option = this.options.variableWidth;
+          break;
+        case TypeSliders.PROMOTION:
+          option = this.options.promotion;
+          break;
+        case TypeSliders.PRODUCT:
+          option = this.options.product;
           break;
         case TypeSliders.PRICINGSLIDE:
           option = this.options.pricingslide;
@@ -464,6 +472,49 @@
       infinite: true,
       zIndex: 5
     },
+    promotion: {
+      speed: 600,
+      slidesToShow: 4,
+      slidesToScroll: 2,
+      infinite: false,
+      zIndex: 5,
+      responsive: [
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    },
+    product: {
+      speed: 600,
+      slidesToShow: 7,
+      slidesToScroll: 2,
+      infinite: false,
+      zIndex: 5,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 5
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 4
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 2
+          }
+        }
+      ]
+    },
     pricingslide: {
       speed: 600,
       dots: true,
@@ -481,16 +532,16 @@
     },
     tworow: {
       rows: 2,
-      variableWidth: true,
+      slidesToShow: 2,
       slidesToScroll: 2,
-      infinite: true,
+      infinite: false,
       zIndex: 5
     },
     tworowproduct: {
       rows: 2,
+      slidesToShow: 7,
       slidesToScroll: 2,
-      variableWidth: true,
-      infinite: true,
+      infinite: false,
       zIndex: 5,
       responsive: [
         {
