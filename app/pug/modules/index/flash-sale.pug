@@ -1,0 +1,10 @@
+section
+    .container
+        .product_block
+            .product_block__header
+                +heading('FLA<i class="icon-flash-sale"></i>H SALE', 'See All', 'countdown')
+            .slider.single-slider(data-cslider='{"type": "variableWidth"}')
+                .slick
+                    -for (var i = 0; i < 15; i++)
+                        .item
+                            +product('progress', 'slideitem')

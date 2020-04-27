@@ -1,0 +1,17 @@
+section.banner
+    .container
+        .banner__inner
+            .banner__slider
+                .slider.single-slider(data-cslider='{"type": "single", "dots": true, "autoplay": true}')
+                    .slick
+                        -for (var i = 0; i < 3; i++)
+                            .item
+                                +img-upload('banner.png').img-view
+
+            .banner__promo.hidden-md-down
+                +link('Image', '#')
+                    +img-upload('promo_1.png')
+                +link('Image', '#')
+                    +img-upload('promo_2.png')
+                +link('Image', '#')
+                    +img-upload('promo_3.png')

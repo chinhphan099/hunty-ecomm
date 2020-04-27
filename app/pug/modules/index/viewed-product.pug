@@ -1,0 +1,9 @@
+section
+    .container
+        .viewed_products
+            +heading('Viewed Product', 'See All')
+            .slider.single-slider(data-cslider='{"type": "variableWidth"}')
+                .slick
+                    -for (var i = 0; i < 15; i++)
+                        .item
+                            +product('one-price', 'slideitem')
