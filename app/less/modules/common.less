@@ -10,8 +10,7 @@
   .open-modal & {
     overflow-x: hidden;
     display: block;
-    width: auto;
-    height: auto;
+    .size(auto);
     z-index: 1000;
   }
   &__dialog {
@@ -30,7 +29,6 @@
     width: 100%;
     background: #FFFFFF;
     border: 1px solid #F4F7FC;
-    box-sizing: border-box;
     box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
     border-radius: 10px;
   }
@@ -65,10 +63,7 @@
       font-size: 18px;
       &:before {
         content: "";
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        .position(null 0 0 0);
         height: 3px;
         transform: scaleX(0);
         transform-origin: 50%;
@@ -142,6 +137,9 @@
         border-radius: 3px;
         color: #2C2E32;
         font-weight: normal;
+        &:hover {
+          border-color: #FFD100;
+        }
         i {
           font-size: 23px;
           margin-right: 10px;
