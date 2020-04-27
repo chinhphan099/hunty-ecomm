@@ -3,8 +3,8 @@ section
         .product_block
             .product_block__header
                 +heading('FLA<i class="icon-flash-sale"></i>H SALE', 'See All', 'countdown')
-            .slider.single-slider(data-cslider='{"type": "variableWidth"}')
+            .slider(data-cslider='{"type": "tworowproduct"}')
                 .slick
-                    -for (var i = 0; i < 15; i++)
+                    -for (var i = 0; i < 30; i++)
                         .item
                             +product('progress', 'slideitem')

@@ -28,6 +28,7 @@
       VARIABLEWIDTH: 'variableWidth',
       VERTICAL: 'vertical',
       TWOROW: 'tworow',
+      TWOROWPRODUCT: 'tworowproduct',
       SYNCING: 'syncing'
     },
     States = {
@@ -153,6 +154,9 @@
           break;
         case TypeSliders.TWOROW:
           option = this.options.tworow;
+          break;
+        case TypeSliders.TWOROWPRODUCT:
+          option = this.options.tworowproduct;
           break;
         case TypeSliders.SYNCING:
           if(this.options.view) {
@@ -354,7 +358,7 @@
       rtl: $('html').attr('dir') === 'rtl' ? true : false,
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 992,
           settings: {
             slidesToShow: 4
           }
@@ -382,7 +386,7 @@
       rtl: $('html').attr('dir') === 'rtl' ? true : false,
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 992,
           settings: {
             slidesToShow: 1,
             centerPadding: '25%'
@@ -406,7 +410,7 @@
       rtl: $('html').attr('dir') === 'rtl' ? true : false,
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 992,
           settings: {
             slidesToShow: 1,
             centerPadding: 0
@@ -442,7 +446,7 @@
       rtl: $('html').attr('dir') === 'rtl' ? true : false,
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 992,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1
@@ -467,8 +471,35 @@
       rows: 2,
       slidesToShow: 2,
       slidesToScroll: 2,
-      infinite: false,
+      infinite: true,
       zIndex: 5
+    },
+    tworowproduct: {
+      rows: 2,
+      slidesToShow: 7,
+      slidesToScroll: 2,
+      infinite: true,
+      zIndex: 5,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 5
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 4
+          }
+        },
+        {
+          breakpoint: 544,
+          settings: {
+            slidesToShow: 2
+          }
+        }
+      ]
     }
   };
 

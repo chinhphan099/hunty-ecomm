@@ -71,10 +71,12 @@ mixin product(type, slideitem)
         i.icon-star
         span.product__count 4.9
 
-mixin promotion()
+mixin promotion(slideitem)
+  if slideitem
+    -imgcls = 'img-view'
   .promotion
     .promotion__thumb
-      a(href="#"): img(src="https://picsum.photos/300/180?grayscale" alt="Shop name")
+      a(href="#"): img(src="https://picsum.photos/300/180?grayscale" alt="Shop name" class!=imgcls)
       .promotion__shop
         span.promotion__avt
           img(src="https://picsum.photos/45/45" alt="Shop name")
