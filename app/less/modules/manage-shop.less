@@ -74,7 +74,7 @@
 			vertical-align: middle;
 		}
 		p {
-			.flex(1 0);
+			.flex(1 0 0%);
 			img {
 				width: 20px;
 				margin-right: 5px;
@@ -113,12 +113,6 @@
 
 //--------------------------------management
 .management {
-	a {
-		color: #000;
-	}
-	h2, h3, h4, h5, h6 {
-		font-weight: bold;
-	}
 	&__inner {
 		@media (min-width: 768px) {
 			.flex-display();
@@ -134,9 +128,6 @@
 			width: 340px;
 		}
 		.navigation {
-			a:hover {
-				color: @yellow;
-			}
 			button {
 				i {
 					.font-size(30px);
@@ -188,7 +179,7 @@
 					li {
 						margin-bottom: 0;
 						font-weight: normal;
-						&:first-child {
+						&.active {
 							background-color: #F4F7FF;
 						}
 					}
@@ -208,7 +199,7 @@
 		}
 	}
 	&__right {
-		.flex(1 0);
+		.flex(1 0 0%);
 		.font-size(14px);
 		line-height: 20px;
 		background-color: #F4F7FF;

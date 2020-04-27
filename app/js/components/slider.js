@@ -457,6 +457,7 @@
     variableWidth: {
       speed: 600,
       variableWidth: true,
+      slidesToScroll: 2,
       infinite: true,
       zIndex: 5
     },
@@ -469,15 +470,15 @@
     },
     tworow: {
       rows: 2,
-      slidesToShow: 2,
+      variableWidth: true,
       slidesToScroll: 2,
       infinite: true,
       zIndex: 5
     },
     tworowproduct: {
       rows: 2,
-      slidesToShow: 7,
       slidesToScroll: 2,
+      variableWidth: true,
       infinite: true,
       zIndex: 5,
       responsive: [

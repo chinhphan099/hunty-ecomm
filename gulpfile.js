@@ -29,7 +29,7 @@ SRC.pug = SRC.root + 'pug/';
 // Source file matchers, using respective directories
 const FILES = {
     less: SRC.less + '*.less',
-    pug: [SRC.pug + '**/*.pug', SRC.pug + '*.pug'],
+    pug: [SRC.pug + '*.pug'],
     js: SRC.js + '**/*.js',
     images: SRC.img + '**/*',
     assets: SRC.assets + '**/*'
