@@ -1,33 +1,53 @@
 .pricing
 	.pricing__head
-		+heading('Plan & Pricing')
-		p Pick a plan to use with your business. If you have any concern, fell free to
-			span(style="color:@yellow;") CONTACT US
+		h2 Plan & Pricing
+		p.hidden-sm-down Pick a plan to use with your business. If you have any concern, fell free to 
+			+link('Contact Us', 'contact-us.html')(style="color: #FFD100;") CONTACT US
 	.pricing__plan
-		.pricing__premium
+		.pricing__below.premium#slide-1
 			.thumb
 				img(src="images/upload/premium.png", alt="")
 			.desc
 				h3 29$
-				h4 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				h4 Lorem ipsum dolor sit amet, <br class="hidden-sm-down" />consectetur adipisicing elit.
 				ul
-					li highest securit
-					li Modify categories
-					li manage potential customers
-					li Send Email & SMS marketing
-				button
-					a.btn Choose Plan
-		.pricing__gold
+					li
+						i.icon-check
+						| Highest securit
+					li
+						i.icon-check
+						| Modify categories
+					li
+						i.icon-check
+						| manage potential customers
+					li
+						i.icon-check
+						| Send Email & SMS marketing
+				+link('', '#').button.hollow Choose Plan
+		.pricing__below.gold#slide-2
 			.thumb
 				img(src="images/upload/gold.png", alt="")
 			.desc
 				h3 29$
-				h4 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				h4 Lorem ipsum dolor sit amet, <br class="hidden-sm-down" />consectetur adipisicing elit.
 				ul
-					li highest securit
-					li Modify categories
-					li manage potential customers
-					li Send Email & SMS marketing
-				button
-					a.btn Choose Plan
+					li
+						i.icon-check
+						| Highest securit
+					li
+						i.icon-check
+						| Modify categories
+					li
+						i.icon-check
+						| manage potential customers
+					li
+						i.icon-check
+						| Send Email & SMS marketing
+				+link('', '#').button.hollow Choose Plan
+	.pricing__slide.hidden-lg-up
+		+link('', '#slide-1')
+		+link('', '#slide-2')
+	.pricing__contact.hidden-md-up
+		+link('Contact Us', 'contact-us.html') Contact Us
+
 
