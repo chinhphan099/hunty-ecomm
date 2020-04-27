@@ -27,6 +27,7 @@
       VIDEOSLIDE: 'videoSlide',
       VARIABLEWIDTH: 'variableWidth',
       VERTICAL: 'vertical',
+      TWOROW: 'tworow',
       SYNCING: 'syncing'
     },
     States = {
@@ -149,6 +150,9 @@
           break;
         case TypeSliders.VERTICAL:
           option = this.options.vertical;
+          break;
+        case TypeSliders.TWOROW:
+          option = this.options.tworow;
           break;
         case TypeSliders.SYNCING:
           if(this.options.view) {
@@ -449,7 +453,7 @@
     variableWidth: {
       speed: 600,
       variableWidth: true,
-      infinite: false,
+      infinite: true,
       zIndex: 5
     },
     vertical: {
@@ -457,6 +461,13 @@
       verticalSwiping: true,
       slidesToShow: 3,
       slidesToScroll: 1,
+      zIndex: 5
+    },
+    tworow: {
+      rows: 2,
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      infinite: false,
       zIndex: 5
     }
   };
