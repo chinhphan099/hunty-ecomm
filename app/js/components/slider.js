@@ -26,6 +26,7 @@
       CENTERMODE: 'centerMode',
       VIDEOSLIDE: 'videoSlide',
       VARIABLEWIDTH: 'variableWidth',
+      PRICINGSLIDE: 'pricingslide',
       VERTICAL: 'vertical',
       TWOROW: 'tworow',
       TWOROWPRODUCT: 'tworowproduct',
@@ -146,8 +147,10 @@
           option = this.options.videoSlide;
           break;
         case TypeSliders.VARIABLEWIDTH:
-          option = $.extend(this.options.variableWidth, {
-          });
+          option = this.options.variableWidth;
+          break;
+        case TypeSliders.PRICINGSLIDE:
+          option = this.options.pricingslide;
           break;
         case TypeSliders.VERTICAL:
           option = this.options.vertical;
@@ -459,6 +462,14 @@
       variableWidth: true,
       slidesToScroll: 2,
       infinite: true,
+      zIndex: 5
+    },
+    pricingslide: {
+      speed: 600,
+      dots: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: false,
       zIndex: 5
     },
     vertical: {
