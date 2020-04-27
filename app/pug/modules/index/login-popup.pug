@@ -1,0 +1,76 @@
+.modal.login-modal
+	.modal__dialog
+		.modal__content
+			.login(data-collapse='{"type": "tab", "effect": "fade", "duration": 0}')
+				.login__tabs
+					li.active#tab1(data-init="" data-active="" data-handle="login"): +link('Login', '#')
+					li#tab2(data-active="" data-handle="register"): +link('Create Account', '#')
+				.login__tab-content
+					.login__panel.tab1(data-content="login")
+						.login__form
+							form(action="")
+								.fieldset
+									+label('name_email', 'Name / Email')
+									+input({id: 'name_email', placeholder: 'Please input your phone number or email'})
+									p.error-message This field is required.
+								.fieldset
+									+label('password', 'Password')
+									+input({type:'password' ,id: 'password', placeholder: 'Please input your phone number or email'})
+									p.error-message This field is required.
+								.fieldset.two_col
+									button(type="submit").button.btn-login Login
+									p.forgot-password: +link('Forgot your password?', '#')
+								.fieldset
+									p.or-login Or login with
+								.fieldset.login-socials
+									button.button.btn-login-goolge
+										i.icon-brand-goolge
+											span.path1
+											span.path2
+											span.path3
+											span.path4
+											span.path5
+											span.path6
+										| Google
+									button.button.btn-login-fb
+										i.icon-fb-circle #[span.path1]#[span.path2]
+										| Facebook
+					.login__panel.tab2(data-content="register")
+						.login__form.register
+							form(action="")
+								.fieldset
+									+label('first_name', 'First Name')
+									+input({id: 'first_name', placeholder: 'First Name'})
+									p.error-message This field is required.
+								.fieldset
+									+label('last_name', 'Last Name')
+									+input({id: 'last_name', placeholder: 'Last Name'})
+									p.error-message This field is required.
+								.fieldset
+									+label('email', 'Email')
+									+input({id: 'email', placeholder: 'Email'})
+									p.error-message This field is required.
+								.fieldset
+									+label('password', 'Password')
+									+input({type:'password' ,id: 'password', placeholder: 'Password'})
+									p.error-message This field is required.
+								.fieldset
+									+label('re-type-password', 'Re-type Password ')
+									+input({type:'password' ,id: 're-type-password', placeholder: 'Re-type Password '})
+									p.error-message This field is required.
+								.fieldset
+									+label('telephone', 'Telephone')
+									+input({type:'password' ,id: 'telephone', placeholder: 'Telephone'})
+									p.error-message This field is required.
+								.fieldset
+									ul.gender
+										li: span Gender
+										li: +radio({name: 'Male', id: 'Male', text: 'Male', checked: 'checked' }).circle
+										li: +radio({name: 'Male', id: 'Female', text: 'Female'}).circle
+								.fieldset
+									+label('telephone', 'Birthday')
+									+customDate({id: 'date', placeholder: "Birthday"})
+									p.error-message This field is required.
+								.fieldset: button(type="submit").button.btn-submit Submit
+
+								
