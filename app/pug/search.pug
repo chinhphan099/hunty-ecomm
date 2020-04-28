@@ -1,13 +1,31 @@
 extends layouts/layout
 
 block vars
-    -title = 'Homepage'
-    -bodyClass = 'search'
+	-title = 'Homepage'
+	-bodyClass = 'search'
 
 block main
-    main
-        +breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { title: 'Category', href: 'index.html', text: 'Category' }, { text: 'Product Name' }, ])
-        include modules/index/promotion_block
-        +pagination()
+	main
+		.container
+			.breadcrumbs_wrap
+				+breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { title: 'Category', href: 'index.html', text: 'Category' }, { text: 'Product Name' }, ])
+			.search_results
+				.filter
+					.filter__inner
+						.results
+							h1 Giay Vans 
+								span.count (12 results) 
+						ul.sort-list
+							li.active: +link('Related', 'javascript:void(0);')
+							li: +link('Best Seller', 'javascript:void(0);')
+							li: +link('Best Price', 'javascript:void(0);')
+							li: +link('About to Expired', 'javascript:void(0);')
+
+				.product-listing
+					-for (var i = 0; i < 14; i++)
+						+product('one-price')
+
+				include modules/index/promotion_block
+				+pagination()
 block popup
-    include modules/index/login-popup
+	include modules/index/login-popup
