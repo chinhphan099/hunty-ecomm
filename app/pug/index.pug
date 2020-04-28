@@ -9,7 +9,20 @@ block main
         include modules/index/banner
         include modules/index/category-icons
         include modules/index/flash-sale
-        include modules/index/promotion_block
+        include modules/index/banner_mb
+        section.promotion_section
+            .container
+                +heading('Recommended Promotion ', 'See All')
+            .promotion_section__inner
+                .container
+                    include modules/index/promotion_block
+        section.promotion_section
+            .container
+                +heading('Promotion Near You ', 'See All')
+            .promotion_section__inner
+                .container
+                    include modules/index/promotion_near_you
+
         include modules/index/viewed-product
         include modules/index/categories_block
         include modules/index/customer-service
