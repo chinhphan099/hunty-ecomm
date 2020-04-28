@@ -1,12 +1,13 @@
 .modal.login-modal
 	.modal__dialog
 		.modal__content
-			.login(data-collapse='{"type": "tab", "effect": "fade", "duration": 0}')
+			button(type="button").close: i.icon-close
+			.login(data-collapsessssx='{"type": "tab", "effect": "fade", "duration": 0}')
 				.login__tabs
 					li.active#tab1(data-init="" data-active="" data-handle="login"): +link('Login', '#')
 					li#tab2(data-active="" data-handle="register"): +link('Create Account', '#')
 				.login__tab-content
-					.login__panel.tab1(data-content="login")
+					.login__pane.tab1.active(data-content="login")
 						.login__form
 							form(action="")
 								.fieldset
@@ -35,7 +36,7 @@
 									button.button.btn-login-fb
 										i.icon-fb-circle #[span.path1]#[span.path2]
 										| Facebook
-					.login__panel.tab2(data-content="register")
+					.login__pane.tab2(data-content="register")
 						.login__form.register
 							form(action="")
 								.fieldset
