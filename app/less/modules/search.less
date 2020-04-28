@@ -1,8 +1,11 @@
-.search_results {
-	padding: 20px;
+.search_results_wrap {
+	padding: 5px 20px 20px;
 	border: 1px solid #F4F7FC;
 	box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
 	border-radius: 5px;
+	.promotion_block {
+		margin-bottom: 20px;
+	}
 }
 .breadcrumbs_wrap {
 	padding: 20px 0;
@@ -62,10 +65,30 @@
 
 .product-listing {
 	display: flex;
-	justify-content: space-between;
 	flex-wrap: wrap;
+	margin-left: -10px;
+	margin-right: -10px;
 	.product {
-		margin-bottom: 30px;
-		width: calc(~"100% / 7 - 15px");
+		margin: 0 10px 30px;
+		width: calc(~"100% / 2 - 20px");
+	}
+	@media(min-width: 544px) {
+		.product {
+			width: calc(~"100% / 3 - 20px");
+		}
+	}
+	@media(min-width: 768px) {
+		.product {
+			width: calc(~"100% / 5 - 20px");
+		}
+	}
+	@media(min-width: 1200px) {
+		margin-left: -15px;
+		margin-right: -15px;
+		.product {
+			margin-left: 15px;
+			margin-right: 15px;
+			width: calc(~"100% / 7 - 30px");
+		}
 	}
 }
