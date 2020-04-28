@@ -1,0 +1,13 @@
+extends layouts/layout
+
+block vars
+    -title = 'Homepage'
+    -bodyClass = 'search'
+
+block main
+    main
+        +breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { title: 'Category', href: 'index.html', text: 'Category' }, { text: 'Product Name' }, ])
+        include modules/index/promotion_block
+        +pagination()
+block popup
+    include modules/index/login-popup
