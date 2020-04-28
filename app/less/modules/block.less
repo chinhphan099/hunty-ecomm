@@ -5,6 +5,7 @@
 		&__inner {
 			margin-top: 2px;
 			position: relative;
+			overflow: hidden;
 		}
 		&__slider {
 			position: relative;
@@ -162,7 +163,7 @@
 	.slick-list {
 		margin: 0 -15px;
 		padding-left: 10px;
-		padding-right: 50px;
+		padding-right: 70px;
 	}
 	@media(min-width: 768px) {
 		margin-bottom: 30px;
@@ -188,6 +189,9 @@
 			margin: 0 -10px;
 			padding-left: 0;
 		}
+		.heading {
+			padding-right: 20px;
+		}
 	}
 }
 
@@ -202,7 +206,7 @@
 	.slick-list {
 		margin: 0 -15px;
 		padding-left: 10px;
-		padding-right: 50px;
+		padding-right: 90px;
 	}
 	.item {
 		padding: 0 5px;
@@ -219,61 +223,13 @@
 		}
 		.slick-list {
 			padding: 0;
-			margin: 0;
+			margin: 0 -10px;
 		}
 		.item {
 			padding: 0 10px;
 		}
 		.promotion {
 			width: 100%;
-		}
-	}
-}
-
-// Viewed Product
-.viewed_products {
-	padding: 20px 0;
-	.slider {
-		padding: 0 15px;
-		margin: 0 -15px;
-		width: auto;
-	}
-	.slick-list {
-		margin: 0 -15px;
-		padding-right: 50px;
-	}
-	.slick-track {
-		padding-top: 5px;
-	}
-	.item {
-		padding: 0 10px;
-	}
-	@media(min-width: 768px) {
-		margin-bottom: 30px;
-		padding: 20px 0 20px 20px;
-		background-color: #fff;
-		box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
-		border-radius: 5px;
-		.heading {
-			padding-right: 20px;
-		}
-		.slider {
-			width: 100%;
-			padding: 0;
-			margin: 0;
-		}
-		.slick-list {
-			padding-right: 50px;
-		}
-	}
-	@media(min-width: 992px) {
-		.slider {
-			width: 100%;
-			padding: 0;
-			margin: 0;
-		}
-		.slick-list {
-			padding-right: 70px;
 		}
 	}
 }
@@ -289,16 +245,18 @@
 			margin: 0 -15px;
 		}
 		.slick-list {
+			margin: 0 -15px;
+			padding-left: 10px;
 			padding-right: 30px;
 		}
 		.item {
-			padding: 5px 5px 5px 0;
+			padding: 5px;
 			border-radius: 3px;
 		}
 		a {
 			position: relative;
 			display: block;
-			padding: 10px 10px 10px 40px;
+			padding: 10px 10px 10px 25px;
 			font-size: 12px;
 			color: #000;
 			background-color: #fff;
@@ -314,6 +272,13 @@
 			}
 			&:hover {
 				background-color: #F4F7FC;
+			}
+		}
+	}
+	@media(min-width: 375px) {
+		&__list {
+			.slick-list {
+				padding-right: 70px;
 			}
 		}
 	}
