@@ -2,10 +2,10 @@
 	.modal__dialog
 		.modal__content
 			button(type="button").close: i.icon-close
-			.login(data-collapsessssx='{"type": "tab", "effect": "fade", "duration": 0}')
+			.login(data-collapse='')
 				.login__tabs
-					li.active#tab1(data-init="" data-active="" data-handle="login"): +link('Login', '#')
-					li#tab2(data-active="" data-handle="register"): +link('Create Account', '#')
+					li.active#tab1(data-active=""): +link('Login', '#')(data-handle="login")
+					li#tab2(data-active=""): +link('Create Account', '#')(data-handle="register")
 				.login__tab-content
 					.login__pane.tab1.active(data-content="login")
 						.login__form
@@ -74,4 +74,4 @@
 									p.error-message This field is required.
 								.fieldset: button(type="submit").button.btn-submit Submit
 
-								
+
