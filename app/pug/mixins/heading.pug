@@ -4,17 +4,6 @@ mixin heading(headingText, link, countdown)
     .heading(class!=cls)&attributes(attributes)
         h2.heading__text!=headingText
         if countdown
-            span.countdown
-                span.countdown__item.countdown--hour
-                    span 0
-                    span 9
-                span.countdown__item.countdown--semicolon :
-                span.countdown__item.countdown--minute
-                    span 0
-                    span 9
-                span.countdown__item.countdown--semicolon :
-                span.countdown__item.countdown--second
-                    span 0
-                    span 9
+            span.countdown(data-countdown) 3:09:09:09
         if link
             +link('See All', '#!').see-all

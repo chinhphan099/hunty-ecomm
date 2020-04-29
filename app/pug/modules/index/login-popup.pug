@@ -16,7 +16,7 @@
 									p.error-message This field is required.
 								.fieldset
 									+label('password', 'Password')
-									+input({type:'password' ,id: 'password', placeholder: 'Please input your phone number or email'})
+									+input({type:'password', id: 'loginPassword', placeholder: 'Password'})
 									p.error-message This field is required.
 								.fieldset.two_col
 									button(type="submit").button.btn-login Login
@@ -53,15 +53,15 @@
 									p.error-message This field is required.
 								.fieldset
 									+label('password', 'Password')
-									+input({type:'password' ,id: 'password', placeholder: 'Password'})
+									+input({type:'password', id: 'password', placeholder: 'Password'})
 									p.error-message This field is required.
 								.fieldset
 									+label('re-type-password', 'Re-type Password ')
-									+input({type:'password' ,id: 're-type-password', placeholder: 'Re-type Password '})
+									+input({type:'password', id: 'reTypePassword', placeholder: 'Re-type Password '})
 									p.error-message This field is required.
 								.fieldset
 									+label('telephone', 'Telephone')
-									+input({type:'password' ,id: 'telephone', placeholder: 'Telephone'})
+									+input({type: 'tel', id: 'telephone', placeholder: 'Telephone'})
 									p.error-message This field is required.
 								.fieldset
 									ul.gender
