@@ -92,7 +92,8 @@ mixin checkbox(opts)
       value=opts.id,
       required=opts.required,
       checked=opts.checked)
-    +label(opts.id, opts.text)
+    if opts.text
+      +label(opts.id, opts.text)
     i.icon-check
 
 //- Custom Checkbox List

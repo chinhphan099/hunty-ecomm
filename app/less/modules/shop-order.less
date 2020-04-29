@@ -6,37 +6,35 @@
 		}
 	}
 }
-//--------------------------------shop-order
-.ordershop-head {
-	margin-top: 10px;
-	margin-bottom: 25px;
-	.heading-title {
-		padding: 0 15px;
-		margin-bottom: 15px;
-		color: #333333;
-	}
-	@media (min-width: 768px) {
-		.heading-title {
-			padding: 0;
-			.font-size(20px);
-		}
-	}
-	@media (min-width: 992px) {
-		.heading-title {
-			.font-size(24px);
-		}
+
+.ordershop {
+	&__table {
+		padding: 20px;
+		background-color: @color01;
+		border-radius: 5px;
+		box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
 	}
 }
 
-.ordershop-table {
-	padding-bottom: 20px;
-	background-color: @color01;
-	border-radius: 5px;
-	box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
-	overflow: auto;
-}
-.table-order {
-	td {
-		padding: 10px 30px;
+.table-wrap {
+	overflow-x: auto;
+	&__order {
+		min-width: 600px;
+		.fieldset {
+			margin-bottom: 0;
+		}
+		.checkbox {
+			.size(26px);
+		}
+		th, td {
+			border: 1px solid #EBF0F9;
+		}
+		tbody {
+			tr {
+				&:nth-child(even) {
+					background-color: #F8FAFF;
+				}
+			}
+		}
 	}
 }

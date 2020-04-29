@@ -1,219 +1,38 @@
 .ordershop
-	.ordershop-head
-		h2.heading-title Shop Order
-	.ordershop-table
-		table.table-order
-			tr
-				td
-					.fieldset
-						.checkbox
-							input(type="checkbox" name="" id="" value="link-cb" checked="checked")
-							i.icon-check
-				th Order ID
-				th Customer ID
-				th Status
-				th Total
-				th Date Added
-				th Date Modified
-				th Date Modified
-			tr
-				td
-					.fieldset
-						.checkbox
-							input(type="checkbox" name="" id="" value="link-cb" checked="checked")
-							i.icon-check
-				td 1234
-				td Jennifer
-				td Shipped
-				td $124
-				td 04/17/2020
-				td 04/19/2020
-				td
-					.ng-scope
-						button
-							i.icon-preview
-						button
-							i.icon-edit
-						button
-							i.icon-delete
-			tr
-				td
-					.fieldset
-						.checkbox
-							input(type="checkbox" name="" id="" value="link-cb" checked="checked")
-							i.icon-check
-				td 1234
-				td Jennifer
-				td Shipped
-				td $124
-				td 04/17/2020
-				td 04/19/2020
-				td
-					.ng-scope
-						button
-							i.icon-preview
-						button
-							i.icon-edit
-						button
-							i.icon-delete
-			tr
-				td
-					.fieldset
-						.checkbox
-							input(type="checkbox" name="" id="" value="link-cb" checked="checked")
-							i.icon-check
-				td 1234
-				td Jennifer
-				td Shipped
-				td $124
-				td 04/17/2020
-				td 04/19/2020
-				td
-					.ng-scope
-						button
-							i.icon-preview
-						button
-							i.icon-edit
-						button
-							i.icon-delete
-			tr
-				td
-					.fieldset
-						.checkbox
-							input(type="checkbox" name="" id="" value="link-cb" checked="checked")
-							i.icon-check
-				td 1234
-				td Jennifer
-				td Shipped
-				td $124
-				td 04/17/2020
-				td 04/19/2020
-				td
-					.ng-scope
-						button
-							i.icon-preview
-						button
-							i.icon-edit
-						button
-							i.icon-delete
-			tr
-				td
-					.fieldset
-						.checkbox
-							input(type="checkbox" name="" id="" value="link-cb" checked="checked")
-							i.icon-check
-				td 1234
-				td Jennifer
-				td Shipped
-				td $124
-				td 04/17/2020
-				td 04/19/2020
-				td
-					.ng-scope
-						button
-							i.icon-preview
-						button
-							i.icon-edit
-						button
-							i.icon-delete
-			tr
-				td
-					.fieldset
-						.checkbox
-							input(type="checkbox" name="" id="" value="link-cb" checked="checked")
-							i.icon-check
-				td 1234
-				td Jennifer
-				td Shipped
-				td $124
-				td 04/17/2020
-				td 04/19/2020
-				td
-					.ng-scope
-						button
-							i.icon-preview
-						button
-							i.icon-edit
-						button
-							i.icon-delete
-			tr
-				td
-					.fieldset
-						.checkbox
-							input(type="checkbox" name="" id="" value="link-cb" checked="checked")
-							i.icon-check
-				td 1234
-				td Jennifer
-				td Shipped
-				td $124
-				td 04/17/2020
-				td 04/19/2020
-				td
-					.ng-scope
-						button
-							i.icon-preview
-						button
-							i.icon-edit
-						button
-							i.icon-delete
-			tr
-				td
-					.fieldset
-						.checkbox
-							input(type="checkbox" name="" id="" value="link-cb" checked="checked")
-							i.icon-check
-				td 1234
-				td Jennifer
-				td Shipped
-				td $124
-				td 04/17/2020
-				td 04/19/2020
-				td
-					.ng-scope
-						button
-							i.icon-preview
-						button
-							i.icon-edit
-						button
-							i.icon-delete
-			tr
-				td
-					.fieldset
-						.checkbox
-							input(type="checkbox" name="" id="" value="link-cb" checked="checked")
-							i.icon-check
-				td 1234
-				td Jennifer
-				td Shipped
-				td $124
-				td 04/17/2020
-				td 04/19/2020
-				td
-					.ng-scope
-						button
-							i.icon-preview
-						button
-							i.icon-edit
-						button
-							i.icon-delete
-			tr
-				td
-					.fieldset
-						.checkbox
-							input(type="checkbox" name="" id="" value="link-cb" checked="checked")
-							i.icon-check
-				td 1234
-				td Jennifer
-				td Shipped
-				td $124
-				td 04/17/2020
-				td 04/19/2020
-				td
-					.ng-scope
-						button
-							i.icon-preview
-						button
-							i.icon-edit
-						button
-							i.icon-delete
+	.ordershop__head
+		+heading('Shop Order')
+	.ordershop__table
+		.table-wrap
+			table.table-wrap__order
+				tr
+					th
+						.fieldset
+							.checkbox
+								input(type="checkbox" name="" id="" value="link-cb" checked="checked")
+								i.icon-check
+					th Order ID
+					th Customer ID
+					th Status
+					th Total
+					th Date Added
+					th Date Modified
+					th Action
+				-for(var i = 1; i <= 10; i++)
+					tr
+						td
+							.fieldset: +checkbox({id: 'orderid_000' + i, checked: 'checked'})
+						td!='000'+i
+						td Jennifer
+						td Shipped
+						td $124
+						td 04/17/2020
+						td 04/19/2020
+						td
+							.ordershop__action
+								button
+									i.icon-preview
+								button
+									i.icon-edit
+								button
+									i.icon-delete
 		+pagination()
