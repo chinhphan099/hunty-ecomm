@@ -80,8 +80,6 @@
       h3.temp-h3 Sản phẩm: +product('one-price')
     .col-xs-6.col-sm-2
       h3.temp-h3 Sản phẩm: +product('two-price')
-    .col-xs-6.col-sm-2
-      h3.temp-h3 Sản phẩm: +product('two-price-cart')
   .row
     .col-xs-6.col-sm-2
       +product('progress')
@@ -89,8 +87,12 @@
       +product('one-price')
     .col-xs-6.col-sm-2
       +product('two-price')
-    .col-xs-6.col-sm-2
-      +product('two-price-cart')
+  .row
+    .col-xs-12
+      h3.temp-h3 Sản phẩm: +product('two-price-cart').product--promo
+  .row
+    .col-xs-12
+      +product('two-price-cart').product--promo
   hr
   .row
     .col-xs-6.col-sm-3
