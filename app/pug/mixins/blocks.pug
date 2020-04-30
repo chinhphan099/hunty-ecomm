@@ -103,3 +103,20 @@ mixin promotion(slideitem)
       i.icon-location
       span 1.3km from you
 
+mixin cartItem(type)
+  .cart-item&attributes(attributes)
+    +button({name: "removeItem"})
+      i.icon-close
+    .thumb
+      a(href="product.html")
+        img(src="https://picsum.photos/140/170", alt="Hunty Product Name")
+    .content
+      p.product__name
+        a(href="product.html") Lorem ipsum dolor sit amet
+      +price('575.000 đ', '(1.000.000)')
+      .custom-number(data-number='{"handle": "qty", "maxLength": 2}')
+        +button({})(data-decrease="")
+          i.icon-angle-down
+        +input({name: 'quantity', value: '1', type: 'number'})(data-input="" autocomplete="off" readonly)
+        +button({})(data-increase="")
+          i.icon-angle-up
