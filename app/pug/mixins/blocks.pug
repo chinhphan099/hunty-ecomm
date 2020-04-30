@@ -51,25 +51,35 @@ mixin product(type, slideitem)
   .product
     .product__thumb
       a(href="product.html"): +img-upload("product-1.png", "Product name")(class!=imgcls)
-    if type == "progress"
-      .product__progress
-        span.product__percent(style="width: 50%")
-        b.product__text Đã bán 90
-      span.product__deal -30%
-      +price('575.000 đ').text-center
-    else if type == "one-price"
-      p.product__name
-        a(href="product.html") Lorem ipsum dolor sit amet
-      span.product__deal -30%
-      +price('575.000 đ')
-    else
-      p.product__name
-        a(href="product.html") Lorem ipsum dolor sit amet
-      +price('575.000 đ', '(1.000.000)')
-      span.product__deal -30%
-      p.product__rate
-        i.icon-star
-        span.product__count 4.9
+    .product__content
+      if type == "progress"
+        .product__progress
+          span.product__percent(style="width: 50%")
+          b.product__text Đã bán 90
+        span.product__deal -30%
+        +price('575.000 đ').text-center
+      else if type == "one-price"
+        p.product__name
+          a(href="product.html") Lorem ipsum dolor sit amet
+        span.product__deal -30%
+        +price('575.000 đ')
+      else if type == "two-price"
+        p.product__name
+          a(href="product.html") Lorem ipsum dolor sit amet
+          +price('575.000 đ', '(1.000.000)')
+          span.product__deal -30%
+          p.product__rate
+            i.icon-star
+            span.product__count 4.9
+      else if type == "two-price-cart"
+        p.product__name
+          a(href="product.html") Lorem ipsum dolor sit amet
+        +price('575.000 đ', '(1.000.000)')
+        span.product__deal.hidden-sm-down -30%
+        span.product_quickadd: i.icon-shopping-cart
+        p.product__rate
+          i.icon-star
+          span.product__count 4.9
 
 mixin promotion(slideitem)
   if slideitem
