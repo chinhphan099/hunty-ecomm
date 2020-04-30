@@ -20,6 +20,15 @@
     }, 400);
   }
 
+  function searchPageEvents() {
+    const selectedType = document.querySelector('.product-type__selected');
+    if(!!selectedType) {
+      selectedType.addEventListener('click', (e) => {
+        e.currentTarget.closest('.product-type__list').classList.toggle('active');
+      });
+    }
+  }
+
   function searchIndex() {
     const searchBtnDk = document.getElementById('search_btn');
     if(!!searchBtnDk) {
@@ -79,6 +88,7 @@
   }
 
   function listener() {
+    searchPageEvents();
     searchIndex();
     loginModal();
     handleTabEvents();
