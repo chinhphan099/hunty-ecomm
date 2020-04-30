@@ -397,15 +397,17 @@
 
 // Header Checkout
 .headerCheckout {
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
     .main-title {
-        padding: 18px 0;
+        padding-top: 18px;
         font-size: 1.8rem;
         line-height: 1.2;
         text-align: center;
     }
     @media(min-width: 768px) {
         margin-bottom: 40px;
-        box-shadow: 0 1px 5px rgba(0,0,0,.4);
+        background-color: #FFD100;
         .container {
             &:before, &:after {content: none;}
             display: flex;
@@ -458,6 +460,13 @@
         }
         .icon-card {
             font-size: 22px;
+        }
+    }
+    @media(min-width: 768px) {
+        li {
+            span {
+                color: #6f6f6f;
+            }
         }
     }
 }
