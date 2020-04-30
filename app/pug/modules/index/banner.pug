@@ -2,11 +2,14 @@ section.banner
     .container
         .banner__inner
             .banner__slider
-                .slider(data-cslider='{"type": "single", "dots": true, "autoplay": true}')
+                .slider(data-cslider='{"type": "single", "dots": true, "autoplay": true, "fade": true}')
                     .slick
-                        -for (var i = 0; i < 3; i++)
-                            .item
-                                +img-upload('banner.png').img-view
+                        .item
+                            +img-upload('banner.png').img-view
+                        .item
+                            img(src="https://picsum.photos/894/380?grayscale").img-view
+                        .item
+                            img(src="https://picsum.photos/894/380").img-view
                     span.load
 
             .banner__promo.hidden-md-down
