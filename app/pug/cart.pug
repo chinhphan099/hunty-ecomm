@@ -1,4 +1,4 @@
-extends layouts/checkout
+extends layouts/layout
 
 block vars
 	-title = 'Cart | Hunty'
@@ -7,7 +7,7 @@ block main
 	main
 		.container
 			.cart
-				+heading('Cart').hidden-sm-down
+				+heading('Cart')
 				.cart__inner
 					.cart__primary
 						.cart__list
@@ -15,8 +15,8 @@ block main
 								+cartItem()
 					.cart__sidebar
 						.fieldset.coupon_code
-							+label('coupon-code', 'Apply Discount Code')
-							+customInput({id: 'coupon-code', text: 'Apply', btnClass: 'button'}, {id: "coupon-code"})
+							+label('couponCode', 'Apply Discount Code')
+							+customInput({id: 'couponCodeBtn', text: 'Apply', btnClass: 'button'}, {id: "couponCode"})
 
 						.cartSubtotal
 							.cartSubtotal__inner

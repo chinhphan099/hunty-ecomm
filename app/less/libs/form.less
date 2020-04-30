@@ -61,7 +61,7 @@ label {
     width: 80px;
   }
   input {
-    width: 33.33%;
+    width: 34%;
     height: 32px;
     padding: 0;
     font-size: 14px;
@@ -72,7 +72,7 @@ label {
   }
   [data-increase],
   [data-decrease] {
-    width: 33.33%;
+    width: 33%;
     border: none;
     color: #8B929F;
     background-color: white;
@@ -81,10 +81,13 @@ label {
   }
   i {
     .font-size(14px);
+    &:hover {
+      color: @yellow;
+    }
   }
   @media (min-width: @lg-min) {
     i {
-      .font-size(10px);
+      .font-size(12px);
     }
   }
 }
