@@ -1,8 +1,9 @@
 .product-listing-wrap {
+	margin-bottom: 80px;
 	.promotion_block {
 		margin-bottom: 20px;
 	}
-	@media(min-width: 768px) {
+	@media (min-width: 768px) {
 		padding: 5px 20px 20px;
 		border: 1px solid #F4F7FC;
 		box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
@@ -22,8 +23,8 @@
 		border-bottom: 1px solid #EBF0F9;
 	}
 	.results {
-		h1 {
-			font-size: 14px;
+		.heading {
+			margin-bottom: 0;
 		}
 		.count {
 			color: #8B929F;
@@ -31,14 +32,13 @@
 			font-weight: normal;
 		}
 	}
-	.sort-inner {
-		padding: 10px 0;
-		flex: 1 0;
-		display: flex;
-		justify-content: flex-end;
-	}
-	
-	.select-text {
+}
+.product-type {
+	padding: 10px 0;
+	flex: 1 0 0%;
+	display: flex;
+	justify-content: flex-end;
+	&__selected {
 		position: relative;
 		padding: 0 15px;
 		display: flex;
@@ -56,9 +56,7 @@
 			font-size: 18px;
 		}
 	}
-	
-	
-	.sort-list {
+	ul {
 		a {
 			position: relative;
 			display: block;
@@ -67,10 +65,31 @@
 			font-size: 12px;
 		}
 	}
-	@media(min-width: 768px) {
-		.sort-inner {
-			padding: 0;
+	@media(max-width: 767px) {
+		&__list {
+			position: relative;
+			&.active {
+				ul {
+					overflow: visible;
+					.translateY(0);
+					opacity: 1;
+				}
+			}
 		}
+		ul {
+			padding: 5px 0;
+			.position(100% 0 null null);
+			width: 160px;
+			opacity: 0;
+			background: #fff;
+			border: 2px solid #FFEB8E;
+			.translateY(10px);
+			.transition(all .3s ease-out);
+			z-index: 10;
+		}
+	}
+	@media(min-width: 768px) {
+		padding: 0;
 		.results {
 			h1 {
 				font-size: 18px;
@@ -79,7 +98,7 @@
 				font-size: 14px;
 			}
 		}
-		.sort-list {
+		ul {
 			display: flex;
 			align-items: center;
 			li {
@@ -110,7 +129,7 @@
 		}
 	}
 	@media(min-width: 992px) {
-		.sort-list {
+		ul {
 			li {
 				margin-left: 10px;
 			}
@@ -120,31 +139,7 @@
 			}
 		}
 	}
-	@media(max-width: 767px) {
-		.sort-options {
-			position: relative;
-			&.active {
-				.sort-list {
-					overflow: visible;
-					.translateY(0);
-					opacity: 1;
-				}
-			}
-		}
-		.sort-list {
-			padding: 5px 0;
-			.position(100% 0 null null);
-			width: 160px;
-			opacity: 0;
-			background: #fff;
-			border: 2px solid #FFEB8E;
-			.translateY(10px);
-			.transition(all .3s ease-out);
-			z-index: 10;
-		}
-	}
 }
-
 
 .product-listing {
 	display: flex;
