@@ -1,12 +1,16 @@
 extends layouts/layout
 
 block vars
-	-title = 'Promotion | Hunty'
+	-title = 'Shop'
+	-hidenHeaderOnMobile = true
+	-hidenFooterOnMobile = true
 
 block main
 	main
+		+goback().goback--white
 		section.promotion_banner
-			+img-upload('banner_promo.jpg')
+			+img-upload('banner_shop.jpg').hidden-sm-down
+			+img-upload('banner_shop_mb.jpg').hidden-md-up
 		section.promotion_container
 			.container
 				.promotion_inner
@@ -26,11 +30,11 @@ block main
 										i.icon-location
 										span 1.3km from you
 							.button_inner
-								+link("Follow Shop", "javascript:;").button.hollow.active
+								+link("Follow Shop", "javascript:;").button.hollow.active.hidden-sm-down
 									i.icon-heart
 									span Follow Shop
 								+link("Follow Shop", "javascript:;").button.hollow
-									i.icon-shop
+									i.icon-shop.hidden-sm-down
 									span View Shop
 
 
