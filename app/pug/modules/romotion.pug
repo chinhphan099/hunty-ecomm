@@ -1,0 +1,20 @@
+extends layouts/layout
+
+block vars
+	-title = 'Recommended'
+	-bodyClass = 'promotion'
+
+block main
+	main
+		section.promotion_section
+			.promotion_banner
+				+img-upload('banner_promo.jpg')
+
+		section.promotion_section
+            .container
+                +heading('Recommended Promotion ', 'See All')
+            .promotion_section__inner
+                .container
+                    include modules/index/promotion_block
+block popup
+	include modules/index/login-popup

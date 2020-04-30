@@ -1,0 +1,130 @@
+
+.pusher__b {
+	padding-bottom: 0;
+}
+
+.promotion_banner {
+	margin-bottom: 20px;
+	img {
+		width: 100%;
+	}
+}
+
+
+// Promotion Container
+.promotion_container {
+	.promotion_inner {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.main_title {
+		font-size: 1.6rem;
+		margin-bottom: 20px;
+		color: #2C2E32;
+	}
+	@media(min-width: 992px) {
+
+		.promotion_inner {
+			flex-direction: row;
+		}
+		.primary {
+			.flex(1 0 0%);
+			padding-right: 20px;
+		}
+		.sidebar {
+			width: 34%;
+		}
+		.main_title {
+			margin-bottom: 30px;
+			font-size: 2.2rem;
+		}
+	}
+}
+
+
+// Promotion Shop
+.promotion_shop {
+	margin-bottom: 30px;
+	padding: 10px;
+	background: #FFFFFF;
+	border: 1px solid #F4F7FC;
+	box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
+	border-radius: 5px;
+	.shop_item {
+		margin-bottom: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.shop_avt{
+		width: 50px;
+	}
+	.shop_desc {
+		padding-left: 10px;
+		flex: 1 0 0%;
+	}
+	.shop_title {
+		margin-bottom: 5px;
+		font-size: 1.6rem;
+		line-height: 1.2;
+	}
+	.shop_location {
+		font-size: 1.4rem;
+		color: #aaa;
+		i, span {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		i {
+			margin-right: 3px;
+			font-size: 20px;
+		}
+	}
+	.button_inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		& > .button {
+			width: calc(~"100% /2 - 10px");
+		}
+	}
+	.button {
+		padding: 10px;
+		font-weight: normal;
+		font-size: 14px;
+		i {
+			margin-right: 8px;
+			font-size: 18px;
+			color: #FFD100;
+		}
+	}
+	@media(min-width: 1200px) {
+		padding: 20px;
+		.button {
+			font-size: 16px;
+		}
+	}
+}
+
+
+// Product List
+.product_list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -10px;
+	margin-right: -10px;
+	.product {
+		margin: 0 10px 30px;
+		width: calc(~"100% / 2 - 20px");
+	}
+	@media(min-width: 544px) {
+		.product {
+			width: calc(~"100% / 3 - 20px");
+		}
+	}
+	@media(min-width: 768px) {
+		.product {
+			width: calc(~"100% / 4 - 20px");
+		}
+	}
+}
