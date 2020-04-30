@@ -48,28 +48,45 @@ mixin icons(classes)
 mixin product(type, slideitem)
   if slideitem
     -imgcls = 'img-view'
-  .product
-    .product__thumb
-      a(href="product.html"): +img-upload("product-1.png", "Product name")(class!=imgcls)
-    if type == "progress"
-      .product__progress
-        span.product__percent(style="width: 50%")
-        b.product__text Đã bán 90
-      span.product__deal -30%
-      +price('575.000 đ').text-center
-    else if type == "one-price"
-      p.product__name
-        a(href="product.html") Lorem ipsum dolor sit amet
-      span.product__deal -30%
-      +price('575.000 đ')
-    else
-      p.product__name
-        a(href="product.html") Lorem ipsum dolor sit amet
-      +price('575.000 đ', '(1.000.000)')
-      span.product__deal -30%
-      p.product__rate
-        i.icon-star
-        span.product__count 4.9
+
+  -imgsrc = 'images/upload/product-1.png'
+  if type == "two-price-cart"
+    -imgsrc = 'https://picsum.photos/140/170'
+
+  .product&attributes(attributes)
+    .thumb
+      a(href="product.html")
+        img(src!=imgsrc, alt="Hunty Product Name" class!=imgcls)
+      if type == "two-price-cart"
+        span.product__quickadd.hidden-md-up: i.icon-shopping-cart
+    .content
+      if type == "progress"
+        .product__progress
+          span.product__percent(style="width: 50%")
+          b.product__text Đã bán 90
+        span.product__deal -30%
+        +price('575.000 đ').text-center
+      else if type == "one-price"
+        p.product__name
+          a(href="product.html") Lorem ipsum dolor sit amet
+        span.product__deal -30%
+        +price('575.000 đ')
+      else if type == "two-price"
+        p.product__name
+          a(href="product.html") Lorem ipsum dolor sit amet
+        +price('575.000 đ', '(1.000.000)')
+        span.product__deal -30%
+        p.product__rate
+          i.icon-star
+          span.product__count 4.9
+      else if type == "two-price-cart"
+        p.product__name
+          a(href="product.html") Lorem ipsum dolor sit amet
+        +price('575.000 đ', '(1.000.000)')
+        span.product__deal.hidden-sm-down -30%
+        p.product__rate
+          i.icon-star
+          span.product__count 4.9
 
 mixin promotion(slideitem)
   if slideitem
