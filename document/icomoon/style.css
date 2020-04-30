@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?5ezqvk');
-  src:  url('fonts/icomoon.eot?5ezqvk#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?5ezqvk') format('truetype'),
-    url('fonts/icomoon.woff?5ezqvk') format('woff'),
-    url('fonts/icomoon.svg?5ezqvk#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?og3m6m');
+  src:  url('fonts/icomoon.eot?og3m6m#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?og3m6m') format('truetype'),
+    url('fonts/icomoon.woff?og3m6m') format('woff'),
+    url('fonts/icomoon.svg?og3m6m#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,24 +25,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-close-circle .path1:before {
-  content: "\e94e";
-  color: rgb(255, 255, 255);
+.icon-close-solid:before {
+  content: "\f406";
 }
-.icon-close-circle .path2:before {
-  content: "\e94f";
-  margin-left: -1em;
-  color: none;
+.icon-close-outline:before {
+  content: "\f405";
 }
-.icon-close-circle .path3:before {
-  content: "\e950";
-  margin-left: -1em;
-  color: rgb(139, 146, 159);
+.icon-minus:before {
+  content: "\f209";
 }
-.icon-close-circle .path4:before {
-  content: "\e951";
-  margin-left: -1em;
-  color: rgb(139, 146, 159);
+.icon-plus:before {
+  content: "\f218";
+}
+.icon-minus-solid:before {
+  content: "\f207";
+}
+.icon-plus-solid:before {
+  content: "\f216";
 }
 .icon-delete:before {
   content: "\e952";
@@ -274,31 +273,31 @@
   content: "\e93d";
   color: #d2daea;
 }
-.icon-brand-goolge .path1:before {
+.icon-brand-google .path1:before {
   content: "\e93e";
   color: rgb(251, 189, 0);
 }
-.icon-brand-goolge .path2:before {
+.icon-brand-google .path2:before {
   content: "\e93f";
   margin-left: -1em;
   color: rgb(15, 157, 88);
 }
-.icon-brand-goolge .path3:before {
+.icon-brand-google .path3:before {
   content: "\e940";
   margin-left: -1em;
   color: rgb(49, 170, 82);
 }
-.icon-brand-goolge .path4:before {
+.icon-brand-google .path4:before {
   content: "\e941";
   margin-left: -1em;
   color: rgb(60, 121, 230);
 }
-.icon-brand-goolge .path5:before {
+.icon-brand-google .path5:before {
   content: "\e942";
   margin-left: -1em;
   color: rgb(207, 45, 72);
 }
-.icon-brand-goolge .path6:before {
+.icon-brand-google .path6:before {
   content: "\e943";
   margin-left: -1em;
   color: rgb(235, 65, 50);

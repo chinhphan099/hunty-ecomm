@@ -7,10 +7,10 @@ block main
 	main
 		.container
 			.cart
-				h1.cart__title Cart
+				+heading('Cart')
 				.cart__inner
 					.cart__primary
-						.product_list
+						.cart__list
 							-for (var i = 0; i < 5; i++)
 								+cartItem()
 					.cart__sidebar
