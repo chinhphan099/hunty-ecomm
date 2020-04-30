@@ -22,12 +22,10 @@ html(lang="en")
     link(rel="stylesheet", href="css/style.css")
   body(class=bodyClass)
     .wrapper
-      include ../modules/global/slideMenu
       .main-container
-        include ../modules/global/header
+        include ../modules/global/checkout-header
         .inner
           block main
-          include ../modules/global/footer
     .overlay
     block popup
     include ../modules/global/script

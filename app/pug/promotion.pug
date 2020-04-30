@@ -1,7 +1,7 @@
 extends layouts/layout
 
 block vars
-	-title = 'Shop'
+	-title = 'Promotion | Hunty'
 	-hidenHeaderOnMobile = true
 	-hidenFooterOnMobile = true
 
@@ -45,5 +45,13 @@ block main
 			.promotion_section__inner
 				.container
 					include modules/index/promotion_block
+		section.floating_bar.fixedBottom
+			.view-cart-inner
+				.view-cart-text
+					+link("View Cart", "cart.html") View Cart
+					span.count (13 items)
+				.price-total
+					span.price.price__current 2.120.000 VND
+
 block popup
 	include modules/index/login-popup
