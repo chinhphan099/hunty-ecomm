@@ -9,17 +9,22 @@ block main
 		.container
 			.breadcrumbs_wrap
 				+breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { title: 'Category', href: 'index.html', text: 'Category' }, { text: 'Product Name' }, ])
-			.search_results_wrap
+			.product-listing-wrap
 				.filter
 					.filter__inner
 						.results
 							h1 Giay Vans 
 								span.count (12 results) 
-						ul.sort-list
-							li.active: +link('Related', 'javascript:void(0);')
-							li: +link('Best Seller', 'javascript:void(0);')
-							li: +link('Best Price', 'javascript:void(0);')
-							li: +link('About to Expired', 'javascript:void(0);')
+						.sort-inner
+							.sort-options
+								.select-text.hidden-sm-up.active
+									span.sort-by Sort by
+									i.icon-caret-down
+								ul.sort-list
+									li.active: +link('Related', 'javascript:void(0);')
+									li: +link('Best Seller', 'javascript:void(0);')
+									li: +link('Best Price', 'javascript:void(0);')
+									li: +link('About to Expired', 'javascript:void(0);')
 
 				.product-listing
 					-for (var i = 0; i < 14; i++)
