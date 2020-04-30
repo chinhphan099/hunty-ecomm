@@ -1,3 +1,5 @@
++link('Back To Top', 'javascript:;')(data-scrollto='{"handle": "body"}').back-top-top: i.icon-arrow-up
+
 .newsletter.hidden-sm-down
     .container
         .newsletter__inner
@@ -9,7 +11,6 @@
                     button(type="button" name="Subscribe" id="Subscribe") Subscribe
                     span: input(type="text" name="Subscribe" id="Subscribe" placeholder = "Your email")
 
-
 footer.footer.hidden-sm-down
     .footer__inner
         .container
@@ -18,7 +19,7 @@ footer.footer.hidden-sm-down
                 ul.footer__nav
                     +items([
                         {title: 'FAQ', href: '#'},
-                        {title: 'Policy', href: '#'},
+                        {title: 'Policy', href: 'policy.html'},
                         {title: 'Call Center', href: '#'}
                     ])
 
@@ -28,7 +29,7 @@ footer.footer.hidden-sm-down
                     +items([
                         {title: 'Introduce', href: '#'},
                         {title: 'Recruitment', href: '#'},
-                        {title: 'Term & Conditions', href: '#'},
+                        {title: 'Term & Conditions', href: 'terms.html'},
                         {title: 'Contact', href: '#'}
                     ])
             .footer__col
@@ -59,8 +60,6 @@ footer.footer.hidden-sm-down
     .footer__copyright
         .container
             p Copyright &#64; 2020 Hunty.com
-
-+link('Back To Top', 'javascript:;')(data-scrollto='{"handle": "body"}').back-top-top: i.icon-arrow-up
 
 nav.tabbar.hidden-sm-up
     .tabbar__inner
