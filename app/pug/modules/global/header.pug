@@ -28,7 +28,7 @@ header.header(class=hidenHeaderOnMobileCls)
                 .header__tracking
                     +link('Tracking order', 'my-order.html')
                         i.icon-tracking
-                        span Tracking order
+                        span.text Tracking order
                 .header__notification
                     +link('Notification', 'notification.html')
                         span.icon
@@ -39,12 +39,12 @@ header.header(class=hidenHeaderOnMobileCls)
                     .header__login
                         +link('Login', 'javascript:;')
                             i.icon-account
-                            span Login
+                            span.text Login
                 else
                     .header__loged
                         +link('Chào Chinh', 'profile.html')
                             img(src="https://picsum.photos/24/24").user_avt
-                            span Chinh
+                            span.text Chinh
                     
     .header__main.hidden-sm-down
         .container
