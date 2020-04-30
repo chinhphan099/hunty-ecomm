@@ -7,6 +7,8 @@
   min-width: 100%;
   .load {
     .position();
+    opacity: 1;
+    transition: opacity 600ms ease;
     background: url("../images/loading.svg") center center / 100px no-repeat;
   }
   .item {
@@ -54,7 +56,8 @@
     height: auto;
     width: auto;
     + .load {
-      display: none;
+      opacity: 0;
+      pointer-events: none;
     }
   }
 }
