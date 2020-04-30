@@ -5,15 +5,17 @@ mixin rowTitle(title)
   tr
     td.title(colspan="13"): strong!=title
 mixin rowContent(no, obj)
-  - var sty = "display: block; width: " + obj.progress + "%; height: 40px; background-color: #dedede; text-align: center; line-height: 40px; font-weight: bold;"
+  - var sty = "white-space:nowrap;display: block; width: " + obj.progress + "%; height: 40px; background-color: #dedede; text-align: center; line-height: 40px; font-weight: bold;"
   tr.template&attributes(attributes)
     td.number!=no
     td.psd!=obj.name
-    td.file: a(href=obj.link, target="_blank")!=obj.link.substr(1)
+    td.file: a(href=obj.link, target="_blank")!=obj.link
     td.progress(style="padding: 0;"): span(style=sty)
       !=obj.progress+'%'
+      if obj.progress == 5
+        |  - Started
       if obj.progress == 90
-        |  - Reviewing
+        |  - Waiting Review
 mixin rowContentList(arr)
   each obj, index in arr
     +rowContent(index+1, obj)
