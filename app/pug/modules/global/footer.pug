@@ -1,3 +1,6 @@
+if hidenFooterOnMobile
+    -hidenFooterOnMobileCls = 'hidden-sm-down'
+
 +link('Back To Top', 'javascript:;')(data-scrollto='{"handle": "body"}').back-top-top: i.icon-arrow-up
 
 .newsletter.hidden-sm-down
@@ -61,7 +64,7 @@ footer.footer.hidden-sm-down
         .container
             p Copyright &#64; 2020 Hunty.com
 
-nav.tabbar.hidden-sm-up
+nav.tabbar.hidden-sm-up(class!=hidenFooterOnMobileCls)
     .tabbar__inner
         +link('Home', '#').tabbar__item.active
             i.icon-home-solid

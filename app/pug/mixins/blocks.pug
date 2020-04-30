@@ -26,7 +26,7 @@ mixin divider(text, spanClass)
     span(class!=spanClass)!=text
 
 mixin goback()
-  a.goback.hidden-md-up(href="javascript:;" onclick="window.history.back()" title="Trang trước")
+  a.goback.hidden-md-up(href="javascript:;" onclick="window.history.back()" title="Trang trước")&attributes(attributes)
     i.icon-arrow-prev
 
 //- Used in Style Guide page.

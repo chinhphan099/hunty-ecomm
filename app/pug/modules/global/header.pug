@@ -1,4 +1,7 @@
-header.header
+if hidenHeaderOnMobile
+    -hidenHeaderOnMobileCls = 'hidden-sm-down'
+
+header.header(class=hidenHeaderOnMobileCls)
     .header__inner
         .container
             .header__wrap
