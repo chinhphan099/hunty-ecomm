@@ -17,8 +17,9 @@ header.header
                         button.header__btn-back.hidden-md-up: i.icon-arrow-left
                         +customInput({id: 'search_btn', type: 'button', text: '<span>Tìm kiếm</span>', iconClass: 'icon-search'}, {id: "txt_search", placeholder: 'Search for Brand, Promotion... '}, {iconCls: 'icon-search'})
                         button.header__gro-up.hidden-md-up: i.icon-gro-up
-                        .header__search-auto-complete.hidden
-                            | Content
+                    .header__search-auto-complete
+                        -for(var i = 0; i < 50; i++)
+                            +link('Search Content').result-item
 
             .header__links.hidden-sm-down
                 .header__tracking

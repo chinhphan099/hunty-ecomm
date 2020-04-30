@@ -21,9 +21,16 @@
   }
 
   function searchIndex() {
-    const searchBtn = document.querySelector('.header__search-btn');
-    if(!!searchBtn) {
-      searchBtn.addEventListener('click', () => {
+    const searchBtnDk = document.getElementById('search_btn');
+    if(!!searchBtnDk) {
+      searchBtnDk.addEventListener('click', () => {
+        document.querySelector('.header__search-auto-complete').classList.toggle('active');
+      });
+    }
+
+    const searchBtnMb = document.querySelector('.header__search-btn');
+    if(!!searchBtnMb) {
+      searchBtnMb.addEventListener('click', () => {
         document.querySelector('body').classList.add('open-search');
       });
     }
