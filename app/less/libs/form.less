@@ -52,19 +52,33 @@ label {
 
 .custom-number {
   position: relative;
-  [data-increase] {
-    .position(5px 5px);
+  display: flex;
+  border: 1px solid @color03;
+  border-radius: 3px;
+  .cart__item & {
+    width: 80px;
+  }
+  input {
+    width: 40%;
+    height: 32px;
+    padding: 5px;
+    text-align: center;
+    border: none;
+  }
+  [data-increase],
+  [data-decrease] {
+    width: 30%;
+    border: none;
+    background-color: white;
   }
   [data-decrease] {
-    .position(null 5px 5px);
   }
   i {
-    .font-size(10px);
+    .font-size(14px);
   }
-  // Min Small Desktop
   @media (min-width: @lg-min) {
     i {
-      .font-size(5px);
+      .font-size(10px);
     }
   }
 }

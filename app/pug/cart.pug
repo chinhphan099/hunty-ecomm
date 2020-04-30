@@ -7,8 +7,22 @@ block main
 	main
 		.container
 			.cart
+				+heading('Cart')
 				.cart__inner
 					.cart__primary
-						
+						.cart__list
+							-for (var i = 0; i < 5; i++)
+								+cartItem()
 					.cart__sidebar
+						.fieldset.coupon_code
+							+label('coupon-code', 'Apply Discount Code')
+							+customInput({id: 'coupon-code', text: 'Apply', btnClass: 'button'}, {id: "coupon-code"})
 
+						.cartSubtotal
+							.cartSubtotal__inner
+								.cartSubtotal_text Total
+								.cartSubtotal__total 1.120.000 VND 
+							.cartSubtotal__next: button(type="button").button Next
+
+
+							
