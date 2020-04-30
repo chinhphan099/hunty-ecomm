@@ -5,7 +5,7 @@ header.header(class=hidenHeaderOnMobileCls)
     .header__inner
         .container
             .header__wrap
-                .header__logo.hidden-sm-down: +link('Hunty', '#'): +img('logo.png', 'Hunty')
+                .header__logo.hidden-sm-down: +link('Hunty', 'index.html'): +img('logo.png', 'Hunty')
                 .header__location
                     i.icon-location.hidden-md-up
                     +customSelect({id: 'select_id'}, [
@@ -26,29 +26,36 @@ header.header(class=hidenHeaderOnMobileCls)
 
             .header__links.hidden-sm-down
                 .header__tracking
-                    +link('Tracking order', '#')
+                    +link('Tracking order', 'my-order.html')
                         i.icon-tracking
                         span Tracking order
                 .header__notification
-                    +link('Notification', '#')
+                    +link('Notification', 'notification.html')
                         span.icon
                             i.icon-notification
                             span.number 2
                         span.text Notification
-                .header__login
-                    +link('Login', '#')
-                        i.icon-account
-                        span Login
+                if notLoged == true
+                    .header__login
+                        +link('Login', 'javascript:;')
+                            i.icon-account
+                            span Login
+                else
+                    .header__loged
+                        +link('Chào Chinh', 'profile.html')
+                            img(src="https://picsum.photos/24/24").user_avt
+                            span Chinh
+                    
     .header__main.hidden-sm-down
         .container
             .header__left
                 nav.nav
-                    +link('danh mục sản phẩm ', '#').nav__category__toggle
+                    +link('danh mục sản phẩm ', 'javascript:;').nav__category__toggle
                         i.icon-hamburger
                         span Danh mục sản phẩm
                     ul.nav__navbar
                         +items-2([
-                            {title: 'Introduce', href: '#', subClass: 'sub_menu', subList: [
+                            {liClass: 'has-sub', title: 'Introduce', href: '#', subClass: 'sub_menu', subList: [
                                 {title: 'Recruitment', href: '#'},
                                 {title: 'Recruitment', href: '#'},
                                 {title: 'Recruitment', href: '#'},
@@ -92,31 +99,43 @@ header.header(class=hidenHeaderOnMobileCls)
                             {title: 'Recruitment', href: '#'},
                             {title: 'Term & Conditions', href: '#'},
                             {title: 'Contact', href: '#'}
-                        ], 0)
+                        ])
                 .product__recently
                     +link('danh mục sản phẩm ', '#').product__recently__title
                         i.icon-caret-down
                         span Sản phẩm đã xem
                     ul.product__recently__list
-                        li: img(src="https://picsum.photos/100/120", alt="")
-                        li: img(src="https://picsum.photos/100/120", alt="")
-                        li: img(src="https://picsum.photos/100/120", alt="")
-                        li: img(src="https://picsum.photos/100/120", alt="")
+                        li
+                            +link('Product title')
+                                img(src="https://picsum.photos/100/120", alt="Product title")
+                        li
+                            +link('Product title')
+                                img(src="https://picsum.photos/100/120", alt="Product title")
+                        li
+                            +link('Product title')
+                                img(src="https://picsum.photos/100/120", alt="Product title")
+                        li
+                            +link('Product title')
+                                img(src="https://picsum.photos/100/120", alt="Product title")
 
             .header__right
-                .header__shop__management
+                .header__shop_management
                     +link('Shop Management ', '#')
                         span.icon: i.icon-view-shop
                         span Shop Management
-                .header__hunty__feed
+                .header__hunty_feed
                     +link('Hunty feed ', '#')
                         i.icon-hunty-feed #[span.path1]#[span.path2]
                         span Hunty feed
-                .header__mini__cart
-                    .mini__cart_title
-                        +link('Cart ', '#')
-                            i.icon-cart
+                .header__mini_cart
+                    .header__mini_cart_title
+                        +link('Cart ', 'cart.html').cart-link
+                            span.header__mini_cart_count
+                                i.icon-cart
+                                span 2
                             span Cart
+                    .header__mini_cart_notice
+                        p Thêm vào giỏ hàng thành công!
 
 
 

@@ -1,4 +1,11 @@
 section.banner__promoMb.hidden-sm-up
     .container
-        .banner__promo__slider
-        +link('Image', '#'): +img-upload('promo_1.png')
+        .slider(data-cslider='{"type": "single", "dots": true, "autoplay": true, "initUnder": 767}')
+            .slick
+                .item
+                    img(src="https://picsum.photos/500/250").img-view
+                .item
+                    img(src="https://picsum.photos/500/250?grayscale").img-view
+                .item
+                    img(src="https://picsum.photos/500/250").img-view
+            span.load

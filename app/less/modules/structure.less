@@ -1,6 +1,6 @@
 // Feader
 .header {
-    background: #FFD100;
+    background-color: #FFD100;
     &__searchForm {
         input {
             font-style: italic;
@@ -36,10 +36,6 @@
             display: block;
             font-size: 12px;
             text-transform: uppercase;
-            color: #333;
-            &:hover {
-                color: #000;
-            }
             > i, > span {
                 display: inline-block;
                 vertical-align: middle;
@@ -51,6 +47,10 @@
             .icon-tracking,
             .icon-notification {
                 font-size: 28px;
+            }
+            .user_avt {
+                border-radius: 50%;
+                margin-right: 5px;
             }
             .icon-account {
                 font-size: 24px;
@@ -173,7 +173,7 @@
                 margin-left: 20px;
             }
         }
-        &__shop__management {
+        &__shop_management {
             .icon {
                 display: inline-flex;
                 align-items: center;
@@ -190,14 +190,15 @@
                 }
             }
         }
-        &__hunty__feed {
+        &__hunty_feed {
             i {
                 .path1:before {color: #fff}
                 .path2:before {color: #ffd100}
             }
         }
-        &__mini__cart {
-            a {
+        &__mini_cart {
+            position: relative;
+            .cart-link {
                 display: block;
                 padding: 8px 12px;
                 border-radius: 3px;
@@ -205,6 +206,65 @@
                 &:hover {
                     background-color: #FFDC40;
                 }
+            }
+            &:hover {
+                .header__mini_cart_notice {
+                    opacity: 1;
+                }
+            }
+        }
+        &__mini_cart_count {
+            display: inline-block;
+            position: relative;
+            margin-right: 6px;
+            i {
+                margin-right: 0;
+            }
+            span {
+                .position(null 0 11px);
+                .size(14px);
+                font-size: 11px;
+                line-height: 14px;
+                text-align: center;
+                color: white;
+                border-radius: 50%;
+                background-color: #FE2070;
+            }
+        }
+        &__mini_cart_notice {
+            .position(100% 0 null null);
+            padding: 10px;
+            margin-top: 10px;
+            background-color: @color01;
+            border-radius: 6px;
+            opacity: 0;
+            box-shadow: 0 2px 4px @color05;
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: 100%;
+                right: 15px;
+                border-width: 8px;
+                border-style: solid;
+                border-color: transparent transparent rgb(255, 255, 255);
+                border-image: initial;
+                border-bottom: 8px solid rgb(255, 255, 255);
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 100%;
+                height: 10px;
+                right: 0;
+                width: 100%;
+            }
+            &.active {
+                opacity: 1;
+            }
+            p {
+                width: 240px;
+                text-align: center;
+                font-size: 1.4rem;
             }
         }
     }
@@ -395,10 +455,14 @@
                 text-decoration: none;
             }
         }
-        & > li {
+        .has-sub {
+            &:hover {
+                & > .sub_menu {
+                    display: block;
+                }
+            }
             > a {
                 &:after {
-                    display: none;
                     position: absolute;
                     top: 50%;
                     right: 10px;
@@ -407,16 +471,6 @@
                     content: "\f105";
                     color: #FFD100;
                     font-size: 24px;
-                }
-            }
-            &:hover {
-                a {
-                    &:after {
-                        display: block;
-                    }
-                }
-                & > .sub_menu {
-                    display: block;
                 }
             }
         }
@@ -466,7 +520,7 @@
         background: #FFFFFF;
         border: 1px solid #F4F7FC;
         box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
-        border-radius: 5px;
+        border-radius: 0 0 5px 5px;
         z-index: 10;
         li {
             padding: 0 10px;
