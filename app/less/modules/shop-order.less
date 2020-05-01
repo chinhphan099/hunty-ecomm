@@ -12,6 +12,28 @@
 	@media (min-width: 768px) {
 		padding: 0;
 	}
+	&__head {
+		display: flex;
+		align-items: center;
+		p, i {
+			margin-bottom: 15px;
+			.font-size(13px);
+			line-height: 19px;
+			color: #8B929F;
+		}
+		i {
+			margin: 0 10px 15px;
+		}
+		@media (min-width: 992px) {
+			p, i {
+				margin-bottom: 20px;
+				.font-size(14px);
+			}
+			i {
+				margin: 0 15px 20px;
+			}
+		}
+	}
 	&__table {
 		padding: 10px;
 		background-color: @color01;
@@ -89,8 +111,11 @@
 		}
 		tbody {
 			tr {
-				&:nth-child(even) {
+				&:nth-child(odd) {
 					background-color: #F8FAFF;
+				}
+				&:first-child {
+					background-color: #fff;
 				}
 			}
 		}

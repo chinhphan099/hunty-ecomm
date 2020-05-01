@@ -1,0 +1,15 @@
+extends layouts/shop-order-info
+
+block vars
+	-title = 'Order Info | Hunty'
+
+block main
+	main
+		+goback()
+		.shop-wrap
+			.shop-wrap__inner
+				.shop-wrap__left
+					include modules/manage-shop/navigation
+				.shop-wrap__right
+					include modules/manage-shop/order-info
+			.shop-wrap__bottom
