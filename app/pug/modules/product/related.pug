@@ -8,3 +8,14 @@ section.viewed_section
                         .item
                             +product('one-price', 'slideitem')
                 span.load
+
+section.viewed_section
+    .container
+        .product_block
+            +heading('Similar Product')
+            .slider(data-cslider='{"type": "product", "setPositionArrows": true}')
+                .slick
+                    -for (var i = 0; i < 15; i++)
+                        .item
+                            +product('one-price', 'slideitem')
+                span.load

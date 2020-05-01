@@ -1,2 +1,32 @@
 .product-details
     +heading('Oxford Men White Shirt Korean Style', '', '','h1')
+    p
+        i.icon-star
+        | 4.9 #[span(style="color: #8B929F;") (3.666 rating)]
+    +price('575.000 đ', '(1.000.000)')
+    .color-wrap
+        span Color
+        a(href="javascript:;").active
+        a(href="javascript:;")
+        a(href="javascript:;")
+        a(href="javascript:;")
+    hr
+    table
+        caption PRODUCT INFORMATION
+        tr
+            td Categories
+            td Fashion
+        tr
+            td Provided by
+            td Lotte
+        tr
+            td Brand
+            td: span(style="color: #FFD100") Rountine
+        tr
+            td Manufactured
+            td Vietnam
+    hr
+    .button-action
+        +button({name: 'chatToShopBtn'}).button.hollow #[i.icon-message] Chat to Shop
+        +button({name: 'addToCartBtn'}).button.hollow #[i.icon-cart] Add to Cart
+        

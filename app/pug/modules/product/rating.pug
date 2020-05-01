@@ -1,2 +1,10 @@
 .product-rating
-    | Rating Block
+    +heading('Rating')
+    .feedback
+        -for(var i = 0; i < 3; i++)
+            .feedback__item
+                .thumb
+                    img(src="https://i.picsum.photos/id/239/100/100.jpg")
+                .content
+                    p.name Jessica
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

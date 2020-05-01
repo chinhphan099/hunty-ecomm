@@ -66,6 +66,16 @@
     }
 }
 .product-details {
+    .color-wrap {
+        display: flex;
+        justify-content: flex-start;
+        span, a {
+            margin-right: 4px;
+        }
+        .active {
+            transform: scale(1.5);
+        }
+    }
     @media (min-width: 768px) {
         width: calc(~"50% - 10px");
     }
