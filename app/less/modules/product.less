@@ -5,33 +5,62 @@
 /* Product Main Info */
 .product-wrapper {
     @media (min-width: 768px) {
+        margin-bottom: 25px;
         display: flex;
         justify-content: space-between;
     }
 }
 .product-slide {
+    margin: 0 -15px 20px;;
     .thumb-slider {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+        .slick-arrow {
+            opacity: 0;
+        }
     }
     .nav-slider {
+        .slick-list {
+            padding-right: 30px;
+        }
         .slick-arrow {
             .size(20px);
+            opacity: 0;
             &:before {
                 font-size: 14px;
             }
         }
+        .item {
+            padding: 0 5px;
+            &.slick-current img {
+                border: 2px solid @yellow;
+                border-radius: 1px;
+            }
+        }
     }
     @media (min-width: 768px) {
+        margin: 0;
         width: calc(~"50% - 10px");
-        .thumb-slider {
-            margin-bottom: 15px;
-        }
         .nav-slider {
             .slick-arrow {
                 .size(24px);
                 &:before {
                     font-size: 16px;
                 }
+            }
+            .item {
+            }
+        }
+    }
+    @media (min-width: 992px) {
+        .thumb-slider {
+            margin-bottom: 15px;
+        }
+        .nav-slider {
+            .slick-list {
+                padding-right: 50px;
+            }
+            .item {
+                padding: 0 10px;
             }
         }
     }
@@ -44,16 +73,26 @@
 /* End Product Main Info */
 
 /* Product Description */
-.description-wrapper {}
+.description-wrapper {
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
 .product-description {
     .editor {
         padding: 0 0 30px;
     }
     @media (min-width: 768px) {
+        width: calc(~"50% - 10px");
         .editor {
             padding-bottom: 0;
         }
     }
 }
-.product-rating {}
+.product-rating {
+    @media (min-width: 768px) {
+        width: calc(~"50% - 10px");
+    }
+}
 /* End Product Description */

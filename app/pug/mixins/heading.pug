@@ -1,8 +1,12 @@
-mixin heading(headingText, link, countdown)
+mixin heading(headingText, link, countdown, tag)
+    -tagName = 'h2'
+    if tag
+        -tagName = tag
     if link
         - cls = 'heading--link'
     .heading(class!=cls)&attributes(attributes)
-        h2.heading__text!=headingText
+        <!{tagName} class="heading__text">
+            !=headingText
         if countdown
             span.countdown(data-countdown) 3:09:09:09
         if link
