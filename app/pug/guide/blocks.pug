@@ -7,25 +7,13 @@
       button.button(data-copy='+button({class: "button", id: "buttonId", name: "buttonId"}) Button Text') Button
     .col-xs-6.col-sm-2(data-handler)
       button.button.hollow(data-copy='+button({class: "button hollow", id: "buttonId", name: "buttonId"}) Button Text') Button
-  br
+  hr
   .row
-    .col-xs-6.col-sm-6
-      h3 TODAY
-      ul
-        li: strong 30 minutes ago
-        li: span Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        li: span Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        li: strong 30 minutes ago
-        li: span Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        li: span Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      h3 TODAY
-      ul
-        li: strong 30 minutes ago
-        li: span Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        li: span Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        li: strong 30 minutes ago
-        li: span Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        li: span Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    .col-xs-12
+      h3 Timeline: +notification()
+  .row
+    .col-xs-12
+      +notification()
   br
   .row
     .col-xs-6.col-sm-4
