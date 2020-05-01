@@ -4,13 +4,43 @@
 
 /* Product Main Info */
 .product-wrapper {
-    .transition(all 120ms ease);
     @media (min-width: 768px) {
         display: flex;
+        justify-content: space-between;
     }
 }
-.product-slide {}
-.product-details {}
+.product-slide {
+    .thumb-slider {
+        margin-bottom: 10px;
+    }
+    .nav-slider {
+        .slick-arrow {
+            .size(20px);
+            &:before {
+                font-size: 14px;
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        width: calc(~"50% - 10px");
+        .thumb-slider {
+            margin-bottom: 15px;
+        }
+        .nav-slider {
+            .slick-arrow {
+                .size(24px);
+                &:before {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+.product-details {
+    @media (min-width: 768px) {
+        width: calc(~"50% - 10px");
+    }
+}
 /* End Product Main Info */
 
 /* Product Description */

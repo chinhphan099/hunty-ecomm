@@ -437,20 +437,19 @@
       ]
     },
     sycingView: {
-      infinite: true,
       speed: 600,
       slidesToShow: 1,
+      infinite: false,
       zIndex: 5,
       rtl: $('html').attr('dir') === 'rtl' ? true : false
     },
     sycingThumb: {
-      infinite: true,
       speed: 600,
-      slidesToShow: 5,
+      slidesToShow: 7,
       slidesToScroll: 1,
-      centerMode: true,
       centerPadding: 0,
       focusOnSelect: true,
+      infinite: true,
       // autoplay: true,
       // autoplaySpeed: 3000,
       zIndex: 5,
@@ -459,7 +458,7 @@
         {
           breakpoint: 992,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 5,
             slidesToScroll: 1
           }
         }
@@ -479,6 +478,13 @@
       infinite: false,
       zIndex: 5,
       responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
         {
           breakpoint: 576,
           settings: {
