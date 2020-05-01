@@ -1,0 +1,79 @@
+.checkout {
+	padding-bottom: 170px;
+	&__heading {
+		margin-bottom: 10px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		h1 {
+			font-size: 16px;
+			color: #8B929F;
+			text-transform: uppercase;
+			line-height: 1.2;
+			font-weight: normal;
+		}
+
+	}
+	.link_change {
+		color: #2085FE;
+		font-size: 14px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	@media(min-width: 768px) {
+		&__heading {
+			h1 {
+				font-size: 22px;
+			}
+		}
+		&__inner {
+			display: flex;
+			justify-content: space-between;
+		}
+		&__primary {
+			.flex(1 0 0%);
+		}
+		&__sidebar {
+			width: 30%;
+			margin-left: 60px;
+		}
+	}
+}
+
+.address_list {
+	margin-bottom: 30px;
+	font-size: 14px;
+	color: #8B929F;
+	.address_item {
+		margin-bottom: 15px;
+		p {
+			margin-bottom: 5px;
+		}
+	}
+	
+	.namePhone {
+		font-size: 16px;
+		color: #2C2E32;
+	}
+	@media(min-width: 768px) {
+		padding: 12px 15px 0 15px;
+		border: 1px dashed #FFD100;
+		border-radius: 3px;
+	}
+}
+
+.address_form  {
+	.position();
+    .invisible();
+    .translateY(-10px);
+    .transition(all .3s ease-out);
+    overflow: hidden;
+    height: 0;
+	&.active {
+      position: static;
+      .translateY(0);
+      .visible();
+      height: auto;
+    }
+}
