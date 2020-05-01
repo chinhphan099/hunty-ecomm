@@ -33,6 +33,7 @@
 		}
 	}
 }
+
 .product-type {
 	padding: 10px 0;
 	flex: 1 0 0%;
@@ -56,15 +57,6 @@
 			font-size: 18px;
 		}
 	}
-	ul {
-		a {
-			position: relative;
-			display: block;
-			color: #8B929F;
-			padding: 4px 10px;
-			font-size: 12px;
-		}
-	}
 	@media(max-width: 767px) {
 		&__list {
 			position: relative;
@@ -75,17 +67,25 @@
 					opacity: 1;
 				}
 			}
-		}
-		ul {
-			padding: 5px 0;
-			.position(100% 0 null null);
-			width: 160px;
-			opacity: 0;
-			background: #fff;
-			border: 2px solid #FFEB8E;
-			transform: translateY(10px);
-			.transition(all .3s ease-out);
-			z-index: 10;
+			ul {
+				display: block;
+				padding: 5px 0;
+				.position(100% 0 null null);
+				width: 160px;
+				opacity: 0;
+				background: #fff;
+				border: 2px solid #FFEB8E;
+				transform: translateY(10px);
+				.transition(all .3s ease-out);
+				z-index: 10;
+				li.active a {font-weight: normal;}
+				a {
+					padding: 4px 10px;
+					&:before {
+						content: none;
+					}
+				}
+			}
 		}
 	}
 	@media(min-width: 768px) {
@@ -98,45 +98,51 @@
 				font-size: 14px;
 			}
 		}
-		ul {
-			display: flex;
-			align-items: center;
-			li {
-				&.active {
-					a {
-						font-weight: 700;
-						color: #333;
-						&:before {
-							transform: scaleX(1);
-						}
-					}
-				}
-			}
+		
+	}
+}
+
+.product-navs {
+	display: flex;
+	align-items: center;
+	li {
+		&.active {
 			a {
-				padding: 10px;
-				font-size: 14px;
+				font-weight: 700;
+				color: #333;
 				&:before {
-					content: "";
-					.position(null 0 0 0);
-					height: 3px;
-					transform: scaleX(0);
-					transform-origin: 50%;
-					background-color: #FFD100;
-					transition: transform .3s ease-out;
-					z-index: 1;
-			   }
+					transform: scaleX(1);
+				}
 			}
 		}
 	}
+	a {
+		&:before {
+			content: "";
+			.position(null 0 0 0);
+			height: 3px;
+			transform: scaleX(0);
+			transform-origin: 50%;
+			background-color: #FFD100;
+			transition: transform .3s ease-out;
+			z-index: 1;
+	   }
+	}
+	a {
+		position: relative;
+		display: block;
+		color: #8B929F;
+		padding: 10px;
+		font-size: 14px;
+	}
+	
 	@media(min-width: 992px) {
-		ul {
-			li {
-				margin-left: 10px;
-			}
-			a {
-				padding: 15px;
-				font-size: 16px;
-			}
+		li {
+			margin-left: 10px;
+		}
+		a {
+			padding: 15px;
+			font-size: 16px;
 		}
 	}
 }

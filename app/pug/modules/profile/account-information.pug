@@ -1,0 +1,20 @@
+.account-informaton
+	+heading('Account Information')
+	.account-form
+		.fieldset
+			+label('name', 'Name').label
+			.fieldset__column
+				+input({type: "text", name: 'fullName', value: 'Your Name'})
+		.fieldset
+			+label('phone', 'Phone').label
+			.fieldset__column
+				+input({type: "tel", name: 'phoneNumber', value: '0123456789'})
+		.fieldset
+			+label('name', 'Email').label
+			.fieldset__column
+				+input({type: "text", value: 'abc@gmail.com'})
+		.fieldset
+			+label('name', 'Year of Birth').label
+			.fieldset__column
+				+input({type: "number", value: '1999'})
+	button.button Save

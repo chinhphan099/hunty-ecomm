@@ -10,16 +10,17 @@ block main
 				.checkout__inner
 					.checkout__primary
 						.checkout__heading
-							h1.heading__text Delivery Method
+							h1.checkout__title Delivery Method
 							+link("Change", "javascript:;").link_change
-						.address_list
-							.address_item
-								p.namePhone
-									span.name Phan Chinh 
-									span.phone 0938528813
-								p.detail Địa chỉ: QTSC 9, Công viên phần mềm Quang Trung, P. Tân Chánh Hiệp, Q.12, TP.HCM, Việt Nam, Phường Tân Chánh Hiệp, Quận 12, Hồ Chí Minh Việt Nam
-						.address_form.active
-							.address_inner 
+						.checkout_address
+							.checkout_address__list
+								.checkout_address__item
+									p.checkout_address__namePhone
+										span.name Phan Chinh 
+										span.phone 0938528813
+									p.checkout_address__detail Địa chỉ: QTSC 9, Công viên phần mềm Quang Trung, P. Tân Chánh Hiệp, Q.12, TP.HCM, Việt Nam, Phường Tân Chánh Hiệp, Quận 12, Hồ Chí Minh Việt Nam
+						.checkout_address__form.active
+							.checkout_address__inner 
 								+form("").address_form_edit
 									.fieldset
 										label.label(for="full_name")

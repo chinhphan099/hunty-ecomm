@@ -1,6 +1,4 @@
 .shop-info
-    .shop-info__banner.hidden-md-up
-        img(src="https://i.picsum.photos/id/119/800/530.jpg", alt="")
     .shop-info__logo
         .thumb
             img(src="https://i.picsum.photos/id/239/100/100.jpg", alt="")
@@ -9,6 +7,13 @@
             p
                 i.icon-star
                 | 4.9 #[span(style="color: #8B929F;") (3.666 rating)]
+            .button_inner
+                +link("Follow Shop", "javascript:;").button.hollow.active.hidden-sm-down
+                    i.icon-heart
+                    span Follow Shop
+                +link("Chat Shop", "javascript:;").button.hollow
+                    i.icon-shop.hidden-sm-down
+                    span Chat Shop
     ul.shop-info__list
         li
             i.icon-follow

@@ -400,7 +400,7 @@
     font-size: 1.4rem;
   }
   .price {
-    font-size: 12px;
+    font-size: 1.4rem;
   }
   @media (max-width: 767px) {
     &--promo {
@@ -717,8 +717,13 @@
 			margin-right: 10px;
 			img {
 				max-width: 50px;
+        border-radius: 50%;
 			}
 		}
+    .desc {
+      flex: 1 0 0%;
+      position: relative;
+    }
 		.wrap-title {
 			margin-bottom: 5px;
 			.font-size(18px);
@@ -733,15 +738,21 @@
 		i {
 			margin-right: 5px;
 		}
-		button {
-			.position(null 0 null null);
-			.btn {
-				padding: 8px;
-				.font-size(14px);
-				font-weight: normal;
-				color: @yellow;
-			}
-		}
+    .button_inner {
+      .shop-wrap & {
+        display: none;
+      }
+    }
+		.button {
+      padding: 8px 10px;
+      font-weight: normal;
+      font-size: 14px;
+      i {
+        margin-right: 8px;
+        font-size: 18px;
+        color: #FFD100;
+      }
+    }
 		@media (min-width: 768px) {
 			margin-bottom: 20px;
 			padding-top: 0;
@@ -750,17 +761,41 @@
 					max-width: 100px;
 				}
 			}
+      .button_inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & > .button {
+          width: calc(~"100% /2 - 10px");
+        }
+      }
 		}
 		@media (min-width: 992px) {
-      width: calc(~"100% / 3 - 5px");
+      width: 40%;
       margin-bottom: 0;
 		}
+    @media(min-width: 1200px) {
+      .button {
+        font-size: 16px;
+      }
+    }
+    @media(max-width: 767px) {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #F4F7FC;
+      .button_inner {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+    }
 	}
 
 	&__list {
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 		li {
-			margin-bottom: 10px;
+			margin: 10px 0;
 		}
 		i {
 			margin-right: 5px;
@@ -770,9 +805,14 @@
       margin-bottom: 0;
     }
 		@media (min-width: 992px) {
-      width: calc(~"100% / 3 - 5px");
+      width: 25%;
+      padding: 0 20px 0 40px;
       margin-bottom: 0;
 		}
+    @media(max-width: 767px) {
+      padding-bottom: 10px;
+      border-bottom: 1px solid #F4F7FC;
+    }
 	}
 
 	&__location {
@@ -797,7 +837,7 @@
 			}
 		}
 		@media (min-width: 992px) {
-			width: calc(~"100% / 3 - 5px");
+			width: 35%;
 		}
 	}
 }
