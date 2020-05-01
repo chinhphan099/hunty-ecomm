@@ -1,0 +1,92 @@
+extends layouts/checkout
+
+block vars
+	-title = 'Checkout | Hunty'
+
+block main
+	main
+		.container
+			.checkout
+				.checkout__inner
+					.checkout__primary
+						.checkout__heading
+							h1.heading__text Payment Method 
+						.checkout__payment
+							ul.checkout__payment_list
+								li
+									.radio.circle
+										input(type="radio" name="cash_id" id="cash_id" value="Payment cash" checked="checked")
+										label(for="cash_id")
+											.thumb: +img("payment-cash.png", "Cash")
+											.content 
+												|Cash  on Delivery
+												span Dissount 3% until 31/03
+
+										i.icon-check
+
+								li
+									.radio.circle
+										input(type="radio" name="cash_id" id="visa_id" value="Payment Visa")
+										label(for="visa_id")
+											.thumb: +img("payment-visa.png", "Visa")
+											.content 
+												|Cash  on Delivery
+												span Dissount 3% until 31/03
+
+										i.icon-check
+								li
+									.radio.circle
+										input(type="radio" name="cash_id" id="atm_id" value="Payment ATM")
+										label(for="atm_id")
+											.thumb: +img("payment-atm.png", "ATM")
+											.content 
+												|Cash  on Delivery
+												span Dissount 3% until 31/03
+
+										i.icon-check
+								li
+									.radio.circle
+										input(type="radio" name="cash_id" id="momo_id" value="Payment MoMo")
+										label(for="momo_id")
+											.thumb: +img("payment-momo.png", "MoMo")
+											.content 
+												|Cash  on Delivery
+												span Dissount 3% until 31/03
+
+										i.icon-check
+								li
+									.radio.circle
+										input(type="radio" name="cash_id" id="payoo_id" value="Payment Payoo")
+										label(for="payoo_id")
+											.thumb: +img("payment-payoo.png", "Payoo")
+											.content 
+												|Cash  on Delivery
+												span Dissount 3% until 31/03
+
+										i.icon-check
+					.checkout__sidebar
+						.checkout_summary
+							table.checkout_summary_table
+								tr
+									td.summary_label Fee
+									td.summary_value 100.000 VND
+								tr
+									td.summary_label Delivery Fee 
+									td.summary_value 20.000 VND
+								td
+									td.summary_label Packet Fee
+									td.summary_value 100.000 VND
+
+						.order_total
+							.order_total__inner
+								.total_text Total
+								.price 1.120.000 VND 
+							.order_total__next: button(type="button").button Next
+
+
+
+
+	
+
+
+							
