@@ -1,5 +1,6 @@
 .account-informaton
-	+heading('Account Information')
+	+heading('Account Information').hidden-sm-down
+	+heading('Edit Profile').hidden-md-up
 	.account-form
 		.fieldset
 			+label('name', 'Name').label
@@ -16,5 +17,5 @@
 		.fieldset
 			+label('name', 'Year of Birth').label
 			.fieldset__column
-				+input({type: "number", value: '1999'})
+				+customDate({id: 'year', value: "11/11/1990", placeholder: '11/11/1990'})
 	button.button Save
