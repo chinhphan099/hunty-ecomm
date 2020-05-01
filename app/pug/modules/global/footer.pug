@@ -21,40 +21,42 @@ footer.footer.hidden-sm-down
                 h4 Customer Service
                 ul.footer__nav
                     +items([
-                        {title: 'FAQ', href: '#'},
+                        {title: 'FAQ', href: 'faqs.html'},
                         {title: 'Policy', href: 'policy.html'},
-                        {title: 'Call Center', href: '#'}
+                        {title: 'Call Center', href: 'call-center.html'}
                     ])
 
             .footer__col
                 h4 About Hunty
                 ul.footer__nav
                     +items([
-                        {title: 'Introduce', href: '#'},
-                        {title: 'Recruitment', href: '#'},
+                        {title: 'Introduce', href: 'introduce.html'},
+                        {title: 'Recruitment', href: 'recruitment.html'},
                         {title: 'Term & Conditions', href: 'terms.html'},
-                        {title: 'Contact', href: '#'}
+                        {title: 'Contact', href: 'contact-us.html'}
                     ])
             .footer__col
                 h4 Payment method
                 ul.footer__payment_list
-                    li: +link('Title', '#'): +img('visa.svg', 'Visa')
-                    li: +link('Title', '#'): +img('mastercard.svg', 'Visa')
+                    li: +img('visa.svg', 'Visa')
+                    li: +img('mastercard.svg', 'Visa')
 
                 h4 Delivery
                 ul.footer-payment-list
-                    li: +link('Title', '#'): +img('visa.svg', 'Visa')
+                    li: +img('delivery.png', 'Delivery')
 
             .footer__col
                 h4 Follow hunty
                 ul.footer__socials
-                    li: +link('FaceBook', '#'): i.icon-fb-circle
-                                                    span.path1
-                                                    span.path2
-                    li: +link('Youtube', '#'): i.icon-youtube-circle
-                                                    span.path1
-                                                    span.path2
-                h4 HUnty application
+                    li: +link('FaceBook', 'https://facebook.com/chinhphan099')
+                            i.icon-fb-circle
+                                span.path1
+                                span.path2
+                    li: +link('Youtube', 'https://www.youtube.com/watch?v=NZ2Plnhz2-Q')
+                            i.icon-youtube-circle
+                                span.path1
+                                span.path2
+                h4 Hunty application
                 ul.footer__apps
                     li: +link('App Store', '#'): +img('app-store.svg', 'App Store')
                     li: +link('Google Play', '#'): +img('google-play.svg', 'Google Play')

@@ -1,8 +1,15 @@
-/**
- * @name Site
- * @description Global variables and functions
- * @version 1.0
- */
+if (window.Element && !Element.prototype.closest) {
+  Element.prototype.closest =
+  function(s) {
+    var matches = (this.document || this.ownerDocument).querySelectorAll(s), i, el = this;
+    do {
+      i = matches.length;
+      while (--i >= 0 && matches.item(i) !== el) {}
+    }
+    while ((i < 0) && (el = el.parentElement));
+    return el;
+  };
+}
 
 (function(global, undefined) {
   'use strict';
@@ -53,6 +60,15 @@
   }
 
   function loginModal() {
+    const loginModal = document.querySelector('.login-modal');
+    if(!!loginModal) {
+      loginModal.addEventListener('click', (e) => {
+        if(!!e.target.closest('.modal__content') || !e.target.closest('.close')) {
+          return;
+        }
+        document.querySelector('body').classList.remove('open-modal');
+      });
+    }
     const loginBtn = document.querySelector('.header__login');
     if(!!loginBtn) {
       loginBtn.addEventListener('click', (e) => {

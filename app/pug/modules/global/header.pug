@@ -50,7 +50,7 @@ header.header(class=hidenHeaderOnMobileCls)
         .container
             .header__left
                 nav.nav
-                    +link('danh mục sản phẩm ', 'javascript:;').nav__category__toggle
+                    +link('danh mục sản phẩm ', '#').nav__category__toggle
                         i.icon-hamburger
                         span Danh mục sản phẩm
                     ul.nav__navbar
@@ -120,11 +120,11 @@ header.header(class=hidenHeaderOnMobileCls)
 
             .header__right
                 .header__shop_management
-                    +link('Shop Management ', '#')
+                    +link('Shop Management ', 'shop-management.html')
                         span.icon: i.icon-view-shop
                         span Shop Management
                 .header__hunty_feed
-                    +link('Hunty feed ', '#')
+                    +link('Hunty feed ', 'hunty-feed.html')
                         i.icon-hunty-feed #[span.path1]#[span.path2]
                         span Hunty feed
                 .header__mini_cart
