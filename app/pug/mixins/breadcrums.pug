@@ -1,10 +1,11 @@
 mixin breadcrumbs(arr)
-  ul.breadcrumbs&attributes(attributes)
-    - var n = arr.length
-    each item,index in arr
-      if (index < n-1)
-        li
-          +link(item.title, item.href, item.text)
-        li #[i.icon-angle-right]
-      else
-        li!= item.text ? item.text : item.title
+  .breadcrumbs_wrap&attributes(attributes)
+    ul.breadcrumbs
+      - var n = arr.length
+      each item,index in arr
+        if (index < n-1)
+          li
+            +link(item.title, item.href, item.text)
+          li #[i.icon-angle-right]
+        else
+          li!= item.text ? item.text : item.title

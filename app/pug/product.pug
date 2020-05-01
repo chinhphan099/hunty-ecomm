@@ -8,17 +8,14 @@ block vars
 block main
   main
     +goback().goback--white
-    .container
-      +breadcrumbs([{ title: 'Home', href: 'index.html', text: 'Home' }, { title: 'Category', href: 'search.html', text: 'Category' }, { text: 'Product Name' },])
-      .product-wrapper
-        .gallery-block
+    section.product-details
+      .container
+        +breadcrumbs([{ title: 'Home', href: 'index.html', text: 'Home' }, { title: 'Category', href: 'search.html', text: 'Category' }, { text: 'Product Name' },])
+        .product-wrapper
           include modules/product/slide
-        .main-info
           include modules/product/details
-      .shop-info
         include modules/global/shop-info
-      .product-description
         .description
           include modules/product/description
-        .rating-block
           include modules/product/rating
+    include modules/index/viewed-product
