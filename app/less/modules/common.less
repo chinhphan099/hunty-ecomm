@@ -689,8 +689,12 @@
 
 /* Shop Info */
 .shop-info {
-	padding: 0 15px 10px;
-	background-color: @color01;
+	padding: 0 0 10px;
+  background-color: @color01;
+  .shop-wrap & {
+    padding-left: 15px;
+    padding-right: 15px; 
+  }
 	@media (min-width: 768px) {
 		display: flex;
 		justify-content: space-between;
@@ -699,7 +703,10 @@
 		margin-bottom: 20px;
 		line-height: 20px;
 		border: 1px solid #F4F7FC;
-		box-shadow: 2px 2px 8px rgba(42, 47, 60, 0.06);
+    box-shadow: 2px 2px 8px rgba(42, 47, 60, 0.06);
+    .shop-wrap & {
+      padding: 20px;
+    }
 	}
 
 	&__banner {
