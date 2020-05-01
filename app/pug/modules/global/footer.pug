@@ -10,9 +10,7 @@ if hidenFooterOnMobile
                 img(src="images/newsletter.png" title="Newsletter")
             .newsletter__description
                 h3 Subscribe our newsletter and get notifications
-                .custom-input
-                    button(type="button" name="Subscribe" id="Subscribe") Subscribe
-                    span: input(type="text" name="Subscribe" id="Subscribe" placeholder = "Your email")
+                +customInput({id: 'subcribeBtn', 'text': 'Subscribe'}, {id: "subcribeTxt", "placeholder": "Your email"})
 
 footer.footer.hidden-sm-down
     .footer__inner
@@ -68,19 +66,19 @@ footer.footer.hidden-sm-down
 
 nav.tabbar.hidden-sm-up(class!=hidenFooterOnMobileCls)
     .tabbar__inner
-        +link('Home', '#').tabbar__item.active
+        +link('Home', 'index.html').tabbar__item.active
             i.icon-home-solid
             span.text Home
 
-        +link('Hunty feed ', '#').tabbar__item.hunty-feed
+        +link('Hunty feed ', 'hunty-feed.html').tabbar__item.hunty-feed
             i.icon-hunty-feed #[span.path1]#[span.path2]
             span.text Hunty feed
-        +link('Notification', '#').tabbar__item.notification
+        +link('Notification', 'notification.html').tabbar__item.notification
             span.icon
                 i.icon-notification
                 span.number 2
                 span.text Notification
-        +link('Profile', '#').tabbar__item.profile
+        +link('Profile', 'profile.html').tabbar__item.profile
             i.icon-account
             span.text Profile
 
