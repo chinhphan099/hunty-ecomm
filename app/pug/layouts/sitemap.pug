@@ -16,6 +16,8 @@ mixin rowContent(no, obj)
         |  - Started
       if obj.progress == 90
         |  - Waiting Review
+      if obj.progress == 99
+        |  - Almost done
 mixin rowContentList(arr)
   each obj, index in arr
     +rowContent(index+1, obj)
