@@ -6,14 +6,6 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		h1 {
-			font-size: 16px;
-			color: #8B929F;
-			text-transform: uppercase;
-			line-height: 1.2;
-			font-weight: normal;
-		}
-
 	}
 	.link_change {
 		color: #2085FE;
@@ -21,6 +13,14 @@
 		&:hover {
 			text-decoration: underline;
 		}
+	}
+	&__title {
+		margin-bottom: 10px;
+		font-size: 16px;
+		text-transform: uppercase;
+		line-height: 1.2;
+		color: #8B929F;
+		font-weight: normal;
 	}
 	@media(min-width: 768px) {
 		max-width: 940px;
@@ -45,20 +45,19 @@
 	}
 }
 
-
-/* Delivery Method */
-.address_list {
+/* Start Checkout Delivery Methodpage  */
+.checkout_address {
 	margin-bottom: 30px;
 	font-size: 14px;
 	color: #8B929F;
-	.address_item {
+	&__item {
 		margin-bottom: 15px;
 		p {
 			margin-bottom: 5px;
 		}
 	}
 	
-	.namePhone {
+	&__namePhone {
 		font-size: 16px;
 		color: #2C2E32;
 	}
@@ -84,9 +83,9 @@
       height: auto;
     }
 }
-/* End Delivery Method */
+/* End Checkout Delivery Methodpage  */
 
-/* PAYMENT METHOD*/
+/* Start Checkout Payment Method page  */
 .checkout_payment {
 	&__list {
 		li {
@@ -135,6 +134,7 @@
 		margin-bottom: 10px;
 		font-weight: normal;
 		font-size: 20px;
+		text-transform: uppercase;
 	}
 	&__table {
 		td {
@@ -158,3 +158,33 @@
 		}
 	}
 }
+/* End Checkout Payment Method page  */
+
+/* Start Checkout Complete page  */
+.checkout_orderid {
+	margin-bottom: 15px;
+	&__number {
+		display: flex;
+		align-items: center;
+		font-size: 24px;
+		a {
+			margin-left: 10px;
+			color: #FFD100;
+			font-size: 14px;
+		}
+	}
+	@media(max-width: 767px) {
+		padding: 0 15px 15px;
+		margin-left: -15px;
+		margin-right: -15px;
+		border-bottom: 5px solid #F5F6F8;
+	}
+}
+
+.checkout_list {
+	margin-bottom: 15px;
+	.checkout__title {
+		margin-bottom: 0;
+	}
+}
+/* End Checkout Complete page  */
