@@ -103,7 +103,7 @@ mixin promotion(slideitem)
       i.icon-location
       span 1.3km from you
 
-mixin cartItem(type)
+mixin cartItem()
   .cart__item&attributes(attributes)
     +button({name: "removeItem"}).remove
       i.icon-close-outline
@@ -121,6 +121,17 @@ mixin cartItem(type)
           +input({name: 'quantity', value: '1', type: 'number'})(data-input="" autocomplete="off" readonly)
           +button({})(data-increase="")
             i.icon-plus
+
+mixin cartItem1()
+  .cart__item&attributes(attributes)
+    .thumb
+      a(href="product.html")
+        img(src="https://picsum.photos/140/170", alt="Hunty Product Name")
+    .content
+      h3.cart__name
+        a(href="product.html") Lorem ipsum dolor sit amet
+      +price('575.000 đ', '(1.000.000)')
+      span.cart__qty Quantity 1
 
 mixin notification()
   .notification__list

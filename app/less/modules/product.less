@@ -3,7 +3,12 @@
 /* End Product Section */
 
 /* Product Main Info */
-.product-wrapper {}
+.product-wrapper {
+    .transition(all 120ms ease);
+    @media (min-width: 768px) {
+        display: flex;
+    }
+}
 .product-slide {}
 .product-details {}
 /* End Product Main Info */
