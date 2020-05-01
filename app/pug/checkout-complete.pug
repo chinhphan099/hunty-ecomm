@@ -1,0 +1,56 @@
+extends layouts/checkout
+
+block vars
+	-title = 'Checkout | Hunty'
+
+block main
+	main
+		.container
+			.checkout.order_completed
+				.checkout__inner
+					.checkout__primary
+						.checkout_order_summary
+							h1.heading__text Your Order Id
+							.order_number
+								strong 95794194
+								+link('Copy', 'javascript;:')
+									i.icon-flash-sale
+									span Copy
+							
+						.checkout_order_details
+							.cart__list
+								-for (var i = 0; i < 5; i++)
+									+cartItem()
+						.checkout_order_address
+							h3 Delivery Address
+							.address_list
+								.address_item
+									p.namePhone
+										span.name Phan Chinh 
+										span.phone 0938528813
+									p.detail Địa chỉ: QTSC 9, Công viên phần mềm Quang Trung, P. Tân Chánh Hiệp, Q.12, TP.HCM, Việt Nam, Phường Tân Chánh Hiệp, Quận 12, Hồ Chí Minh Việt Nam
+					
+					.checkout__sidebar
+						.checkout_summary
+							h3 Paymet
+							table.checkout_summary__table
+								tr: caption Cash on Delivery
+								tr 
+									td.summary_label Fee
+									td.summary_value 100.000 VND
+								tr
+									td.summary_label Delivery Fee 
+									td.summary_value 20.000 VND
+								tr
+									td.summary_label Packet Fee
+									td.summary_value 100.000 VND
+							+link('Back to Home', "index.html")
+
+
+
+
+
+	
+
+
+							
