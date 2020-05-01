@@ -1,2 +1,25 @@
 .product-slide
-    | Slider
+    // Gallery
+    .gallery
+        // Main Slider
+        .slider.thumb-slider(data-cslider='{"type": "syncing", "navFor": ".slider-nav", "view": "true", "hasPopup": true, "hasZoom": true, "smoothZoom": true}')
+            span.flag On Sale
+            .slick.slider-thumb
+                .item(data-zoom-id="zoom2"): img(src="https://picsum.photos/600/400" data-zoom-image="https://picsum.photos/1200/800").img-view.zoomer
+                .item(data-zoom-id="zoom2"): img(src="https://picsum.photos/600/400" data-zoom-image="https://picsum.photos/1200/800").img-view.zoomer
+                .item(data-zoom-id="zoom2"): img(src="https://picsum.photos/600/400" data-zoom-image="https://picsum.photos/1200/800").img-view.zoomer
+                .item(data-zoom-id="zoom2"): img(src="https://picsum.photos/600/400" data-zoom-image="https://picsum.photos/1200/800").img-view.zoomer
+            span.load
+            .pinchZoomWrap(data-pinchzoom='{"initUnder": 767}')
+                .pinchZoomInner
+                    i.icon-cancel-circle(data-closezoom="")
+                    div(data-handle="")
+
+        // Nav Slider
+        .slider.vertical-slider(data-cslider='{"type": "syncing", "navFor": ".slider-thumb"}')
+            .slick.slider-nav
+                .item: img(src="https://picsum.photos/600/400").img-view
+                .item: img(src="https://picsum.photos/600/400").img-view
+                .item: img(src="https://picsum.photos/600/400").img-view
+                .item: img(src="https://picsum.photos/600/400").img-view
+            span.load
