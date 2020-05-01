@@ -41,7 +41,7 @@ mixin icons(classes)
     each classname in classes
       li(data-handler="")
         i(class='icon-' + classname, data-copy="i.icon-" + classname)
-        //span.name!=classname
+        span.name!=classname
     if block
       block
 
@@ -98,7 +98,7 @@ mixin promotion(slideitem)
         span.promotion__avt
           a(href="#"): img(src="images/upload/shop.png" alt="Shop name")
         span.promotion__shopname: a(href="#") Lorem ipsum
-    p.promotion__title: a(href="#") Lorem ipsum dolor sit
+    p.promotion__title: a(href="promotion.html") Lorem ipsum dolor sit
     p.promotion__location
       i.icon-location
       span 1.3km from you
