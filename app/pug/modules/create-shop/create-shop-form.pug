@@ -10,13 +10,13 @@
 				label.label(for="guide_txt")
 					span Shop’s Name
 				.fieldset__column
-					input(type="text" name="guide_txt" id="guide_txt" required="required" placeholder="My Shop" aria-required="true")
+					+input({id: 'shopName', placeholder: 'Shop Name'})
 					span.error-message This field is required.
 			.fieldset
 				label.label(for="address")
 					span Address
 				.fieldset__column
-					input(type="text" name="address" id="address" required="required" placeholder="My Address" aria-required="true")
+					+input({id: 'addressShop', placeholder: 'Address shop'})
 					span.error-message This field is required.
 			.fieldset
 				label.label(for="city")
@@ -24,23 +24,23 @@
 				.fieldset__column
 					.fieldset__row
 						.fieldset__col3
-							input(type="text" name="city" id="city" required="required" placeholder="City" aria-required="true")
+							+input({id: 'city', placeholder: 'City'})
 						.fieldset__col3
-							input(type="text" name="state" id="state" required="required" placeholder="State" aria-required="true")
+							+input({id: 'state', placeholder: 'State'})
 						.fieldset__col3
-							input(type="text" name="zipcode" id="zipcode" required="required" placeholder="Zipcode" aria-required="true")
+							+input({id: 'zipCode', placeholder: 'Zip Code'})
 					span.error-message This field is required.
 			.fieldset
 				label.label(for="telephone")
 					span Telephone
 				.fieldset__column
-					input(type="text" name="telephone" id="telephone" required="required" placeholder="Telephone" aria-required="true")
+					+input({id: 'telephone', placeholder: 'Telephone'})
 					span.error-message This field is required.
 			.fieldset
 				label.label(for="email")
 					span Email
 				.fieldset__column
-					input(type="text" name="email" id="email" required="required" placeholder="Email" aria-required="true")
+					+input({id: 'emailShop', placeholder: 'Email', 'type': 'email'})
 					span.error-message This field is required.
 			.fieldset
 				label.label.appear(for="image1")
@@ -66,19 +66,15 @@
 				.fieldset__column
 					.fieldset__row
 						.fieldset__col1
-							select(name="time" id="time")
-								option(value="") 7 days/ week
-								option(value="1") 6 days/ week
-								option(value="2") 5 days/ week
-								option(value="3") 4 days/ week
-								option(value="4") 3 days/ week
-								option(value="5") 2 days/ week
-								option(value="6") 1 days/ week
-							i.icon-caret-down
+							+customSelect({id: 'openDateDdl'}, [
+								{value: '', text: 'Please select an option'},
+								{value: '7',text: '7 days / week'},
+								{value: '6', text: '6 days / week'}
+							])
 						.fieldset__col2
-							input(type="text" name="fromTime" id="fromTime" required="required" placeholder="From Time" aria-required="true")
+							+input({id: 'openTime', placeholder: 'Open Time'})
 						.fieldset__col2
-							input(type="text" name="toTime" id="toTime" required="required" placeholder="To" aria-required="true")
+							+input({id: 'closeTime', placeholder: 'Close Time'})
 					span.error-message This field is required.
 		button.button Register Seller
 		p By submitting your application, you agree to our #[a(href="term.html") Term & Conditions] <br class="hidden-sm-down" />and confirm that the information you have provided is complete and accurate.
