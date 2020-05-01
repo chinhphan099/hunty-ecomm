@@ -6,12 +6,12 @@ block vars
 
 block main
 	main
-		+goback().goback--white
 		.container
-			+breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { text: 'Keyword “Giày Vans”' }, ]).hidden-sm-down
-			.hunty_feed.row_wrap
+			include modules/global/header_mb
+			+breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { text: 'Hunty Feed' }, ]).hidden-sm-down
+			.hunty_feed.row_wrap.pusher_b70
 				.primary
-					.heading
+					.heading.hidden-sm-down.heading--border
 						h1.heading__text  Product List
 					.product_list
 						-for (var i = 0; i < 12; i++)
