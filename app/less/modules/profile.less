@@ -17,20 +17,7 @@
 
 //--------------------------------------breadcrumb
 .account-breadcrumb {
-	display: flex;
-	align-items: center;
 	width: 100%;
-	margin: 15px 0 20px;
-	.font-size(14px);
-	line-height: 19px;
-	color: #8B929F;
-	p {
-		margin-bottom: 0;
-	}
-	i {
-		margin: 0 10px;
-	}
-	@media (min-width: 768px) {}
 }
 //--------------------------------------sidebar
 .account-sidebar {
@@ -164,6 +151,11 @@
 }
 //--------------------------------------inner
 .account-informaton {
+	.custom-date {
+		span {
+			color: #333;
+		}
+	}
 	@media (max-width: 767px) {
 		display: none;
 	}
@@ -173,13 +165,36 @@
 		padding-left: 25px;
 		.button {
 			display: block;
-			margin-left: 150px;
+			margin-left: 120px;
 			padding: 10px 50px;
 		}
 		.fieldset {
 			.label {
 				width: 120px;
 			}
+		}
+	}
+}
+
+.profile-edit {
+	.account-informaton {
+		display: block;
+		padding: 80px 15px;
+	}
+	.heading {
+		margin-bottom: 90px;
+	}
+	.button {
+		width: 100%;
+	}
+}
+
+.custom-date {
+	@media (max-width: 767px) {
+		span {
+			padding: 11px 0;
+			border: 0;
+			border-bottom: 1px solid #D2DAEA;
 		}
 	}
 }

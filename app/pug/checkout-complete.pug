@@ -7,8 +7,8 @@ block main
 	main
 		.container
 			.checkout.checkout--completed
-				.checkout__inner
-					.checkout__primary
+				.checkout__inner.row_wrap
+					.primary
 						.checkout_orderid
 							h1.checkout__title Your Order Id
 							.checkout_orderid__number
@@ -33,7 +33,7 @@ block main
 						.checkout__back-home
 							+link('Back to Home', "index.html").button.btn-back-home
 					
-					.checkout__sidebar
+					.sidebar
 						.checkout_summary
 							h3.checkout__title Payment
 							table.checkout_summary__table

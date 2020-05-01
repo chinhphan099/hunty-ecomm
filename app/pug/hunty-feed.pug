@@ -1,0 +1,25 @@
+extends layouts/layout
+
+block vars
+	-title = 'Hunty feed | Hunty'
+	-hidenHeaderOnMobile = true
+
+block main
+	main
+		+goback().goback--white
+		.container
+			+breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { text: 'Keyword “Giày Vans”' }, ]).hidden-sm-down
+			.hunty_feed.row_wrap
+				.primary
+					.heading
+						h1.heading__text  Product List
+					.product_list
+						-for (var i = 0; i < 12; i++)
+							+product('two-price-cart').product--promo
+				.sidebar.hidden-sm-down
+					.heading: h2.heading__text  Promotinons
+					include modules/index/banner_promo
+
+
+block popup
+	include modules/index/login-popup

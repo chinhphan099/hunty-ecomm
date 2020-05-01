@@ -1,0 +1,14 @@
+extends layouts/layout
+
+block vars
+	-title = 'History Check-in | Hunty'
+
+block main
+	main
+		+goback()
+		.profile
+			.container
+				.profile-inner
+					include modules/profile/account-breadcrumb
+					include modules/profile/account-sidebar
+					include modules/profile/history-check

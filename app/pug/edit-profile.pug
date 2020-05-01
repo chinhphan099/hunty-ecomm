@@ -1,0 +1,12 @@
+extends layouts/create-shop
+
+block vars
+	-title = 'Edit Profile | Hunty'
+
+block main
+	main
+		+goback()
+		.profile
+			.container
+				.profile-edit
+					include modules/profile/account-information
