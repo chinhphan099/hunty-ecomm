@@ -146,11 +146,14 @@
 .fieldset {
 	&__column {
 		.flex(1 0 0%);
-		input {
+		input, select {
 			@media (max-width: 767px) {
 				padding: 0 0 10px 0;
 				border: none;
 				border-bottom: 1px solid #D2DAEA;
+				i {
+					color: #919191;
+				}
 			}
 		}
 		&__img {
@@ -227,6 +230,26 @@
 		@media (max-width: 767px) {
 			display: none;
 		}
+	}
+	.form_group {
+		button {
+			margin-right: 10px;
+		}
+		@media (max-width: 767px) {
+			.flex-display();
+			.justify-content(space-between);
+			.align-items(center);
+			& > button {
+				margin-right: 0;
+				width: calc(~"100% / 2 - 10px");
+			}
+		}
+		
+	}
+	.select_address {
+		.flex-display();
+		.align-items(center);
+		li {margin-right: 20px;}
 	}
 	@media (min-width: 768px) {
 		.flex-display();
