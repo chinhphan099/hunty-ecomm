@@ -1,14 +1,13 @@
 extends layouts/layout
 
 block vars
-	-title = 'Shop'
+	-title = 'Shop | Hunty'
 
 block main
 	main
-		
 		.container
-			.breadcrumbs_wrap
-				+breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { title: ' Shop', href: ' shop.html', text: ' Shop' }, { text: 'Lotte Mart' }, ])
+			+breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { title: ' Shop', href: ' shop.html', text: ' Shop' }, { text: 'Lotte Mart' }, ])
 			.shop-
+
 block popup
 	include modules/index/login-popup

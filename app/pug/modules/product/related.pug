@@ -1,0 +1,10 @@
+section.viewed_section
+    .container
+        .product_block
+            +heading('Related Product')
+            .slider(data-cslider='{"type": "product", "setPositionArrows": true}')
+                .slick
+                    -for (var i = 0; i < 15; i++)
+                        .item
+                            +product('one-price', 'slideitem')
+                span.load

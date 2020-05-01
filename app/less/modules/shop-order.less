@@ -8,11 +8,47 @@
 }
 
 .ordershop {
+	padding: 60px 15px;
+	@media (min-width: 768px) {
+		padding: 0;
+	}
 	&__table {
-		padding: 20px;
+		padding: 10px;
 		background-color: @color01;
 		border-radius: 5px;
 		box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
+		@media (min-width: 768px) {}
+		@media (min-width: 992px) {
+			padding: 20px;
+		}
+	}
+	&__action {
+		i {
+			padding: 5px;
+			margin-right: 5px;
+			.font-size(12px);
+			border-radius: 2px;
+		}
+		.icon-preview {
+			color: #8B929F;
+			background-color: #fff;
+			border: 1px solid #D2DAEA;
+		}
+		.icon-edit {
+			color: #fff;
+			background-color: #2085FE;
+		}
+		.icon-delete {
+			margin-right: 0;
+			color: #fff;
+			background-color: #FE2070;
+		}
+		@media (min-width: 992px) {
+			i {
+				padding: 8px;
+				margin-right: 10px;
+			}
+		}
 	}
 }
 
@@ -24,15 +60,62 @@
 			margin-bottom: 0;
 		}
 		.checkbox {
-			.size(26px);
+			.size(18px);
+			input {
+				.size(18px);
+			}
+			i {
+				.size(18px);
+				&:before {
+					top: 5px;
+					left: 2px;
+					.font-size(10px);
+				}
+			}
+		}
+		th {
 		}
 		th, td {
+			padding: 5px 15px;
+			text-align: left;
 			border: 1px solid #EBF0F9;
+			white-space: nowrap;
+			&:first-child {
+				padding: 8px;
+			}
+			&:last-child {
+				text-align: right;
+			}
 		}
 		tbody {
 			tr {
 				&:nth-child(even) {
 					background-color: #F8FAFF;
+				}
+			}
+		}
+		@media (min-width: 768px) {}
+		@media (min-width: 992px) {
+			.checkbox {
+				.size(20px);
+				input {
+					.size(20px);
+				}
+				i {
+					.size(20px);
+					&:before {
+						.font-size(12px);
+					}
+				}
+			}
+			th, td {
+				padding-left: 25px;
+				padding-right: 25px;
+				&:first-child {
+					padding: 15px 12px;
+				}
+				&:last-child {
+					width: 185px;
 				}
 			}
 		}

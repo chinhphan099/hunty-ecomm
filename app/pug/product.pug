@@ -8,4 +8,14 @@ block vars
 block main
   main
     +goback().goback--white
-    | Product details
+    section.product-section
+      .container
+        +breadcrumbs([{ title: 'Home', href: 'index.html', text: 'Home' }, { title: 'Category', href: 'search.html', text: 'Category' }, { text: 'Product Name' }]).hidden-sm-down
+        .product-wrapper
+          include modules/product/slide
+          include modules/product/details
+        include modules/global/shop-info
+        .description-wrapper
+          include modules/product/description
+          include modules/product/rating
+    include modules/product/related
