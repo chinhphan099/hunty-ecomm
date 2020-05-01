@@ -1,0 +1,14 @@
+extends layouts/layout
+
+block vars
+	-title = 'Profile | Hunty'
+
+block main
+	main
+		+goback()
+		.profile
+			.container
+				.profile-inner
+					include modules/profile/account-breadcrumb
+					include modules/profile/account-sidebar
+					include modules/profile/account-information
