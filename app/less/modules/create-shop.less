@@ -143,136 +143,133 @@
 	}
 }
 
-.loginshop-form {
-	margin-top: 25px;
-	.fieldset {
-		padding-top: 0;
-		padding-bottom: 13px;
-		&__column {
-			.flex(1 0);
-			input {
-				@media (max-width: 767px) {
-					padding: 0 0 10px 0;
-					border: none;
-					border-bottom: 1px solid #D2DAEA;
-				}
-			}
-			&__img {
-				.position(relative);
-				.flex-display();
-				.justify-content(center);
-				.align-items(center);
-				width: 85px;
-				height: 85px;
-				text-align: center;
-				border: 1px dashed @yellow;
-				box-sizing: border-box;
-				box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
-				border-radius: 4px;
-				z-index: 2;
-				i {
-					display: block;
-					color: @yellow;
-				}
-				span {
-					display: block;
-					.font-size(11px);
-					line-height: 15px;
-					color: #2C2E32;
-				}
-				input {
-					.position(0 null null 0);
-					width: 84px;
-					height: 84px;
-					z-index: 1;
-					opacity: 0;
-				}
+.fieldset {
+	&__column {
+		.flex(1 0 0%);
+		input {
+			@media (max-width: 767px) {
+				padding: 0 0 10px 0;
+				border: none;
+				border-bottom: 1px solid #D2DAEA;
 			}
 		}
-		&__row {
+		&__img {
+			.position(relative);
 			.flex-display();
-			.justify-content(space-between);
-			.flex-wrap(wrap);
-		}
-		&__col3 {
-			width: calc(~"100% / 3 - 3px");
-		}
-		&__col1 {
-			position: relative;
-			width: 100%;
-			select {
-				width: 100%;
-				padding: 10px 20px 10px 10px;
-				margin-bottom: 10px;
-				.font-size(14px);
-				color: rgb(139, 146, 159);
-				@media (max-width: 767px) {
-					padding: 0 0 10px 0;
-					border: none;
-					border-bottom: 1px solid #D2DAEA;
-				}
-			}
+			.justify-content(center);
+			.align-items(center);
+			width: 85px;
+			height: 85px;
+			text-align: center;
+			border: 1px dashed @yellow;
+			box-sizing: border-box;
+			box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
+			border-radius: 4px;
+			z-index: 2;
 			i {
-				position: absolute;
-				top: 30%;
-				right: 10px;
-				.font-size(18px);
-				transform: translateY(-50%);
-				color: rgb(139, 146, 159);
-				pointer-events: none;
+				display: block;
+				color: @yellow;
+			}
+			span {
+				display: block;
+				.font-size(11px);
+				line-height: 15px;
+				color: #2C2E32;
+			}
+			input {
+				.position(0 null null 0);
+				width: 84px;
+				height: 84px;
+				z-index: 1;
+				opacity: 0;
 			}
 		}
-		&__col2 {
-			width: calc(~"50% - 2px");
+	}
+	&__row {
+		.flex-display();
+		.justify-content(space-between);
+		.flex-wrap(wrap);
+	}
+	&__col3 {
+		width: calc(~"100% / 3 - 3px");
+	}
+	&__col1 {
+		position: relative;
+		width: 100%;
+		select {
+			width: 100%;
+			padding: 10px 20px 10px 10px;
+			margin-bottom: 10px;
+			.font-size(14px);
+			color: rgb(139, 146, 159);
+			@media (max-width: 767px) {
+				padding: 0 0 10px 0;
+				border: none;
+				border-bottom: 1px solid #D2DAEA;
+			}
 		}
+		i {
+			position: absolute;
+			top: 30%;
+			right: 10px;
+			.font-size(18px);
+			transform: translateY(-50%);
+			color: rgb(139, 146, 159);
+			pointer-events: none;
+		}
+	}
+	&__col2 {
+		width: calc(~"50% - 2px");
 	}
 	.label {
 		.font-size(14px);
 		line-height: 19px;
-		color: #333;
 		@media (max-width: 767px) {
 			display: none;
 		}
 	}
+	@media (min-width: 768px) {
+		.flex-display();
+		.justify-content(space-between);
+		.align-items(center);
+		&__column {
+			&__img {
+				width: 65px;
+				height: 65px;
+				input {
+					width: 64px;
+					height: 64px;
+				}
+			}
+		}
+		&__col3 {
+			width: calc(~"100% / 3 - 7px");
+		}
+		&__col1 {
+			position: relative;
+			width: calc(~"46% - 7px");
+			select {
+				margin-bottom: 0;
+			}
+			i {
+				top: 50%;
+			}
+		}
+		&__col2 {
+			width: calc(~"27% - 7px");
+		}
+		.label {
+			width: 150px;
+		}
+	}
+}
+.loginshop-form {
+	margin-top: 25px;
 	.appear {
 		display: block;
 	}
 	@media (min-width: 768px) {
 		padding: 0 80px 0 30px;
-		.fieldset {
-			.flex-display();
-			.justify-content(space-between);
-			.align-items(center);
-			&__column {
-				&__img {
-					width: 65px;
-					height: 65px;
-					input {
-						width: 64px;
-						height: 64px;
-					}
-				}
-			}
-			&__col3 {
-				width: calc(~"100% / 3 - 7px");
-			}
-			&__col1 {
-				position: relative;
-				width: calc(~"46% - 7px");
-				select {
-					margin-bottom: 0;
-				}
-				i {
-					top: 50%;
-				}
-			}
-			&__col2 {
-				width: calc(~"27% - 7px");
-			}
-		}
-		.label {
-			width: 150px;
-		}
 	}
 }
 
