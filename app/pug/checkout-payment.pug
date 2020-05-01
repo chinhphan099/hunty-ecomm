@@ -11,8 +11,8 @@ block main
 					.checkout__primary
 						.checkout__heading
 							h1.heading__text Payment Method 
-						.checkout__payment
-							ul.checkout__payment_list
+						.checkout_payment
+							ul.checkout_payment__list
 								li
 									.radio.circle
 										input(type="radio" name="cash_id" id="cash_id" value="Payment cash" checked="checked")
@@ -66,14 +66,15 @@ block main
 										i.icon-check
 					.checkout__sidebar
 						.checkout_summary
-							table.checkout_summary_table
-								tr
+							h3.checkout_summary__title.hidden-sm-down Order Summary
+							table.checkout_summary__table
+								tr 
 									td.summary_label Fee
 									td.summary_value 100.000 VND
 								tr
 									td.summary_label Delivery Fee 
 									td.summary_value 20.000 VND
-								td
+								tr
 									td.summary_label Packet Fee
 									td.summary_value 100.000 VND
 
