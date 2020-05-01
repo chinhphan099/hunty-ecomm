@@ -22,14 +22,14 @@
 		color: #8B929F;
 		font-weight: normal;
 	}
+	&--completed {
+		padding-bottom: 70px;
+	}
 	@media(min-width: 768px) {
 		max-width: 940px;
 		margin: auto;
-		&__heading {
-			h1 {
-				font-size: 22px;
-				color: #333;
-			}
+		&__title {
+			font-size: 18px;
 		}
 		&__inner {
 			display: flex;
@@ -43,11 +43,25 @@
 			margin-left: 40px;
 		}
 	}
+	@media(max-width: 767px) {
+		&__back-home {
+			padding: 0 15px 15px;
+			background: #fff;
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: 10;
+			a {
+				display: flex;
+			}
+		}
+	}
 }
 
 /* Start Checkout Delivery Methodpage  */
 .checkout_address {
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 	font-size: 14px;
 	color: #8B929F;
 	&__item {
@@ -61,6 +75,9 @@
 		font-size: 16px;
 		color: #2C2E32;
 	}
+	&.border_b {
+		border-bottom: 1px dashed #EBF0F9;
+	}
 	@media(min-width: 768px) {
 		padding: 12px 15px 0 15px;
 		border: 1px dashed #FFD100;
@@ -69,7 +86,8 @@
 }
 
 /* Addredd Form Edit*/
-.address_form  {
+.checkout_address  {
+	padding-top: 10px;
 	.position();
     .invisible();
     .translateY(-10px);
@@ -129,7 +147,6 @@
 }
 
 .checkout_summary {
-	padding: 10px 0;
 	&__title {
 		margin-bottom: 10px;
 		font-weight: normal;
@@ -137,6 +154,12 @@
 		text-transform: uppercase;
 	}
 	&__table {
+		caption {
+			padding-bottom: 5px;
+			font-size: 16px;
+			text-align: left;
+			color: #2C2E32;
+		}
 		td {
 			padding: 8px 0;
 			font-size: 16px;
@@ -145,12 +168,18 @@
 				white-space: nowrap;
 			}
 		}
-		.summary_label {
+		.label {
 			color: #8B929F;
+		}
+		.totals {
+			font-weight: bold;
 		}
 	}
 	@media(min-width: 768px) {
 		&__table {
+			caption {
+				padding-bottom: 15px;
+			}
 			td {
 				padding: 15px 0;
 				border-top: 1px solid #EBF0F9;
@@ -163,6 +192,8 @@
 /* Start Checkout Complete page  */
 .checkout_orderid {
 	margin-bottom: 15px;
+	padding-bottom: 15px;
+	border-bottom: 5px solid #F5F6F8;
 	&__number {
 		display: flex;
 		align-items: center;
@@ -177,7 +208,7 @@
 		padding: 0 15px 15px;
 		margin-left: -15px;
 		margin-right: -15px;
-		border-bottom: 5px solid #F5F6F8;
+		
 	}
 }
 

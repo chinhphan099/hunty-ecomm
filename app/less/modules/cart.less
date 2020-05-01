@@ -10,14 +10,14 @@
 	}
 	&__item {
 		position: relative;
-		padding: 20px 20px 20px 0;
+		padding: 15px 15px 15px 0;
 		width: 100%;
 		display: flex;
 		align-items: center;
 		border-bottom: 1px solid #EBF0F9;
 		.remove {
 			position: absolute;
-			top: 20px;
+			top: 15px;
 			right: 0;
 			font-size: 24px;
 			color: #8B929F;
@@ -40,7 +40,7 @@
 			padding-left: 15px;
 		}
 		.price {
-			margin-bottom: 12px;
+			margin-bottom: 10px;
 			&__current {
 				font-size: 16px;
 			}
@@ -71,20 +71,19 @@
 			margin-left: 60px;
 		}
 		&__item {
-			padding-right: 0;
+			padding-right: 100px;
 			.thumb {
 				width: 110px;
-			}
-			.price {
-				margin-bottom: 0;
 			}
 		}
 		&__name {
 			font-size: 16px;
 		}
-		&__price {
-			display: flex;
-			justify-content: space-between;
+		.custom-number {
+			position: absolute;
+			transform: translateY(-50%);
+			top: 50%;	
+			right: 0;
 		}
 	}
 	@media(max-width: 767px) {
