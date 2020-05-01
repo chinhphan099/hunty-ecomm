@@ -139,17 +139,18 @@
 		}
 	}
 	&__right {
-		.flex(1 0 0%);
-		.font-size(14px);
 		line-height: 20px;
 		background-color: #F4F7FF;
 		@media (min-width: 768px) {
-			min-height: 930px;
+			width: calc(~"100% - 240px");
 			padding: 20px 20px 80px;
 			.font-size(16px);
 		}
 		@media (min-width: 992px) {
 			.font-size(18px);
+		}
+		@media (min-width: 1200px) {
+			width: calc(~"100% - 340px");
 		}
 	}
 }

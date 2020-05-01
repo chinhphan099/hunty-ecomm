@@ -547,11 +547,11 @@
     }
     a {
       display: block;
-      .size(38px);
+      .size(30px);
       margin-left: -1px;
       color: #8B929F;
-      font-size: 1.6rem;
-      line-height: 38px;
+      font-size: 1.4rem;
+      line-height: 30px;
       text-align: center;
       text-decoration: none;
       border: 1px solid #D2DAEA;
@@ -562,6 +562,15 @@
       &.active {
         color: white;
         background-color: @yellow;
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    li {
+      a {
+        .size(38px);
+        font-size: 1.6rem;
+        line-height: 38px;
       }
     }
   }
