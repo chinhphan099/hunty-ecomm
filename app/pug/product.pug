@@ -1,0 +1,11 @@
+extends layouts/layout
+
+block vars
+  -title = 'Product Details | Hunty'
+  -hidenHeaderOnMobile = true
+  -hidenFooterOnMobile = true
+
+block main
+  main
+    +goback().goback--white
+    | Product details
