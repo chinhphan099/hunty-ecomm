@@ -689,61 +689,68 @@
 
 /* Shop Info */
 .shop-info {
-	padding: 0 15px 10px;
-	background-color: @color01;
-	@media (min-width: 768px) {
-		display: flex;
-		justify-content: space-between;
-		.flex-wrap(wrap);
-		padding: 20px;
-		margin-bottom: 20px;
-		line-height: 20px;
-		border: 1px solid #F4F7FC;
-		box-shadow: 2px 2px 8px rgba(42, 47, 60, 0.06);
-	}
+  padding: 0 0 10px;
+  background-color: @color01;
+  .shop-wrap & {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    .flex-wrap(wrap);
+    padding: 0 20px;
+    margin-bottom: 20px;
+    line-height: 20px;
+    border: 1px solid #F4F7FC;
+    box-shadow: 2px 2px 8px rgba(42, 47, 60, 0.06);
+    .shop-wrap & {
+      padding: 20px;
+    }
+  }
 
-	&__banner {
-		margin: 0 -15px;
-	}
+  &__banner {
+    margin: 0 -15px;
+  }
 
-	&__logo {
-		position: relative;
-		display: flex;
-		align-items: center;
-		width: 100%;
-		margin-bottom: 20px;
-		padding-top: 20px;
-		.thumb {
-			margin-right: 10px;
-			img {
-				max-width: 50px;
+  &__logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    .thumb {
+      margin-right: 10px;
+      img {
+        max-width: 50px;
         border-radius: 50%;
-			}
-		}
+      }
+    }
     .desc {
       flex: 1 0 0%;
       position: relative;
     }
-		.wrap-title {
-			margin-bottom: 5px;
-			.font-size(18px);
-			font-weight: bold;
-		}
-		p {
-			margin-bottom: 5px;
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-		i {
-			margin-right: 5px;
-		}
+    .wrap-title {
+      margin-bottom: 5px;
+      .font-size(18px);
+      font-weight: bold;
+    }
+    p {
+      margin-bottom: 5px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    i {
+      margin-right: 5px;
+    }
     .button_inner {
       .shop-wrap & {
         display: none;
       }
     }
-		.button {
+    .button {
       padding: 8px 10px;
       font-weight: normal;
       font-size: 14px;
@@ -753,14 +760,14 @@
         color: #FFD100;
       }
     }
-		@media (min-width: 768px) {
-			margin-bottom: 20px;
-			padding-top: 0;
-			.thumb {
-				img {
-					max-width: 100px;
-				}
-			}
+    @media (min-width: 768px) {
+      margin-bottom: 20px;
+      padding-top: 0;
+      .thumb {
+        img {
+          max-width: 100px;
+        }
+      }
       .button_inner {
         display: flex;
         align-items: center;
@@ -769,11 +776,11 @@
           width: calc(~"100% /2 - 10px");
         }
       }
-		}
-		@media (min-width: 992px) {
+    }
+    @media (min-width: 992px) {
       width: 40%;
       margin-bottom: 0;
-		}
+    }
     @media(min-width: 1200px) {
       .button {
         font-size: 16px;
@@ -790,55 +797,55 @@
         z-index: 1;
       }
     }
-	}
+  }
 
-	&__list {
-		margin-bottom: 15px;
-		li {
-			margin: 10px 0;
-		}
-		i {
-			margin-right: 5px;
-			color: @yellow;
+  &__list {
+    margin-bottom: 15px;
+    li {
+      margin: 10px 0;
+    }
+    i {
+      margin-right: 5px;
+      color: @yellow;
     }
     @media (min-width: 768px) {
       margin-bottom: 0;
     }
-		@media (min-width: 992px) {
+    @media (min-width: 992px) {
       width: 25%;
       padding: 0 20px 0 40px;
       margin-bottom: 0;
-		}
+    }
     @media(max-width: 767px) {
       padding-bottom: 10px;
       border-bottom: 1px solid #F4F7FC;
     }
-	}
+  }
 
-	&__location {
-		.wrap-title {
-			margin-bottom: 10px;
-			font-weight: normal;
-		}
-		p {
-			margin-bottom: 10px;
-		}
-		a {
-			color: #2085FE;
-		}
-		i {
-			margin-right: 5px;
-			color: @yellow;
-		}
-		@media (min-width: 768px) {
-			width: 50%;
-			a {
-				.font-size(14px);
-			}
-		}
-		@media (min-width: 992px) {
-			width: 35%;
-		}
-	}
+  &__location {
+    .wrap-title {
+      margin-bottom: 10px;
+      font-weight: normal;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    a {
+      color: #2085FE;
+    }
+    i {
+      margin-right: 5px;
+      color: @yellow;
+    }
+    @media (min-width: 768px) {
+      width: 50%;
+      a {
+        .font-size(14px);
+      }
+    }
+    @media (min-width: 992px) {
+      width: 35%;
+    }
+  }
 }
 /* End Shop Info */
