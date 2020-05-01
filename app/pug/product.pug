@@ -10,7 +10,7 @@ block main
     +goback().goback--white
     section.product-section
       .container
-        +breadcrumbs([{ title: 'Home', href: 'index.html', text: 'Home' }, { title: 'Category', href: 'search.html', text: 'Category' }, { text: 'Product Name' },])
+        +breadcrumbs([{ title: 'Home', href: 'index.html', text: 'Home' }, { title: 'Category', href: 'search.html', text: 'Category' }, { text: 'Product Name' }]).hidden-sm-down
         .product-wrapper
           include modules/product/slide
           include modules/product/details
@@ -18,4 +18,4 @@ block main
         .description-wrapper
           include modules/product/description
           include modules/product/rating
-    include modules/index/viewed-product
+    include modules/product/related
