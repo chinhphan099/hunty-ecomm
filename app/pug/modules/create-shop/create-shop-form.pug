@@ -7,78 +7,67 @@
 			p.hidden-md-up Please fill in your information to create a new shop
 		.loginshop-form
 			.fieldset
-				label.label(for="guide_txt")
-					span Shop’s Name
+				+label('shopName', 'Shop’s Name').label
 				.fieldset__column
-					input(type="text" name="guide_txt" id="guide_txt" required="required" placeholder="My Shop" aria-required="true")
+					+input({id: 'shopName', placeholder: 'Shop Name'})
 					span.error-message This field is required.
 			.fieldset
-				label.label(for="address")
-					span Address
+				+label('addressShop', 'Address shop').label
 				.fieldset__column
-					input(type="text" name="address" id="address" required="required" placeholder="My Address" aria-required="true")
+					+input({id: 'addressShop', placeholder: 'Address shop'})
 					span.error-message This field is required.
 			.fieldset
-				label.label(for="city")
-					span City
+				+label('cityTxt', 'Address shop').label
 				.fieldset__column
 					.fieldset__row
 						.fieldset__col3
-							input(type="text" name="city" id="city" required="required" placeholder="City" aria-required="true")
+							+input({id: 'cityTxt', placeholder: 'City'})
 						.fieldset__col3
-							input(type="text" name="state" id="state" required="required" placeholder="State" aria-required="true")
+							+input({id: 'stateTxt', placeholder: 'State'})
 						.fieldset__col3
-							input(type="text" name="zipcode" id="zipcode" required="required" placeholder="Zipcode" aria-required="true")
+							+input({id: 'zipCodeTxt', placeholder: 'Zip Code'})
 					span.error-message This field is required.
 			.fieldset
-				label.label(for="telephone")
+				+label('telephoneTxt', 'Telephone').label
 					span Telephone
 				.fieldset__column
-					input(type="text" name="telephone" id="telephone" required="required" placeholder="Telephone" aria-required="true")
+					+input({id: 'telephoneTxt', placeholder: 'Telephone'})
 					span.error-message This field is required.
 			.fieldset
-				label.label(for="email")
-					span Email
+				+label('emailShopTxt', 'Email').label
 				.fieldset__column
-					input(type="text" name="email" id="email" required="required" placeholder="Email" aria-required="true")
+					+input({id: 'emailShopTxt', placeholder: 'Email', 'type': 'email'})
 					span.error-message This field is required.
 			.fieldset
-				label.label.appear(for="image1")
-					span Shop’s Logo
+				+label('shopLogo', "Shop's Logo").appear.label
 				.fieldset__column
 					.fieldset__column__img
 						span
 							i.icon-photo
 							| Browse
-						input(type="file" id="image1")
+						input(type="file" id="shopLogo")
 			.fieldset
-				label.label.appear(for="image2")
-					span Featured Image
+				+label('featureImage', 'Featured Image').label
 				.fieldset__column
 					.fieldset__column__img
 						span
 							i.icon-photo
 							| Browse
-						input(type="file" id="image2")
+						input(type="file" id="featureImage")
 			.fieldset
-				label.label
-					span Opening Time
+				+label('openDateDdl', 'Opening Time').label
 				.fieldset__column
 					.fieldset__row
 						.fieldset__col1
-							select(name="time" id="time")
-								option(value="") 7 days/ week
-								option(value="1") 6 days/ week
-								option(value="2") 5 days/ week
-								option(value="3") 4 days/ week
-								option(value="4") 3 days/ week
-								option(value="5") 2 days/ week
-								option(value="6") 1 days/ week
-							i.icon-caret-down
+							+customSelect({id: 'openDateDdl'}, [
+								{value: '', text: 'Please select an option'},
+								{value: '7',text: '7 days / week'},
+								{value: '6', text: '6 days / week'}
+							])
 						.fieldset__col2
-							input(type="text" name="fromTime" id="fromTime" required="required" placeholder="From Time" aria-required="true")
+							+input({id: 'openTime', placeholder: 'Open Time'})
 						.fieldset__col2
-							input(type="text" name="toTime" id="toTime" required="required" placeholder="To" aria-required="true")
+							+input({id: 'closeTime', placeholder: 'Close Time'})
 					span.error-message This field is required.
 		button.button Register Seller
 		p By submitting your application, you agree to our #[a(href="term.html") Term & Conditions] <br class="hidden-sm-down" />and confirm that the information you have provided is complete and accurate.

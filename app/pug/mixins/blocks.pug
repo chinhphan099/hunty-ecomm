@@ -121,3 +121,18 @@ mixin cartItem(type)
           +input({name: 'quantity', value: '1', type: 'number'})(data-input="" autocomplete="off" readonly)
           +button({})(data-increase="")
             i.icon-plus
+
+mixin notification()
+  .notification__list
+    h3 TODAY
+    ul
+      li: strong 30 minutes ago
+      li: span Lorem ipsum dolor sit amet
+      li: span Lorem ipsum dolor sit amet
+      li: strong 1h ago
+      li: span Lorem ipsum dolor sit amet
+      li: span Lorem ipsum dolor sit amet
+    h3 YESTERDAY
+    ul
+      li: span Lorem ipsum dolor sit amet
+      li: span Lorem ipsum dolor sit amet
