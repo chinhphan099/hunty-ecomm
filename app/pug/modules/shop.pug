@@ -1,7 +1,7 @@
 extends layouts/layout
 
 block vars
-	-title = 'Promotion | Hunty'
+	-title = 'Shop | Hunty'
 	-hidenHeaderOnMobile = true
 	-hidenFooterOnMobile = true
 
@@ -15,7 +15,7 @@ block main
 			.container
 				.promotion_inner
 					.primary
-						.heading: h1.heading__text  Lotte Mart disscount 30% 
+						h1.main_title  Lotte Mart disscount 30%
 						.product_list
 							-for (var i = 0; i < 12; i++)
 								+product('two-price-cart').product--promo

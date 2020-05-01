@@ -11,11 +11,5 @@ section.banner
                         .item
                             img(src="https://picsum.photos/894/380").img-view
                     span.load
-
-            .banner__promo.hidden-md-down
-                +link('Image', '#')
-                    +img-upload('promo_1.png')
-                +link('Image', '#')
-                    +img-upload('promo_2.png')
-                +link('Image', '#')
-                    +img-upload('promo_3.png')
+            .banner__promo_inner
+                include banner_promo
