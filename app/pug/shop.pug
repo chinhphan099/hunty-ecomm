@@ -16,8 +16,8 @@ block main
 					+img-upload('shop_banner_mb.jpg').hidden-md-up
 
 				include modules/global/shop-info
-				.shop__wrap
-					.shop__primary
+				.shop__wrap.row_wrap
+					.primary
 						.shop__heading.heading
 							h1.heading__text  Product List
 							ul.product-navs 
@@ -27,7 +27,7 @@ block main
 						.product_list
 							-for (var i = 0; i < 12; i++)
 								+product('two-price-cart').product--promo
-					.shop__sidebar.hidden-sm-down
+					.sidebar.hidden-sm-down
 						.heading: h2.heading__text  Promotinons
 						include modules/index/banner_promo
 

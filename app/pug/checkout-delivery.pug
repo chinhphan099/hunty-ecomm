@@ -7,8 +7,8 @@ block main
 	main
 		.container
 			.checkout
-				.checkout__inner
-					.checkout__primary
+				.checkout__inner.row_wrap
+					.primary
 						.checkout__heading
 							h1.checkout__title Delivery Method
 							+link("Change", "javascript:;").link_change
@@ -89,7 +89,7 @@ block main
 											+button({class: "button hollow", id: "cancel_id", name: "cancel_id"}) Cancel
 											+button({class: "button", id: "submit_id", name: "ubmit_id"}) Submit
 		
-					.checkout__sidebar
+					.sidebar
 						.order_total
 							.order_total__inner
 								.total_text Total

@@ -839,3 +839,24 @@
   }
 }
 /* End Shop Info */
+
+/* Row Wrap */
+.row_wrap {
+  @media(min-width: 992px) {
+    display: flex;
+    justify-content: space-between;
+    .primary {
+      .flex(1 0 0%);
+      padding-right: 25px;
+      .checkout & {
+        padding-right: 40px;
+      }
+    }
+    .sidebar {
+      width: 34%;
+
+    }
+  }
+}
+/* End Row Wrap */
+  

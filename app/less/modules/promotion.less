@@ -15,30 +15,21 @@
 
 // Promotion Container
 .promotion_container {
-	.promotion_inner {
-		display: flex;
-		flex-direction: column-reverse;
-	}
 	.main_title {
 		font-size: 1.6rem;
 		margin-bottom: 20px;
 		color: #2C2E32;
 	}
 	@media(min-width: 992px) {
-
-		.promotion_inner {
-			flex-direction: row;
-		}
-		.primary {
-			.flex(1 0 0%);
-			padding-right: 20px;
-		}
-		.sidebar {
-			width: 34%;
-		}
 		.main_title {
 			margin-bottom: 30px;
 			font-size: 2.2rem;
+		}
+	}
+	@media(max-width: 992px) {
+		.promotion_inner {
+	  		display: flex;
+	  		flex-direction: column-reverse;
 		}
 	}
 }
