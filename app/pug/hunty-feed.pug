@@ -11,8 +11,7 @@ block main
 			+breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { text: 'Hunty Feed' }, ]).hidden-sm-down
 			.hunty_feed.row_wrap.pusher_b70
 				.primary
-					.heading.hidden-sm-down.heading--border
-						h1.heading__text  Product List
+					+heading('Product List', '', '', 'h1').hidden-sm-down.heading--border
 					.product_list
 						-for (var i = 0; i < 12; i++)
 							+product('two-price-cart').product--promo
