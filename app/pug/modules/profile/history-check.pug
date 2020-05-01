@@ -3,11 +3,12 @@
 	.history-seach
 		.fieldset: +customInput({id: 'search_btn_2', iconClass: 'icon-search'}, {id: "txt_search_2", placeholder: "Search for Brand"})
 	.history-shop
-		-for (var i = 0; i < 30; i++)
+		-for (var i = 0; i < 20; i++)
 			.shop-check
 				.thumb
 					+link('Image', '#')
 						+img-upload('shop.png')
 				.desc
-					h3.w-title Lotte Mart
+					h3.w-title
+						+link('title', '#') Lotte Mart
 					p 150 Le Thi Hong Gam, ward 2, Dist 1, Ho Chi Minh
