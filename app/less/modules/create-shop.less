@@ -2,9 +2,9 @@
 .headershop {
 	background-color: @yellow;
 	&__inner {
-		.flex-display();
-		.justify-content(space-between);
-		.align-items(center);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		padding: 8px 0;
 		.font-size(14px);
 		line-height: 19px;
@@ -158,9 +158,9 @@
 		}
 		&__img {
 			.position(relative);
-			.flex-display();
+			display: flex;
 			.justify-content(center);
-			.align-items(center);
+			align-items: center;
 			width: 85px;
 			height: 85px;
 			text-align: center;
@@ -189,8 +189,8 @@
 		}
 	}
 	&__row {
-		.flex-display();
-		.justify-content(space-between);
+		display: flex;
+		justify-content: space-between;
 		.flex-wrap(wrap);
 	}
 	&__col3 {
@@ -236,9 +236,9 @@
 			margin-right: 10px;
 		}
 		@media (max-width: 767px) {
-			.flex-display();
-			.justify-content(space-between);
-			.align-items(center);
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
 			& > button {
 				margin-right: 0;
 				width: calc(~"100% / 2 - 10px");
@@ -247,14 +247,14 @@
 		
 	}
 	.select_address {
-		.flex-display();
-		.align-items(center);
+		display: flex;
+		align-items: center;
 		li {margin-right: 20px;}
 	}
 	@media (min-width: 768px) {
-		.flex-display();
-		.justify-content(space-between);
-		.align-items(center);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		&__column {
 			&__img {
 				width: 65px;

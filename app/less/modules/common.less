@@ -16,13 +16,13 @@
   &__dialog {
     max-width: 500px;
     margin: 10px;
-    .flex-display();
-    .align-items(center);
+    display: flex;
+    align-items: center;
     .translateY(-20%);
     .transition(transform .3s ease-out);
     min-height: calc(~"100vh - (10px * 2)");
     .open-modal & {
-      .translateY(0);
+      transform: translateY(0);
     }
   }
   &__content {
@@ -58,9 +58,9 @@
 /* Login Form */
 .login {
   &__tabs {
-    .flex-display();
-    .align-items(center);
-    .justify-content(space-between);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 25px 15px 0;
     list-style: none;
     border-bottom: 1px solid #EBF0F9;
@@ -106,7 +106,7 @@
     height: 0;
     &.active {
       position: static;
-      .translateY(0);
+      transform: translateY(0);
       .visible();
       height: auto;
     }
@@ -125,9 +125,9 @@
       display: block;
     }
     .two_col {
-      .flex-display();
-      .align-items(center);
-      .justify-content(space-between);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       text-align: center;
       &:before, &:after {content: none}
 
@@ -152,16 +152,16 @@
       font-size: 14px;
     }
     .login-socials {
-      .flex-display();
-      .justify-content(space-between);
-      .align-items(center);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       &:before, &:after {content: none}
       & > * {
         width: calc(~"100% / 2 - 10px");
       }
       .button {
-        .flex-display();
-        .align-items(center);
+        display: flex;
+        align-items: center;
         .justify-content(center);
         padding: 0;
         height: 40px;
@@ -182,9 +182,9 @@
       }
     }
     .gender {
-      .flex-display();
-      .align-items(center);
-      .justify-content(space-between);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       text-align: center;
     }
     .btn-submit {
@@ -355,8 +355,8 @@
   &__progress {
     position: relative;
     .size(100%, 18px);
-    .flex-display();
-    .align-items(center);
+    display: flex;
+    align-items: center;
     .justify-content(center);
     margin-bottom: 5px;
     color: @color01;
@@ -467,8 +467,8 @@
   }
   &__shop {
     .position(null 0 0 0);
-    .flex-display();
-    .align-items(center);
+    display: flex;
+    align-items: center;
     padding: 10px;
     background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
     background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%);
@@ -526,7 +526,7 @@
   margin-top: 30px;
   text-align: center;
   &__inner {
-    .flex-display(inline-flex);
+    display: inline-flex;;
     border-radius: 3px;
     overflow: hidden;
   }
@@ -692,8 +692,8 @@
 	padding: 0 15px 10px;
 	background-color: @color01;
 	@media (min-width: 768px) {
-		.flex-display();
-		.justify-content(space-between);
+		display: flex;
+		justify-content: space-between;
 		.flex-wrap(wrap);
 		padding: 20px;
 		margin-bottom: 20px;
@@ -708,8 +708,8 @@
 
 	&__logo {
 		position: relative;
-		.flex-display();
-		.align-items(center);
+		display: flex;
+		align-items: center;
 		width: 100%;
 		margin-bottom: 20px;
 		padding-top: 20px;

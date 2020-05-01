@@ -144,14 +144,14 @@
     [data-nav="@{openLeftNav}"] {
       .icon-hamburger, .icon-star {
         .position(50% null null 10px);
-        .translateY(-50%);
+        transform: translateY(-50%);
         cursor: pointer;
       }
     }
     [data-nav="@{openRightNav}"] {
       .icon-search, .icon-star {
         .position(50% 10px);
-        .translateY(-50%);
+        transform: translateY(-50%);
         cursor: pointer;
       }
     }
@@ -258,7 +258,7 @@
     border-bottom: 1px solid @color08;
     i {
       .position(50% 10px);
-      .translateY(-50%);
+      transform: translateY(-50%);
     }
     .icon-angle-up {
       display: none;
@@ -475,7 +475,7 @@ code {
   display: none;
   .position(fixed, 50% null null 50%);
   z-index: 2;
-  .translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   padding: 10px 30px;
   background-color: @color01;
   color: @text-color;
@@ -646,7 +646,7 @@ code {
   overflow: hidden;
   .flex-display {
     background-color: @color02;
-    .flex-display();
+    display: flex;
     .flex-wrap(wrap);
   }
   .inner {

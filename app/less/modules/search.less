@@ -52,7 +52,7 @@
 		cursor: pointer;
 		i {
 			.position(50% 10px null null);
-			.translateY(-50%);
+			transform: translateY(-50%);
 			font-size: 18px;
 		}
 	}
@@ -71,7 +71,7 @@
 			&.active {
 				ul {
 					overflow: visible;
-					.translateY(0);
+					transform: translateY(0);
 					opacity: 1;
 				}
 			}
@@ -83,7 +83,7 @@
 			opacity: 0;
 			background: #fff;
 			border: 2px solid #FFEB8E;
-			.translateY(10px);
+			transform: translateY(10px);
 			.transition(all .3s ease-out);
 			z-index: 10;
 		}

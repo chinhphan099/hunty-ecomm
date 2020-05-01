@@ -15,6 +15,7 @@ const {task, watch, src, dest, parallel, series} = require('gulp'),
     babel = require('gulp-babel'),
     sourcemaps = require('gulp-sourcemaps'),
     qunit = require('gulp-qunit'),
+    autoprefixer = require('gulp-autoprefixer'),
     ip = require('ip');
 
 // Source folder configuration
@@ -103,6 +104,9 @@ task('less', () =>
             let displayErr = gutil.colors.red(err.message);
             gutil.log(displayErr);
             this.emit('end');
+        }))
+        .pipe(autoprefixer({
+            flexbox: "no-2009"
         }))
         .pipe(dest(PUB.css))
         // .pipe(cssmin())
