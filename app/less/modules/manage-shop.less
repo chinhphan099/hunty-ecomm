@@ -135,7 +135,7 @@
 		@media (min-width: 992px) {
 			width: 240px;
 		}
-		@media (min-width: 1200px) {
+		@media (min-width: 1400px) {
 			width: 340px;
 		}
 	}
@@ -412,7 +412,9 @@ button:focus +.nav-close +.nav-navigation, button:focus +.nav-close {
 }
 
 .manage-block6 {
-	padding: 15px;
-	margin: 0 -15px;
-	background-color: white;
+	@media (min-widtH: 1200px) {
+		.product_list .product {
+			width: calc(~"100% / 6 - 20px");
+		}
+	}
 }
