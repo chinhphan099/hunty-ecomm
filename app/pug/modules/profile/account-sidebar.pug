@@ -25,25 +25,50 @@
 
 	.account-menu
 		p
-			+link('', 'profile.html').active
-				i.icon-account.hidden-sm-down
-				| Account Information
+			if profileIndex == 0
+				+link('', 'profile.html').active
+					i.icon-account.hidden-sm-down
+					| Account Information
+			else
+				+link('', 'profile.html')
+					i.icon-account.hidden-sm-down
+					| Account Information
 		p
-			+link('', 'history-check.html')
-				i.icon-check-in.hidden-sm-down
-				| History Check-in
+			if profileIndex == 1
+				+link('', 'history-check.html').active
+					i.icon-check-in.hidden-sm-down
+					| History Check-in
+			else
+				+link('', 'history-check.html')
+					i.icon-check-in.hidden-sm-down
+					| History Check-in
 		p
-			+link('', 'my-order.html')
-				i.icon-order.hidden-sm-down #[span.path1]#[span.path2]#[span.path3]
-				| My Orders
+			if profileIndex == 2
+				+link('', 'my-order.html').active
+					i.icon-order.hidden-sm-down #[span.path1]#[span.path2]#[span.path3]
+					| My Orders
+			else
+				+link('', 'my-order.html')
+					i.icon-order.hidden-sm-down #[span.path1]#[span.path2]#[span.path3]
+					| My Orders
 		p
-			+link('', 'my-promotion.html')
-				i.icon-promo.hidden-sm-down
-				| My Promotion
+			if profileIndex == 3
+				+link('', 'my-promotion.html')
+					i.icon-promo.hidden-sm-down
+					| My Promotion
+			else
+				+link('', 'my-promotion.html')
+					i.icon-promo.hidden-sm-down
+					| My Promotion
 		p
-			+link('', 'my-followed.html')
-				i.icon-view-shop.hidden-sm-down
-				| My Followed
+			if profileIndex == 4
+				+link('', 'my-followed.html').active
+					i.icon-view-shop.hidden-sm-down
+					| My Followed
+			else
+				+link('', 'my-followed.html')
+					i.icon-view-shop.hidden-sm-down
+					| My Followed
 		p.hidden-md-up
 			+link('', 'terms.html')
 				| Term & Conditions
