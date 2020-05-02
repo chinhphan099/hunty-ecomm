@@ -91,11 +91,6 @@
 .loginshop {
 	&__inner {
 		padding: 80px 15px;
-		border: 1px solid #F4F7FC;
-		box-sizing: border-box;
-		border-radius: 5px;
-		box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
-		background-color: #fff;
 		& > p {
 			.font-size(15px);
 			line-height: 19px;
@@ -108,6 +103,12 @@
 		}
 		@media (min-width: 768px) {
 			padding: 25px 60px 20px;
+			margin-bottom: 20px;
+			border: 1px solid #F4F7FC;
+			box-sizing: border-box;
+			border-radius: 5px;
+			box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
+			background-color: #fff;
 			.button {
 				width: auto;
 				margin: 0 0 15px 185px;
@@ -124,16 +125,15 @@
 
 .loginshop-title {
 	margin-bottom: 40px;
-	h2 {
-		margin-bottom: 7px;
-		.font-size(24px);
-		font-weight: bold;
-		line-height: 28px;
-		color: #2C2E32;
+	.heading {
+		margin-bottom: 5px;
+	}
+	.heading__text {
+		.font-size(20px);
 	}
 	@media (min-width: 768px) {
 		margin-bottom: 0;
-		h2 {
+		h4 {
 			margin-bottom: 15px;
 			.font-size(16px);
 			line-height: 22px;

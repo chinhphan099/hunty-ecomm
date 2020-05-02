@@ -1,0 +1,50 @@
+.loginshop-title.product {
+	@media (min-width: 768px) {
+		text-align: center;
+		.heading__text {
+			.font-size(28px);
+		}
+	}
+}
+
+.loginshop-store {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 65px;
+}
+
+.store-item {
+	width: calc(~"50% - 10px");
+	margin-bottom: 15px;
+	a {
+		max-width: 155px;
+		height: 155px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 30px 20px;
+		margin: 0 auto;
+		text-align: center;
+		box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
+		border-radius: 4px;
+		border: 1px dashed #FFD100;
+		img {
+			display: block;
+			height: 42px;
+			margin: 0 auto 5px;
+		}
+	}
+	@media (min-width: 768px) {
+		margin-bottom: 25px;
+		a {
+			max-width: 250px;
+			height: 250px;
+			padding: 35px;
+			img {
+				height: 50px;
+			}
+		}
+	}
+}
