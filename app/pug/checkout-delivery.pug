@@ -5,97 +5,96 @@ block vars
 	-checkoutStep = 2
 
 block main
-	main
+	main.checkout
 		.container
-			.checkout
-				.checkout__inner.row_wrap
-					.primary
-						.checkout__heading
-							h1.checkout__title Delivery Method
-							+link("Change", "javascript:;").link_change
-						.checkout_address
-							.checkout_address__list
-								.checkout_address__item
-									p.checkout_address__namePhone
-										span.name Phan Chinh 
-										span.phone 0938528813
-									p.checkout_address__detail Địa chỉ: QTSC 9, Công viên phần mềm Quang Trung, P. Tân Chánh Hiệp, Q.12, TP.HCM, Việt Nam, Phường Tân Chánh Hiệp, Quận 12, Hồ Chí Minh Việt Nam
-						.checkout_address__form.active
-							.checkout_address__inner 
-								+form("").address_form_edit
-									.fieldset
-										label.label(for="full_name")
-											span Full Name
-										.fieldset__column
-											input(type="text" name="full_name" id="full_name" required="required" placeholder="Phan Chinh" aria-required="true")
-											span.error-message This field is required.
+			.row_wrap
+				.primary
+					.checkout__heading
+						h1.checkout__title Delivery Method
+						+link("Change", "javascript:;").link_change
+					.checkout_address
+						.checkout_address__list
+							.checkout_address__item
+								p.checkout_address__namePhone
+									span.name Phan Chinh 
+									span.phone 0938528813
+								p.checkout_address__detail Địa chỉ: QTSC 9, Công viên phần mềm Quang Trung, P. Tân Chánh Hiệp, Q.12, TP.HCM, Việt Nam, Phường Tân Chánh Hiệp, Quận 12, Hồ Chí Minh Việt Nam
+					.checkout_address__form.active
+						.checkout_address__inner 
+							+form("").address_form_edit
+								.fieldset
+									label.label(for="full_name")
+										span Full Name
+									.fieldset__column
+										input(type="text" name="full_name" id="full_name" required="required" placeholder="Phan Chinh" aria-required="true")
+										span.error-message This field is required.
 
-									.fieldset
-										label.label(for="telephone")
-											span Phone Number
-										.fieldset__column
-											input(type="tel" name="telephone" id="telephone" required="required" placeholder="0938528813" aria-required="true")
-											span.error-message This field is required.
-									.fieldset
-										label.label(for="province_id")
-											span Province
-										.fieldset__column
-											+customSelect({id: 'province_id'}, [
-												{value: 'hcm', text: 'Hồ Chí Minh '},
-												{value: 'hn', text: 'Hà Nội'},
-												{value: 'th', text: 'Thanh Hoá'}
-											])
-											span.error-message This field is required.
-									.fieldset
-										label.label(for="district_id")
-											span District
-										.fieldset__column
-											+customSelect({id: 'district_id'}, [
-												{value: 'hcm', text: 'Quận 12 '},
-												{value: 'hn', text: 'Quận 12 '},
-												{value: 'th', text: 'Quận 12 '}
-											])
-											span.error-message This field is required.
-									.fieldset
-										label.label(for="ward_id")
-											span Ward
-										.fieldset__column
-											+customSelect({id: 'ward_id'}, [
-												{value: 'hcm', text: 'Quận 12 '},
-												{value: 'hn', text: 'Quận 12 '},
-												{value: 'th', text: 'Quận 12 '}
-											])
-											span.error-message This field is required.
-									.fieldset
-										label.label(for="street_id")
-											span Address
-										.fieldset__column
-											+textarea('street_id', 'QTSC 9, Công viên phần mềm Quang Trung, P. Tân Chánh Hiệp, Q.12, TP.HCM, Việt Nam')
-											span.error-message This field is required.
-									.fieldset
-										label.label(for="street_id")
-											span Select a address  
-										.fieldset__column
-											ul.select_address  
-												li 
-													+radio({name: 'office', id: 'office', text: 'Office', checked: 'checked' }).circle
-													span.error-message This field is required.
-												li 
-													+radio({name: 'office', id: 'Home', text: 'Home'}).circle
-													span.error-message This field is required.
+								.fieldset
+									label.label(for="telephone")
+										span Phone Number
+									.fieldset__column
+										input(type="tel" name="telephone" id="telephone" required="required" placeholder="0938528813" aria-required="true")
+										span.error-message This field is required.
+								.fieldset
+									label.label(for="province_id")
+										span Province
+									.fieldset__column
+										+customSelect({id: 'province_id'}, [
+											{value: 'hcm', text: 'Hồ Chí Minh '},
+											{value: 'hn', text: 'Hà Nội'},
+											{value: 'th', text: 'Thanh Hoá'}
+										])
+										span.error-message This field is required.
+								.fieldset
+									label.label(for="district_id")
+										span District
+									.fieldset__column
+										+customSelect({id: 'district_id'}, [
+											{value: 'hcm', text: 'Quận 12 '},
+											{value: 'hn', text: 'Quận 12 '},
+											{value: 'th', text: 'Quận 12 '}
+										])
+										span.error-message This field is required.
+								.fieldset
+									label.label(for="ward_id")
+										span Ward
+									.fieldset__column
+										+customSelect({id: 'ward_id'}, [
+											{value: 'hcm', text: 'Quận 12 '},
+											{value: 'hn', text: 'Quận 12 '},
+											{value: 'th', text: 'Quận 12 '}
+										])
+										span.error-message This field is required.
+								.fieldset
+									label.label(for="street_id")
+										span Address
+									.fieldset__column
+										+textarea('street_id', 'QTSC 9, Công viên phần mềm Quang Trung, P. Tân Chánh Hiệp, Q.12, TP.HCM, Việt Nam')
+										span.error-message This field is required.
+								.fieldset
+									label.label(for="street_id")
+										span Select a address  
+									.fieldset__column
+										ul.select_address  
+											li 
+												+radio({name: 'office', id: 'office', text: 'Office', checked: 'checked' }).circle
+												span.error-message This field is required.
+											li 
+												+radio({name: 'office', id: 'Home', text: 'Home'}).circle
+												span.error-message This field is required.
 
-									.fieldset
-										label.label
-										.fieldset__column.form_group
-											+button({class: "button hollow", id: "cancel_id", name: "cancel_id"}) Cancel
-											+button({class: "button", id: "submit_id", name: "ubmit_id"}) Submit
-		
-					.sidebar
-						.order_total
-							.order_total__inner
-								.total_text Total
-								.price 1.120.000 VND 
-							.order_total__next: button(type="button").button Next
+								.fieldset
+									label.label
+									.fieldset__column.form_group
+										+button({class: "button hollow", id: "cancel_id", name: "cancel_id"}) Cancel
+										+button({class: "button", id: "submit_id", name: "ubmit_id"}) Submit
+	
+				.sidebar
+					.order_total
+						.order_total__inner
+							.total_text Total
+							.price 1.120.000 VND 
+						.order_total__next: button(type="button").button Next
 
 
 

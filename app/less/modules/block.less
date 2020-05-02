@@ -1,7 +1,8 @@
 // Block
 .banner {
-	overflow: hidden;
+	position: relative;
 	margin-bottom: 20px;
+	overflow: hidden;
 	&__promoMb {
 		margin-bottom: 20px;
 		.slick-arrow {
@@ -25,6 +26,16 @@
 		}
 	}
 	@media(max-width: 767px) {
+
+		&:before {
+			content: "";
+			height: 50%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			background-image: linear-gradient(to right, #ffd100 , #f2ca1a);
+		}
 		.slick-arrow {
 			opacity: 0;
 		}

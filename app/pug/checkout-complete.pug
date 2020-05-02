@@ -5,53 +5,52 @@ block vars
 	-checkoutStep = 4
 
 block main
-	main
+	main.checkout.checkout--completed
 		.container
-			.checkout.checkout--completed
-				.checkout__inner.row_wrap
-					.primary
-						.checkout_orderid
-							h1.checkout__title Your Order Id
-							.checkout_orderid__number
-								strong 95794194
-								+link('Copy', 'javascript;:')
-									i.icon-flash-sale
-									span Copy
-							
-						.checkout_list
-							h3.checkout__title Order Details
-							.checkout_list__inner
-								-for (var i = 0; i < 3; i++)
-									+cartItem1()
-						.checkout_address.border_b
-							h3.checkout__title Delivery Address
-							.checkout_address__list
-								.checkout_address__item
-									p.checkout_address__namePhone
-										span.name Phan Chinh 
-										span.phone 0938528813
-									p.checkout_address__detail Địa chỉ: QTSC 9, Công viên phần mềm Quang Trung, P. Tân Chánh Hiệp, Q.12, TP.HCM, Việt Nam, Phường Tân Chánh Hiệp, Quận 12, Hồ Chí Minh Việt Nam
-						.checkout__back-home
-							+link('Back to Home', "index.html").button.btn-back-home
-					
-					.sidebar
-						.checkout_summary
-							h3.checkout__title Payment
-							table.checkout_summary__table
-								tr: caption Cash on Delivery
-								tr 
-									td.label Fee
-									td.value 100.000 VND
-								tr
-									td.label Delivery Fee 
-									td.value 20.000 VND
-								tr
-									td.label Packet Fee
-									td.value 100.000 VND
-								tr.totals
-									td.label Totals
-									td.value 100.000 VND
-							
+			.row_wrap
+				.primary
+					.checkout_orderid
+						h1.checkout__title Your Order Id
+						.checkout_orderid__number
+							strong 95794194
+							+link('Copy', 'javascript;:')
+								i.icon-flash-sale
+								span Copy
+						
+					.checkout_list
+						h3.checkout__title Order Details
+						.checkout_list__inner
+							-for (var i = 0; i < 3; i++)
+								+cartItem1()
+					.checkout_address.border_b
+						h3.checkout__title Delivery Address
+						.checkout_address__list
+							.checkout_address__item
+								p.checkout_address__namePhone
+									span.name Phan Chinh 
+									span.phone 0938528813
+								p.checkout_address__detail Địa chỉ: QTSC 9, Công viên phần mềm Quang Trung, P. Tân Chánh Hiệp, Q.12, TP.HCM, Việt Nam, Phường Tân Chánh Hiệp, Quận 12, Hồ Chí Minh Việt Nam
+					.checkout__back-home
+						+link('Back to Home', "index.html").button.btn-back-home
+				
+				.sidebar
+					.checkout_summary
+						h3.checkout__title Payment
+						table.checkout_summary__table
+							tr: caption Cash on Delivery
+							tr 
+								td.label Fee
+								td.value 100.000 VND
+							tr
+								td.label Delivery Fee 
+								td.value 20.000 VND
+							tr
+								td.label Packet Fee
+								td.value 100.000 VND
+							tr.totals
+								td.label Totals
+								td.value 100.000 VND
+						
 
 
 

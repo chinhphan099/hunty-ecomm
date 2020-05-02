@@ -6,31 +6,29 @@ block vars
 	-hidenFooterOnMobile = true
 
 block main
-	main
+	main.shop 
 		+goback().goback--white
 		.container
 			+breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { title: ' Shop', href: ' shop.html', text: ' Shop' }, { text: 'Lotte Mart' }, ]).hidden-sm-down
-			.shop 
-				.shop__banner
-					+img-upload('shop_banner.jpg').hidden-sm-down
-					+img-upload('shop_banner_mb.jpg').hidden-md-up
+			.shop__banner
+				+img-upload('shop_banner.jpg').hidden-sm-down
+				+img-upload('shop_banner_mb.jpg').hidden-md-up
 
-				+shopInfo()
-				.shop__wrap.row_wrap
-					.primary
-						.shop__heading.heading
-							h1.heading__text  Product List
-							ul.product-navs 
-								li.active: +link('Sale', '#')
-								li: +link('Unsale', '#')
-								li: +link('All', '#')
-						.product_list
-							-for (var i = 0; i < 12; i++)
-								+product('two-price-cart').product--promo
-					.sidebar.hidden-sm-down
-						.heading: h2.heading__text  Promotinons
-						include modules/index/banner_promo
-
+			+shopInfo()
+			.shop__wrap.row_wrap
+				.primary
+					.shop__heading.heading
+						h1.heading__text  Product List
+						ul.product-navs 
+							li.active: +link('Sale', '#')
+							li: +link('Unsale', '#')
+							li: +link('All', '#')
+					.product_list
+						-for (var i = 0; i < 12; i++)
+							+product('two-price-cart').product--promo
+				.sidebar.hidden-sm-down
+					.heading: h2.heading__text  Promotinons
+					include modules/index/banner_promo
 
 block popup
 	include modules/index/login-popup
