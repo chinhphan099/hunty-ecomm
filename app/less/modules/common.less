@@ -84,12 +84,13 @@
     background: #FFFFFF;
     border: 1px solid #F4F7FC;
     box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
-    border-radius: 10px;
+    border-radius: 5px;
   }
 
   .close {
     padding: 10px;
     .position(0 0 null null);
+    z-index: 3;
     font-size: 20px;
     opacity: .8;
     &:hover {
@@ -98,6 +99,7 @@
   }
   @media(min-width: 768px) {
     .close {
+      padding: 10px;
       font-size: 25px;
     }
   }

@@ -25,20 +25,19 @@
 
   Plugin.prototype = {
     init: function() {
-      var that = this,
-        el = this.element,
+      var el = this.element,
         destination = this.options.handle,
         initUnder = this.options.initUnder;
 
       this.toggleShow();
-      win.off('scroll.' + pluginName).on('scroll.' + pluginName, function() {
-        that.toggleShow();
+      win.off('scroll.' + pluginName).on('scroll.' + pluginName, () => {
+        this.toggleShow();
       });
-      el.off('click.' + pluginName).on('click.' + pluginName, function(e) {
+      el.off('click.' + pluginName).on('click.' + pluginName, (e) => {
         e.preventDefault();
         e.stopPropagation();
         if(win.width() < initUnder && $(destination).length) {
-          that.scrollTo(destination);
+          this.scrollTo(destination);
         }
       });
     },
@@ -53,12 +52,11 @@
       }
     },
     scrollTo: function(elm) {
-      var that = this,
-        scrollTo = !!$(elm).length ? $(elm).offset().top : 0;
+      var scrollTo = !!$(elm).length ? $(elm).offset().top : 0;
 
       $('html, body').animate({
         scrollTop: scrollTo
-      }, that.options.duration, 'easeOutCubic'); // jquery.easing.1.3.js
+      }, this.options.duration, 'easeOutCubic'); // jquery.easing.1.3.js
     },
     destroy: function() {
       this.element.off('click.' + pluginName);

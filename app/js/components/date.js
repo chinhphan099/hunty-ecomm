@@ -81,5 +81,4 @@
   $(function() {
     $('[data-' + pluginName + ']')[pluginName]();
   });
-
 }(jQuery, window));

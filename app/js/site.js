@@ -16,19 +16,6 @@ if (window.Element && !Element.prototype.closest) {
 (function(global, undefined) {
   'use strict';
 
-  function scrollTopAfterCollapse(elmScroll, handle, isPos) {
-    var spaceToTop = 0,
-      offsetHandle = isPos ? handle.position().top : handle.offset().top;
-
-    if(!isPos) {
-      spaceToTop = 50;
-    }
-
-    elmScroll.stop().animate({
-      scrollTop: offsetHandle - spaceToTop
-    }, 400);
-  }
-
   function productTypeOnSearchPage() {
     const selectedType = document.querySelector('.product-type__selected');
     if(!!selectedType) {
@@ -38,7 +25,7 @@ if (window.Element && !Element.prototype.closest) {
     }
   }
 
-  function searchEvent() {
+  function searchEventOnHeader() {
     const searchBtnDk = document.getElementById('search_btn');
     if(!!searchBtnDk) {
       searchBtnDk.addEventListener('click', () => {
@@ -71,13 +58,14 @@ if (window.Element && !Element.prototype.closest) {
         document.querySelector('body').classList.remove('open-modal');
       });
     }
-    const loginBtn = document.querySelector('.header__login');
-    if(!!loginBtn) {
+
+    const loginBtns = document.querySelectorAll('.header__login');
+    Array.prototype.slice.call(loginBtns).forEach(loginBtn => {
       loginBtn.addEventListener('click', (e) => {
         e.preventDefault();
         document.querySelector('body').classList.add('open-modal');
       });
-    }
+    });
 
     const closeModal = document.querySelector('.modal .close');
     if(!!closeModal) {
@@ -88,7 +76,7 @@ if (window.Element && !Element.prototype.closest) {
     }
   }
 
-  function handleTabEvents() {
+  function handleTabEventsGlobal() {
     const tabItems = document.querySelectorAll('[data-collapse] [data-handle]');
     Array.prototype.slice.call(tabItems).forEach(tabItem => {
       tabItem.addEventListener('click', (e) => {
@@ -134,9 +122,9 @@ if (window.Element && !Element.prototype.closest) {
   function listener() {
     productDetailEvents();
     productTypeOnSearchPage();
-    searchEvent();
+    searchEventOnHeader();
     loginModal();
-    handleTabEvents();
+    handleTabEventsGlobal();
     handleMobileNavOnShopManagement();
   }
 
@@ -149,8 +137,4 @@ if (window.Element && !Element.prototype.closest) {
   window.addEventListener('load', () => {
     listener();
   });
-
-  global.Site = {
-    scrollTopAfterCollapse: scrollTopAfterCollapse
-  };
 })(window);

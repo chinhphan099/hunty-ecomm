@@ -402,13 +402,15 @@
       var topHandle = handle.offset().top,
         topWindow = win.scrollTop();
 
-      if(activeContent.closest('.navigation .inner').length) {
+      if(activeContent.closest('.navigation .inner').length && !!Site && typeof Site.scrollTopAfterCollapse === 'function') {
         Site.scrollTopAfterCollapse(activeContent.closest('.navigation .inner'), handle, true);
       }
       if(plugin.initSuccess) {
         var gotop = handle.data('active');
         if(gotop === 'gotop' &&
-          (topHandle < topWindow || topHandle > topWindow + win.height() / 1.25)) {
+          (topHandle < topWindow || topHandle > topWindow + win.height() / 1.25) &&
+          !!Site && typeof Site.scrollTopAfterCollapse === 'function'
+          ){
           Site.scrollTopAfterCollapse($('html, body'), handle, false);
         }
       }
@@ -421,5 +423,4 @@
   $(function() {
     $('[data-' + pluginName + ']')[pluginName]();
   });
-
 }(jQuery, window));
