@@ -14,8 +14,10 @@ block main
 					include modules/manage-shop/block-1
 					.shop-info__banner.hidden-md-up
 						img(src="https://i.picsum.photos/id/119/800/530.jpg", alt="")
-					+shopInfo()
+					+shopInfo('no-button')
 					include modules/manage-shop/block-3
 					include modules/manage-shop/block-4
 					include modules/manage-shop/block-5
+					.container-fluid
+						include modules/global/product-sale-unsale-all
 			.shop-wrap__bottom
