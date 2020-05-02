@@ -1,7 +1,7 @@
 section.viewed_section
     .container
         .product_block
-            +heading('Related Product')
+            +heading('Related Product', 'View All')
             .slider(data-cslider='{"type": "product", "setPositionArrows": true}')
                 .slick
                     -for (var i = 0; i < 15; i++)
@@ -12,7 +12,7 @@ section.viewed_section
 section.viewed_section
     .container
         .product_block
-            +heading('Similar Product')
+            +heading('Similar Product', 'View All')
             .slider(data-cslider='{"type": "product", "setPositionArrows": true}')
                 .slick
                     -for (var i = 0; i < 15; i++)

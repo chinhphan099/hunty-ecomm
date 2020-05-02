@@ -1,3 +1,4 @@
+// Polyfill Closest
 if (window.Element && !Element.prototype.closest) {
   Element.prototype.closest =
   function(s) {
@@ -10,6 +11,7 @@ if (window.Element && !Element.prototype.closest) {
     return el;
   };
 }
+// End Polyfill Closest
 
 (function(global, undefined) {
   'use strict';
@@ -27,7 +29,7 @@ if (window.Element && !Element.prototype.closest) {
     }, 400);
   }
 
-  function searchPageEvents() {
+  function productTypeOnSearchPage() {
     const selectedType = document.querySelector('.product-type__selected');
     if(!!selectedType) {
       selectedType.addEventListener('click', (e) => {
@@ -36,7 +38,7 @@ if (window.Element && !Element.prototype.closest) {
     }
   }
 
-  function searchIndex() {
+  function searchEvent() {
     const searchBtnDk = document.getElementById('search_btn');
     if(!!searchBtnDk) {
       searchBtnDk.addEventListener('click', () => {
@@ -93,6 +95,7 @@ if (window.Element && !Element.prototype.closest) {
         const dataContent = e.currentTarget.dataset.handle;
         const wrapper = e.currentTarget.closest('[data-collapse]');
         const contentItem = wrapper.querySelector(`[data-content="${dataContent}"]`);
+
         if(!contentItem.classList.contains('active')) {
           wrapper.querySelector('[data-content].active').classList.remove('active');
           wrapper.querySelector('[data-active].active').classList.remove('active');
@@ -103,9 +106,19 @@ if (window.Element && !Element.prototype.closest) {
     });
   }
 
+  function productDetailEvents() {
+    const viewAllDescription = document.querySelector('.product-description .view-all');
+    if(!!viewAllDescription) {
+      viewAllDescription.addEventListener('click', (e) => {
+        e.currentTarget.closest('.product-description').querySelector('.editor').classList.toggle('show-all');
+      });
+    }
+  }
+
   function listener() {
-    searchPageEvents();
-    searchIndex();
+    productDetailEvents();
+    productTypeOnSearchPage();
+    searchEvent();
     loginModal();
     handleTabEvents();
   }

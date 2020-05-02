@@ -247,9 +247,11 @@
         this.getGalleryList(currentSlide),
         {
           loop: false,
-          slideShow: false,
-          fullScreen: false,
-          thumbs: false
+          slideShow: true,
+          fullScreen: true,
+          animationEffect: 'zoom',
+          transitionEffect: 'circular',
+          thumbs: true
         }
       );
     },

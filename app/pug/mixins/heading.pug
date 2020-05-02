@@ -7,6 +7,7 @@ mixin heading(headingText, link, countdown, tag)
     .heading(class!=cls)&attributes(attributes)
         <!{tagName} class="heading__text">
             !=headingText
+        </!{tagName}>
         if countdown
             span.countdown(data-countdown) 3:09:09:09
         if link
