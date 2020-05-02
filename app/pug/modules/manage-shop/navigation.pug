@@ -1,3 +1,9 @@
+if shopActiveTab == 0
+	-activeCls0 = 'active'
+
+if shopActiveTab == 1
+	-activeCls1 = 'active'
+
 .shop-nav
 	button.nav-menu
 		i.icon-hamburger.hidden-md-up
@@ -5,11 +11,11 @@
 		i.icon-close.hidden-md-up
 	.nav-navigation.clearfix
 		ul
-			li.active
+			li(class!=activeCls0)
 				+link('Home', 'shop-management.html')
 					i.icon-home
 					|	Home
-			li
+			li(class!=activeCls1)
 				+link('Order', 'shop-order.html')
 					i.icon-shop-order
 					|	Shop Order
