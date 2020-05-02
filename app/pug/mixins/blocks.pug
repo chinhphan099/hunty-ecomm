@@ -175,18 +175,19 @@ mixin shopInfo(type)
       .thumb
         img(src="https://i.picsum.photos/id/239/100/100.jpg", alt="")
       .desc
-        h3.wrap-title Routine
-        p
-          i.icon-star
-          | 4.9 #[span(style="color: #8B929F;") (3.666 rating)]
+        .inner
+          h3.wrap-title Routine
+          p.shop-info__rating
+            i.icon-star
+            | 4.9 #[span(style="color: #8B929F;") (3.666 rating)]
         if type != 'no-button'
           .button_inner
             +link("Follow Shop", "javascript:;").button.hollow.active
               i.icon-heart
-              span Follow Shop
+              span Follow
             +link("Chat Shop", "javascript:;").button.hollow
               i.icon-message
-              span Chat Shop
+              span Chat
     ul.shop-info__list
       li
         i.icon-follow
