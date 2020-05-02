@@ -219,6 +219,12 @@
 	.position(fixed, 15px 15px null null);
 	border: none;
 	z-index: 999;
+	&.active {
+		display: block;
+	}
+	&.active +.nav-navigation {
+		display: block;
+	}
 	i {
 		.font-size(30px);
 		color: #8B929F;
@@ -282,10 +288,6 @@
 		.font-size(18px);
 		padding: 20px;
 	}
-}
-
-button:focus +.nav-close +.nav-navigation, button:focus +.nav-close {
-	display: block;
 }
 
 
