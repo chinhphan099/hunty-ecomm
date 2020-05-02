@@ -1,0 +1,14 @@
+.history-check
+	+heading('My Followed')
+	.history-seach
+		.fieldset: +customInput({id: 'search_btn_2', iconClass: 'icon-search'}, {id: "txt_search_2", placeholder: "Search for Brand"})
+	.history-shop
+		-for (var i = 0; i < 20; i++)
+			.shop-check
+				.thumb
+					+link('Image', '#')
+						+img-upload('shop.png')
+				.desc
+					h3.w-title
+						+link('title', '#') Lotte Mart
+					p 120.000 followers
