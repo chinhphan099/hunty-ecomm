@@ -1,0 +1,14 @@
+extends layouts/layout
+
+block vars
+	-title = 'My Followed | Hunty'
+
+block main
+	main
+		+goback()
+		.profile
+			.container
+				.profile-history
+					include modules/profile/account-breadcrumb
+					include modules/profile/account-sidebar
+					include modules/profile/my-followed

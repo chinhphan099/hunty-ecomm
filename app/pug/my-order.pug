@@ -1,14 +1,14 @@
 extends layouts/layout
 
 block vars
-	-title = 'History Check-in | Hunty'
+	-title = 'My Order | Hunty'
 
 block main
 	main
 		+goback()
 		.profile
 			.container
-				.profile-inner
+				.profile-history
 					include modules/profile/account-breadcrumb
 					include modules/profile/account-sidebar
-					include modules/profile/history-check
+					include modules/profile/my-order
