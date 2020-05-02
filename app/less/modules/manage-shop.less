@@ -135,7 +135,7 @@
 		@media (min-width: 992px) {
 			width: 240px;
 		}
-		@media (min-width: 1200px) {
+		@media (min-width: 1400px) {
 			width: 340px;
 		}
 	}
@@ -143,8 +143,8 @@
 	&__right {
 		padding: 0 15px;
 		line-height: 20px;
-		background-color: #F4F7FF;
 		@media (min-width: 768px) {
+			background-color: #F4F7FF;
 			overflow: hidden;
 			flex: 1 0 0%;
 			padding: 20px 20px 80px;
@@ -165,9 +165,6 @@
 	}
 
 	.shop-info {
-		padding-left: 15px;
-		padding-right: 15px; 
-		margin: 0 -15px;
 		@media (min-width: 768px) {
 			padding: 20px;
 		}
@@ -416,3 +413,10 @@
 	}
 }
 
+.manage-block6 {
+	@media (min-widtH: 1200px) {
+		.product_list .product {
+			width: calc(~"100% / 6 - 20px");
+		}
+	}
+}

@@ -8,8 +8,9 @@
 }
 //--------------------------------pricing
 .pricing {
-	.flex(1 0);
+	.flex(1 0 0%);
 	padding: 60px 0;
+	margin: 0 -15px;
 	.font-size(14px);
 	line-height: 20px;
 	background-color: @yellow;
@@ -54,6 +55,7 @@
 	}
 	@media (min-width: 768px) {
 		padding: 0;
+		margin: 0;
 		background-color: inherit;
 		.slider {
 			overflow: visible;
@@ -61,21 +63,21 @@
 		.slick {
 			display: flex;
 			flex-wrap: wrap;
+			justify-content: space-between;
 		}
 		.item {
+			width: calc(~"100% / 2 - 10px");
+			margin: 0 10px 10px 0;
 			position: relative;
-			width: 400px;
-			margin: 0 auto 20px;
 			background-color: @color01;
 			border-radius: 10px;
 			box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
 			height: auto;
 		}
 	}
-	@media (min-width: 992px) {
+	@media (min-width: 1200px) {
 		.item {
-			width: 310px;
-			margin: 0 20px 20px 0px;
+			width: calc(~"100% / 3 - 10px");
 		}
 	}
 }
@@ -113,7 +115,6 @@
 }
 
 .pricing-below {
-	.flex-shrink(0);
 	padding: 0 20px 50px 20px;
 	text-align: center;
 	.thumb {
