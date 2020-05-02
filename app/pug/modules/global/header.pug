@@ -22,7 +22,7 @@ header.header(class=hidenHeaderOnMobileCls)
                         button.header__gro-up.hidden-md-up: i.icon-gro-up
                     .header__search-auto-complete
                         .header__searchAutocomplete__list
-                            -for(var i = 0; i < 10; i++)
+                            -for(var i = 0; i < 3; i++)
                                 +link('Search Content').result-item
                         .header__searchResults
                             ul.tabs
@@ -39,8 +39,6 @@ header.header(class=hidenHeaderOnMobileCls)
                                         -for(var i = 0; i < 4; i++)
                                             +searchResult('')
                                 .pane.tab2
-                            
-
                             
             .header__links.hidden-sm-down
                 .header__tracking
