@@ -5,5 +5,8 @@
     li: +link('Unsale', '#')
     li: +link('All', '#')
 .product_list
-  -for (var i = 0; i < 12; i++)
+  -for (var i = 0; i < 1; i++)
+    +product('two-price-cart').product--promo
+  +product('two-price-cart-unsale').product--promo
+  -for (var i = 0; i < 9; i++)
     +product('two-price-cart').product--promo

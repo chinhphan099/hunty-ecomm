@@ -50,15 +50,19 @@ mixin product(type, slideitem)
     -imgcls = 'img-view'
 
   -imgsrc = 'images/upload/product-1.png'
-  if type == "two-price-cart"
+  if type == "two-price-cart" || type == "two-price-cart-unsale"
     -imgsrc = 'https://picsum.photos/140/170'
 
   .product&attributes(attributes)
     .thumb
       a(href="product.html")
         img(src!=imgsrc, alt="Hunty Product Name" class!=imgcls)
-      if type == "two-price-cart"
-        span.product__quickadd.hidden-md-up: i.icon-shopping-cart
+        if type == "two-price-cart"
+          span.product__quickadd.hidden-md-up
+            i.icon-shopping-cart
+        if type == "two-price-cart-unsale"
+          span.product__quickadd.hidden-md-up
+            i.icon-hunty-feed #[span.path1]#[span.path2]
     .content
       if type == "progress"
         .product__progress
@@ -79,7 +83,7 @@ mixin product(type, slideitem)
         p.product__rate
           i.icon-star
           span.product__count 4.9
-      else if type == "two-price-cart"
+      else if type == "two-price-cart" || type == "two-price-cart-unsale"
         p.product__name
           a(href="product.html") Lorem ipsum dolor sit amet
         +price('575.000 đ', '(1.000.000)')
