@@ -78,7 +78,11 @@ nav.tabbar.hidden-md-up(class!=hidenFooterOnMobileCls)
                 i.icon-notification
                 span.number 2
                 span.text Notification
-        +link('Profile', 'profile.html').tabbar__item.profile
-            i.icon-account
-            span.text Profile
-
+        if notLoged == true
+            +link('Profile', 'javascript:;').tabbar__item.profile
+                i.icon-account
+                span.text Login
+        else 
+            +link('Chào Chinh', 'profile.html').tabbar__item.profile
+                img(src="https://picsum.photos/24/24").user_avt
+                span.text Chinh
