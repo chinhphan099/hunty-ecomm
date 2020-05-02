@@ -142,6 +142,15 @@ mixin category()
       h3.cat_name
         a(href="search.html") T-Shirt
 
+mixin searchResult()
+  .searchResults__item&attributes(attributes)
+    .thumb
+      a(href="product.html")
+        img(src="https://picsum.photos/140/170", alt="Hunty Product Name")
+    .content
+      h3.name
+        a(href="search.html") T-Shirt
+
 mixin notification()
   .notification__list
     h3 TODAY

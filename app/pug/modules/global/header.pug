@@ -21,28 +21,46 @@ header.header(class=hidenHeaderOnMobileCls)
                         +customInput({id: 'search_btn', type: 'button', text: '<span>Tìm kiếm</span>', iconClass: 'icon-search'}, {id: "txt_search", placeholder: 'Search for Brand, Promotion... '}, {iconCls: 'icon-search'})
                         button.header__gro-up.hidden-md-up: i.icon-gro-up
                     .header__search-auto-complete
-                        -for(var i = 0; i < 50; i++)
-                            +link('Search Content').result-item
+                        .header__searchAutocomplete__list
+                            -for(var i = 0; i < 10; i++)
+                                +link('Search Content').result-item
+                        .header__searchResults
+                            ul.tabs
+                                li.active#tab1: +link('Promotion', '#')
+                                li#tab2: +link('Map', '#')
+                            .tab_content
+                                .pane.tab1.active
+                                    +heading('Lastest Search', '', '', 'h3')
+                                    .searchResults_list
+                                        -for(var i = 0; i < 4; i++)
+                                            +searchResult('')
+                                    +heading('Hot Trends', '', '', 'h3')
+                                    .searchResults_list
+                                        -for(var i = 0; i < 4; i++)
+                                            +searchResult('')
+                                .pane.tab2
+                            
 
+                            
             .header__links.hidden-sm-down
                 .header__tracking
-                    +link('Tracking order', 'my-order.html')
+                    +link('Tracking order', 'my-order.html').uppercase
                         i.icon-tracking
                         span.text Tracking order
                 .header__notification
-                    +link('Notification', 'notification.html')
+                    +link('Notification', 'notification.html').uppercase
                         span.icon
                             i.icon-notification
                             span.number 2
                         span.text Notification
                 if notLoged == true
                     .header__login
-                        +link('Login', 'javascript:;')
+                        +link('Login', 'javascript:;').uppercase
                             i.icon-account
                             span.text Login
                 else
                     .header__loged
-                        +link('Chào Chinh', 'profile.html')
+                        +link('Chào Chinh', 'profile.html').uppercase
                             img(src="https://picsum.photos/24/24").user_avt
                             span.text Chinh
                     
@@ -50,7 +68,7 @@ header.header(class=hidenHeaderOnMobileCls)
         .container
             .header__left
                 nav.nav
-                    +link('danh mục sản phẩm ', '#').nav__category__toggle
+                    +link('danh mục sản phẩm ', '#').nav__category__toggle.uppercase
                         i.icon-hamburger
                         span Danh mục sản phẩm
                     ul.nav__navbar
@@ -101,7 +119,7 @@ header.header(class=hidenHeaderOnMobileCls)
                             {title: 'Contact', href: '#'}
                         ])
                 .product__recently
-                    +link('danh mục sản phẩm ', '#').product__recently__title
+                    +link('danh mục sản phẩm ', '#').product__recently__title.uppercase
                         i.icon-caret-down
                         span Sản phẩm đã xem
                     ul.product__recently__list
@@ -120,16 +138,16 @@ header.header(class=hidenHeaderOnMobileCls)
 
             .header__right
                 .header__shop_management
-                    +link('Shop Management ', 'shop-management.html')
+                    +link('Shop Management ', 'shop-management.html').uppercase
                         span.icon: i.icon-view-shop
                         span Shop Management
                 .header__hunty_feed
-                    +link('Hunty feed ', 'hunty-feed.html')
+                    +link('Hunty feed ', 'hunty-feed.html').uppercase
                         i.icon-hunty-feed #[span.path1]#[span.path2]
                         span Hunty feed
                 .header__mini_cart
                     .header__mini_cart_title
-                        +link('Cart ', 'cart.html').cart-link
+                        +link('Cart ', 'cart.html').cart-link.uppercase
                             span.header__mini_cart_count
                                 i.icon-cart
                                 span 2

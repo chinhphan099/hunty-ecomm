@@ -3,11 +3,11 @@
 		.modal__content
 			button(type="button").close: i.icon-close
 			.login(data-collapse='')
-				.login__tabs
+				.tabs
 					li.active#tab1(data-active=""): +link('Login', '#')(data-handle="login")
 					li#tab2(data-active=""): +link('Create Account', '#')(data-handle="register")
-				.login__tab-content
-					.login__pane.tab1.active(data-content="login")
+				.tab_content
+					.pane.tab1.active(data-content="login")
 						.login__form
 							form(action="")
 								.fieldset
@@ -36,7 +36,7 @@
 									button.button.btn-login-fb
 										i.icon-fb-circle #[span.path1]#[span.path2]
 										| Facebook
-					.login__pane.tab2(data-content="register")
+					.pane.tab2(data-content="register")
 						.login__form.register
 							form(action="")
 								.fieldset

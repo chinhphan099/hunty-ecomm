@@ -14,12 +14,38 @@
     &__search-auto-complete {
         .result-item {
             display: block;
+
             padding: 10px;
             & + .result-item {
                 border-top: 1px solid @color03;
             }
             &:hover {
                 background-color: #FFEB8E;
+            }
+        }
+    }
+    &__searchResults {
+        padding: 0 15px;
+        .tabs {
+            li {
+                padding: 0 15px;
+                width: 50%;
+            }
+            a {
+                display: block;
+                font-size: 16px;
+            }
+        }
+        .heading__text {
+            font-size: 16px;
+        }
+        .searchResults_list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            & > div {
+                margin-bottom: 20px;
+                width: calc(~"100% / 2 - 10px");
             }
         }
     }
@@ -35,7 +61,6 @@
         a {
             display: block;
             font-size: 12px;
-            text-transform: uppercase;
             > i, > span {
                 display: inline-block;
                 vertical-align: middle;
@@ -601,7 +626,6 @@
         left: -100px;
         width: 550px;
         display: none;
-        flex-grow: 1;
         justify-content: space-between;
         padding: 20px;
         background: #FFFFFF;
@@ -625,6 +649,8 @@
     }
 }
 /* End Product Recently */
+
+
 
 /* Footer */
 .footer {
