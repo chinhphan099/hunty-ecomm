@@ -34,12 +34,12 @@
 
 .history-shop {
 	@media (min-width: 992px) {
-		column-count: 2;
-		column-gap: 50px;
-		margin-top: 40px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-top: 50px;
 	}
 }
-
 .shop-check {
 	display: flex;
 	align-items: center;
@@ -63,13 +63,11 @@
 		margin-right: 10px;
 	}
 	.desc {
-		white-space: nowrap;
+		flex: 1 0 0%;
 		overflow: hidden;
 	}
 	@media (min-width: 992px) {
-		&:nth-child(10) {
-			border: 0;
-		}
+		width: calc(~"50% - 10px");
 	}
 }
 
