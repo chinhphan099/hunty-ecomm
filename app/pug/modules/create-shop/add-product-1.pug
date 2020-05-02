@@ -1,0 +1,13 @@
+.loginshop
+	.loginshop__inner
+		.loginshop-title
+			h2.hidden-md-up Welcome to your new store
+			p.hidden-md-up Please add your first product
+		.loginshop-store
+			.store-item
+				+link('Add Product', '#')
+					span add Single Product
+				-for (var i = 0; i < 4; i++)
+					+link('Product', '#')
+						+img-upload('shoppe.png')
+						span Link Product from Shoppe
