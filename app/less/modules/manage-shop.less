@@ -116,20 +116,18 @@
 //--------------------------------shop-wrap
 .shop-wrap {
 	overflow: hidden;
+	@media (min-width: 768px) {
+		border-bottom: 8px solid @yellow;
+		min-height: calc(~"100vh - 81px");
+	}
+
 	&__inner {
 		@media (min-width: 768px) {
 			display: flex;
 			.flex-wrap(wrap);
 		}
 	}
-	&__bottom {
-		@media (min-width: 768px) {
-			position: fixed;
-			bottom: 0;
-			.size(100%, 8px);
-			background-color: @yellow;
-		}
-	}
+
 	&__left {
 		@media (min-width: 768px) {
 			width: 200px;
@@ -141,30 +139,30 @@
 			width: 340px;
 		}
 	}
+
 	&__right {
 		line-height: 20px;
 		background-color: #F4F7FF;
 		@media (min-width: 768px) {
 			overflow: hidden;
 			flex: 1 0 0%;
-			// width: calc(~"100% - 200px");
 			padding: 20px 20px 80px;
 			.font-size(16px);
 		}
 		@media (min-width: 992px) {
-			padding-bottom: 40px;
+			padding-bottom: 20px;
 			.font-size(18px);
-			// width: calc(~"100% - 240px");
 		}
 		@media (min-width: 1200px) {
-			//width: calc(~"100% - 340px");
 		}
 	}
+
 	.product-navs {
 		@media (max-width: 767px) {
 			justify-content: space-between;
 		}
 	}
+
 	.shop-info {
 		padding-left: 15px;
     padding-right: 15px; 
@@ -234,7 +232,7 @@
 	left: 0;
 	bottom: 0;
 	padding: 70px 20px 20px;
-	.font-size(18px);
+	font-size: 1.8rem;
 	line-height: 25px;
 	text-align: right;
 	background-color: #fff;
@@ -257,7 +255,7 @@
 		display: block;
 		position: inherit;
 		padding: 10px;
-		.font-size(16px);
+		font-size: 1.6rem;
 		text-align: left;
 		li {
 			margin-bottom: 0;
