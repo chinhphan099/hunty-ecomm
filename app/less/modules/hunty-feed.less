@@ -1,0 +1,22 @@
+.category_block {
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.category {
+		margin-bottom: 15px;
+		width: calc(~"100% / 2 - 10px");
+	}
+	@media(min-width: 544px) {
+		.category {
+			width: calc(~"100% / 3 - 10px");
+		}
+	}
+}
+
+
+.btn_seeMore {
+	margin-bottom: 15px;
+	width: 100%;
+}

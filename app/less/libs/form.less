@@ -315,15 +315,20 @@ label {
   background-color: @yellow;
   font-weight: bold;
   border-radius: 3px;
+  box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
   .transition(all 150ms ease);
   &:hover {
     background-color: #FFDC40;
+  }
+  &.gray {
+    background: #D2DAEA;
+    color: #2C2E32;
+    font-weight: normal;
   }
   &.hollow {
     border-color: @yellow;
     background-color: @color01;
     color: @color11;
-    box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
   }
   &.active {
     border-color: #D2DAEA;
