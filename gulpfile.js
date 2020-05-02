@@ -46,7 +46,7 @@ PUB.img = PUB.root + 'images/';
 
 task('scripts', () => {
     return src([SRC.js + 'site.js', SRC.js + 'components/*.js'])
-        .pipe(sourcemaps.init())
+        //.pipe(sourcemaps.init())
         .pipe(jshint('.jshintrc'))
         .pipe(jshint.reporter('default'))
         .on('error', function(err) {
@@ -59,15 +59,15 @@ task('scripts', () => {
         }))
         .pipe(concat('scripts.js'))
         .pipe(dest(PUB.js))
-        /*.pipe(uglify())
-        .pipe(rename({ suffix: '.min' }))
+        .pipe(uglify())
+        //.pipe(rename({suffix: '.min'}))
         .on('error', function(err) {
             let displayErr = gutil.colors.red(err.message);
             gutil.log(displayErr);
             this.emit('end');
         })
-        .pipe(dest(PUB.js))*/
-        .pipe(sourcemaps.write('.'))
+        .pipe(dest(PUB.js))
+        //.pipe(sourcemaps.write('.'))
         .pipe(dest(PUB.js))
 });
 
@@ -85,6 +85,7 @@ task('jsguide', () => {
             "presets": ["@babel/preset-env"]
         }))
         .pipe(concat('jsguide.js'))
+        .pipe(uglify())
         .pipe(dest(PUB.js))
         .pipe(sourcemaps.write('.'))
         .pipe(dest(PUB.js))
@@ -92,9 +93,10 @@ task('jsguide', () => {
 
 task('libs', () => {
     return src(SRC.js + 'libs/*.js')
-        .pipe(sourcemaps.init())
+        //.pipe(sourcemaps.init())
         .pipe(concat('libs.js'))
-        .pipe(sourcemaps.write('.'))
+        .pipe(uglify())
+        //.pipe(sourcemaps.write('.'))
         .pipe(dest(PUB.js))
 });
 
@@ -109,9 +111,9 @@ task('less', () =>
             flexbox: "no-2009"
         }))
         .pipe(dest(PUB.css))
-        // .pipe(cssmin())
-        // .pipe(rename({suffix: '.min'}))
-        // .pipe(dest(PUB.css))
+        .pipe(cssmin())
+        //.pipe(rename({suffix: '.min'}))
+        .pipe(dest(PUB.css))
 );
 
 task('pug', () =>
@@ -199,7 +201,7 @@ task('webserver', (done) => {
         port: process.env.PORT || 2222,
         directoryListing: true,
         open: '/sitemap.html',
-        fallback: '/sitemap.html'
+        fallback: '/index.html'
     }));
     done();
 });

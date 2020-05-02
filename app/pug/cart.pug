@@ -12,7 +12,7 @@ block main
 					.cart__primary
 						.cart__list
 							-for (var i = 0; i < 5; i++)
-								+cartItem()
+								+cartItem(i)
 					.cart__sidebar
 						.fieldset.coupon_code
 							+label('couponCode', 'Apply Discount Code')
