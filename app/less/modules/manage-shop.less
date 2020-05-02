@@ -216,10 +216,7 @@
 	.position(fixed, 15px 15px null null);
 	border: none;
 	z-index: 999;
-	&.active {
-		display: block;
-	}
-	&.active +.nav-navigation {
+	.active.shop-nav & {
 		display: block;
 	}
 	i {
@@ -242,7 +239,7 @@
 	text-align: right;
 	background-color: #fff;
 	transition: height 0.3s ease;
-	z-index: 99;
+	z-index: 10;
 	li {
 		margin-bottom: 25px;
 		font-weight: 600;
@@ -252,6 +249,9 @@
 	}
 	@media (max-width: 767px) {
 		overflow-y: scroll;
+		.shop-nav.active & {
+			display: block;
+		}
 		i {
 			display: none;
 		}
