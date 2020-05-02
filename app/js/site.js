@@ -115,12 +115,29 @@ if (window.Element && !Element.prototype.closest) {
     }
   }
 
+  function handleMobileNavOnShopManagement() {
+    const openNavControler = document.querySelector('.shop-nav .nav-menu');
+    if(!!openNavControler) {
+      openNavControler.addEventListener('click', (e) => {
+        e.currentTarget.closest('.shop-nav').classList.add('active');
+      });
+    }
+
+    const closeNavControler = document.querySelector('.shop-nav .nav-close');
+    if(!!closeNavControler) {
+      closeNavControler.addEventListener('click', (e) => {
+        e.currentTarget.closest('.shop-nav').classList.remove('active');
+      });
+    }
+  }
+
   function listener() {
     productDetailEvents();
     productTypeOnSearchPage();
     searchEvent();
     loginModal();
     handleTabEvents();
+    handleMobileNavOnShopManagement();
   }
 
   function init() {}
