@@ -1,0 +1,24 @@
+extends layouts/layout
+
+block vars
+	-title = 'Notification | Hunty'
+	-hidenHeaderOnMobile = true
+
+block main
+	main.notification
+		.container
+			include modules/global/header_mb
+			+breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { text: 'Notification' }, ]).hidden-sm-down
+			.row_wrap
+				.primary
+					+heading('Your Notification', '', '', 'h1').hidden-sm-down.heading--border
+					+notification()
+					+pagination().hidden-sm-down
+					
+				.sidebar.hidden-sm-down
+					.heading: h2.heading__text  Promotinons
+					include modules/index/banner_promo
+			
+
+block popup
+	include modules/index/login-popup
