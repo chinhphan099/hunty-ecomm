@@ -1,25 +1,30 @@
 .my-order {
 	position: relative;
 	margin-top: -82px;
-	background-color: #F5F6F8;
+	padding: 20px 15px 80px;
+	background-color: #fff;
 	z-index: 8;
 	.heading {
-		padding: 20px 15px;
-		margin-bottom: 5px;
+		margin-bottom: 20px;
 		text-align: center;
-		background-color: #fff;
 	}
 	&__show {
-		padding: 20px 15px 80px;
-		background-color: #fff;
 	}
 	@media (min-width: 768px) {
 		.flex(1 0 0%);
+		overflow: hidden;
 		margin-top: 0;
 		padding: 0;
 		padding-left: 25px;
 		.heading {
 			text-align: left;
+		}
+	}
+	@media (min-width: 992px) {
+		&__show {
+			column-count: 2;
+			column-gap: 50px;
+			margin-top: 40px;
 		}
 	}
 }
@@ -40,5 +45,10 @@
 	}
 	p {
 		margin-bottom: 5px;
+	}
+	@media (min-width: 992px) {
+		&:nth-child(10) {
+			border: 0;
+		}
 	}
 }

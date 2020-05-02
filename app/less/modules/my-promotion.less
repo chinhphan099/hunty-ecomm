@@ -9,11 +9,19 @@
 	}
 	@media (min-width: 768px) {
 		.flex(1 0 0%);
+		overflow: hidden;
 		margin-top: 0;
 		padding: 0;
 		padding-left: 25px;
 		.heading {
 			text-align: left;
+		}
+	}
+	@media (min-width: 992px) {
+		&__show {
+			column-count: 2;
+			column-gap: 50px;
+			margin-top: 40px;
 		}
 	}
 }
@@ -22,5 +30,7 @@
 	margin-bottom: 15px;
 	.promotion__shop {
 		background: none;
+	}
+	@media (min-width: 992px) {
 	}
 }

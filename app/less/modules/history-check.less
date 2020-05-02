@@ -23,12 +23,21 @@
 	}
 	@media (min-width: 768px) {
 		.flex(1 0 0%);
+		overflow: hidden;
 		margin-top: 0;
 		padding: 0;
 		padding-left: 25px;
 		.heading {
 			text-align: left;
 		}
+	}
+}
+
+.history-shop {
+	@media (min-width: 992px) {
+		column-count: 2;
+		column-gap: 50px;
+		margin-top: 40px;
 	}
 }
 
@@ -58,13 +67,14 @@
 		white-space: nowrap;
 		overflow: hidden;
 	}
-	@media (min-width: 768px) {
-		border: 0;
+	@media (min-width: 992px) {
+		&:nth-child(10) {
+			border: 0;
+		}
 	}
 }
 
 .history-seach {
-	max-width: 500px;
 	.fieldset {
 		display: block;
 	}
