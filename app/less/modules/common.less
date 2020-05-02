@@ -762,12 +762,8 @@
 
 /* Shop Info */
 .shop-info {
-  padding: 0 0 10px;
+  padding: 20px 0;
   background-color: @color01;
-  .shop-wrap & {
-    padding-left: 15px;
-    padding-right: 15px; 
-  }
   @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
@@ -777,9 +773,9 @@
     line-height: 20px;
     border: 1px solid #F4F7FC;
     box-shadow: 2px 2px 8px rgba(42, 47, 60, 0.06);
-    .shop-wrap & {
-      padding: 20px;
-    }
+  }
+  @media (min-width: 992px) {
+    align-items: center
   }
 
   &__banner {
@@ -789,83 +785,111 @@
   &__logo {
     position: relative;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
-    margin-bottom: 20px;
-    padding-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid @color03;
     .thumb {
       margin-right: 10px;
-      img {
-        max-width: 50px;
-        border-radius: 50%;
-      }
+      width: 50px;
+      height: 50px;
+      overflow: hidden;
+      border-radius: 50%;
     }
     .desc {
       flex: 1 0 0%;
       position: relative;
+      padding-top: 5px;
     }
     .wrap-title {
       margin-bottom: 5px;
       .font-size(18px);
       font-weight: bold;
     }
-    p {
-      margin-bottom: 10px;
-      &:last-child {
-        margin-bottom: 0;
+    .shop-info__rating {
+      i {
+        margin-right: 5px;
       }
-    }
-    i {
-      margin-right: 5px;
     }
     .button_inner {
       display: flex;
       justify-content: space-between;
-      & > .button {
-        width: calc(~"100% /2 - 10px");
-      }
-    }
-
-    .button {
-      padding: 8px;
-      font-weight: normal;
-      font-size: 14px;
-      i {
-        margin-right: 8px;
-        font-size: 16px;
-        color: #FFD100;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      margin-left: -60px;
+      .button {
+        padding: 8px;
+        width: calc(~"100% / 2 - 5px");
+        font-weight: normal;
+        font-size: 14px;
+        i {
+          margin-right: 8px;
+          font-size: 16px;
+          color: #FFD100;
+        }
       }
     }
     @media (min-width: 768px) {
-      margin-bottom: 20px;
-      padding-top: 0;
+      align-items: center;
       .thumb {
-        img {
-          max-width: 100px;
+        .size(90px);
+        margin-right: 20px;
+      }
+      .desc {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 0;
+      }
+      .shop-info__rating {
+        margin-bottom: 0;
+      }
+      .button_inner {
+        width: 200px;
+        margin-top: 0;
+        margin-left: 0;
+        .button {
+          width: 100%;
+          & + .button {
+            margin-top: 10px;
+          }
         }
       }
-      
     }
     @media (min-width: 992px) {
       width: 40%;
       margin-bottom: 0;
+      border-bottom: 0;
+      padding-bottom: 0;
+      .thumb {
+        .size(100px);
+      }
+      .button_inner {
+        width: 100%;
+        margin-top: 10px;
+        padding-right: 30px;
+        .button {
+          width: calc(~"50% - 5px");
+          & + .button {
+            margin-top: 0;
+          }
+        }
+      }
     }
     @media(min-width: 1200px) {
       .button {
         font-size: 16px;
       }
     }
-    @media(max-width: 767px) {
-      padding-bottom: 20px;
-      border-bottom: 1px solid #F4F7FC;
-      
-    }
   }
 
   &__list {
     margin-bottom: 10px;
     li {
-      margin: 10px 0;
+      margin: 0 0 10px;
       &:last-child {
         margin-bottom: 0;
       }
@@ -876,11 +900,12 @@
     }
     @media (min-width: 768px) {
       margin-bottom: 0;
+      flex: 1 0 0%;
     }
     @media (min-width: 992px) {
-      width: 25%;
-      padding: 0 20px 0 40px;
+      padding: 0 20px;
       margin-bottom: 0;
+      flex: 1 0 0%;
     }
     @media(max-width: 767px) {
       padding-bottom: 10px;
@@ -907,13 +932,13 @@
       color: @yellow;
     }
     @media (min-width: 768px) {
-      width: 50%;
+      width: calc(~"50% - 10px");
       a {
         .font-size(14px);
       }
     }
     @media (min-width: 992px) {
-      width: 35%;
+      width: 34%;
     }
   }
 }

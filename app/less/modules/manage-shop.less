@@ -132,6 +132,9 @@
 	}
 	&__left {
 		@media (min-width: 768px) {
+			width: 200px;
+		}
+		@media (min-width: 992px) {
 			width: 240px;
 		}
 		@media (min-width: 1200px) {
@@ -142,20 +145,56 @@
 		line-height: 20px;
 		background-color: #F4F7FF;
 		@media (min-width: 768px) {
-			width: calc(~"100% - 240px");
+			overflow: hidden;
+			flex: 1 0 0%;
+			// width: calc(~"100% - 200px");
 			padding: 20px 20px 80px;
 			.font-size(16px);
 		}
 		@media (min-width: 992px) {
+			padding-bottom: 40px;
 			.font-size(18px);
+			// width: calc(~"100% - 240px");
 		}
 		@media (min-width: 1200px) {
-			width: calc(~"100% - 340px");
+			//width: calc(~"100% - 340px");
 		}
 	}
 	.product-navs {
 		@media (max-width: 767px) {
 			justify-content: space-between;
+		}
+	}
+	.shop-info {
+		padding-left: 15px;
+    padding-right: 15px; 
+		@media (min-width: 768px) {
+			padding: 20px;
+		}
+		@media (min-width: 992px) {
+			align-items: flex-start;
+			&__logo {
+				width: 100%;
+				margin-bottom: 15px;
+			}
+			&__list {
+				flex: 1 0 0%;
+				padding: 0 20px 0 0;
+			}
+			&__location {
+				width: calc(~"50% - 5px")
+			}
+		}
+		@media (min-width: 1280px) {
+			&__logo {
+				width: 35%;
+				margin-bottom: 0;
+			}
+			&__list {
+			}
+			&__location {
+				width: 34%;
+			}
 		}
 	}
 }
@@ -217,7 +256,7 @@
 	@media (min-width: 768px) {
 		display: block;
 		position: inherit;
-		padding: 20px;
+		padding: 10px;
 		.font-size(16px);
 		text-align: left;
 		li {
@@ -241,6 +280,7 @@
 	}
 	@media (min-width: 992px) {
 		.font-size(18px);
+		padding: 20px;
 	}
 }
 
