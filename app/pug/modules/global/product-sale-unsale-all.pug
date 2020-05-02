@@ -1,0 +1,9 @@
+.shop__heading.heading
+  h1.heading__text  Product List
+  ul.product-navs 
+    li.active: +link('Sale', '#')
+    li: +link('Unsale', '#')
+    li: +link('All', '#')
+.product_list
+  -for (var i = 0; i < 12; i++)
+    +product('two-price-cart').product--promo

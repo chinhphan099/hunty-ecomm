@@ -153,6 +153,11 @@
 			width: calc(~"100% - 340px");
 		}
 	}
+	.product-navs {
+		@media (max-width: 767px) {
+			justify-content: space-between;
+		}
+	}
 }
 
 //--------------------------------nav-menu
@@ -355,6 +360,7 @@ button:focus +.nav-close +.nav-navigation, button:focus +.nav-close {
 //--------------------------------manage-block5
 .manage-block5 {
 	padding: 20px 15px;
+	margin-bottom: 20px;
 	border: 1px solid #F4F7FC;
 	box-shadow: 2px 2px 8px rgba(42, 47, 60, 0.06);
 	background-color: #fff;
@@ -366,5 +372,7 @@ button:focus +.nav-close +.nav-navigation, button:focus +.nav-close {
 	}
 	@media (min-width: 768px) {
 		padding: 20px;
+		margin-bottom: 25px;
 	}
 }
+

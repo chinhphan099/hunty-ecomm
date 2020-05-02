@@ -169,7 +169,7 @@ mixin notification()
         span.text Lorem ipsum dolor sit amet
         span.time 7:15
 
-mixin shopInfo()
+mixin shopInfo(type)
   .shop-info
     .shop-info__logo
       .thumb
@@ -179,13 +179,14 @@ mixin shopInfo()
         p
           i.icon-star
           | 4.9 #[span(style="color: #8B929F;") (3.666 rating)]
-        .button_inner
-          +link("Follow Shop", "javascript:;").button.hollow.active
-            i.icon-heart
-            span Follow Shop
-          +link("Chat Shop", "javascript:;").button.hollow
-            i.icon-message
-            span Chat Shop
+        if type != 'no-button'
+          .button_inner
+            +link("Follow Shop", "javascript:;").button.hollow.active
+              i.icon-heart
+              span Follow Shop
+            +link("Chat Shop", "javascript:;").button.hollow
+              i.icon-message
+              span Chat Shop
     ul.shop-info__list
       li
         i.icon-follow
