@@ -9,16 +9,21 @@ block main
 		.container
 			include modules/global/header_mb
 			+breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { text: 'Hunty Feed' }, ]).hidden-sm-down
-			.hunty_feed.row_wrap.pusher_b70
+			.row_wrap
 				.primary
 					+heading('Product List', '', '', 'h1').hidden-sm-down.heading--border
 					.product_list
-						-for (var i = 0; i < 12; i++)
+						-for (var i = 0; i < 8; i++)
 							+product('two-price-cart').product--promo
+					button().button.gray.hidden-md-up.btn_seeMore See More
 				.sidebar.hidden-sm-down
 					.heading: h2.heading__text  Promotinons
 					include modules/index/banner_promo
 
+			.category_block.hidden-md-up
+				.category_block__list
+					-for (var i = 0; i < 12; i++)
+						+category('Category')
 
 block popup
 	include modules/index/login-popup

@@ -133,6 +133,15 @@ mixin cartItem1()
       +price('575.000 đ', '(1.000.000)')
       span.cart__qty Quantity 1
 
+mixin category()
+  .category&attributes(attributes)
+    .thumb
+      a(href="product.html")
+        img(src="https://picsum.photos/140/170", alt="Hunty Product Name")
+    .content
+      h3.cat_name
+        a(href="search.html") T-Shirt
+
 mixin notification()
   .notification__list
     h3 TODAY
