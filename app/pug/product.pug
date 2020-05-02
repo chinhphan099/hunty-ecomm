@@ -6,7 +6,7 @@ block vars
   -hidenFooterOnMobile = true
 
 block main
-  main
+  main.pusher_b70
     +goback().goback--white
     section.product-section
       .container
@@ -14,7 +14,7 @@ block main
         .product-wrapper
           include modules/product/slide
           include modules/product/details
-        include modules/global/shop-info
+        +shopInfo()
         .description-wrapper
           include modules/product/description
           include modules/product/rating

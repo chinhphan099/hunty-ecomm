@@ -156,3 +156,38 @@ mixin notification()
     ul
       li: span Lorem ipsum dolor sit amet
       li: span Lorem ipsum dolor sit amet
+
+mixin shopInfo()
+  .shop-info
+    .shop-info__logo
+      .thumb
+        img(src="https://i.picsum.photos/id/239/100/100.jpg", alt="")
+      .desc
+        h3.wrap-title Routine
+        p
+          i.icon-star
+          | 4.9 #[span(style="color: #8B929F;") (3.666 rating)]
+        .button_inner
+          +link("Follow Shop", "javascript:;").button.hollow.active
+            i.icon-heart
+            span Follow Shop
+          +link("Chat Shop", "javascript:;").button.hollow
+            i.icon-message
+            span Chat Shop
+    ul.shop-info__list
+      li
+        i.icon-follow
+        span Follower: #[strong(style="color: #2C2E32;") 12.000]
+      li
+        i.icon-t-shirt
+        span Products: #[strong(style="color: #2C2E32;") 12.000]
+      li
+        i.icon-message
+        span Response Rate: #[strong(style="color: #2C2E32;") 99%]
+    .shop-info__location
+      h3.wrap-title
+        i.icon-location
+        span(style="color: #8B929F;") Location
+      p 123 Nguyen Thi Minh Khai, ward 2, Dist.3 HCM
+      p
+        +link('Title', '#') View All Location
