@@ -17,7 +17,37 @@
 					th Status
 					th Total
 					th Action
-				-for(var i = 1; i <= 10; i++)
+				tr
+					td
+						.fieldset: +checkbox({id: 'orderid_000' + i, checked: 'checked'})
+					td #0001 Nguyễn Văn A
+					td 04/17/2020
+					td.color-processing Processing
+					td $124
+					td
+						.ordershop__action
+							button
+								i.icon-preview
+							button
+								i.icon-edit
+							button
+								i.icon-delete
+				tr
+					td
+						.fieldset: +checkbox({id: 'orderid_000' + i, checked: 'checked'})
+					td #0002 Nguyễn Văn A
+					td 04/17/2020
+					td.color-onhold Onhold
+					td $124
+					td
+						.ordershop__action
+							button
+								i.icon-preview
+							button
+								i.icon-edit
+							button
+								i.icon-delete
+				-for(var i = 3; i <= 10; i++)
 					tr
 						td
 							.fieldset: +checkbox({id: 'orderid_000' + i, checked: 'checked'})
