@@ -129,6 +129,15 @@ if (window.Element && !Element.prototype.closest) {
     }
   }
 
+  function followShopEvent() {
+    const followShopBtn = document.getElementById('followShop');
+    if(!!followShopBtn) {
+      followShopBtn.addEventListener('click', (e) => {
+        e.currentTarget.classList.toggle('active');
+      });
+    }
+  }
+
   function listener() {
     productDetailEvents();
     productTypeOnSearchPage();
@@ -137,13 +146,8 @@ if (window.Element && !Element.prototype.closest) {
     loginModal();
     handleTabEventsGlobal();
     handleMobileNavOnShopManagement();
+    followShopEvent();
   }
-
-  function init() {}
-
-  window.addEventListener('DOMContentLoaded', () => {
-    init();
-  });
 
   window.addEventListener('load', () => {
     listener();
