@@ -71,24 +71,26 @@
 		padding: 12px 15px 0 15px;
 		border: 1px dashed #FFD100;
 		border-radius: 3px;
+		&.border_b {
+			border-color: @yellow;
+		}
 	}
 }
-
 /* Addredd Form Edit*/
-.checkout_address  {
+.checkout_address__form  {
 	padding-top: 10px;
 	.position();
-    .invisible();
-    .translateY(-10px);
-    .transition(all .3s ease-out);
-    overflow: hidden;
-    height: 0;
+	.invisible();
+	.translateY(-10px);
+	.transition(all .3s ease-out);
+	overflow: hidden;
+	height: 0;
 	&.active {
-      position: static;
-      transform: translateY(0);
-      .visible();
-      height: auto;
-    }
+		position: static;
+		transform: translateY(0);
+		.visible();
+		height: auto;
+	}
 }
 /* End Checkout Delivery Methodpage  */
 

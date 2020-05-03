@@ -66,7 +66,7 @@ task('scripts', () => {
             gutil.log(displayErr);
             this.emit('end');
         })
-        .pipe(dest(PUB.js))
+        // .pipe(dest(PUB.js))
         //.pipe(sourcemaps.write('.'))
         .pipe(dest(PUB.js))
 });

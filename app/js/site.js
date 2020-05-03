@@ -119,9 +119,20 @@ if (window.Element && !Element.prototype.closest) {
     }
   }
 
+  function handleEventsOnCheckoutDelivery() {
+    const changeDeliveryMothod = document.querySelector('.link_change');
+    if(!!changeDeliveryMothod) {
+      changeDeliveryMothod.addEventListener('click', () => {
+        document.querySelector('.checkout_address__form').classList.add('active');
+        document.querySelector('.checkout_address').classList.add('hidden');
+      });
+    }
+  }
+
   function listener() {
     productDetailEvents();
     productTypeOnSearchPage();
+    handleEventsOnCheckoutDelivery();
     searchEventOnHeader();
     loginModal();
     handleTabEventsGlobal();
