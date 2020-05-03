@@ -12,7 +12,7 @@
 		display: flex;
 		align-items: flex-start;
 		flex-wrap: wrap;
-		margin-bottom: 250px;
+		margin-bottom: 150px;
 	}
 }
 
@@ -186,12 +186,19 @@
 	.account-informaton {
 		display: block;
 		padding: 80px 15px;
+		width: 100%;
+		margin: 0 auto;
 	}
 	.heading {
 		margin-bottom: 90px;
 	}
 	.button {
 		width: 100%;
+	}
+	@media (min-width: 768px) {
+		.button {
+			width: calc(~"100% - 120px");
+		}
 	}
 }
 
