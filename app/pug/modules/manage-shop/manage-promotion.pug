@@ -1,0 +1,11 @@
+.manage-promotion
+	h4.wrap-title ACTIVE PROMOTION
+	-for(var i = 1; i <= 4; i++)
+		.promotion-col
+			.promotion-col__thumb
+				+link('Image', 'promotion.html')
+					+img-upload('promo_1.png')
+			.promotion-col__desc
+				+link('', 'promotion.html') Lorem ipsum dolor sit amet.
+				p End Date: 11/11/2020
+	+button({class: "button hollow", id: "buttonId", name: "buttonId"}) Add New Promotion

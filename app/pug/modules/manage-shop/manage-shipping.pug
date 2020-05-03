@@ -1,0 +1,8 @@
+.manage-shipping
+	.manage-shipping__item
+		-for(var i = 1; i <= 6; i++)
+			.desc
+				h4.wrap-title Stardard Shipping
+					span.txt-desc 0.5kg - 5kg
+				p 20.000 VND
+	+button({class: "button hollow", id: "buttonId", name: "buttonId"}) Add New
