@@ -26,7 +26,7 @@ header.header(class=hidenHeaderOnMobileCls)
                                 +link('Search Content').result-item
                         .header__searchResults
                             ul.tabs
-                                li.active#tab1: +link('Promotion', '#')
+                                li.active#tab1: +link('Promotion', 'promotion.html')
                                 li#tab2: +link('Map', '#')
                             .tab_content
                                 .pane.tab1.active
@@ -117,7 +117,7 @@ header.header(class=hidenHeaderOnMobileCls)
                             {title: 'Contact', href: '#'}
                         ])
                 .product__recently
-                    +link('danh mục sản phẩm ', '#').product__recently__title.uppercase
+                    +link('danh mục sản phẩm ', 'product.html').product__recently__title.uppercase
                         i.icon-caret-down
                         span Sản phẩm đã xem
                     ul.product__recently__list

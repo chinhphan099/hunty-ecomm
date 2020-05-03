@@ -4,8 +4,8 @@
 			button(type="button").close: i.icon-close
 			.login(data-collapse='')
 				.tabs
-					li.active#tab1(data-active=""): +link('Login', '#')(data-handle="login")
-					li#tab2(data-active=""): +link('Create Account', '#')(data-handle="register")
+					li.active#tab1(data-active=""): +link('Login', 'javascript:;')(data-handle="login")
+					li#tab2(data-active=""): +link('Create Account', 'javascript:;')(data-handle="register")
 				.tab_content
 					.pane.tab1.active(data-content="login")
 						.login__form
@@ -20,7 +20,7 @@
 									p.error-message This field is required.
 								.fieldset.two_col
 									button(type="submit").button.btn-login Login
-									p.forgot-password: +link('Forgot your password?', '#')
+									p.forgot-password: +link('Forgot your password?', '#!')
 								.fieldset
 									p.or-login Or login with
 								.fieldset.login-socials
