@@ -3,7 +3,6 @@ include ../mixins/all
 block vars
   -title = ''
   -bodyClass = ''
-  -shopActiveTab = ''
 
 doctype html
 html(lang="en")
@@ -24,7 +23,8 @@ html(lang="en")
   body(class=bodyClass)
     .wrapper
       .main-container
-        include ../modules/global/manage-shop-header-plan
+        header-shipping.hidden-sm-down
+          include ../modules/global/manage-shop-header
         .inner
           block main
     block popup

@@ -1,7 +1,8 @@
 extends layouts/manage-shipping
 
 block vars
-	-title = 'Plan & Pricing | Hunty'
+	-title = 'Shipping | Hunty'
+	-shopActiveTab = 0
 
 block main
 	main
@@ -11,4 +12,5 @@ block main
 				.shop-wrap__left
 					include modules/manage-shop/navigation
 				.shop-wrap__right
-					include modules/manage-shop/pricing
+					include modules/manage-shop/manage-heading
+					include modules/manage-shop/manage-shipping
