@@ -201,7 +201,7 @@ task('webserver', (done) => {
         port: process.env.PORT || 2222,
         directoryListing: true,
         open: '/sitemap.html',
-        fallback: '/index.html'
+        fallback: '/404.html'
     }));
     done();
 });

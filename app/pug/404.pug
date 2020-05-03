@@ -1,0 +1,15 @@
+extends layouts/layout
+
+block vars
+  -title = '404 | Hunty'
+
+block main
+  main
+    .container
+      .not-found
+        h1 404
+        h2 PAGE NOT FOUND
+        .not-found__img
+          +img('404.gif')
+        p Sorry, the page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+        +link('Back To Homepage', 'index.html').button.hollow
