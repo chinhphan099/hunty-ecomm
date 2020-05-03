@@ -3,6 +3,9 @@
 	position: relative;
 	margin-bottom: 20px;
 	overflow: hidden;
+	.slick-arrow {
+		opacity: 0;
+	}
 	&__promoMb {
 		margin-bottom: 20px;
 		.slick-arrow {
@@ -26,7 +29,6 @@
 		}
 	}
 	@media(max-width: 767px) {
-
 		&:before {
 			content: "";
 			height: 50%;
@@ -35,9 +37,6 @@
 			left: 0;
 			right: 0;
 			background-image: linear-gradient(to right, #ffd100 , #f2ca1a);
-		}
-		.slick-arrow {
-			opacity: 0;
 		}
 		.slick-dots {
 			height: 3px;
@@ -100,6 +99,11 @@
 			height: 375px;
 			z-index: 1;
 			box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
+		}
+	}
+	@media(min-width: 1280px) {
+		.slick-arrow {
+			opacity: 1;
 		}
 	}
 }
