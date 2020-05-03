@@ -402,7 +402,7 @@
       var topHandle = handle.offset().top,
         topWindow = win.scrollTop();
 
-      if(activeContent.closest('.navigation .inner').length && !!Site && typeof Site.scrollTopAfterCollapse === 'function') {
+      if(activeContent.closest('.navigation .inner').length && typeof Site !== 'undefined' && typeof Site.scrollTopAfterCollapse === 'function') {
         Site.scrollTopAfterCollapse(activeContent.closest('.navigation .inner'), handle, true);
       }
       if(plugin.initSuccess) {

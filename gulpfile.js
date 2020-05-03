@@ -59,7 +59,7 @@ task('scripts', () => {
         }))
         .pipe(concat('scripts.js'))
         .pipe(dest(PUB.js))
-        .pipe(uglify())
+        //.pipe(uglify())
         //.pipe(rename({suffix: '.min'}))
         .on('error', function(err) {
             let displayErr = gutil.colors.red(err.message);
@@ -85,7 +85,7 @@ task('jsguide', () => {
             "presets": ["@babel/preset-env"]
         }))
         .pipe(concat('jsguide.js'))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(dest(PUB.js))
         .pipe(sourcemaps.write('.'))
         .pipe(dest(PUB.js))
@@ -95,7 +95,7 @@ task('libs', () => {
     return src(SRC.js + 'libs/*.js')
         //.pipe(sourcemaps.init())
         .pipe(concat('libs.js'))
-        .pipe(uglify())
+        //.pipe(uglify())
         //.pipe(sourcemaps.write('.'))
         .pipe(dest(PUB.js))
 });
@@ -111,7 +111,7 @@ task('less', () =>
             flexbox: "no-2009"
         }))
         .pipe(dest(PUB.css))
-        .pipe(cssmin())
+        //.pipe(cssmin())
         //.pipe(rename({suffix: '.min'}))
         .pipe(dest(PUB.css))
 );
