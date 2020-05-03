@@ -1,0 +1,16 @@
+extends layouts/manage-shipping
+
+block vars
+	-title = 'Shop Dashboard | Hunty'
+	-shopActiveTab = 0
+
+block main
+	main
+		+goback()
+		.shop-wrap
+			.shop-wrap__inner
+				.shop-wrap__left
+					include modules/manage-shop/navigation
+				.shop-wrap__right
+					include modules/manage-shop/dashboard-heading
+					include modules/manage-shop/shop-dashboard
