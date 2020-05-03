@@ -22,20 +22,22 @@
 }
 
 .manage-shipping {
-	.desc {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: 20px;
-	}
-	.wrap-title {
-		.font-size(16px);
-	}
-	.txt-desc {
-		display: block;
-		.font-size(14px);
-		color: #8B929F;
-		font-weight: normal;
+	&__item {
+		.desc {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+		.wrap-title {
+			.font-size(16px);
+		}
+		.txt-desc {
+			display: block;
+			.font-size(14px);
+			color: #8B929F;
+			font-weight: normal;
+		}
 	}
 	.button.hollow {
 		width: 100%;
@@ -55,15 +57,21 @@
 		&__item {
 			column-count: 2;
 			column-gap: 100px;
-		}
-		.desc {
-			margin-bottom: 30px;
+			.desc {
+				margin-bottom: 30px;
+			}
 		}
 	}
 	@media (min-width: 1200px) {
 		padding: 40px 60px;
 		&__item {
 			column-gap: 250px;
+			.wrap-title {
+				.font-size(18px);
+			}
+			.txt-desc {
+				.font-size(16px);
+			}
 		}
 	}
 }
