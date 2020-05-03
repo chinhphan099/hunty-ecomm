@@ -2,6 +2,7 @@
 @import "libs/variable.less";
 // Mixin
 @import "mixins/mixin.less";
+@import "mixins/grid.less";
 
 // Font
 .noto-sans {
@@ -684,3 +685,17 @@ code {
   }
 }
 
+.make-grid-columns();
+.make-grid(xs);
+@media (min-width: @sm-min) {
+  .make-grid(sm);
+}
+@media (min-width: @md-min) {
+  .make-grid(md);
+}
+@media (min-width: @lg-min) {
+  .make-grid(lg);
+}
+@media (min-width: @xl-min) {
+  .make-grid(xl);
+}
