@@ -77,6 +77,8 @@
 		}
 		p {
 			img {
+				position: relative;
+				top: -2px;
 				width: 20px;
 				margin-right: 5px;
 				border-radius: 50%;
@@ -92,6 +94,7 @@
 		@media (min-width: 768px) {
 			.custom-select {
 				width: 240px;
+				margin-right: 10px;
 			}
 		}
 		@media (min-width: 992px) {
@@ -362,9 +365,13 @@
 			color: #FE2070;
 		}
 		@media (min-width: 768px) {
+			font-size: 1.5rem;
 			.desc-arrow {
 				width: calc(~"50% - 10px");
 			}
+		}
+		@media (min-width: 768px) {
+			font-size: 1.8rem;
 		}
 	}
 }
@@ -436,6 +443,7 @@
 		color: #21D795;
 	}
 	@media (min-width: 768px) {
+		font-size: 1.5rem;
 		.wrap-title {
 			margin-bottom: 0;
 		}
