@@ -9,12 +9,12 @@ mixin heading(headingText, link, countdown, tag)
             !=headingText
         </!{tagName}>
         if countdown
-            span.countdown(data-countdown="")
-                span.countdown__item.countdown--hour 09
+            span.countdown(data-flashsale="" data-begindate="02/03/2020" data-enddate="06/06/2020")
+                span.countdown__item.countdown--hour --
                 span.countdown__item :
-                span.countdown__item.countdown--minute 09
+                span.countdown__item.countdown--minute --
                 span.countdown__item :
-                span.countdown__item.countdown--second 09
+                span.countdown__item.countdown--second --
 
         if link
             +link('See All', '#!').see-all
