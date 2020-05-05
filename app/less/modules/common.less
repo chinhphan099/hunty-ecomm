@@ -277,6 +277,9 @@
   }
   .see-all {
     color: #8B929F;
+    &:hover {
+      color: @text-color;
+    }
   }
   &__text {
     font-size: 1.6rem;
@@ -392,7 +395,7 @@
     padding: 0 2px;
     font-size: 1rem;
     font-weight: bold;
-    background-color: @yellow;
+    background-image: radial-gradient(circle at top right, rgba(255, 209, 0, 0.071), rgb(255, 209, 0) 80%);
     &:before {
       .position(0 100% 0 null);
       .triangle(left, 10px, 22px, @yellow);
@@ -962,4 +965,3 @@
   }
 }
 /* End Row Wrap */
-  

@@ -15,7 +15,7 @@ block main
 			.container
 				.promotion_inner.row_wrap
 					.primary
-						.heading: h1.heading__text  Lotte Mart disscount 30% 
+						.heading: h1.heading__text  Lotte Mart disscount 30%
 						.product_list
 							-for (var i = 0; i < 12; i++)
 								+product('two-price-cart').product--promo
@@ -39,7 +39,7 @@ block main
 
 		section.promotion_section
 			.container
-				+heading('Recommended Promotion ', 'See All')
+				+heading('Recommended Promotion ', 'See All', '', '', 'promotion.html')
 			.promotion_section__inner
 				.container
 					include modules/index/promotion_block

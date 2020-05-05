@@ -51,7 +51,7 @@
     }
     @media(min-width: 768px) {
         position: relative;
-        z-index: 5;
+        z-index: 7;
         .container {
             &:before, &:after {content: none;}
             display: flex;
@@ -303,10 +303,6 @@
         }
     }
     @media(min-width: 992px) {
-        &__wrap {
-        }
-        &__searchForm {
-        }
         &__right {
             & > div {
                 margin-left: 40px;
@@ -318,6 +314,11 @@
             font-size: 14px;
             &:hover {
                 color: @color01;
+            }
+        }
+        &__left {
+            a {
+                .link-color(inherit, inherit);
             }
         }
     }

@@ -1,4 +1,4 @@
-mixin heading(headingText, link, countdown, tag)
+mixin heading(headingText, link, countdown, tag, url = '#!')
     -tagName = 'h2'
     if tag
         -tagName = tag
@@ -17,4 +17,4 @@ mixin heading(headingText, link, countdown, tag)
                 span.countdown__item.countdown--second --
 
         if link
-            +link('See All', '#!').see-all
+            +link('See All', url).see-all
