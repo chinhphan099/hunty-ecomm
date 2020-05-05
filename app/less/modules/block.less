@@ -112,16 +112,21 @@
 .category_icons {
 	margin-bottom: 20px;
 	&__list {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		text-align: center;
-		li {
-			width: calc(~"100% / 5 - 8px");
+		.item {
+			display: flex;
 			margin-bottom: 5px;
+			padding: 0 5px;
+			text-align: center;
+		}
+		.slick-arrow {
+			.size(26px);
+			&:before {
+				font-size: 16px;
+			}
 		}
 		a {
 			display: block;
+			.size(100%);
 			color: #2C2E32;
 			font-size: 11px;
 			line-height: 1.4;
@@ -153,18 +158,29 @@
 	}
 	@media(min-width: 576px) {
 		&__list {
-			li {
-				width: calc(~"100% / 10 - 5px");
+			.item {
 			}
 			.icon {
+			}
+		}
+	}
+	@media(max-width: 767px) {
+		&__list {
+			.slick-track {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				align-items: flex-start;
+			}
+			.item {
+				width: calc(~"100% / 5 - 5px") !important;
 			}
 		}
 	}
 	@media(min-width: 768px) {
 		margin-bottom: 25px;
 		&__list {
-			li {
-				width: calc(~"100% / 10 - 12px");
+			.item {
 			}
 			.icon {
 			}
@@ -172,8 +188,8 @@
 	}
 	@media(min-width: 992px) {
 		&__list {
-			li {
-				width: calc(~"100% / 10 - 15px");
+			.item {
+				padding: 0 10px;
 			}
 			.icon {
 				margin-bottom: 10px;
@@ -182,8 +198,7 @@
 	}
 	@media(min-width: 1200px) {
 		&__list {
-			li {
-				width: 94px;
+			.item {
 			}
 			a {
 				font-size: 16px;
@@ -374,8 +389,13 @@
 				}
 			}
 			a {
+				display: flex;
+				align-items: center;
+				.size(100%);
 				padding: 15px 15px 15px 50px;
-				font-size: 14px;
+				font-size: 1.4rem;
+				text-align: left;
+				background-color: transparent;
 				&:before {
 					left: 15px;
 					font-size: 24px;

@@ -22,7 +22,7 @@
     resize = ('onorientationchange' in window) ? 'orientationchange.resize' + pluginName : 'resize.resize' + pluginName,
     TypeSliders = {
       SINGLE: 'single',
-      CAROUSEL: 'carousel',
+      CATEGORYICONS: 'categoryicons',
       CENTERMODE: 'centerMode',
       VIDEOSLIDE: 'videoSlide',
       VARIABLEWIDTH: 'variableWidth',
@@ -139,8 +139,8 @@
         case TypeSliders.SINGLE:
           option = this.options.singleSlider;
           break;
-        case TypeSliders.CAROUSEL:
-          option = this.options.carousel;
+        case TypeSliders.CATEGORYICONS:
+          option = this.options.categoryicons;
           break;
         case TypeSliders.CENTERMODE:
           option = this.options.centerMode;
@@ -310,7 +310,7 @@
 
       if(this.options.setPositionArrows) {
         $(imgVisible).each(function() {
-          maxHeight = Math.max($(this).height(), maxHeight);
+          maxHeight = Math.max($(this).innerHeight(), maxHeight);
         });
         posTop = (maxHeight / 2);
         arrowControl.animate({'top': posTop}, 300);
@@ -360,10 +360,10 @@
       accessibility: false, // Disable Slide go to top on after change
       rtl: $('html').attr('dir') === 'rtl' ? true : false
     },
-    carousel: {
-      infinite: true,
+    categoryicons: {
+      infinite: false,
       speed: 600,
-      slidesToShow: 6,
+      slidesToShow: 10,
       slidesToScroll: 2,
       // autoplay: true,
       // autoplaySpeed: 3000,
@@ -371,21 +371,9 @@
       rtl: $('html').attr('dir') === 'rtl' ? true : false,
       responsive: [
         {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 4
-          }
-        },
-        {
           breakpoint: 768,
           settings: {
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 544,
-          settings: {
-            slidesToShow: 2
+            slidesToShow: 100
           }
         }
       ]
@@ -565,7 +553,7 @@
           }
         },
         {
-          breakpoint: 544,
+          breakpoint: 576,
           settings: {
             slidesToShow: 2
           }

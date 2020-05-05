@@ -145,6 +145,9 @@
                 border-radius: 3px;
                 font-size: 14px;
                 i {display: none;}
+                &:hover {
+                    background-color: #FFDC40;
+                }
             }
         }
         &__search-auto-complete {
@@ -233,6 +236,7 @@
                 border: 2px solid #FFF;
                 &:hover {
                     background-color: #FFDC40;
+                    color: @link-hover;
                 }
             }
             &:hover {
@@ -312,6 +316,9 @@
     @media(min-width: 1200px) {
         a {
             font-size: 14px;
+            &:hover {
+                color: @color01;
+            }
         }
     }
     @media(max-width: 991px) {
@@ -764,8 +771,8 @@
     h3 {
         margin-bottom: 10px;
         font-size: 16px;
+        font-weight: normal;
         line-height: 1.4;
-        color: #333;
     }
     &__inner {
         max-width: 590px;
@@ -787,10 +794,14 @@
         }
         button {
             padding: 0 10px;
-            background: #FFD100;
-            border-radius: 0 3px 3px 0;
             font-size: 16px;
+            color: @color01;
+            background-color: #FFD100;
+            border-radius: 0 3px 3px 0;
             border: none;
+            &:hover {
+                background-color: #FFDC40;
+            }
         }
     }
     @media(min-width: 768px) {
