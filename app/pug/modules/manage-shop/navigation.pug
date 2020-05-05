@@ -4,8 +4,13 @@ if shopActiveTab == 0
 if shopActiveTab == 1
 	-activeCls1 = 'active'
 
+if whiteColor == true
+	-navMenuWhite = 'nav-menu--white'
+if hideHumburger == true
+	-hideHumburgerCls = 'hidden'
+
 .shop-nav
-	button.nav-menu
+	button.nav-menu(class!=navMenuWhite class!=hideHumburgerCls)
 		i.icon-hamburger.hidden-md-up
 	button.nav-close
 		i.icon-close.hidden-md-up
@@ -47,4 +52,3 @@ if shopActiveTab == 1
 				+link('Analysis', 'analysis.html')
 					i.icon-analysis
 					|	Analysis
-

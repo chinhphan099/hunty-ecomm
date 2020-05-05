@@ -2,10 +2,12 @@ extends layouts/manage-shipping
 
 block vars
 	-title = 'Plan & Pricing | Hunty'
+	-whiteColor = true
+	-hideHumburger = true
 
 block main
 	main
-		+goback()
+		+goback().goback--white
 		.shop-wrap
 			.shop-wrap__inner
 				.shop-wrap__left
