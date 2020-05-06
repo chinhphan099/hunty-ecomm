@@ -250,7 +250,7 @@
           slideShow: true,
           fullScreen: true,
           animationEffect: 'zoom',
-          transitionEffect: 'circular',
+          transitionEffect: 'fade',
           thumbs: true
         }
       );
