@@ -208,7 +208,7 @@ task('optimized',
     parallel('imagemin')
 );
 task('build',
-    parallel('less', 'pug', 'scripts', 'jsguide', 'libs', 'copyAssets', 'watch')
+    parallel('less', 'pug', 'scripts', 'jsguide', 'libs', 'copyAssets', 'optimized', 'watch')
 );
 task('default',
     series('clean', 'build', 'webserver')
