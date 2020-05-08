@@ -24,6 +24,7 @@
         productoneline: {
             slidesPerView: 'auto',
             spaceBetween: 20,
+            slidesPerGroup: 2,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -31,15 +32,6 @@
         },
         promotion: {
             slidesPerView: 'auto',
-            spaceBetween: 20,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            }
-        },
-        tworowproduct: {
-            slidesPerView: 7,
-            slidesPerColumn: 2,
             spaceBetween: 20,
             navigation: {
                 nextEl: '.swiper-button-next',

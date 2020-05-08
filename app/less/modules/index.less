@@ -4,25 +4,44 @@
 	padding: 20px 0 10px;
 	margin-bottom: 20px;
 	background-color: #F4F7FC;
-	.swiper-slide {
-		width: auto;
+	&__outer {
+		margin: 0 -5px;
+	}
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.product {
+		margin-bottom: 20px;
+		width: calc(~"50% - 10px");
+		margin: 0 5px 20px;
 	}
 	@media (min-width: 768px) {
 		padding: 0;
 		margin-bottom: 25px;
 		background-color: transparent;
-		.swiper-slide {
-			width: auto;
+		.product {
+			width: calc(~"100% / 3 - 10px");
 		}
 	}
 	@media (min-width: 992px) {
-		.swiper-slide {
-			width: auto;
+		.product {
+			width: calc(~"100% / 5 - 10px");
 		}
 	}
 	@media (min-width: 1200px) {
-		.swiper-slide {
-			width: auto;
+		.product_block {
+			padding: 20px;
+			.heading {
+				padding-right: 0;
+			}
+		}
+		&__outer {
+			margin: 0 -10px;
+		}
+		.product {
+			width: calc(~"100% / 7 - 20px");
+			margin: 0 10px 25px;
 		}
 	}
 }

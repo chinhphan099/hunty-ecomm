@@ -3,10 +3,7 @@ section.flashsale_section
         .product_block
             .product_block__header
                 +heading('FLA<i class="icon-flash-sale"></i>H SALE', 'See All', 'countdown')
-            .swiper-container(data-swiper='{"type": "tworowproduct"}')
-                .swiper-wrapper
-                    -for (var i = 0; i < 30; i++)
-                        .swiper-slide
-                            +product('one-price', 'slideitem')
-                .swiper-button-prev
-                .swiper-button-next
+            .flashsale_section__outer
+                .flashsale_section__inner
+                    -for (var i = 0; i < 14; i++)
+                        +product('one-price', 'slideitem')
