@@ -2,9 +2,10 @@ section.viewed_section
     .container
         .product_block
             +heading('Viewed Product', 'See All')
-            .slider(data-cslider='{"type": "product", "setPositionArrows": true}')
-                .slick
+            .swiper-container(data-swiper='{"type": "productoneline"}')
+                .swiper-wrapper
                     -for (var i = 0; i < 15; i++)
-                        .item
+                        .swiper-slide
                             +product('one-price', 'slideitem')
-                span.load
+                .swiper-button-prev
+                .swiper-button-next

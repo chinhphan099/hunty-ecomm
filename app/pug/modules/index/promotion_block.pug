@@ -1,8 +1,8 @@
 .promotion_block
-    .slider(data-cslider='{"type": "promotion", "setPositionArrows": true}')
-        .slick
+    .swiper-container(data-swiper='{"type": "promotion"}')
+        .swiper-wrapper
             -for (var i = 0; i < 4; i++)
-                .item
+                .swiper-slide
                     +promotion('slideitem')
-        span.load
-
+        .swiper-button-prev
+        .swiper-button-next

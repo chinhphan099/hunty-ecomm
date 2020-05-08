@@ -11,16 +11,36 @@
 }((window || module || {}), function() {
     'use strict';
 
-    const TypeSliders = {
-        DEFAULTSLIDE: 'defaultSlide',
-        BANNER: 'banner'
-    };
-
     const defaults = {
-        defaultSlide: {
+        banner: {
             pagination: {
                 el: '.swiper-pagination',
             },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        },
+        productoneline: {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        },
+        promotion: {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        },
+        tworowproduct: {
+            slidesPerView: 7,
+            slidesPerColumn: 2,
+            spaceBetween: 20,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -43,9 +63,7 @@
             this.initSlider(this.element);
         },
         initSlider: function(elm) {
-            let finalOptions = this.options[TypeSliders.DEFAULTSLIDE];
-            switch(this.options.type) {
-            }
+            let finalOptions = this.options[this.options.type];
             new Swiper(elm, finalOptions);
         }
     };

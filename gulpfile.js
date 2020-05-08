@@ -107,8 +107,8 @@ task('less', () =>
             gutil.log(displayErr);
             this.emit('end');
         }))
-        .pipe(autoprefixer('last 3 versions', 'ie 10'))
-        // .pipe(dest(PUB.css))
+        //.pipe(autoprefixer('last 3 versions', 'ie 10'))
+        //.pipe(dest(PUB.css))
         //.pipe(cssmin())
         //.pipe(rename({suffix: '.min'}))
         .pipe(dest(PUB.css))
