@@ -15,7 +15,7 @@
   "devel": true,
   "expr": true,
   "quotmark": "single",
-  "esversion": 8,
+  "esversion": 9,
   "globals": {
     "Modernizr": true,
     "Detectizr": true,
@@ -28,6 +28,10 @@
     "locations": true,
     "FB": true,
     "YT": true,
+    "Swiper": true,
+    "define": true,
+    "module": true,
+    "Swiperjs": true,
     "onYouTubeIframeAPIReady": true
   }
 }

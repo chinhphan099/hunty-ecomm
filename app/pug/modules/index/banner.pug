@@ -2,14 +2,16 @@ section.banner
     .container
         .banner__inner
             .banner__slider
-                .slider(data-cslider='{"type": "single", "dots": true, "autoplay": true}')
-                    .slick
-                        .item
-                            a(href="search.html"): img(src="https://picsum.photos/id/1/890/375").img-view
-                        .item
-                            a(href="search.html"): img(src="https://picsum.photos/id/2/890/375").img-view
-                        .item
-                            a(href="search.html"): img(src="https://picsum.photos/id/3/890/375").img-view
-                    span.load
+                .swiper-container(data-swiper='{"type": "banner"}')
+                    .swiper-wrapper
+                        .swiper-slide
+                            img(src="https://picsum.photos/id/1/890/375")
+                        .swiper-slide
+                            img(src="https://picsum.photos/id/2/890/375")
+                        .swiper-slide
+                            img(src="https://picsum.photos/id/3/890/375")
+                    .swiper-pagination
+                    .swiper-button-prev
+                    .swiper-button-next
             .banner__promo_inner.hidden-md-down
                 include banner_promo
