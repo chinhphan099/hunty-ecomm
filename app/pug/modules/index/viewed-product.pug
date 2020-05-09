@@ -2,10 +2,10 @@ section.viewed_section
     .container
         .product_block
             +heading('Viewed Product', 'See All')
-            .swiper-container(data-swiper='{"type": "productoneline"}')
+            .swiper-container(data-swiper='{"type": "productoneline", "setPositionArrows": true}')
                 .swiper-wrapper
                     -for (var i = 0; i < 15; i++)
                         .swiper-slide
                             +product('one-price', 'slideitem')
-                .swiper-button-prev
-                .swiper-button-next
+                .swiper-button.swiper-button-prev
+                .swiper-button.swiper-button-next

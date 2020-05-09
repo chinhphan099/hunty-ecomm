@@ -1,8 +1,8 @@
 .promotion_block
-    .swiper-container(data-swiper='{"type": "promotion"}')
+    .swiper-container(data-swiper='{"type": "promotion", "setPositionArrows": true}')
         .swiper-wrapper
             -for (var i = 0; i < 4; i++)
                 .swiper-slide
                     +promotion('slideitem')
-        .swiper-button-prev
-        .swiper-button-next
+        .swiper-button.swiper-button-prev
+        .swiper-button.swiper-button-next

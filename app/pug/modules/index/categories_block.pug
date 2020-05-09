@@ -1,8 +1,10 @@
 section.categories_block
     .container
         .categories_block__list
-            .slider(data-cslider='{"type": "tworow", "initUnder": 767}')
-                .slick
-                    -for (var i = 1; i < 25; i++)
-                        .item: +link('Categories ' + i, 'search.html')
-                span.load
+            .swiper-container(data-swiper='{"type": "tworow", "initUnder": 767}')
+                .swiper-wrapper
+                    -for (var i = 0; i < 24; i++)
+                        .swiper-slide
+                            +link('Categories ' + i, 'search.html')
+                .swiper-button.swiper-button-prev
+                .swiper-button.swiper-button-next

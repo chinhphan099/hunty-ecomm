@@ -1,11 +1,13 @@
 section.banner__promoMb.hidden-sm-up
     .container
-        .slider(data-cslider='{"type": "single", "dots": true, "autoplay": true, "initUnder": 767}')
-            .slick
-                .item
-                    img(src="https://picsum.photos/500/250").img-view
-                .item
-                    img(src="https://picsum.photos/500/250?grayscale").img-view
-                .item
-                    img(src="https://picsum.photos/500/250").img-view
-            span.load
+        .swiper-container(data-swiper='{"type": "banner"}')
+            .swiper-wrapper
+                .swiper-slide
+                    img(src="https://picsum.photos/id/1/500/250").img-view
+                .swiper-slide
+                    img(src="https://picsum.photos/id/2/500/250").img-view
+                .swiper-slide
+                    img(src="https://picsum.photos/id/3/500/250").img-view
+            .swiper-scrollbar
+            .swiper-button.swiper-button-prev
+            .swiper-button.swiper-button-next

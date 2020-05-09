@@ -230,7 +230,7 @@
 // Recommended Promotion
 .promotion_block {
 	.swiper-slide {
-		width: calc(~"100% / 2 - 30px");
+		width: calc(~"100% - 30px");
 	}
 	@media (min-width: 768px) {
 		.swiper-slide {
@@ -250,17 +250,7 @@
 	padding: 15px 0;
 	margin-bottom: 20px;
 	&__list {
-		.slider {
-			width: auto;
-			padding: 0 15px;
-			margin: 0 -15px;
-		}
-		.slick-list {
-			margin: 0 -15px;
-			padding-left: 10px;
-			padding-right: 30px;
-		}
-		.item {
+		.swiper-slide {
 			padding: 5px;
 			border-radius: 3px;
 		}
@@ -287,27 +277,16 @@
 	}
 	@media(min-width: 375px) {
 		&__list {
-			.slick-list {
-				padding-right: 70px;
-			}
 		}
 	}
 	@media(min-width: 768px) {
 		&__list {
-			.slider {
-				width: 1px;
-				padding: 0;
-				margin: 0;
-			}
-			.slick {
+			.swiper-wrapper {
 				display: flex;
-				justify-content: space-between;
 				flex-wrap: wrap;
+				justify-content: space-between;
 			}
-			.slick-list {
-				padding-right: 0;
-			}
-			.item {
+			.swiper-slide {
 				display: flex;
 				align-items: center;
 				padding: 0;
@@ -324,7 +303,7 @@
 	}
 	@media(min-width: 992px) {
 		&__list {
-			.item {
+			.swiper-slide {
 				width: calc(~"100% / 6 - 15px");
 				&:hover {
 					background-color: #F4F7FC;
