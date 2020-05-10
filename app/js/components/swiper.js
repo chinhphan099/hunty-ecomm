@@ -15,6 +15,7 @@
   let timeResize;
   const defaults = {
     banner: {
+      slidesPerView: 1,
       scrollbar: {
         el: '.swiper-scrollbar',
         draggable: true
@@ -34,11 +35,21 @@
       }
     },
     promotion: {
-      slidesPerView: 'auto',
-      spaceBetween: 20,
+      slidesPerView: 2,
+      spaceBetween: 10,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        992: {
+          slidesPerView: 4,
+          spaceBetween: 20
+        },
+        576: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        }
       }
     },
     tworow: {
@@ -71,6 +82,7 @@
 
   Plugin.prototype = {
     init: function() {
+      this.slide = this.element;
       if (this.options.initUnder) {
         if (window.innerWidth < this.options.initUnder) {
           this.initialize();
@@ -110,13 +122,10 @@
       }
     },
     checkImgLoad: function() {
-      const fakeSrc = this.element.querySelector('img');
+      const fakeSrc = this.element.querySelector('img').src;
       const objImg = new Image();
       objImg.src = fakeSrc;
-      objImg.onLoad = () => {
-        this.initSlider();
-      };
-      if (!objImg.complete) {
+      if (objImg.complete && objImg.naturalHeight !== 0) {
         this.initSlider();
       }
     },
@@ -124,20 +133,18 @@
       let finalOptions = this.options[this.options.type];
       isSlide.apply(this);
       finalOptions = Object.assign(finalOptions, {
-        on: {
-          init: () => {
-            this.setPositionArrows();
-          }
-        }
+        init: false
       });
 
       this.slide = new Swiper(this.element, finalOptions);
+      this.slide.on('init', () => {
+        this.setPositionArrows();
+        this.checkIsNoSlide();
+      });
       this.slide.on('slideChange', () => {
         this.setPositionArrows();
       });
-
-      // check No Slide
-      this.checkIsNoSlide();
+      this.slide.init();
     },
     setPositionArrows: function() {
       var arrowControls = this.element.querySelectorAll('.swiper-button'),
@@ -153,17 +160,15 @@
       }
     },
     checkIsNoSlide: function() {
-      console.log(this.slide);
-      // isNoSlide.apply(this);
-      if (this.slide.passedParams.slidesPerView >= this.slide.slides.length) {
+      if (this.slide.params.slidesPerView >= this.slide.slides.length) {
         this.destroy();
       } else {
         isSlide.apply(this);
       }
     },
     destroy: function() {
-      isNoSlide.apply(this);
       this.slide.destroy();
+      isNoSlide.apply(this);
     }
   };
 
