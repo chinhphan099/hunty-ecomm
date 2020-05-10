@@ -95,21 +95,22 @@
       this.listener();
     },
     listener: function() {
+      const that = this;
       window.addEventListener(resize, () => {
         if (timeResize) {
           clearTimeout(timeResize);
         }
         timeResize = setTimeout(() => {
-          if (window.innerWidth >= this.options.initUnder) {
-            if (this.element.classList.contains('swiper-container-initialized')) {
-              this.destroy();
+          if (window.innerWidth >= that.options.initUnder) {
+            if (that.element.classList.contains('swiper-container-initialized')) {
+              that.destroy();
             }
             return;
           }
-          if (this.element.classList.contains('swiper-container-initialized')) {
-            this.setPositionArrows();
+          if (that.element.classList.contains('swiper-container-initialized')) {
+            that.setPositionArrows();
           } else {
-            this.initialize();
+            that.initialize();
           }
         }, 600);
       });
