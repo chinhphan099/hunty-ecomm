@@ -6,7 +6,6 @@ const {task, watch, src, dest, parallel, series} = require('gulp'),
     jshint = require('gulp-jshint'),
     cssmin = require('gulp-cssmin'),
     concat = require('gulp-concat'),
-    imagemin = require('gulp-imagemin'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     clean = require('gulp-clean'),
@@ -148,22 +147,6 @@ task('pugdata', () =>
         }))
 );
 
-task('imagemin', () =>
-    src(FILES.images)
-    .pipe(imagemin([
-        imagemin.gifsicle({interlaced: true, progressive: true, optimizationLevel: 5}),
-        imagemin.jpegtran({interlaced: true, progressive: true, optimizationLevel: 5}),
-        imagemin.optipng({interlaced: true, progressive: true, optimizationLevel: 5}),
-        imagemin.svgo({
-            plugins: [
-                {removeViewBox: true},
-                {cleanupIDs: false}
-            ]
-        })
-    ]))
-    .pipe(dest(PUB.img))
-);
-
 task('copyAssets', () =>
     src(FILES.assets)
         .pipe(dest(PUB.root))
@@ -204,11 +187,8 @@ task('webserver', (done) => {
     done();
 });
 
-task('optimized',
-    parallel('imagemin')
-);
 task('build',
-    parallel('less', 'pug', 'scripts', 'jsguide', 'libs', 'copyAssets', 'optimized', 'watch')
+    parallel('less', 'pug', 'scripts', 'jsguide', 'libs', 'copyAssets', 'watch')
 );
 task('default',
     series('clean', 'build', 'webserver')
