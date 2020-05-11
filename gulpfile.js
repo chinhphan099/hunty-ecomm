@@ -1,6 +1,6 @@
 'use strict';
 
-const {task, watch, src, dest, parallel, series} = require('gulp'),
+const { task, watch, src, dest, parallel, series } = require('gulp'),
     less = require('gulp-less'),
     pug = require('gulp-pug'),
     jshint = require('gulp-jshint'),
@@ -101,38 +101,39 @@ task('libs', () => {
 
 task('less', () =>
     src(FILES.less)
-        .pipe(less().on('error', function(err) {
-            let displayErr = gutil.colors.red(err.message);
-            gutil.log(displayErr);
-            this.emit('end');
-        }))
-        //.pipe(autoprefixer('last 3 versions', 'ie 10'))
-        //.pipe(dest(PUB.css))
-        //.pipe(cssmin())
-        //.pipe(rename({suffix: '.min'}))
-        .pipe(dest(PUB.css))
+    .pipe(less().on('error', function(err) {
+        let displayErr = gutil.colors.red(err.message);
+        gutil.log(displayErr);
+        this.emit('end');
+    }))
+    .pipe(autoprefixer('last 3 versions', 'ie 10'))
+    //.pipe(dest(PUB.css))
+    //.pipe(cssmin())
+    //.pipe(rename({suffix: '.min'}))
+    .pipe(dest(PUB.css))
 );
 
 task('pug', () =>
     src(FILES.pug)
-        .pipe(pug({
+    .pipe(pug({
             pretty: true
         })
         .on('error', function(err) {
             let displayErr = gutil.colors.red(err.message);
             gutil.log(displayErr);
             this.emit('end');
-        }))
-        .pipe(dest(file => {
-            var pugIndex = file.base.lastIndexOf('pug');
-            var relPath = file.base.substr(pugIndex+4);
-            return PUB.root + relPath;
-        }))
+        })
+    )
+    .pipe(dest(file => {
+      var pugIndex = file.base.lastIndexOf('pug');
+      var relPath = file.base.substr(pugIndex + 4);
+      return PUB.root + relPath;
+    }))
 );
 
 task('pugdata', () =>
     src('./app/pug/data/*.pug')
-        .pipe(pug({
+    .pipe(pug({
             pretty: true
         })
         .on('error', function(err) {
@@ -140,23 +141,24 @@ task('pugdata', () =>
             gutil.log(displayErr);
             this.emit('end');
         }))
-        .pipe(dest(file => {
-            var pugIndex = file.base.lastIndexOf('pug');
-            var relPath = file.base.substr(pugIndex+4);
-            return PUB.root + relPath;
-        }))
+    .pipe(dest(file => {
+        var pugIndex = file.base.lastIndexOf('pug');
+        var relPath = file.base.substr(pugIndex + 4);
+        return PUB.root + relPath;
+    }))
 );
 
 task('copyAssets', () =>
-    src(FILES.assets)
-        .pipe(dest(PUB.root))
+    src(FILES.assets).pipe(dest(PUB.root))
 );
 
 task('test', function() {
     return src('./test/*.html')
-        .pipe(qunit({'page': {
-            viewportSize: { width: 1280, height: 800 }
-        }}));
+        .pipe(qunit({
+            'page': {
+                viewportSize: { width: 1280, height: 800 }
+            }
+        }));
 });
 
 task('watch', (done) => {
@@ -165,25 +167,23 @@ task('watch', (done) => {
     watch([SRC.js + 'guide/guide.js', SRC.js + 'guide/**/*.js'], series('jsguide'));
     watch(SRC.js + 'libs/*.js', series('libs'));
     watch([SRC.pug + '**/*.pug', SRC.pug + '*.pug'], series('pug'));
-    watch(FILES.images, series('imagemin'));
     watch(FILES.assets, series('copyAssets'));
     done();
 });
 
 task('clean', () => {
-    return src('./public', {read: false, allowEmpty: true})
-        .pipe(clean());
+    return src('./public', { read: false, allowEmpty: true }).pipe(clean());
 });
 
 task('webserver', (done) => {
     src(PUB.root)
-    .pipe(webserver({
-        host: ip.address(),
-        port: process.env.PORT || 2222,
-        directoryListing: true,
-        open: '/sitemap.html',
-        fallback: '/404.html'
-    }));
+        .pipe(webserver({
+            host: ip.address(),
+            port: process.env.PORT || 2222,
+            directoryListing: true,
+            open: '/sitemap.html',
+            fallback: '/404.html'
+        }));
     done();
 });
 
