@@ -54,9 +54,9 @@ mixin product(type, slideitem)
     -imgsrc = 'https://picsum.photos/140/170'
 
   .product&attributes(attributes)
-    .thumb
+    .thumb(class!=imgcls)
       a(href="product.html")
-        img(src!=imgsrc, alt="Hunty Product Name" class!=imgcls)
+        img(src!=imgsrc, alt="Hunty Product Name")
         if type == "two-price-cart"
           span.product__quickadd.hidden-md-up
             i.icon-shopping-cart
@@ -161,7 +161,7 @@ mixin notification()
     ul
       li: strong 30 minutes ago
       li
-        span.text Lorem ipsum dolor sit amet 
+        span.text Lorem ipsum dolor sit amet
         span.time 7:15
       li
         span.text Lorem ipsum dolor sit amet

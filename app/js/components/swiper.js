@@ -95,25 +95,32 @@
       this.listener();
     },
     listener: function() {
-      const that = this;
       window.addEventListener(resize, () => {
-        if (timeResize) {
+        // this.resizeEvent();
+        if (!timeResize) {
           clearTimeout(timeResize);
         }
         timeResize = setTimeout(() => {
-          if (window.innerWidth >= that.options.initUnder) {
-            if (that.element.classList.contains('swiper-container-initialized')) {
-              that.destroy();
-            }
-            return;
-          }
-          if (that.element.classList.contains('swiper-container-initialized')) {
-            that.setPositionArrows();
-          } else {
-            that.initialize();
-          }
+          console.log(this);
+          this.resizeEvent();
         }, 600);
       });
+    },
+    resizeEvent: function() {
+      if (window.innerWidth >= this.options.initUnder) {
+        if (this.element.classList.contains('swiper-container-initialized')) {
+          this.destroy();
+        }
+        return;
+      }
+      if (this.slide.destroyed !== true) {
+        this.checkIsNoSlide();
+      }
+      if (this.element.classList.contains('swiper-container-initialized')) {
+        this.setPositionArrows();
+      } else {
+        this.initialize();
+      }
     },
     initialize: function() {
       if (this.element.querySelectorAll('img').length) {
@@ -161,7 +168,7 @@
       }
     },
     checkIsNoSlide: function() {
-      if (this.slide.params.slidesPerView >= this.slide.slides.length) {
+      if (!!this.slide.slides && (this.slide.slides.length === 0 || this.slide.params.slidesPerView >= this.slide.slides.length)) {
         this.destroy();
       } else {
         isSlide.apply(this);
