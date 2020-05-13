@@ -54,8 +54,9 @@
 }
 
 /* No Slide */
-.no-slide {
-  .swiper-button {
+.swiper-button {
+  .transition(top 150ms ease);
+  .no-slide & {
     opacity: 0;
     pointer-events: none;
   }
@@ -63,6 +64,10 @@
 /* End No Slide */
 
 /* Modal */
+.open-modal {
+  overflow: hidden;
+  margin-right: 15px;
+}
 .modal {
   .position(fixed, 0 0 0 0);
   .size(0);
@@ -70,7 +75,6 @@
   overflow-y: auto;
   z-index: 20;
   .open-modal & {
-    overflow-x: hidden;
     display: block;
     .size(auto);
     z-index: 1000;

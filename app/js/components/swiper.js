@@ -95,32 +95,30 @@
       this.listener();
     },
     listener: function() {
-      window.addEventListener(resize, () => {
-        // this.resizeEvent();
-        if (!timeResize) {
-          clearTimeout(timeResize);
-        }
-        timeResize = setTimeout(() => {
-          console.log(this);
-          this.resizeEvent();
-        }, 600);
-      });
+      this.resizeEvent = this.resizeEvent.bind(this);
+      window.addEventListener(resize, this.resizeEvent);
     },
     resizeEvent: function() {
-      if (window.innerWidth >= this.options.initUnder) {
-        if (this.element.classList.contains('swiper-container-initialized')) {
-          this.destroy();
+      if (!timeResize) {
+        clearTimeout(timeResize);
+      }
+      timeResize = setTimeout(() => {
+        if (!!this.options.initUnder && window.innerWidth >= this.options.initUnder) {
+          if (this.element.classList.contains('swiper-container-initialized')) {
+            this.destroy();
+          }
+          return;
         }
-        return;
-      }
-      if (this.slide.destroyed !== true) {
-        this.checkIsNoSlide();
-      }
-      if (this.element.classList.contains('swiper-container-initialized')) {
-        this.setPositionArrows();
-      } else {
-        this.initialize();
-      }
+        if (this.slide.destroyed !== true) {
+          this.checkIsNoSlide();
+        }
+        if (this.element.classList.contains('swiper-container-initialized')) {
+          this.setPositionArrows();
+        }
+        else {
+          this.initialize();
+        }
+      }, 600);
     },
     initialize: function() {
       if (this.element.querySelectorAll('img').length) {
