@@ -96,7 +96,7 @@
     width: 100%;
     background: #FFFFFF;
     border: 1px solid #F4F7FC;
-    box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
+    box-shadow: 0px 2px 8px @color12;
     border-radius: 5px;
   }
 
@@ -149,7 +149,7 @@
 
       button {
         width: 50%;
-        box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
+        box-shadow: 0px 2px 8px @color12;
       }
     }
     .forgot-password {
@@ -184,7 +184,7 @@
         height: 40px;
         background: #fff;
         border: 1px solid #F4F7FC;
-        box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
+        box-shadow: 0px 2px 8px @color12;
         border-radius: 3px;
         color: #2C2E32;
         font-size: 14px;
@@ -363,7 +363,9 @@
   }
   .thumb {
     margin-bottom: 10px;
-    box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
+    // box-shadow: 0px 2px 8px @color12;
+    outline: 1px solid @color12;
+    outline-offset: -1px;
     height: 170px;
     line-height: 170px;
     text-align: center;
@@ -551,7 +553,7 @@
 .category {
   .thumb {
     margin-bottom: 15px;
-    box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
+    box-shadow: 0px 2px 8px @color12;
     height: 100px;
     line-height: 100px;
     text-align: center;
@@ -579,7 +581,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0px 2px 8px rgba(42, 47, 60, 0.06);
+  box-shadow: 0px 2px 8px @color12;
   background-color: @color01;
   border-radius: 3px;
   .thumb {
@@ -788,7 +790,7 @@
     margin-bottom: 20px;
     line-height: 20px;
     border: 1px solid #F4F7FC;
-    box-shadow: 2px 2px 8px rgba(42, 47, 60, 0.06);
+    box-shadow: 2px 2px 8px @color12;
   }
   @media (min-width: 992px) {
     align-items: center
