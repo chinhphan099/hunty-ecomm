@@ -13,13 +13,13 @@ block main
     include modules/index/banner_mb
     section.promotion_section
       .container
-        +heading('Recommended Promotion ', 'See All', '', '', 'promotion.html')
+        +heading({text: 'Recommended Promotion', subText: 'See All', url: 'promotion.html'})
       .promotion_section__inner
         .container
           include modules/index/promotion_block
     section.promotion_section
       .container
-        +heading('Promotion Near You ', 'See All', '', '', 'promotion.html')
+        +heading({text: 'Promotion Near You', subText: 'See All', url: 'promotion.html'})
       .promotion_section__inner
         .container
           include modules/index/promotion_near_you

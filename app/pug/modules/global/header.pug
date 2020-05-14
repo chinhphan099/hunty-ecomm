@@ -30,11 +30,11 @@ header.header(class=hidenHeaderOnMobileCls)
                 li#tab2: +link('Map', '#')
               .tab_content
                 .pane.tab1.active
-                  +heading('Lastest Search', '', '', 'h3')
+                  +heading({text: 'Lastest Search', tag: 'h3'})
                   .searchResults_list
                     -for(var i = 0; i < 4; i++)
                       +searchResult('')
-                  +heading('Hot Trends', '', '', 'h3')
+                  +heading({text: 'Hot Trends', tag: 'h3'})
                   .searchResults_list
                     -for(var i = 0; i < 4; i++)
                       +searchResult('')
@@ -152,6 +152,3 @@ header.header(class=hidenHeaderOnMobileCls)
               span Cart
           .header__mini_cart_notice
             p Thêm vào giỏ hàng thành công!
-
-
-

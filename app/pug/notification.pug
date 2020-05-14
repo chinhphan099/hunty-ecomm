@@ -12,10 +12,10 @@ block main
 			+breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { text: 'Notification' }, ]).hidden-sm-down
 			.row_wrap
 				.primary
-					+heading('Your Notification', '', '', 'h1').hidden-sm-down.heading--border
+					+heading({text: 'Your Notification', tag: 'h1'}).hidden-sm-down.heading--border
 					+notification()
 					+pagination().hidden-sm-down
 
 				.sidebar.hidden-sm-down
-					+heading('Promotions')
+					+heading({text: 'Promotions'})
 					include modules/index/banner_promo

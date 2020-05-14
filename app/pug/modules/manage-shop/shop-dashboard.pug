@@ -43,7 +43,7 @@
     .header__searchResults
       .tab_content
         .pane.tab1.active
-          +heading('Top 10 best-seller products', '', '', 'h3')
+          +heading({text: 'Top 10 best-seller products', tag: 'h3'})
           .searchResults_list
             -for(var i = 0; i < 4; i++)
               +searchResult('')

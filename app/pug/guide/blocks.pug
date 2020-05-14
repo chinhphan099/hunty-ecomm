@@ -54,15 +54,15 @@
   hr
   .row
     .col-xs-6.col-sm-4
-      h3.temp-h3 Tiêu đề: +heading('Viewed Product')
+      h3.temp-h3 Tiêu đề: +heading({text: 'Heading Text'})
   .row
     .col-xs-6.col-sm-4
-      +heading('Viewed Product')
-      +heading('Recommended Promotion')
+      +heading({text: 'Viewed Product'})
+      +heading({text: 'Recommended Promotion'})
   hr
   .row
     .col-sm-6
-      +heading('Mô tả sản phẩm ở trang product detail')
+      +heading({text: 'Mô tả sản phẩm ở trang product detail'})
       .editor
         p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem quia, corrupti accusamus odio, deserunt dicta natus necessitatibus dolores eligendi quis tempore? Tempora exercitationem consectetur tenetur incidunt reiciendis architecto beatae nesciunt.
         p: img(src="https://picsum.photos/700/350")

@@ -1,7 +1,7 @@
 section.viewed_section
   .container
     .product_block
-      +heading('Related Product', 'View All')
+      +heading({text: 'Related Product', subText: 'View All'})
       .swiper-container(data-swiper='{"type": "productoneline"}')
         .swiper-wrapper
           -for (var i = 0; i < 15; i++)
@@ -13,7 +13,7 @@ section.viewed_section
 section.viewed_section
   .container
     .product_block
-      +heading('Similar Product', 'View All')
+      +heading({text: 'Similar Product', subText: 'View All'})
       .swiper-container(data-swiper='{"type": "productoneline"}')
         .swiper-wrapper
           -for (var i = 0; i < 15; i++)

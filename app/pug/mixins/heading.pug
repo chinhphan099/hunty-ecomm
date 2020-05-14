@@ -1,20 +1,23 @@
-mixin heading(headingText, link, countdown, tag, url = '#!')
-  -tagName = 'h2'
+// tagName, link,
+mixin heading(obj)
+  -obj.tag = 'h2'
+
   if tag
-    -tagName = tag
-  if link
+    -obj.tag = tag
+
+  if obj.url || obj.subText
     - cls = 'heading--link'
+
   .heading(class!=cls)&attributes(attributes)
-    <!{tagName} class="heading__text">
-      !=headingText
-    </!{tagName}>
-    if countdown
+    <!{obj.tag} class="heading__text">
+      !=obj.text
+    </!{obj.tag}>
+    if obj.countdown
       span.countdown(data-flashsale="" data-begindate="02/03/2020" data-enddate="06/06/2020")
         span.countdown__item.countdown--hour --
         span.countdown__item :
         span.countdown__item.countdown--minute --
         span.countdown__item :
         span.countdown__item.countdown--second --
-
-    if link
-      +link('See All', url).see-all
+    if obj.subText || obj.url
+      +link(obj.subText, obj.url).see-all

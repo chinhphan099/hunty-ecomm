@@ -1,7 +1,7 @@
 section.viewed_section
   .container
     .product_block
-      +heading('Viewed Product', 'See All')
+      +heading({text: 'Viewed Product', subText: 'See All', url: 'search.html'})
       .swiper-container(data-swiper='{"type": "productoneline", "setPositionArrows": true}')
         .swiper-wrapper
           -for (var i = 0; i < 15; i++)
