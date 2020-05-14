@@ -1,25 +1,25 @@
 extends layouts/manage-shop
 
 block vars
-	-title = 'Shop Management | Hunty'
-	-shopActiveTab = 0
+  -title = 'Shop Management | Hunty'
+  -shopActiveTab = 0
 
 block main
-	main
-		+goback()
-		.shop-wrap
-			.shop-wrap__inner
-				.shop-wrap__left
-					include modules/manage-shop/navigation
-				.shop-wrap__right
-					include modules/manage-shop/block-1
-					.shop-info__banner.hidden-md-up
-						img(src="https://i.picsum.photos/id/119/800/530.jpg", alt="")
-					+shopInfo('no-button')
-					include modules/manage-shop/block-3
-					include modules/manage-shop/manage-static
-					include modules/manage-shop/block-4
-					include modules/manage-shop/block-5
-					include modules/manage-shop/block-shipping
-					.manage-block6
-						include modules/global/product-sale-unsale-all
+  main
+    +goback()
+    .shop-wrap
+      .shop-wrap__inner
+        .shop-wrap__left
+          include modules/manage-shop/navigation
+        .shop-wrap__right
+          include modules/manage-shop/block-1
+          .shop-info__banner.hidden-md-up
+            img(src="https://i.picsum.photos/id/119/800/530.jpg", alt="")
+          +shopInfo('no-button')
+          include modules/manage-shop/block-3
+          include modules/manage-shop/manage-static
+          include modules/manage-shop/block-4
+          include modules/manage-shop/block-5
+          include modules/manage-shop/block-shipping
+          .manage-block6
+            include modules/global/product-sale-unsale-all

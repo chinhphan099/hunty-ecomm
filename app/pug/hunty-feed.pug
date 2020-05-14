@@ -1,27 +1,27 @@
 extends layouts/layout
 
 block vars
-	-title = 'Hunty feed | Hunty'
-	-hidenHeaderOnMobile = true
-	-navMobile = 'hunty-feed'
+  -title = 'Hunty feed | Hunty'
+  -hidenHeaderOnMobile = true
+  -navMobile = 'hunty-feed'
 
 block main
-	main.hunty_feed.pusher_b70
-		.container
-			include modules/global/header_mb
-			+breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { text: 'Hunty Feed' }, ]).hidden-sm-down
-			.row_wrap
-				.primary
-					+heading('Your Hunty Product', '', '', 'h1').hidden-sm-down.heading--border
-					.product_list
-						-for (var i = 0; i < 8; i++)
-							+product('two-price-cart').product--promo
-					button().button.gray.hidden-md-up.btn_seeMore See More
-				.sidebar.hidden-sm-down
-					.heading: h2.heading__text  Promotions
-					include modules/index/banner_promo
+  main.hunty_feed.pusher_b70
+    .container
+      include modules/global/header_mb
+      +breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { text: 'Hunty Feed' }, ]).hidden-sm-down
+      .row_wrap
+        .primary
+          +heading('Your Hunty Product', '', '', 'h1').hidden-sm-down.heading--border
+          .product_list
+            -for (var i = 0; i < 8; i++)
+              +product('two-price-cart').product--promo
+          button().button.gray.hidden-md-up.btn_seeMore See More
+        .sidebar.hidden-sm-down
+          +heading('Promotions')
+          include modules/index/banner_promo
 
-			.category_block.hidden-md-up
-				.category_block__list
-					-for (var i = 0; i < 12; i++)
-						+category('Category')
+      .category_block.hidden-md-up
+        .category_block__list
+          -for (var i = 0; i < 12; i++)
+            +category('Category')

@@ -1,21 +1,21 @@
 .account-informaton
-	+heading('Account Information').hidden-sm-down
-	+heading('Edit Profile').hidden-md-up
-	.account-form
-		.fieldset
-			+label('name', 'Name').label
-			.fieldset__column
-				+input({type: "text", name: 'fullName', value: 'Your Name'})
-		.fieldset
-			+label('phone', 'Phone').label
-			.fieldset__column
-				+input({type: "tel", name: 'phoneNumber', value: '0123456789'})
-		.fieldset
-			+label('name', 'Email').label
-			.fieldset__column
-				+input({type: "text", value: 'abc@gmail.com'})
-		.fieldset
-			+label('name', 'Year of Birth').label
-			.fieldset__column
-				+customDate({id: 'year', value: "11/11/1990", placeholder: '11/11/1990'})
-	button.button Save
+  +heading('Account Information').hidden-sm-down
+  +heading('Edit Profile').hidden-md-up
+  .account-form
+    .fieldset
+      +label('name', 'Name').label
+      .fieldset__column
+        +input({type: "text", name: 'fullName', value: 'Your Name'})
+    .fieldset
+      +label('phone', 'Phone').label
+      .fieldset__column
+        +input({type: "tel", name: 'phoneNumber', value: '0123456789'})
+    .fieldset
+      +label('name', 'Email').label
+      .fieldset__column
+        +input({type: "text", value: 'abc@gmail.com'})
+    .fieldset
+      +label('name', 'Year of Birth').label
+      .fieldset__column
+        +customDate({id: 'year', value: "11/11/1990", placeholder: '11/11/1990'})
+  button.button Save

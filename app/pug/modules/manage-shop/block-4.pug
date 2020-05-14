@@ -1,10 +1,10 @@
 .manage-block4
-	.promotion_block
-		+heading('Promotion Running', 'Manage', '', '', 'manage-promotion.html')
-		.swiper-container(data-swiper='{"type": "promotion"}')
-				.swiper-wrapper
-						-for (var i = 0; i < 4; i++)
-								.swiper-slide
-										+promotion('slideitem')
-				.swiper-button.swiper-button-prev
-				.swiper-button.swiper-button-next
+  .promotion_block
+    +heading('Promotion Running', 'Manage', '', '', 'manage-promotion.html')
+    .swiper-container(data-swiper='{"type": "promotion"}')
+        .swiper-wrapper
+            -for (var i = 0; i < 4; i++)
+                .swiper-slide
+                    +promotion('slideitem')
+        .swiper-button.swiper-button-prev
+        .swiper-button.swiper-button-next

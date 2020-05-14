@@ -1,53 +1,53 @@
 .loginshop
-	.loginshop__inner
-		.loginshop-title.product
-			+heading('Add New Product')
-		.loginshop-newform
-			.fieldset
-				+label('categories', 'Categories').label
-				.fieldset__column
-					+customSelect({id: 'select_id_1'}, [
-						{value: '', text: 'Categories'},
-						{value: 'Categories 1',},
-						{value: 'Categories 2'}
-					])
-			.fieldset
-				+label('productsName', "Product's Name").label
-				.fieldset__column
-					+input({id: 'productsName', placeholder: "Product's Name"})
-					span.error-message This field is required.
-			.fieldset
-				+label('price', 'Price').label
-				.fieldset__column
-					.ouline
-						+input({type: "number", id: 'price', placeholder: 'Price'})
-						span.inline VND
-					span.error-message This field is required.
-			.fieldset
-				+label('discount', 'Discount').label
-				.fieldset__column
-					.ouline
-						+input({type: "number", id: 'discount', placeholder: 'Discount'})
-						span.inline %
-					span.error-message This field is required.
-			.fieldset
-				+label('priceDiscount', 'Price After Discount').label
-				.fieldset__column
-					.ouline
-						+input({type: "number", id: 'priceDiscount', placeholder: 'Price After Discount'})
-						span.inline VND
-					span.error-message This field is required.
-			.fieldset
-				+label('browseImage', 'Featured Image').label
-				.fieldset__column
-					.fieldset__column__img
-						span
-							i.icon-photo
-							| Browse
-						input(type="file" id="browseImage")
-			.fieldset
-				+label('productDescription', 'Product Description').label
-				.fieldset__column
-					+input({id: 'productDescription', placeholder: 'Product Description'})
-					span.error-message This field is required.
-		button.button.newform Add
+  .loginshop__inner
+    .loginshop-title.product
+      +heading('Add New Product')
+    .loginshop-newform
+      .fieldset
+        +label('categories', 'Categories').label
+        .fieldset__column
+          +customSelect({id: 'select_id_1'}, [
+            {value: '', text: 'Categories'},
+            {value: 'Categories 1',},
+            {value: 'Categories 2'}
+          ])
+      .fieldset
+        +label('productsName', "Product's Name").label
+        .fieldset__column
+          +input({id: 'productsName', placeholder: "Product's Name"})
+          span.error-message This field is required.
+      .fieldset
+        +label('price', 'Price').label
+        .fieldset__column
+          .ouline
+            +input({type: "number", id: 'price', placeholder: 'Price'})
+            span.inline VND
+          span.error-message This field is required.
+      .fieldset
+        +label('discount', 'Discount').label
+        .fieldset__column
+          .ouline
+            +input({type: "number", id: 'discount', placeholder: 'Discount'})
+            span.inline %
+          span.error-message This field is required.
+      .fieldset
+        +label('priceDiscount', 'Price After Discount').label
+        .fieldset__column
+          .ouline
+            +input({type: "number", id: 'priceDiscount', placeholder: 'Price After Discount'})
+            span.inline VND
+          span.error-message This field is required.
+      .fieldset
+        +label('browseImage', 'Featured Image').label
+        .fieldset__column
+          .fieldset__column__img
+            span
+              i.icon-photo
+              | Browse
+            input(type="file" id="browseImage")
+      .fieldset
+        +label('productDescription', 'Product Description').label
+        .fieldset__column
+          +input({id: 'productDescription', placeholder: 'Product Description'})
+          span.error-message This field is required.
+    button.button.newform Add

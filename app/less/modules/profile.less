@@ -1,213 +1,213 @@
 .profile {
-	@media (max-width: 767px) {
-		.container {
-			padding: 0;
-		}
-	}
+  @media (max-width: 767px) {
+    .container {
+      padding: 0;
+    }
+  }
 }
 
 //--------------------------------------profile-inner
 .profile-inner {
-	@media (min-width: 768px) {
-		display: flex;
-		align-items: flex-start;
-		flex-wrap: wrap;
-		margin-bottom: 150px;
-	}
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 150px;
+  }
 }
 
 //--------------------------------------sidebar
 .account-sidebar {
-	@media (max-width: 767px) {
-		position: relative;
-		padding: 0 15px 100px;
-		z-index: 1;
-		&:before {
-			position: absolute;
-			top: 0;
-			left: 0;
-			content: "";
-			.size(100%, 100px);
-			background-color: @yellow;
-			z-index: 1;
-		}
-	}
-	@media (min-width: 768px) {
-		width: 280px;
-		padding-bottom: 20px;
-		background: #FFFFFF;
-		border: 1px solid #F4F7FC;
-		box-shadow: 0px 2px 8px @color12;
-		border-radius: 5px;
-	}
+  @media (max-width: 767px) {
+    position: relative;
+    padding: 0 15px 100px;
+    z-index: 1;
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      .size(100%, 100px);
+      background-color: @yellow;
+      z-index: 1;
+    }
+  }
+  @media (min-width: 768px) {
+    width: 280px;
+    padding-bottom: 20px;
+    background: #FFFFFF;
+    border: 1px solid #F4F7FC;
+    box-shadow: 0px 2px 8px @color12;
+    border-radius: 5px;
+  }
 }
 
 .account-infor {
-	position: relative;
-	.button.hollow {
-		display: block;
-		width: 100%;
-		margin-bottom: 20px;
-		font-weight: normal;
-		color: @yellow;
-		i {
-			margin-right: 5px;
-		}
-	}
+  position: relative;
+  .button.hollow {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    font-weight: normal;
+    color: @yellow;
+    i {
+      margin-right: 5px;
+    }
+  }
 }
 
 .act-edit {
-	position: absolute;
-	top: 20px;
-	right: 0;
-	z-index: 8;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  z-index: 8;
 }
 
 .act-avatar {
-	margin-bottom: 15px;
-	&__thumb {
-		position: relative;
-		z-index: 2;
-		padding-top: 50px;
-		margin-bottom: 10px;
-		img {
-			display: block;
-			margin: 0 auto;
-			border-radius: 50%;
-		}
-	}
-	&__desc {
-		text-align: center;
-	}
-	h3 {
-		.font-size(18px);
-		margin-bottom: 5px;
-	}
-	i {
-		margin-right: 5px;
-	}
-	@media (min-width: 768px) {
-		display: flex;
-		align-items: center;
-		padding: 20px;
-		margin-bottom: 0;
-		&__thumb {
-			margin: 0;
-			margin-right: 10px;
-			padding-top: 0;
-			img {
-				width: 60px;
-			}
-		}
-		&__desc {
-			text-align: left;
-		}
-	}
+  margin-bottom: 15px;
+  &__thumb {
+    position: relative;
+    z-index: 2;
+    padding-top: 50px;
+    margin-bottom: 10px;
+    img {
+      display: block;
+      margin: 0 auto;
+      border-radius: 50%;
+    }
+  }
+  &__desc {
+    text-align: center;
+  }
+  h3 {
+    .font-size(18px);
+    margin-bottom: 5px;
+  }
+  i {
+    margin-right: 5px;
+  }
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 0;
+    &__thumb {
+      margin: 0;
+      margin-right: 10px;
+      padding-top: 0;
+      img {
+        width: 60px;
+      }
+    }
+    &__desc {
+      text-align: left;
+    }
+  }
 }
 
 .act-address {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 15px;
-	p {
-		margin-bottom: 5px;
-	}
-	&__name {
-		color: #8B929F;
-	}
-	&__infor {
-		text-align: right;
-	}
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  p {
+    margin-bottom: 5px;
+  }
+  &__name {
+    color: #8B929F;
+  }
+  &__infor {
+    text-align: right;
+  }
 }
 
 .account-menu {
-	p {
-		margin-bottom: 10px;
-		border-bottom: 1px solid #EBF0F9;
-		&:last-child {
-			border: 0;
-		}
-	}
-	a {
-		display: block;
-		padding-bottom: 10px;
-	}
-	@media (min-width: 768px){
-		p {
-			margin-bottom: 0;
-			border: 0;
-		}
-		a {
-			position: relative;
-			padding: 8px 20px 8px 45px;
-			&.active {
-				background-color: #F4F7FC;
-			}
-			&:hover {
-				background-color: #F4F7FC;
-			}
-		}
-		i {
-			position: absolute;
-			left: 20px;
-			top: 10px;
-			color: #8B929F;
-		}
-	}
+  p {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #EBF0F9;
+    &:last-child {
+      border: 0;
+    }
+  }
+  a {
+    display: block;
+    padding-bottom: 10px;
+  }
+  @media (min-width: 768px){
+    p {
+      margin-bottom: 0;
+      border: 0;
+    }
+    a {
+      position: relative;
+      padding: 8px 20px 8px 45px;
+      &.active {
+        background-color: #F4F7FC;
+      }
+      &:hover {
+        background-color: #F4F7FC;
+      }
+    }
+    i {
+      position: absolute;
+      left: 20px;
+      top: 10px;
+      color: #8B929F;
+    }
+  }
 }
 //--------------------------------------inner
 .account-informaton {
-	.custom-date {
-		span {
-			color: #333;
-		}
-	}
-	@media (max-width: 767px) {
-		display: none;
-	}
-	@media (min-width: 768px) {
-		flex: 1 0 0%;
-		max-width: 550px;
-		padding-left: 25px;
-		.button {
-			display: block;
-			margin-left: 120px;
-			padding: 10px 50px;
-		}
-		.fieldset {
-			.label {
-				width: 120px;
-			}
-		}
-	}
+  .custom-date {
+    span {
+      color: #333;
+    }
+  }
+  @media (max-width: 767px) {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    flex: 1 0 0%;
+    max-width: 550px;
+    padding-left: 25px;
+    .button {
+      display: block;
+      margin-left: 120px;
+      padding: 10px 50px;
+    }
+    .fieldset {
+      .label {
+        width: 120px;
+      }
+    }
+  }
 }
 
 .profile-edit {
-	.account-informaton {
-		display: block;
-		padding: 80px 15px;
-		width: 100%;
-		margin: 0 auto;
-	}
-	.heading {
-		margin-bottom: 90px;
-	}
-	.button {
-		width: 100%;
-	}
-	@media (min-width: 768px) {
-		.button {
-			width: calc(~"100% - 120px");
-		}
-	}
+  .account-informaton {
+    display: block;
+    padding: 80px 15px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .heading {
+    margin-bottom: 90px;
+  }
+  .button {
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    .button {
+      width: calc(~"100% - 120px");
+    }
+  }
 }
 
 .custom-date {
-	@media (max-width: 767px) {
-		span {
-			padding: 11px 0;
-			border: 0;
-			border-bottom: 1px solid #D2DAEA;
-		}
-	}
+  @media (max-width: 767px) {
+    span {
+      padding: 11px 0;
+      border: 0;
+      border-bottom: 1px solid #D2DAEA;
+    }
+  }
 }

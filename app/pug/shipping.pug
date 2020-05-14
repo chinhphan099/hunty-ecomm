@@ -1,16 +1,16 @@
 extends layouts/manage-shipping
 
 block vars
-	-title = 'Shipping | Hunty'
-	-shopActiveTab = 0
+  -title = 'Shipping | Hunty'
+  -shopActiveTab = 0
 
 block main
-	main
-		+goback()
-		.shop-wrap
-			.shop-wrap__inner
-				.shop-wrap__left
-					include modules/manage-shop/navigation
-				.shop-wrap__right
-					include modules/manage-shop/shipping-heading
-					include modules/manage-shop/manage-shipping
+  main
+    +goback()
+    .shop-wrap
+      .shop-wrap__inner
+        .shop-wrap__left
+          include modules/manage-shop/navigation
+        .shop-wrap__right
+          include modules/manage-shop/shipping-heading
+          include modules/manage-shop/manage-shipping

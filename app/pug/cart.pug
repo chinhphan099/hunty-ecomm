@@ -1,25 +1,25 @@
 extends layouts/checkout
 
 block vars
-	-title = 'Cart | Hunty'
+  -title = 'Cart | Hunty'
 
 block main
-	main
-		.container
-			.cart
-				+heading('Cart')
-				.cart__inner
-					.cart__primary
-						.cart__list
-							-for (var i = 0; i < 5; i++)
-								+cartItem(i)
-					.cart__sidebar
-						.fieldset.coupon_code
-							+label('couponCode', 'Apply Discount Code')
-							+customInput({id: 'couponCodeBtn', text: 'Apply', btnClass: 'button'}, {id: "couponCode"})
+  main
+    .container
+      .cart
+        +heading('Cart')
+        .cart__inner
+          .cart__primary
+            .cart__list
+              -for (var i = 0; i < 5; i++)
+                +cartItem(i)
+          .cart__sidebar
+            .fieldset.coupon_code
+              +label('couponCode', 'Apply Discount Code')
+              +customInput({id: 'couponCodeBtn', text: 'Apply', btnClass: 'button'}, {id: "couponCode"})
 
-						.order_total
-							.order_total__inner
-								.total_text Total
-								.price 1.120.000 VND
-							.order_total__next: button(type="button").button Next
+            .order_total
+              .order_total__inner
+                .total_text Total
+                .price 1.120.000 VND
+              .order_total__next: button(type="button").button Next

@@ -1,14 +1,14 @@
 .loginshop
-	.loginshop__inner
-		.loginshop-title.product
-			+heading('Welcome to your new store')
-			p Please add your first product
-		.loginshop-store
-			.store-item
-				+link('Add Product', 'add-product-2.html')
-					span add Single Product
-			-for (var i = 0; i < 3; i++)
-				.store-item
-					+link('Product', 'add-product-2.html')
-						+img('shoppe.png')
-						span Link Product from Shoppe
+  .loginshop__inner
+    .loginshop-title.product
+      +heading('Welcome to your new store')
+      p Please add your first product
+    .loginshop-store
+      .store-item
+        +link('Add Product', 'add-product-2.html')
+          span add Single Product
+      -for (var i = 0; i < 3; i++)
+        .store-item
+          +link('Product', 'add-product-2.html')
+            +img('shoppe.png')
+            span Link Product from Shoppe

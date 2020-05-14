@@ -1,76 +1,76 @@
 .manage-heading {
-	padding-top: 60px;
-	@media (min-width: 768px) {
-		padding-top: 0;
-	}
+  padding-top: 60px;
+  @media (min-width: 768px) {
+    padding-top: 0;
+  }
 }
 
 .routine-select {
-	position: relative;
-	margin-bottom: 20px;
-	select {
-		padding-left: 35px;
-		font-weight: 700;
-	}
-	.icon-shop {
-		position: absolute;
-		top: 10px;
-		left: 10px;
-		font-size: 1.9rem;
-		color: @yellow;
-	}
+  position: relative;
+  margin-bottom: 20px;
+  select {
+    padding-left: 35px;
+    font-weight: 700;
+  }
+  .icon-shop {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.9rem;
+    color: @yellow;
+  }
 }
 
 .manage-shipping {
-	&__item {
-		.desc {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			margin-bottom: 20px;
-		}
-		.wrap-title {
-			.font-size(16px);
-		}
-		.txt-desc {
-			display: block;
-			.font-size(14px);
-			color: #8B929F;
-			font-weight: normal;
-		}
-	}
-	.button.hollow {
-		width: 100%;
-		color: @yellow;
-	}
-	@media (min-width: 768px) {
-		padding: 20px;
-		background-color: #fff;
-		.button.hollow {
-			display: block;
-			max-width: 400px;
-			margin: 0 auto;
-			margin-top: 30px;
-		}
-	}
-	@media (min-width: 992px) {
-		&__item {
-			column-count: 2;
-			column-gap: 100px;
-			.desc {
-				margin-bottom: 30px;
-			}
-		}
-	}
-	@media (min-width: 1200px) {
-		&__item {
-			column-gap: 250px;
-			.wrap-title {
-				.font-size(18px);
-			}
-			.txt-desc {
-				.font-size(16px);
-			}
-		}
-	}
+  &__item {
+    .desc {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .wrap-title {
+      .font-size(16px);
+    }
+    .txt-desc {
+      display: block;
+      .font-size(14px);
+      color: #8B929F;
+      font-weight: normal;
+    }
+  }
+  .button.hollow {
+    width: 100%;
+    color: @yellow;
+  }
+  @media (min-width: 768px) {
+    padding: 20px;
+    background-color: #fff;
+    .button.hollow {
+      display: block;
+      max-width: 400px;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+  }
+  @media (min-width: 992px) {
+    &__item {
+      column-count: 2;
+      column-gap: 100px;
+      .desc {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    &__item {
+      column-gap: 250px;
+      .wrap-title {
+        .font-size(18px);
+      }
+      .txt-desc {
+        .font-size(16px);
+      }
+    }
+  }
 }

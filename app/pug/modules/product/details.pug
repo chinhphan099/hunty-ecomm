@@ -1,33 +1,32 @@
 .product-details
-    +heading('Oxford Men White Shirt Korean Style', '', '','h1')
-    p.rating
-        i.icon-star
-        | 4.9 #[span(style="color: #8B929F; padding-left: 3px;") (3.666 rating)]
-        span.hidden-md-up(data-scrollto='{"handle": ".product-rating"}' style="color: #FFD100; padding-left: 5px; cursor: pointer;") View Rating
-    +price('575.000 đ', '(1.000.000)')
-    .color-wrap
-        span COLOR:
-        a(href="javascript:;").active
-        a(href="javascript:;")
-        a(href="javascript:;")
-        a(href="javascript:;")
-    hr
-    table
-        caption PRODUCT INFORMATION
-        tr
-            td Categories
-            td Fashion
-        tr
-            td Provided by
-            td Lotte
-        tr
-            td Brand
-            td: span(style="color: #FFD100") Rountine
-        tr
-            td Manufactured
-            td Vietnam
-    hr.hidden-sm-down
-    .button-action
-        +button({name: 'chatToShopBtn'}).button.hollow.chat-to-shop #[i.icon-message] Chat to Shop
-        +button({name: 'addToCartBtn'}).button.hollow.add-to-cart #[i.icon-cart] Add to Cart
-        
+  +heading('Oxford Men White Shirt Korean Style', '', '','h1')
+  p.rating
+    i.icon-star
+    | 4.9 #[span(style="color: #8B929F; padding-left: 3px;") (3.666 rating)]
+    span.hidden-md-up(data-scrollto='{"handle": ".product-rating"}' style="color: #FFD100; padding-left: 5px; cursor: pointer;") View Rating
+  +price('575.000 đ', '(1.000.000)')
+  .color-wrap
+    span COLOR:
+    a(href="javascript:;").active
+    a(href="javascript:;")
+    a(href="javascript:;")
+    a(href="javascript:;")
+  hr
+  table
+    caption PRODUCT INFORMATION
+    tr
+      td Categories
+      td Fashion
+    tr
+      td Provided by
+      td Lotte
+    tr
+      td Brand
+      td: span(style="color: #FFD100") Rountine
+    tr
+      td Manufactured
+      td Vietnam
+  hr.hidden-sm-down
+  .button-action
+    +button({name: 'chatToShopBtn'}).button.hollow.chat-to-shop #[i.icon-message] Chat to Shop
+    +button({name: 'addToCartBtn'}).button.hollow.add-to-cart #[i.icon-cart] Add to Cart

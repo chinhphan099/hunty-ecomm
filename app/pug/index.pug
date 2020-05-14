@@ -1,32 +1,32 @@
 extends layouts/layout
 
 block vars
-    -title = 'Homepage | Hunty'
-    -notLoged = true
-    -navMobile = 'home'
+  -title = 'Homepage | Hunty'
+  -notLoged = true
+  -navMobile = 'home'
 
 block main
-    main.pusher_b70
-        include modules/index/banner
-        include modules/index/category-icons
-        include modules/index/flash-sale
-        include modules/index/banner_mb
-        section.promotion_section
-            .container
-                +heading('Recommended Promotion ', 'See All', '', '', 'promotion.html')
-            .promotion_section__inner
-                .container
-                    include modules/index/promotion_block
-        section.promotion_section
-            .container
-                +heading('Promotion Near You ', 'See All', '', '', 'promotion.html')
-            .promotion_section__inner
-                .container
-                    include modules/index/promotion_near_you
+  main.pusher_b70
+    include modules/index/banner
+    include modules/index/category-icons
+    include modules/index/flash-sale
+    include modules/index/banner_mb
+    section.promotion_section
+      .container
+        +heading('Recommended Promotion ', 'See All', '', '', 'promotion.html')
+      .promotion_section__inner
+        .container
+          include modules/index/promotion_block
+    section.promotion_section
+      .container
+        +heading('Promotion Near You ', 'See All', '', '', 'promotion.html')
+      .promotion_section__inner
+        .container
+          include modules/index/promotion_near_you
 
-        include modules/index/viewed-product
-        //- include modules/index/categories_block
-        include modules/index/customer-service
+    include modules/index/viewed-product
+    //- include modules/index/categories_block
+    include modules/index/customer-service
 
 block popup
-    include modules/index/login-popup
+  include modules/index/login-popup

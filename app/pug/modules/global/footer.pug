@@ -1,109 +1,109 @@
 if hidenFooterOnMobile
-    -hidenFooterOnMobileCls = 'hidden-sm-down'
+  -hidenFooterOnMobileCls = 'hidden-sm-down'
 
 +link('Back To Top', 'javascript:;')(data-scrollto='{"handle": "body"}').back-to-top: i.icon-arrow-up
 
 .newsletter.hidden-sm-down
-    .container
-        .newsletter__inner
-            .newsletter__icon
-                img(src="images/newsletter.png" title="Newsletter")
-            .newsletter__description
-                h3 Subscribe our newsletter and get notifications
-                +customInput({id: 'subcribeBtn', 'text': 'Subscribe'}, {id: "subcribeTxt", "placeholder": "Your email"})
+  .container
+    .newsletter__inner
+      .newsletter__icon
+        img(src="images/newsletter.png" title="Newsletter")
+      .newsletter__description
+        h3 Subscribe our newsletter and get notifications
+        +customInput({id: 'subcribeBtn', 'text': 'Subscribe'}, {id: "subcribeTxt", "placeholder": "Your email"})
 
 footer.footer.hidden-sm-down
-    .footer__inner
-        .container
-            .footer__col
-                h4 Customer Service
-                ul.footer__nav
-                    +items([
-                        {title: 'FAQ', href: 'faqs.html'},
-                        {title: 'Policy', href: 'policy.html'},
-                        {title: 'Call Center', href: 'call-center.html'}
-                    ])
+  .footer__inner
+    .container
+      .footer__col
+        h4 Customer Service
+        ul.footer__nav
+          +items([
+            {title: 'FAQ', href: 'faqs.html'},
+            {title: 'Policy', href: 'policy.html'},
+            {title: 'Call Center', href: 'call-center.html'}
+          ])
 
-            .footer__col
-                h4 About Hunty
-                ul.footer__nav
-                    +items([
-                        {title: 'Introduce', href: 'introduce.html'},
-                        {title: 'Recruitment', href: 'recruitment.html'},
-                        {title: 'Term & Conditions', href: 'terms.html'},
-                        {title: 'Contact', href: 'contact-us.html'}
-                    ])
-            .footer__col
-                h4 Payment method
-                ul.footer__payment_list
-                    li: +img('visa.svg', 'Visa')
-                    li: +img('mastercard.svg', 'Visa')
+      .footer__col
+        h4 About Hunty
+        ul.footer__nav
+          +items([
+            {title: 'Introduce', href: 'introduce.html'},
+            {title: 'Recruitment', href: 'recruitment.html'},
+            {title: 'Term & Conditions', href: 'terms.html'},
+            {title: 'Contact', href: 'contact-us.html'}
+          ])
+      .footer__col
+        h4 Payment method
+        ul.footer__payment_list
+          li: +img('visa.svg', 'Visa')
+          li: +img('mastercard.svg', 'Visa')
 
-                h4 Delivery
-                ul.footer-payment-list
-                    li: +img('delivery.png', 'Delivery')
+        h4 Delivery
+        ul.footer-payment-list
+          li: +img('delivery.png', 'Delivery')
 
-            .footer__col
-                h4 Follow hunty
-                ul.footer__socials
-                    li: +link('FaceBook', 'https://facebook.com/chinhphan099')
-                            i.icon-fb-circle
-                                span.path1
-                                span.path2
-                    li: +link('Youtube', 'https://www.youtube.com/watch?v=NZ2Plnhz2-Q')
-                            i.icon-youtube-circle
-                                span.path1
-                                span.path2
-                h4 Hunty application
-                ul.footer__apps
-                    li: +link('App Store', '#'): +img('app-store.svg', 'App Store')
-                    li: +link('Google Play', '#'): +img('google-play.svg', 'Google Play')
+      .footer__col
+        h4 Follow hunty
+        ul.footer__socials
+          li: +link('FaceBook', 'https://facebook.com/chinhphan099')
+              i.icon-fb-circle
+                span.path1
+                span.path2
+          li: +link('Youtube', 'https://www.youtube.com/watch?v=NZ2Plnhz2-Q')
+              i.icon-youtube-circle
+                span.path1
+                span.path2
+        h4 Hunty application
+        ul.footer__apps
+          li: +link('App Store', '#'): +img('app-store.svg', 'App Store')
+          li: +link('Google Play', '#'): +img('google-play.svg', 'Google Play')
 
 
-    .footer__copyright
-        .container
-            p Copyright &#64; 2020 Hunty.com
+  .footer__copyright
+    .container
+      p Copyright &#64; 2020 Hunty.com
 
 nav.tabbar.hidden-md-up(class!=hidenFooterOnMobileCls)
-    .tabbar__inner
-        if navMobile == 'home'
-            +link('Home', 'index.html').tabbar__item.active
-                i.icon-home-solid
-                span.text Home
-        else
-            +link('Home', 'index.html').tabbar__item
-                i.icon-home-solid
-                span.text Home
-        if navMobile == 'hunty-feed'
-            +link('Hunty feed ', 'hunty-feed.html').tabbar__item.hunty-feed.active
-                i.icon-hunty-feed #[span.path1]#[span.path2]
-                span.text Hunty feed
-        else
-            +link('Hunty feed ', 'hunty-feed.html').tabbar__item.hunty-feed
-                i.icon-hunty-feed #[span.path1]#[span.path2]
-                span.text Hunty feed
-        if navMobile == 'noti'
-            +link('Notification', 'notification.html').tabbar__item.notification.active
-                span.icon
-                    i.icon-notification
-                    span.number 2
-                    span.text Notification
-        else
-            +link('Notification', 'notification.html').tabbar__item.notification
-                span.icon
-                    i.icon-notification
-                    span.number 2
-                    span.text Notification
-        if notLoged == true
-            +link('Profile', 'javascript:;').tabbar__item.profile.header__login
-                i.icon-account
-                span.text Login
-        else
-            if navMobile == 'profile'
-                +link('Chào Chinh', 'profile.html').tabbar__item.profile.active
-                    img(src="https://picsum.photos/id/1/24/24").user_avt
-                    span.text Chinh
-            else
-                +link('Chào Chinh', 'profile.html').tabbar__item.profile
-                    img(src="https://picsum.photos/id/1/24/24").user_avt
-                    span.text Chinh
+  .tabbar__inner
+    if navMobile == 'home'
+      +link('Home', 'index.html').tabbar__item.active
+        i.icon-home-solid
+        span.text Home
+    else
+      +link('Home', 'index.html').tabbar__item
+        i.icon-home-solid
+        span.text Home
+    if navMobile == 'hunty-feed'
+      +link('Hunty feed ', 'hunty-feed.html').tabbar__item.hunty-feed.active
+        i.icon-hunty-feed #[span.path1]#[span.path2]
+        span.text Hunty feed
+    else
+      +link('Hunty feed ', 'hunty-feed.html').tabbar__item.hunty-feed
+        i.icon-hunty-feed #[span.path1]#[span.path2]
+        span.text Hunty feed
+    if navMobile == 'noti'
+      +link('Notification', 'notification.html').tabbar__item.notification.active
+        span.icon
+          i.icon-notification
+          span.number 2
+          span.text Notification
+    else
+      +link('Notification', 'notification.html').tabbar__item.notification
+        span.icon
+          i.icon-notification
+          span.number 2
+          span.text Notification
+    if notLoged == true
+      +link('Profile', 'javascript:;').tabbar__item.profile.header__login
+        i.icon-account
+        span.text Login
+    else
+      if navMobile == 'profile'
+        +link('Chào Chinh', 'profile.html').tabbar__item.profile.active
+          img(src="https://picsum.photos/id/1/24/24").user_avt
+          span.text Chinh
+      else
+        +link('Chào Chinh', 'profile.html').tabbar__item.profile
+          img(src="https://picsum.photos/id/1/24/24").user_avt
+          span.text Chinh

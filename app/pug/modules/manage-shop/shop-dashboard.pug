@@ -1,49 +1,49 @@
 .shop-dashboard
-	.dashboard-heading
-		ul.product-navs
-			li.active: +link('Today', '#!')
-			li: +link('Yesterday', '#!')
-			li: +link('This Week', '#!')
-			li: +link('This Month', '#!')
-			li: +link('This Year', '#!')
-	.dashboard-chart
-		.dashboard-chart__col2
-			.desc
-				.desc-arrow
-					p
-						strong Total Visitors
-					h3.wrap-title 123
-						span Visitor
-					p.w-arrow
-						i.icon-arrow-solid-up
-						span(style="color: #8B929F;") 14 (+9%)
-				.desc-arrow.hidden-lg-up
-					p
-						strong Total Sales
-					h3.wrap-title 123
-						span Visitor
-					p.w-arrow
-						i.icon-arrow-solid-down
-						span(style="color: #8B929F;") 14 (+9%)
-			.thumb
-				img(src="images/chart.jpg", alt="chart")
-		.dashboard-chart__col2.hidden-md-down
-			.desc
-				.desc-arrow
-					p
-						strong Total Sales
-					h3.wrap-title 123
-						span Visitor
-					p.w-arrow
-						i.icon-arrow-solid-down
-						span(style="color: #8B929F;") 14 (+9%)
-			.thumb
-				img(src="images/chart.jpg", alt="chart")
-	.dashboard-seller
-		.header__searchResults
-			.tab_content
-				.pane.tab1.active
-					+heading('Top 10 best-seller products', '', '', 'h3')
-					.searchResults_list
-						-for(var i = 0; i < 4; i++)
-							+searchResult('')
+  .dashboard-heading
+    ul.product-navs
+      li.active: +link('Today', '#!')
+      li: +link('Yesterday', '#!')
+      li: +link('This Week', '#!')
+      li: +link('This Month', '#!')
+      li: +link('This Year', '#!')
+  .dashboard-chart
+    .dashboard-chart__col2
+      .desc
+        .desc-arrow
+          p
+            strong Total Visitors
+          h3.wrap-title 123
+            span Visitor
+          p.w-arrow
+            i.icon-arrow-solid-up
+            span(style="color: #8B929F;") 14 (+9%)
+        .desc-arrow.hidden-lg-up
+          p
+            strong Total Sales
+          h3.wrap-title 123
+            span Visitor
+          p.w-arrow
+            i.icon-arrow-solid-down
+            span(style="color: #8B929F;") 14 (+9%)
+      .thumb
+        img(src="images/chart.jpg", alt="chart")
+    .dashboard-chart__col2.hidden-md-down
+      .desc
+        .desc-arrow
+          p
+            strong Total Sales
+          h3.wrap-title 123
+            span Visitor
+          p.w-arrow
+            i.icon-arrow-solid-down
+            span(style="color: #8B929F;") 14 (+9%)
+      .thumb
+        img(src="images/chart.jpg", alt="chart")
+  .dashboard-seller
+    .header__searchResults
+      .tab_content
+        .pane.tab1.active
+          +heading('Top 10 best-seller products', '', '', 'h3')
+          .searchResults_list
+            -for(var i = 0; i < 4; i++)
+              +searchResult('')

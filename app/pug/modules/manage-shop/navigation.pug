@@ -1,54 +1,54 @@
 if shopActiveTab == 0
-	-activeCls0 = 'active'
+  -activeCls0 = 'active'
 
 if shopActiveTab == 1
-	-activeCls1 = 'active'
+  -activeCls1 = 'active'
 
 if whiteColor == true
-	-navMenuWhite = 'nav-menu--white'
+  -navMenuWhite = 'nav-menu--white'
 if hideHumburger == true
-	-hideHumburgerCls = 'hidden'
+  -hideHumburgerCls = 'hidden'
 
 .shop-nav
-	button.nav-menu(class!=navMenuWhite class!=hideHumburgerCls)
-		i.icon-hamburger.hidden-md-up
-	button.nav-close
-		i.icon-close.hidden-md-up
-	.nav-navigation.clearfix
-		ul
-			li(class!=activeCls0)
-				+link('Home', 'shop-management.html')
-					i.icon-home
-					|	Home
-			li(class!=activeCls1)
-				+link('Order', 'shop-order.html')
-					i.icon-shop-order
-					|	Shop Order
-			li
-				+link('Categories', 'shop-categories.html')
-					i.icon-categories
-					|	Shop Categories
-			li
-				+link('Products', 'product.html')
-					i.icon-product
-					|	Shop Products
-			li
-				+link('Marketing', 'shop-marketing.html')
-					i.icon-marketing
-					|	Shop Marketing
-			li
-				+link('Customers', 'shop-customers.html')
-					i.icon-customers
-					|	Shop Customers
-			li
-				+link('Campaign', 'shop-campaign.html')
-					i.icon-campaign
-					|	Shop Campaign
-			li
-				+link('Reports', 'reports.html')
-					i.icon-report
-					|	Reports
-			li
-				+link('Analysis', 'analysis.html')
-					i.icon-analysis
-					|	Analysis
+  button.nav-menu(class!=navMenuWhite class!=hideHumburgerCls)
+    i.icon-hamburger.hidden-md-up
+  button.nav-close
+    i.icon-close.hidden-md-up
+  .nav-navigation.clearfix
+    ul
+      li(class!=activeCls0)
+        +link('Home', 'shop-management.html')
+          i.icon-home
+          | Home
+      li(class!=activeCls1)
+        +link('Order', 'shop-order.html')
+          i.icon-shop-order
+          | Shop Order
+      li
+        +link('Categories', 'shop-categories.html')
+          i.icon-categories
+          | Shop Categories
+      li
+        +link('Products', 'product.html')
+          i.icon-product
+          | Shop Products
+      li
+        +link('Marketing', 'shop-marketing.html')
+          i.icon-marketing
+          | Shop Marketing
+      li
+        +link('Customers', 'shop-customers.html')
+          i.icon-customers
+          | Shop Customers
+      li
+        +link('Campaign', 'shop-campaign.html')
+          i.icon-campaign
+          | Shop Campaign
+      li
+        +link('Reports', 'reports.html')
+          i.icon-report
+          | Reports
+      li
+        +link('Analysis', 'analysis.html')
+          i.icon-analysis
+          | Analysis

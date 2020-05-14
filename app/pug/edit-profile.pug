@@ -1,14 +1,14 @@
 extends layouts/layout
 
 block vars
-	-title = 'Edit Profile | Hunty'
-	-hidenHeaderOnMobile = true
-	-navMobile = 'profile'
+  -title = 'Edit Profile | Hunty'
+  -hidenHeaderOnMobile = true
+  -navMobile = 'profile'
 
 block main
-	main
-		+goback()
-		.profile
-			.container
-				.profile-edit
-					include modules/profile/account-information
+  main
+    +goback()
+    .profile
+      .container
+        .profile-edit
+          include modules/profile/account-information

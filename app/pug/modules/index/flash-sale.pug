@@ -1,9 +1,9 @@
 section.flashsale_section
-    .container
-        .product_block
-            .product_block__header
-                +heading('FLA<i class="icon-flash-sale"></i>H SALE', 'See All', 'countdown')
-            .flashsale_section__outer
-                .flashsale_section__inner
-                    -for (var i = 0; i < 14; i++)
-                        +product('one-price', 'slideitem')
+  .container
+    .product_block
+      .product_block__header
+        +heading('FLA<i class="icon-flash-sale"></i>H SALE', 'See All', 'countdown')
+      .flashsale_section__outer
+        .flashsale_section__inner
+          -for (var i = 0; i < 14; i++)
+            +product('one-price', 'slideitem')

@@ -1,75 +1,75 @@
 .loginshop
-	.loginshop__inner
-		.loginshop-title
-			h4.hidden-sm-down Thank you for your trust and the choice to accompany Hunty!
-			h4.hidden-sm-down Please fill in your information to create an account to log in to the Sales Center
-			+heading('Create Your Shop').hidden-md-up
-			p.hidden-md-up Please fill in your information to create a new shop
-		.loginshop-form
-			.fieldset
-				+label('shopName', 'Shop’s Name').label
-				.fieldset__column
-					+input({id: 'shopName', placeholder: 'Shop Name'})
-					span.error-message This field is required.
-			.fieldset
-				+label('addressShop', 'Address shop').label
-				.fieldset__column
-					+input({id: 'addressShop', placeholder: 'Address shop'})
-					span.error-message This field is required.
-			.fieldset
-				+label('cityTxt', 'Address shop').label
-				.fieldset__column
-					.fieldset__row
-						.fieldset__col3
-							+input({id: 'cityTxt', placeholder: 'City'})
-						.fieldset__col3
-							+input({id: 'stateTxt', placeholder: 'State'})
-						.fieldset__col3
-							+input({id: 'zipCodeTxt', placeholder: 'Zip Code'})
-					span.error-message This field is required.
-			.fieldset
-				+label('telephoneTxt', 'Telephone').label
-					span Telephone
-				.fieldset__column
-					+input({id: 'telephoneTxt', placeholder: 'Telephone'})
-					span.error-message This field is required.
-			.fieldset
-				+label('emailShopTxt', 'Email').label
-				.fieldset__column
-					+input({id: 'emailShopTxt', placeholder: 'Email', 'type': 'email'})
-					span.error-message This field is required.
-			.fieldset
-				+label('shopLogo', "Shop's Logo").appear.label
-				.fieldset__column
-					.fieldset__column__img
-						span
-							i.icon-photo
-							| Browse
-						input(type="file" id="shopLogo")
-			.fieldset
-				+label('featureImage', 'Featured Image').label
-				.fieldset__column
-					.fieldset__column__img
-						span
-							i.icon-photo
-							| Browse
-						input(type="file" id="featureImage")
-			.fieldset
-				+label('openDateDdl', 'Opening Time').label
-				.fieldset__column
-					.fieldset__row
-						.fieldset__col1
-							+customSelect({id: 'openDateDdl'}, [
-								{value: '', text: 'Please select an option'},
-								{value: '7',text: '7 days / week'},
-								{value: '6', text: '6 days / week'}
-							])
-						.fieldset__col2
-							+input({id: 'openTime', placeholder: 'Open Time'})
-						.fieldset__col2
-							+input({id: 'closeTime', placeholder: 'Close Time'})
-					span.error-message This field is required.
-		button.button Register Seller
-		p By submitting your application, you agree to our #[a(href="term.html") Term & Conditions] <br class="hidden-sm-down" />and confirm that the information you have provided is complete and accurate.
+  .loginshop__inner
+    .loginshop-title
+      h4.hidden-sm-down Thank you for your trust and the choice to accompany Hunty!
+      h4.hidden-sm-down Please fill in your information to create an account to log in to the Sales Center
+      +heading('Create Your Shop').hidden-md-up
+      p.hidden-md-up Please fill in your information to create a new shop
+    .loginshop-form
+      .fieldset
+        +label('shopName', 'Shop’s Name').label
+        .fieldset__column
+          +input({id: 'shopName', placeholder: 'Shop Name'})
+          span.error-message This field is required.
+      .fieldset
+        +label('addressShop', 'Address shop').label
+        .fieldset__column
+          +input({id: 'addressShop', placeholder: 'Address shop'})
+          span.error-message This field is required.
+      .fieldset
+        +label('cityTxt', 'Address shop').label
+        .fieldset__column
+          .fieldset__row
+            .fieldset__col3
+              +input({id: 'cityTxt', placeholder: 'City'})
+            .fieldset__col3
+              +input({id: 'stateTxt', placeholder: 'State'})
+            .fieldset__col3
+              +input({id: 'zipCodeTxt', placeholder: 'Zip Code'})
+          span.error-message This field is required.
+      .fieldset
+        +label('telephoneTxt', 'Telephone').label
+          span Telephone
+        .fieldset__column
+          +input({id: 'telephoneTxt', placeholder: 'Telephone'})
+          span.error-message This field is required.
+      .fieldset
+        +label('emailShopTxt', 'Email').label
+        .fieldset__column
+          +input({id: 'emailShopTxt', placeholder: 'Email', 'type': 'email'})
+          span.error-message This field is required.
+      .fieldset
+        +label('shopLogo', "Shop's Logo").appear.label
+        .fieldset__column
+          .fieldset__column__img
+            span
+              i.icon-photo
+              | Browse
+            input(type="file" id="shopLogo")
+      .fieldset
+        +label('featureImage', 'Featured Image').label
+        .fieldset__column
+          .fieldset__column__img
+            span
+              i.icon-photo
+              | Browse
+            input(type="file" id="featureImage")
+      .fieldset
+        +label('openDateDdl', 'Opening Time').label
+        .fieldset__column
+          .fieldset__row
+            .fieldset__col1
+              +customSelect({id: 'openDateDdl'}, [
+                {value: '', text: 'Please select an option'},
+                {value: '7',text: '7 days / week'},
+                {value: '6', text: '6 days / week'}
+              ])
+            .fieldset__col2
+              +input({id: 'openTime', placeholder: 'Open Time'})
+            .fieldset__col2
+              +input({id: 'closeTime', placeholder: 'Close Time'})
+          span.error-message This field is required.
+    button.button Register Seller
+    p By submitting your application, you agree to our #[a(href="term.html") Term & Conditions] <br class="hidden-sm-down" />and confirm that the information you have provided is complete and accurate.
 
 

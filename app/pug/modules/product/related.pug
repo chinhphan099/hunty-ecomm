@@ -1,23 +1,23 @@
 section.viewed_section
-    .container
-        .product_block
-            +heading('Related Product', 'View All')
-            .swiper-container(data-swiper='{"type": "productoneline"}')
-                .swiper-wrapper
-                    -for (var i = 0; i < 15; i++)
-                        .swiper-slide
-                            +product('one-price', 'slideitem')
-                .swiper-button.swiper-button-prev
-                .swiper-button.swiper-button-next
+  .container
+    .product_block
+      +heading('Related Product', 'View All')
+      .swiper-container(data-swiper='{"type": "productoneline"}')
+        .swiper-wrapper
+          -for (var i = 0; i < 15; i++)
+            .swiper-slide
+              +product('one-price', 'slideitem')
+        .swiper-button.swiper-button-prev
+        .swiper-button.swiper-button-next
 
 section.viewed_section
-    .container
-        .product_block
-            +heading('Similar Product', 'View All')
-            .swiper-container(data-swiper='{"type": "productoneline"}')
-                .swiper-wrapper
-                    -for (var i = 0; i < 15; i++)
-                        .swiper-slide
-                            +product('one-price', 'slideitem')
-                .swiper-button.swiper-button-prev
-                .swiper-button.swiper-button-next
+  .container
+    .product_block
+      +heading('Similar Product', 'View All')
+      .swiper-container(data-swiper='{"type": "productoneline"}')
+        .swiper-wrapper
+          -for (var i = 0; i < 15; i++)
+            .swiper-slide
+              +product('one-price', 'slideitem')
+        .swiper-button.swiper-button-prev
+        .swiper-button.swiper-button-next

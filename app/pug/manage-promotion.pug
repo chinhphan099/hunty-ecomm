@@ -1,17 +1,17 @@
 extends layouts/manage-shipping
 
 block vars
-	-title = 'Manage Promotion | Hunty'
-	-shopActiveTab = 0
-	-hideHumburger = true
+  -title = 'Manage Promotion | Hunty'
+  -shopActiveTab = 0
+  -hideHumburger = true
 
 block main
-	main
-		+goback()
-		.shop-wrap
-			.shop-wrap__inner
-				.shop-wrap__left
-					include modules/manage-shop/navigation
-				.shop-wrap__right
-					include modules/manage-shop/promotion-heading
-					include modules/manage-shop/manage-promotion
+  main
+    +goback()
+    .shop-wrap
+      .shop-wrap__inner
+        .shop-wrap__left
+          include modules/manage-shop/navigation
+        .shop-wrap__right
+          include modules/manage-shop/promotion-heading
+          include modules/manage-shop/manage-promotion

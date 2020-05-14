@@ -1,17 +1,17 @@
 extends layouts/layout
 
 block vars
-	-title = 'My Followed | Hunty'
-	-hidenHeaderOnMobile = true
-	-profileIndex = 4
-	-navMobile = 'profile'
+  -title = 'My Followed | Hunty'
+  -hidenHeaderOnMobile = true
+  -profileIndex = 4
+  -navMobile = 'profile'
 
 block main
-	main
-		+goback()
-		.profile
-			.container
-				+breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { title: 'Account', href: '#', text: 'Account' }, { text: 'Your Name' }, ]).hidden-sm-down
-				.profile-history
-					include modules/profile/account-sidebar
-					include modules/profile/my-followed
+  main
+    +goback()
+    .profile
+      .container
+        +breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { title: 'Account', href: '#', text: 'Account' }, { text: 'Your Name' }, ]).hidden-sm-down
+        .profile-history
+          include modules/profile/account-sidebar
+          include modules/profile/my-followed

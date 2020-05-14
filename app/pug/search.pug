@@ -1,31 +1,31 @@
 extends layouts/layout
 
 block vars
-	-title = 'Search | Hunty'
+  -title = 'Search | Hunty'
 
 block main
-	main.search_results
-		.container
-			+breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { title: 'Category', href: 'index.html', text: 'Category' }, { text: 'Product Name' }, ])
-			.product-listing-wrap
-				.filter
-					.filter__inner
-						.results
-							+heading('Giay Vans <span class="count">(12 results)</span>')
-						.product-type
-							.product-type__list
-								.product-type__selected.hidden-md-up
-									span.sort-by Related
-									i.icon-caret-down
-								ul.product-navs
-									li.active: +link('Related', '#')
-									li: +link('Best Seller', '#')
-									li: +link('Best Price', '#')
-									li: +link('About to Expired', '#')
+  main.search_results
+    .container
+      +breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { title: 'Category', href: 'index.html', text: 'Category' }, { text: 'Product Name' }, ])
+      .product-listing-wrap
+        .filter
+          .filter__inner
+            .results
+              +heading('Giay Vans <span class="count">(12 results)</span>')
+            .product-type
+              .product-type__list
+                .product-type__selected.hidden-md-up
+                  span.sort-by Related
+                  i.icon-caret-down
+                ul.product-navs
+                  li.active: +link('Related', '#')
+                  li: +link('Best Seller', '#')
+                  li: +link('Best Price', '#')
+                  li: +link('About to Expired', '#')
 
-				.product-listing
-					-for (var i = 0; i < 14; i++)
-						+product('one-price')
+        .product-listing
+          -for (var i = 0; i < 14; i++)
+            +product('one-price')
 
-				include modules/index/promotion_block
-				+pagination()
+        include modules/index/promotion_block
+        +pagination()

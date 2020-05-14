@@ -6,7 +6,7 @@ block vars
 	-hidenFooterOnMobile = true
 
 block main
-	main.shop 
+	main.shop
 		+goback().goback--white
 		.container
 			+breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { title: ' Shop', href: ' shop.html', text: ' Shop' }, { text: 'Lotte Mart' }, ]).hidden-sm-down
@@ -19,5 +19,5 @@ block main
 				.primary
 					include modules/global/product-sale-unsale-all
 				.sidebar.hidden-sm-down
-					.heading: h2.heading__text  Promotions
+					+heading('Promotions')
 					include modules/index/banner_promo

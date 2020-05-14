@@ -1,66 +1,66 @@
 .ordershop
-	.ordershop__head
-		p Shop Order
-		i.icon-angle-right
-		+heading('Order Info')
-	.ordershop__table
-		.table-wrap
-			table.table-wrap__order
-				tr
-					th
-						.fieldset
-							.checkbox
-								input(type="checkbox" name="" id="" value="link-cb" checked="checked")
-								i.icon-check
-					th Order
-					th Date
-					th Status
-					th Total
-					th Action
-				tr
-					td
-						.fieldset: +checkbox({id: 'orderid_000' + i, checked: 'checked'})
-					td #0001 Nguyễn Văn A
-					td 04/17/2020
-					td.color-processing Processing
-					td $124
-					td
-						.ordershop__action
-							button
-								i.icon-preview
-							button
-								i.icon-edit
-							button
-								i.icon-delete
-				tr
-					td
-						.fieldset: +checkbox({id: 'orderid_000' + i, checked: 'checked'})
-					td #0002 Nguyễn Văn A
-					td 04/17/2020
-					td.color-onhold Onhold
-					td $124
-					td
-						.ordershop__action
-							button
-								i.icon-preview
-							button
-								i.icon-edit
-							button
-								i.icon-delete
-				-for(var i = 3; i <= 10; i++)
-					tr
-						td
-							.fieldset: +checkbox({id: 'orderid_000' + i, checked: 'checked'})
-						td!='#000'+i + " Nguyễn Văn A"
-						td 04/17/2020
-						td completed
-						td $124
-						td
-							.ordershop__action
-								button
-									i.icon-preview
-								button
-									i.icon-edit
-								button
-									i.icon-delete
-		+pagination()
+  .ordershop__head
+    p Shop Order
+    i.icon-angle-right
+    +heading('Order Info')
+  .ordershop__table
+    .table-wrap
+      table.table-wrap__order
+        tr
+          th
+            .fieldset
+              .checkbox
+                input(type="checkbox" name="" id="" value="link-cb" checked="checked")
+                i.icon-check
+          th Order
+          th Date
+          th Status
+          th Total
+          th Action
+        tr
+          td
+            .fieldset: +checkbox({id: 'orderid_000' + i, checked: 'checked'})
+          td #0001 Nguyễn Văn A
+          td 04/17/2020
+          td.color-processing Processing
+          td $124
+          td
+            .ordershop__action
+              button
+                i.icon-preview
+              button
+                i.icon-edit
+              button
+                i.icon-delete
+        tr
+          td
+            .fieldset: +checkbox({id: 'orderid_000' + i, checked: 'checked'})
+          td #0002 Nguyễn Văn A
+          td 04/17/2020
+          td.color-onhold Onhold
+          td $124
+          td
+            .ordershop__action
+              button
+                i.icon-preview
+              button
+                i.icon-edit
+              button
+                i.icon-delete
+        -for(var i = 3; i <= 10; i++)
+          tr
+            td
+              .fieldset: +checkbox({id: 'orderid_000' + i, checked: 'checked'})
+            td!='#000'+i + " Nguyễn Văn A"
+            td 04/17/2020
+            td completed
+            td $124
+            td
+              .ordershop__action
+                button
+                  i.icon-preview
+                button
+                  i.icon-edit
+                button
+                  i.icon-delete
+    +pagination()
