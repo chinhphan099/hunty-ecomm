@@ -69,7 +69,6 @@
         margin-right: 6px;
         color: #fff;
       }
-      .icon-tracking,
       .icon-notification {
         font-size: 28px;
       }
@@ -187,34 +186,6 @@
       align-items: center;
     }
     &__right {
-      display: flex;
-      align-items: center;
-      & > div {
-        margin-left: 20px;
-      }
-    }
-    &__shop_management {
-      .icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 35px;
-        height: 35px;
-        margin-right: 10px;
-        border-radius: 50%;
-        background-color: #fff;
-        i {
-          color: #FE2070;
-          font-size: 18px;
-          margin-right: 0;
-        }
-      }
-    }
-    &__hunty_feed {
-      i {
-        .path1:before {color: #fff}
-        .path2:before {color: #ffd100}
-      }
     }
     &__mini_cart {
       position: relative;
@@ -293,9 +264,6 @@
   }
   @media(min-width: 992px) {
     &__right {
-      & > div {
-        margin-left: 40px;
-      }
     }
   }
   @media(min-width: 1200px) {
@@ -367,8 +335,7 @@
       right: 0;
       z-index: 10;
     }
-    &__btn-back,
-    &__gro-up {
+    &__btn-back {
       width: 30px;
       .icon-gro-up {
         font-size: 24px;
@@ -456,7 +423,9 @@
   }
   li {
     &.active {
-      span {color: #FFD100;}
+      span {
+        color: @color14;
+      }
     }
     span {
       position: relative;

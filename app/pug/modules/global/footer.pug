@@ -74,14 +74,14 @@ nav.tabbar.hidden-md-up(class!=hidenFooterOnMobileCls)
       +link('Home', 'index.html').tabbar__item
         i.icon-home-solid
         span.text Home
-    if navMobile == 'hunty-feed'
-      +link('Hunty feed ', 'hunty-feed.html').tabbar__item.hunty-feed.active
-        i.icon-hunty-feed #[span.path1]#[span.path2]
-        span.text Hunty feed
+    if navMobile == 'cart'
+      +link('Cart', 'cart.html').tabbar__item.active
+        i.icon-cart #[span.path1]#[span.path2]
+        span.text Cart
     else
-      +link('Hunty feed ', 'hunty-feed.html').tabbar__item.hunty-feed
-        i.icon-hunty-feed #[span.path1]#[span.path2]
-        span.text Hunty feed
+      +link('Cart', 'cart.html').tabbar__item
+        i.icon-cart #[span.path1]#[span.path2]
+        span.text Cart
     if navMobile == 'noti'
       +link('Notification', 'notification.html').tabbar__item.notification.active
         span.icon

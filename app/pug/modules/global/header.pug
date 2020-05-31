@@ -5,12 +5,13 @@ header.header(class=hidenHeaderOnMobileCls)
   .header__inner
     .container
       .header__wrap
-        .header__logo.hidden-sm-down: +link('Hunty', 'index.html'): +img('logo.png', 'Hunty')
+        .header__logo.text-center
+          +link('Hunty', 'index.html'): +img('logo.png', 'Hunty')(style="width: 120px;")
+          +link('Search', 'javascript:;').header__search-btn.hidden-md-up: i.icon-search
         .header__searchForm
           .header__searchForm-inner
             button.header__btn-back.hidden-md-up: i.icon-arrow-left
             +customInput({id: 'search_btn', type: 'button', text: '<span>Tìm kiếm</span>', iconClass: 'icon-search'}, {id: "txt_search", placeholder: 'Search for Brand, Promotion... '}, {iconCls: 'icon-search'})
-            button.header__gro-up.hidden-md-up: i.icon-gro-up
           .header__search-auto-complete
             .header__searchAutocomplete__list
               -for(var i = 0; i < 3; i++)
@@ -32,10 +33,15 @@ header.header(class=hidenHeaderOnMobileCls)
                 .pane.tab2
 
       .header__links.hidden-sm-down
-        .header__tracking
-          +link('Tracking order', 'my-order.html').uppercase
-            i.icon-tracking
-            span.text Tracking order
+        .header__mini_cart
+          .header__mini_cart_title
+            +link('Cart ', 'cart.html').cart-link.uppercase
+              span.header__mini_cart_count
+                i.icon-cart
+                span 2
+              span Cart
+          .header__mini_cart_notice
+            p Thêm vào giỏ hàng thành công!
         .header__notification
           +link('Notification', 'notification.html').uppercase
             span.icon
@@ -126,20 +132,4 @@ header.header(class=hidenHeaderOnMobileCls)
                 img(src="https://picsum.photos/100/120", alt="Product title")
 
       .header__right
-        .header__shop_management
-          +link('Shop Management ', 'shop-management.html').uppercase
-            span.icon: i.icon-view-shop
-            span Shop Management
-        .header__hunty_feed
-          +link('Hunty feed ', 'hunty-feed.html').uppercase
-            i.icon-hunty-feed #[span.path1]#[span.path2]
-            span Hunty feed
-        .header__mini_cart
-          .header__mini_cart_title
-            +link('Cart ', 'cart.html').cart-link.uppercase
-              span.header__mini_cart_count
-                i.icon-cart
-                span 2
-              span Cart
-          .header__mini_cart_notice
-            p Thêm vào giỏ hàng thành công!
+        | Right content

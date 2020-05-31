@@ -2,19 +2,18 @@ extends layouts/layout
 
 block vars
 	-title = 'Notification | Hunty'
-	-hidenHeaderOnMobile = true
 	-navMobile = 'noti'
 
 block main
 	main.notification.pusher_b70
 		.container
-			include modules/global/header_mb
-			+breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { text: 'Notification' }, ]).hidden-sm-down
+			//- include modules/global/header_mb
+			+breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { text: 'Notification' }, ])
 			.row_wrap
 				.primary
 					+heading({text: 'Your Notification', tag: 'h1'}).hidden-sm-down.heading--border
 					+notification()
-					+pagination().hidden-sm-down
+					+pagination()
 
 				.sidebar.hidden-sm-down
 					+heading({text: 'Promotions'})
