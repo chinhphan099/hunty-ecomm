@@ -16,9 +16,10 @@
   const defaults = {
     banner: {
       slidesPerView: 1,
-      scrollbar: {
-        el: '.swiper-scrollbar',
-        draggable: true
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'progressbar',
       },
       navigation: {
         nextEl: '.swiper-button-next',
@@ -35,29 +36,42 @@
       }
     },
     promotion: {
-      slidesPerView: 2,
-      spaceBetween: 10,
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    },
+    tworow: {
+      slidesPerView: 'auto',
+      slidesPerColumn: 2,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    },
+    categoryicons: {
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true
+      },
+      slidesPerView: 'auto',
+      slidesPerGroup: 2,
+      slidesPerColumn: 2,
+      spaceBetween: 15,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
       breakpoints: {
         992: {
-          slidesPerView: 4,
-          spaceBetween: 20
-        },
-        576: {
-          slidesPerView: 3,
-          spaceBetween: 20
+          spaceBetween: 20,
+          slidesPerView: 'auto',
+          slidesPerGroup: 2,
+          slidesPerColumn: 2
         }
-      }
-    },
-    tworow: {
-      slidesPerView: 2,
-      slidesPerColumn: 2,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
       }
     }
   };
@@ -85,10 +99,12 @@
       if (this.options.initUnder) {
         if (window.innerWidth < this.options.initUnder) {
           this.initialize();
-        } else {
+        }
+        else {
           isNoSlide.apply(this);
         }
-      } else {
+      }
+      else {
         this.initialize();
       }
       this.listener();
@@ -122,19 +138,21 @@
     initialize: function() {
       if (this.element.querySelectorAll('img').length) {
         this.checkImgLoad();
-      } else {
+      }
+      else {
         this.initSlider();
       }
     },
     checkImgLoad: function() {
       const fakeSrc = this.element.querySelector('img').src;
       const objImg = new Image();
-      objImg.src = fakeSrc;
-      if (objImg.complete && objImg.naturalHeight !== 0) {
+      objImg.onload = () => {
         this.initSlider();
-      }
+      };
+      objImg.src = fakeSrc;
     },
     initSlider: function() {
+      console.log(this.options);
       let finalOptions = this.options[this.options.type];
       isSlide.apply(this);
       finalOptions = Object.assign(finalOptions, {
@@ -156,7 +174,7 @@
         imgVisible = this.element.querySelector('.swiper-slide-active .img-view'),
         posTop = 0;
 
-      if (this.options.setPositionArrows) {
+      if (!!imgVisible && this.options.setPositionArrows) {
         const maxHeight = imgVisible.clientHeight;
         posTop = (maxHeight / 2);
         Array.prototype.slice.call(arrowControls).forEach(arrowControl => {

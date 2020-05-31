@@ -8,6 +8,89 @@
 /* Slider */
 @import "plugins/slider.less";
 @import "plugins/swiper.less";
+
+.flashsale_section {
+  .swiper-wrapper {
+    align-content: flex-start;
+  }
+  .swiper-container {
+    height: 520px;
+  }
+  .swiper-slide {
+    height: calc(~"(100% - 20px) / 2");
+  }
+}
+.categories {
+  .swiper-wrapper {
+    align-content: flex-start;
+    flex-direction: column;
+  }
+  .swiper-container {
+    height: 210px;
+  }
+  .swiper-slide {
+    height: calc(~"(100% - 20px) / 2");
+  }
+  @media (min-width: 768px) {
+    .swiper-container {
+      height: 220px;
+    }
+  }
+  @media (min-width: 992px) {
+    .swiper-container {
+      height: 320px;
+    }
+  }
+}
+//! Product List
+.categories,
+.product_block,
+.promotion_block {
+  .swiper-container {
+    padding: 0 15px;
+    margin: 0 -15px;
+  }
+  @media (min-width: 768px) {
+    .swiper-container {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+.swiper-slide {
+  .categories & {
+    width: auto;
+  }
+  .product_block & {
+    width: auto;
+  }
+  .promotion_block & {
+    width: auto;
+  }
+}
+.swiper-container-horizontal > .swiper-scrollbar {
+  left: 0;
+  width: 100%;
+}
+.swiper-container-horizontal > .swiper-pagination-progressbar,
+.swiper-container-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+  top: auto;
+  bottom: 0;
+}
+.swiper-button {
+  .size(40px);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, .7);
+  transition: all 125ms ease;
+  &:hover {
+    background-color: @yellow;
+  }
+  &:after {
+    color: @color13;
+    font-size: 20px;
+  }
+}
+
 /* Fancybox */
 @import "plugins/fancybox.less";
 /* Zoomer */

@@ -1,18 +1,8 @@
-section.cs_block
+section.services
   .container
-    .cs_block__list
-      .cs_block__item
-        span.icon: i.icon-support
-        h4 Hỗ Trợ Dịch Vụ Cho Các Shop
-      .cs_block__item
-        span.icon: i.icon-customer
-        h4 Mang lại khách hàng tiềm năng shop
-      .cs_block__item
-        span.icon: i.icon-assurance
-        h4 Thật sự an tâm khi mua hàng
-      .cs_block__item
-        span.icon: i.icon-eco
-        h4 Eco System thương mại điện tử
-      .cs_block__item
-        span.icon: i.icon-sale
-        h4 Chủ động nhận mã giảm giá
+    .services__list
+      -for(var i = 1; i <= 4; i++)
+        .services__item
+          span.services__thumb
+            +img('service-' + i + '.png')
+          span.services__text Giao hàng miễn phí cho DDH từ 300km tại nội thành HCM

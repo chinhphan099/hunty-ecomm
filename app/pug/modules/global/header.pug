@@ -6,15 +6,6 @@ header.header(class=hidenHeaderOnMobileCls)
     .container
       .header__wrap
         .header__logo.hidden-sm-down: +link('Hunty', 'index.html'): +img('logo.png', 'Hunty')
-        .header__location
-          i.icon-location.hidden-md-up
-          +customSelect({id: 'select_id'}, [
-            {value: 'hcm', text: 'Hồ Chí Minh '},
-            {value: 'hn', text: 'Hà Nội'},
-            {value: 'th', text: 'Thanh Hoá'}
-          ])
-          button.header__search-btn.hidden-md-up: i.icon-search
-
         .header__searchForm
           .header__searchForm-inner
             button.header__btn-back.hidden-md-up: i.icon-arrow-left

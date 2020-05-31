@@ -10,7 +10,6 @@ block main
     include modules/index/banner
     include modules/index/category-icons
     include modules/index/flash-sale
-    include modules/index/banner_mb
     section.promotion_section
       .container
         +heading({text: 'Recommended Promotion', subText: 'See All', url: 'promotion.html'})
@@ -22,7 +21,7 @@ block main
         +heading({text: 'Promotion Near You', subText: 'See All', url: 'promotion.html'})
       .promotion_section__inner
         .container
-          include modules/index/promotion_near_you
+          include modules/index/promotion_block
 
     include modules/index/viewed-product
     //- include modules/index/categories_block
