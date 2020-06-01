@@ -5,54 +5,55 @@ header.header(class=hidenHeaderOnMobileCls)
   .header__inner
     .container
       .header__wrap
-        .header__logo.text-center
+        +link('Category Menu', 'javascript:;').header__hamburger.hidden-md-up: i.icon-hamburger
+        .header__logo
           +link('Hunty', 'index.html'): +img('logo.png', 'Hunty')(style="width: 120px;")
-          +link('Search', 'javascript:;').header__search-btn.hidden-md-up: i.icon-search
-        .header__searchForm
-          .header__searchForm-inner
-            button.header__btn-back.hidden-md-up: i.icon-arrow-left
-            +customInput({id: 'search_btn', type: 'button', text: '<span>Tìm kiếm</span>', iconClass: 'icon-search'}, {id: "txt_search", placeholder: 'Search for Brand, Promotion... '}, {iconCls: 'icon-search'})
-          .header__search-auto-complete
-            .header__searchAutocomplete__list
-              -for(var i = 0; i < 3; i++)
-                +link('Search Content').result-item
-            .header__searchResults
-              ul.tabs
-                li.active#tab1: +link('Promotion', 'promotion.html')
-                li#tab2: +link('Map', '#')
-              .tab_content
-                .pane.tab1.active
-                  +heading({text: 'Lastest Search', tag: 'h3'})
-                  .searchResults_list
-                    -for(var i = 0; i < 4; i++)
-                      +searchResult('')
-                  +heading({text: 'Hot Trends', tag: 'h3'})
-                  .searchResults_list
-                    -for(var i = 0; i < 4; i++)
-                      +searchResult('')
-                .pane.tab2
+        +link('Search', 'javascript:;').header__search-btn.hidden-md-up: i.icon-search
+      .header__searchForm
+        .header__searchForm-inner
+          button.header__btn-back.hidden-md-up: i.icon-arrow-left
+          +customInput({id: 'search_btn', type: 'button', text: '<span>Tìm kiếm</span>', iconClass: 'icon-search'}, {id: "txt_search", placeholder: 'Search for Brand, Promotion... '}, {iconCls: 'icon-search'})
+        .header__search-auto-complete
+          .header__searchAutocomplete__list
+            -for(var i = 0; i < 3; i++)
+              +link('Search Content').result-item
+          .header__searchResults
+            ul.tabs
+              li.active#tab1: +link('Promotion', 'promotion.html')
+              li#tab2: +link('Map', '#')
+            .tab_content
+              .pane.tab1.active
+                +heading({text: 'Lastest Search', tag: 'h3'})
+                .searchResults_list
+                  -for(var i = 0; i < 4; i++)
+                    +searchResult('')
+                +heading({text: 'Hot Trends', tag: 'h3'})
+                .searchResults_list
+                  -for(var i = 0; i < 4; i++)
+                    +searchResult('')
+              .pane.tab2
 
       .header__links.hidden-sm-down
         .header__mini_cart
           .header__mini_cart_title
-            +link('Cart ', 'cart.html').cart-link.uppercase
+            +link('Cart ', 'cart.html').header__cart_link.uppercase
               span.header__mini_cart_count
                 i.icon-cart
                 span 2
-              span Cart
+              span Giỏ Hàng
           .header__mini_cart_notice
             p Thêm vào giỏ hàng thành công!
         .header__notification
-          +link('Notification', 'notification.html').uppercase
+          +link('Thông Báo', 'notification.html').uppercase
             span.icon
               i.icon-notification
               span.number 2
-            span.text Notification
+            span.text Thông Báo
         if notLoged == true
           .header__login
-            +link('Login', 'javascript:;').uppercase
+            +link('Đăng Nhập', 'javascript:;').uppercase
               i.icon-account
-              span.text Login
+              span.text Đăng Nhập
         else
           .header__loged
             +link('Chào Chinh', 'profile.html').uppercase
@@ -63,9 +64,9 @@ header.header(class=hidenHeaderOnMobileCls)
     .container
       .header__left
         nav.nav
-          +link('danh mục sản phẩm ', '#').nav__category__toggle.uppercase
+          +link('DANH MỤC', 'javascript:;').nav__category_toggle.uppercase
             i.icon-hamburger
-            span Danh mục sản phẩm
+            span DANH MỤC
           ul.nav__navbar
             +items-2([
               {liClass: 'has-sub', title: 'Introduce', href: '#', subClass: 'sub_menu', subList: [
@@ -113,23 +114,28 @@ header.header(class=hidenHeaderOnMobileCls)
               {title: 'Term & Conditions', href: '#'},
               {title: 'Contact', href: '#'}
             ])
-        .product__recently
-          +link('danh mục sản phẩm ', 'product.html').product__recently__title.uppercase
-            i.icon-caret-down
-            span Sản phẩm đã xem
-          ul.product__recently__list
-            li
-              +link('Product title')
-                img(src="https://picsum.photos/100/120", alt="Product title")
-            li
-              +link('Product title')
-                img(src="https://picsum.photos/100/120", alt="Product title")
-            li
-              +link('Product title')
-                img(src="https://picsum.photos/100/120", alt="Product title")
-            li
-              +link('Product title')
-                img(src="https://picsum.photos/100/120", alt="Product title")
 
       .header__right
-        | Right content
+        .header__quick_link
+          ul
+            li: +link('Khuyến Mãi')
+            li: +link('Sản phẩm nổi bật')
+            li: +link('Sản phẩm mới')
+            li.product__recently
+              +link('danh mục sản phẩm ', 'product.html').product__recently__title
+                i.icon-caret-down
+                span Sản phẩm đã xem
+              ul.product__recently__list
+                li
+                  +link('Product title', 'product.html')
+                    img(src="https://picsum.photos/100/120", alt="Product title")
+                li
+                  +link('Product title', 'product.html')
+                    img(src="https://picsum.photos/100/120", alt="Product title")
+                li
+                  +link('Product title', 'product.html')
+                    img(src="https://picsum.photos/100/120", alt="Product title")
+                li
+                  +link('Product title', 'product.html')
+                    img(src="https://picsum.photos/100/120", alt="Product title")
+        include ../index/banner
