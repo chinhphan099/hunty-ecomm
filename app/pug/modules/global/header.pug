@@ -32,7 +32,6 @@ header.header(class=hidenHeaderOnMobileCls)
                   -for(var i = 0; i < 4; i++)
                     +searchResult('')
               .pane.tab2
-
       .header__links.hidden-sm-down
         .header__mini_cart
           .header__mini_cart_title
@@ -60,82 +59,64 @@ header.header(class=hidenHeaderOnMobileCls)
               img(src="https://picsum.photos/24/24").user_avt
               span.text Chinh
 
-  .header__main.hidden-sm-down
+  .header__menu
     .container
-      .header__left
-        nav.nav
-          +link('DANH MỤC', 'javascript:;').nav__category_toggle.uppercase
-            i.icon-hamburger
-            span DANH MỤC
-          ul.nav__navbar
-            +items-2([
-              {liClass: 'has-sub', title: 'Introduce', href: '#', subClass: 'sub_menu', subList: [
-                {title: 'Recruitment', href: '#'},
-                {title: 'Recruitment', href: '#'},
-                {title: 'Recruitment', href: '#'},
-                {title: 'Recruitment', href: '#'},
-                {title: 'Recruitment', href: '#'},
-                {title: 'Recruitment', href: '#'},
-                {title: 'Recruitment', href: '#'},
-                {title: 'Recruitment', href: '#'},
-                {title: 'Recruitment', href: '#'},
-                {title: 'Recruitment', href: '#'},
-                {title: 'Recruitment', href: '#'},
-                {title: 'Recruitment', href: '#'},
-                {title: 'Recruitment', href: '#'},
-                {title: 'Term & Conditions', href: '#', subClass: 'sub_menu', subList: [
+      .navigation
+        .inner
+          ul.navigation__list
+            li
+              +link('DANH MỤC', 'javascript:;').navigation__cate
+                i.icon-hamburger
+                span DANH MỤC
+              ul.navigation__cate_items
+                +items-2([
+                  {
+                    liClass: 'has-sub', title: 'Introduce', linkClass: 'link-cls', href: '#', subClass: 'sub_menu', subList: [
+                      {title: 'Recruitment', href: '#'},
+                      {title: 'Recruitment', href: '#'},
+                      {title: 'Recruitment', href: '#'},
+                      {title: 'Recruitment', href: '#'},
+                      {title: 'Recruitment', href: '#'},
+                      {title: 'Recruitment', href: '#'},
+                      {title: 'Recruitment', href: '#'},
+                      {title: 'Recruitment', href: '#'},
+                      {title: 'Recruitment', href: '#'},
+                      {title: 'Recruitment', href: '#'},
+                      {title: 'Recruitment', href: '#'},
+                      {title: 'Recruitment', href: '#'},
+                      {title: 'Recruitment', href: '#'},
+                      {title: 'Term & Conditions', href: '#', subClass: 'sub_menu', subList: [
+                        {title: 'Recruitment', href: '#'},
+                        {title: 'Term & Conditions', href: '#'},
+                        {title: 'Recruitment', href: '#'},
+                        {title: 'Term & Conditions', href: '#'},
+                        {title: 'Recruitment', href: '#'},
+                        {title: 'Term & Conditions', href: '#'},
+                        {title: 'Recruitment', href: '#'},
+                        {title: 'Term & Conditions', href: '#'},
+                        {title: 'Recruitment', href: '#'},
+                        {title: 'Term & Conditions', href: '#'},
+                        {title: 'Recruitment', href: '#'},
+                        {title: 'Term & Conditions', href: '#'}
+                      ]}
+                    ]
+                  },
                   {title: 'Recruitment', href: '#'},
                   {title: 'Term & Conditions', href: '#'},
+                  {title: 'Contact', href: '#'},
                   {title: 'Recruitment', href: '#'},
                   {title: 'Term & Conditions', href: '#'},
+                  {title: 'Contact', href: '#'},
                   {title: 'Recruitment', href: '#'},
                   {title: 'Term & Conditions', href: '#'},
+                  {title: 'Contact', href: '#'},
                   {title: 'Recruitment', href: '#'},
                   {title: 'Term & Conditions', href: '#'},
+                  {title: 'Contact', href: '#'},
                   {title: 'Recruitment', href: '#'},
                   {title: 'Term & Conditions', href: '#'},
-                  {title: 'Recruitment', href: '#'},
-                  {title: 'Term & Conditions', href: '#'}
-                ]}
-              ]},
-              {title: 'Recruitment', href: '#'},
-              {title: 'Term & Conditions', href: '#'},
-              {title: 'Contact', href: '#'},
-              {title: 'Recruitment', href: '#'},
-              {title: 'Term & Conditions', href: '#'},
-              {title: 'Contact', href: '#'},
-              {title: 'Recruitment', href: '#'},
-              {title: 'Term & Conditions', href: '#'},
-              {title: 'Contact', href: '#'},
-              {title: 'Recruitment', href: '#'},
-              {title: 'Term & Conditions', href: '#'},
-              {title: 'Contact', href: '#'},
-              {title: 'Recruitment', href: '#'},
-              {title: 'Term & Conditions', href: '#'},
-              {title: 'Contact', href: '#'}
-            ])
-
-      .header__right
-        .header__quick_link
-          ul
+                  {title: 'Contact', href: '#'}
+                ])
             li: +link('Khuyến Mãi')
             li: +link('Sản phẩm nổi bật')
             li: +link('Sản phẩm mới')
-            li.product__recently
-              +link('danh mục sản phẩm ', 'product.html').product__recently__title
-                i.icon-caret-down
-                span Sản phẩm đã xem
-              ul.product__recently__list
-                li
-                  +link('Product title', 'product.html')
-                    img(src="https://picsum.photos/100/120", alt="Product title")
-                li
-                  +link('Product title', 'product.html')
-                    img(src="https://picsum.photos/100/120", alt="Product title")
-                li
-                  +link('Product title', 'product.html')
-                    img(src="https://picsum.photos/100/120", alt="Product title")
-                li
-                  +link('Product title', 'product.html')
-                    img(src="https://picsum.photos/100/120", alt="Product title")
-        include ../index/banner
