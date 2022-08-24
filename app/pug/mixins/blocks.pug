@@ -51,7 +51,7 @@ mixin product(type, slideitem)
 
   -imgsrc = 'images/upload/product-1.png'
   if type == "two-price-cart" || type == "two-price-cart-unsale"
-    -imgsrc = 'https://picsum.photos/140/170'
+    -imgsrc = 'images/upload/img-140-170.jpeg'
 
   .product&attributes(attributes)
     .thumb
@@ -97,7 +97,7 @@ mixin promotion(slideitem)
     -imgcls = 'img-view'
   .promotion
     .promotion__thumb
-      a(href="promotion.html"): img(src="https://picsum.photos/500/250?grayscale" alt="Shop name" class!=imgcls)
+      a(href="promotion.html"): img(src="images/upload/promotion_banner.jpeg" alt="Shop name" class!=imgcls)
       .promotion__shop
         span.promotion__avt
           a(href="promotion.html"): img(src="images/upload/shop.png" alt="Shop name")
@@ -113,7 +113,7 @@ mixin cartItem(index)
       i.icon-close-outline
     .thumb
       a(href="product.html")
-        img(src="https://picsum.photos/140/170", alt="Hunty Product Name")
+        img(src="images/upload/img-140-170.jpeg", alt="Hunty Product Name")
     .content
       h3.cart__name
         a(href="product.html") Lorem ipsum dolor sit amet
@@ -130,7 +130,7 @@ mixin cartItem1()
   .cart__item&attributes(attributes)
     .thumb
       a(href="product.html")
-        img(src="https://picsum.photos/140/170", alt="Hunty Product Name")
+        img(src="images/upload/img-140-170.jpeg", alt="Hunty Product Name")
     .content
       h3.cart__name
         a(href="product.html") Lorem ipsum dolor sit amet
@@ -141,7 +141,7 @@ mixin category()
   .category&attributes(attributes)
     .thumb
       a(href="product.html")
-        img(src="https://picsum.photos/140/170", alt="Hunty Product Name")
+        img(src="images/upload/img-140-170.jpeg", alt="Hunty Product Name")
     .content
       h3.cat_name
         a(href="search.html") T-Shirt
@@ -150,7 +150,7 @@ mixin searchResult()
   .searchResults__item&attributes(attributes)
     .thumb
       a(href="product.html")
-        img(src="https://picsum.photos/140/170", alt="Hunty Product Name")
+        img(src="images/upload/img-140-170.jpeg", alt="Hunty Product Name")
     .content
       h3.name
         a(href="search.html") T-Shirt
@@ -161,7 +161,7 @@ mixin notification()
     ul
       li: strong 30 minutes ago
       li
-        span.text Lorem ipsum dolor sit amet 
+        span.text Lorem ipsum dolor sit amet
         span.time 7:15
       li
         span.text Lorem ipsum dolor sit amet
@@ -186,7 +186,7 @@ mixin shopInfo(type)
   .shop-info
     .shop-info__logo
       .thumb
-        img(src="https://i.picsum.photos/id/239/100/100.jpg", alt="")
+        img(src="images/upload/img-100-100.jpeg", alt="")
       .desc
         .inner
           h3.wrap-title Routine

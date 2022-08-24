@@ -6,7 +6,7 @@ block vars
 block main
 	main.search_results
 		.container
-			+breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { title: 'Category', href: 'index.html', text: 'Category' }, { text: 'Product Name' }, ])
+			+breadcrumbs([ { title: 'Home', href: 'index.html', text: 'Home' }, { text: 'Searched text...' }])
 			.product-listing-wrap
 				.filter
 					.filter__inner
@@ -18,10 +18,10 @@ block main
 									span.sort-by Related
 									i.icon-caret-down
 								ul.product-navs
-									li.active: +link('Related', '#')
-									li: +link('Best Seller', '#')
-									li: +link('Best Price', '#')
-									li: +link('About to Expired', '#')
+									li.active: +link('Related', 'javascript:;')
+									li: +link('Best Seller', 'javascript:;')
+									li: +link('Best Price', 'javascript:;')
+									li: +link('About to Expired', 'javascript:;')
 
 				.product-listing
 					-for (var i = 0; i < 14; i++)
