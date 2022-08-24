@@ -254,7 +254,7 @@ task('default',
 );
 
 task('release_build',
-  parallel('release_less', 'pug', 'release_scripts', 'jsguide', 'libs', 'copyAssets', 'watch')
+  parallel('release_less', 'pug', 'release_scripts', 'jsguide', 'libs', 'copyAssets', 'optimized', 'watch')
 );
 task('release',
   series('clean', 'release_build', 'webserver')
