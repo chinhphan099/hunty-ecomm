@@ -70,6 +70,32 @@ task('scripts', () => {
         //.pipe(sourcemaps.write('.'))
         .pipe(dest(PUB.js))
 });
+task('release_scripts', () =>
+  src([SRC.js + 'site.js', SRC.js + 'components/*.js'])
+    .pipe(sourcemaps.init())
+    .pipe(jshint('.jshintrc'))
+    .pipe(jshint.reporter('default'))
+    .on('error', function(err) {
+      let displayErr = gutil.colors.red(err.message);
+      gutil.log(displayErr);
+      this.emit('end');
+    })
+    .pipe(babel({
+      "presets": ["@babel/preset-env"]
+    }))
+    .pipe(concat('scripts.js'))
+    .pipe(dest(PUB.js))
+    .pipe(uglify())
+    // .pipe(rename({suffix: '.min'}))
+    .on('error', function(err) {
+      let displayErr = gutil.colors.red(err.message);
+      gutil.log(displayErr);
+      this.emit('end');
+    })
+    .pipe(dest(PUB.js))
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest(PUB.js))
+);
 
 task('jsguide', () => {
     return src([SRC.js + 'guide/guide.js', SRC.js + 'guide/components/*.js'])
@@ -112,6 +138,19 @@ task('less', () =>
         //.pipe(cssmin())
         //.pipe(rename({suffix: '.min'}))
         .pipe(dest(PUB.css))
+);
+task('release_less', () =>
+  src(FILES.less)
+  .pipe(less().on('error', function(err) {
+    let displayErr = gutil.colors.red(err.message);
+    gutil.log(displayErr);
+    this.emit('end');
+  }))
+  .pipe(autoprefixer('last 3 versions', 'ie 10'))
+  .pipe(dest(PUB.css))
+  .pipe(cssmin())
+  //.pipe(rename({ suffix: '.min' }))
+  .pipe(dest(PUB.css))
 );
 
 task('pug', () =>
@@ -195,11 +234,11 @@ task('clean', () => {
 task('webserver', (done) => {
     src(PUB.root)
     .pipe(webserver({
-        host: ip.address(),
-        port: process.env.PORT || 2222,
-        directoryListing: true,
-        open: '/sitemap.html',
-        fallback: '/404.html'
+      host: ip.address(),
+      port: process.env.PORT || 2224,
+      directoryListing: true,
+      open: '/sitemap.html',
+      fallback: '/404.html'
     }));
     done();
 });
@@ -212,4 +251,11 @@ task('build',
 );
 task('default',
     series('clean', 'build', 'webserver')
+);
+
+task('release_build',
+  parallel('release_less', 'pug', 'release_scripts', 'jsguide', 'libs', 'copyAssets', 'optimized', 'watch')
+);
+task('release',
+  series('clean', 'release_build', 'webserver')
 );
